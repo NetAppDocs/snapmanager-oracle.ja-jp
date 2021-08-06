@@ -2,7 +2,7 @@
 permalink: windows/task_restarting_the_snapmanager_windows_host_server.html 
 sidebar: sidebar 
 keywords: restart, snapmanager, service, window, host, server 
-summary: [ サービス ] ウィンドウを使用して SnapManager サーバを再起動できます。 
+summary: '[ サービス ] ウィンドウを使用して SnapManager サーバを再起動できます。' 
 ---
 = SnapManager ホストサーバを再起動しています
 :icons: font

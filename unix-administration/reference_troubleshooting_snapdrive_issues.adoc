@@ -1,0 +1,89 @@
+---
+permalink: unix-administration/reference_troubleshooting_snapdrive_issues.html 
+sidebar: sidebar 
+keywords: common, issue, snapmanager, snapdrive, product, troubleshoot 
+summary: SnapDrive 製品で SnapManager を使用する際には、いくつかの一般的な問題が発生する可能性があります。 
+---
+= SnapDrive の問題のトラブルシューティング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 製品で SnapManager を使用する際には、いくつかの一般的な問題が発生する可能性があります。
+
+まず、問題が SnapManager for Oracle または SnapDrive に関連しているかどうかを確認する必要があります。問題が SnapDrive エラーの場合、 SnapManager for Oracle は次のようなエラーメッセージを表示します。
+
+[listing]
+----
+SMO-12111: Error executing snapdrive command "<snapdrive command>": <snapdrive error>
+----
+次に、 SnapDrive のエラーメッセージの例を示します。 SMO -12111 は SnapManager のエラー番号です。0001-770 の番号付け方式は、 UNIX エラーの SnapDrive を表します。
+
+[listing]
+----
+SMO-12111: Error executing snapdrive command
+"/usr/sbin/snapdrive snap restore -file
+/mnt/pathname/ar_anzio_name_10gR2_arrac1/data/undotbs02.dbf
+-snapname pathname.company.com:
+/vol/ar_anzio_name_10gR2_arrac1:
+TEST_ARRAC1_YORKTOW_arrac12_F_C_0_8abc01b20f9ec03d010f9ec06bee0001_0": 0001-770
+Admin error: Inconsistent number of files returned when listing contents of
+/vol/ar_anzio_name_10gR2_arrac1/.snapshot/
+TEST_ARRAC1_YORKTOW_arrac12_F_C_0_8abc01b20f9ec03d010f9ec06bee0001_0/data
+on filer pathname.
+----
+SnapDrive for UNIX の検出、設定の問題、およびスペースに関する最も一般的なエラーメッセージを次に示します。これらのエラーが表示された場合は、『 SnapDrive インストレーションアドミニストレーションガイド』の「トラブルシューティング」の章を参照してください。
+
+|===
+| 現象 | 説明 
+
+
+ a| 
+0001-136 管理エラー：ファイラーにログオンできません： <filer> <filer> にユーザ名またはパスワードを設定してください
+ a| 
+SnapDrive の初期設定
+
+
+
+ a| 
+0001-382 Admin error ：マルチパスの再スキャンに失敗しました
+ a| 
+LUN 検出エラー
+
+
+
+ a| 
+0001-462 Admin ERROR: <lun> ： spd5 のマルチパスの構成を解除できませんでした : デバイスを停止できませんデバイスがビジーです。
+ a| 
+LUN 検出エラー
+
+
+
+ a| 
+0001-476 管理エラー：関連付けられているデバイスを検出できません ... 0001-710 Admin エラー： LUN の OS 更新に失敗しました ...
+ a| 
+LUN 検出エラー
+
+
+
+ a| 
+0001-680 Admin ERROR: LUN の作成または接続を可能にするために ' ホスト OS は内部データを更新する必要がありますSnapDrive 設定の準備 LUN を使用するか、またはこの情報を手動で更新してください ...
+ a| 
+LUN 検出エラー
+
+
+
+ a| 
+0001-817 admin エラー：ボリュームのクローンを作成できませんでした ... ： FlexClone のライセンスがありません
+ a| 
+SnapDrive の初期設定
+
+
+
+ a| 
+0001-878 Admin ERROR: HBA アシスタントが見つかりませんLUN を含むコマンドは失敗します。
+ a| 
+LUN 検出エラー
+
+|===

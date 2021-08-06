@@ -1,0 +1,63 @@
+---
+permalink: unix-administration/task_updating_target_database_hostname_associated_with_a_profile.html 
+sidebar: sidebar 
+keywords: snapmanager, 3.2, oracle, provide, ability, update, host, name, target, database, snapmanager, profile, smo 
+summary: Oracle 用の SnapManager \ （ 3.2 以降 \ ）では、 SnapManager プロファイル内のターゲット・データベースのホスト名を更新できます。 
+---
+= プロファイルに関連付けられたターゲット・データベースのホスト名を更新しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager （ 3.2 以降） for Oracle を使用すると、 SnapManager プロファイル内のターゲット・データベースのホスト名を更新できます。
+
+* ローカルユーザのホームディレクトリには、プロファイルとリポジトリのマッピングが格納されている必要があります。
+* SnapManager のグラフィカルユーザインターフェイス（ GUI ）セッションを終了する必要があります。
+* Real Application Clusters （ RAC ）環境では、プロファイルで指定されたホストで使用可能なクローンまたはマウントされたバックアップを削除してアンマウントする必要があります。
+
+
+プロファイルを新しいホスト名で更新するには、 CLI を使用する必要があります。
+
+* プロファイル * でターゲット・データベースのホスト名を変更するシナリオはサポートされていません
+
+プロファイル内のターゲット・データベースのホスト名の変更では、次のシナリオはサポートされていません。
+
+* SnapManager GUI を使用してターゲット・データベースのホスト名を変更する方法
+* プロファイルのターゲットデータベースのホスト名を更新したあとに、リポジトリデータベースをロールバックする
+* 1 つのコマンドを実行して、新しいターゲットデータベースホスト名に対する複数のプロファイルを更新する
+* SnapManager 処理の実行中にターゲット・データベースのホスト名を変更する場合
+* SnapManager が Solaris にインストールされている場合のターゲットデータベースのホスト名の変更、および SVM スタックを含むホストマウントファイルシステムを使用してデータベースの論理ユニット番号（ LUN ）が作成されている場合。
+
+
+
+NOTE: プロファイル内のターゲット・データベースのホスト名を更新すると、ターゲット・データベースのホスト名だけが変更されます。プロファイルに設定されている他の設定パラメータはすべて保持されます。
+
+保護が有効なプロファイルで新しいターゲット・データベースのホスト名を更新すると、更新されたプロファイルでも同じデータセットと保護ポリシーが保持されます。
+
+ターゲットホストのホスト名を変更したら、新しい保護プロファイルを作成する前に、既存のすべての保護プロファイルのホスト名を更新する必要があります。プロファイルのホスト名を更新するには、 smo profile update コマンドを実行します。
+
+ターゲット・データベースのホスト名を更新したあとで、クローンまたはマウントされたバックアップが新しいホストで使用できない場合、クローンを削除またはスプリットしたり、バックアップをアンマウントしたりすることはできません。その場合、新しいホストから SnapManager 処理を実行すると、障害が発生したり、古いホストのエントリが古いエントリになったりすることがあります。SnapManager 処理を実行するには、プロファイルの更新を使用して、以前のホスト名に戻す必要があります。
+
+. 次のコマンドを入力します。 `mo profile update-profileprofileprofile[-profile-passwordprofileprofileprofileprofile_password] [-datab_name-hostdb_host[-siddb_host] [-siddleb_usernamedb_username-jectdb_password] [{-RMAN {-usernamedb_password-portdb_password] -retain-usernametulation[-draine-password] -password-count[--stostoirdane-mail-email[--password] [-drast全員 [--password] [--password] [-draine-mail-password] [-draine-mail-password] [--stどれ すウチ [-count[--password] -password] -password] -countnodirstどれ すウチ [--stどれ すウチ [--password] -password] -password] -password] -password] -password] -password] -password] -countnodirm[ 週次データベース [ 週次データベース [ 週次データベース [ 週次データベース [ 電子メール [--password] -password[ 週次データベース [ 電子メール [--password
++
+このコマンドの他のオプションは、次のとおりです。
+
++
+[-force] [-nopromp]
+
++
+|===
+
+
+| 状況 | 作業 
+
+
+ a| 
+* ターゲット・データベースのホスト名を変更します *
+ a| 
+hostnew_db_host を指定します
+
+|===
+. プロファイルのターゲット・データベース・ホスト名を表示するには、次のコマンドを入力します。 'mo profile show'
+

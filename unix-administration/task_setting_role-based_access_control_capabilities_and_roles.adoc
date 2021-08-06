@@ -1,0 +1,271 @@
+---
+permalink: unix-administration/task_setting_role-based_access_control_capabilities_and_roles.html 
+sidebar: sidebar 
+keywords: enable, role-based, access, control, rbac, snapmanager, snapdrive, capabilities, role, smo 
+summary: SnapDrive を使用してロールベースアクセス制御（ RBAC ） for SnapManager を有効にしたあと、 RBAC の機能とユーザをロールに追加して SnapManager の処理を実行できます。 
+---
+= ロールベースアクセス制御の機能とロールを設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive を使用して SnapManager 用のロールベースアクセス制御（ RBAC ）を有効にしたあと、ロールに RBAC の機能とユーザを追加して SnapManager の処理を実行できます。
+
+Data Fabric Manager サーバでグループを作成し、そのグループをプライマリストレージシステムとセカンダリストレージシステムの両方に追加する必要があります。次のコマンドを実行します。
+
+* dfm group create smo _grp
+* DFM グループには、 smo _grpprimary_storage_system を追加します
+* DFM グループには、 smo _grpsecondary_storage_system を追加します
+
+
+Operations Manager Web インターフェイスまたは Data Fabric Manager Server Command-Line Interface （ CLI ；コマンドラインインターフェイス）のいずれかを使用して、 RBAC の機能とロールを変更できます。
+
+次の表に、 SnapManager の処理を実行するために必要な RBAC の機能を示します。
+
+|===
+| SnapManager 処理 | データ保護が有効になっていない場合は RBAC 機能が必要です | データ保護を有効にする場合は RBAC 機能が必要です 
+
+
+ a| 
+プロファイルの作成またはプロファイルの更新
+ a| 
+sd.storage.Read （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+
+
+ a| 
+プロファイルの保護
+ a| 
+DFM. Database_Write （ smo _grp ）
+
+sd.storage.Read （ smo _grp ）
+
+sd.Config.Read （ smo _grp ）
+
+sd.Config.Write （ smo _grp ）
+
+sd.Config.Delete （ smo _grp ）
+
+GlobalDataProtection
+ a| 
+なし
+
+
+
+ a| 
+Backup create をクリックします
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Write （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.Snapshot.Delete （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Write （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.Snapshot.Delete （ SMO_profile データセット）
+
+
+
+ a| 
+backup create （ DBverify を使用） backup create （ DBverify ヲシ
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Write （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.Snapshot.Delete （ smo _grp ）
+
+sd.snapshot.Clone （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Write （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.Snapshot.Delete （ SMO_profile データセット）
+
+sd.snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+Backup create （ RMAN を使用）
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Write （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.Snapshot.Delete （ smo _grp ）
+
+sd.snapshot.Clone （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Write （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.Snapshot.Delete （ SMO_profile データセット）
+
+sd.snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+バックアップのリストア
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Write （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.Snapshot.Delete （ smo _grp ）
+
+sd.snapshot.Clone （ smo _grp ）
+
+sd.Snapshot.Restore （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Write （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.Snapshot.Delete （ SMO_profile データセット）
+
+sd.snapshot.Clone （ SMO_profile データセット）
+
+sd.Snapshot.Restore （ SMO_profile データセット）
+
+
+
+ a| 
+バックアップの削除
+ a| 
+sd.Snapshot.Delete （ smo _grp ）
+ a| 
+sd.Snapshot.Delete （ SMO_profile データセット）
+
+
+
+ a| 
+バックアップの検証
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.Snapshot.Clone （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.Snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+バックアップマウント
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.Snapshot.Clone （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.Snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+バックアップのアンマウント
+ a| 
+sd.Snapshot.Clone （ smo _grp ）
+ a| 
+sd.Snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+クローンの作成
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.snapshot.Clone （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+クローンの削除
+ a| 
+sd.Snapshot.Clone （ smo _grp ）
+ a| 
+sd.Snapshot.Clone （ SMO_profile データセット）
+
+
+
+ a| 
+クローンスプリット
+ a| 
+sd.storage.Read （ smo _grp ）
+
+sd.Snapshot.Read （ smo _grp ）
+
+sd.snapshot.Clone （ smo _grp ）
+
+sd.Snapshot.Delete （ smo _grp ）
+
+sd.storage.Write （ smo _grp ）
+ a| 
+sd.storage.Read （ SMO_profile データセット）
+
+sd.Snapshot.Read （ SMO_profile データセット）
+
+sd.snapshot.Clone （ SMO_profile データセット）
+
+sd.Snapshot.Delete （ SMO_profile データセット）
+
+sd.storage.Write （ SMO_profile データセット）
+
+|===
+RBAC 機能の定義の詳細については、『 OnCommand Unified Manager Operations Manager アドミニストレーションガイド』を参照してください。
+
+. Operations Manager コンソールにアクセスします。
+. [ セットアップ ] メニューから、 [* 役割 * ] を選択します。
+. 既存のロールを選択するか、新しいロールを作成します。
+. データベース・ストレージ・リソースに操作を割り当てるには ' ［ * 機能の追加 * ］ をクリックします
+. [ 役割の設定の編集 ] ページで、役割の変更を保存するには、 [*Update*] をクリックします。
+
+
+* 関連情報 *
+
+http://support.netapp.com/documentation/productsatoz/index.html["_OnCommand Unified Manager Operations Manager Administration Guide_: [mysupport.netapp.com/documentation/productsatoz/index.html\](https://mysupport.netapp.com/documentation/productsatoz/index.html)"]

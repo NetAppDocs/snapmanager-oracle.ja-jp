@@ -1,0 +1,24 @@
+---
+permalink: unix-installation-cmode/reference_preparing_storage_systems_for_snapmirror_and_snapvault_replication.html 
+sidebar: sidebar 
+keywords: snapmanager, data, ontap, snapmirror, technology, mirror, copies, create, bakup, volume, initialize, relationship 
+summary: SnapManager と Data ONTAP の SnapMirror テクノロジを使用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、 Data ONTAP SnapVault テクノロジと組み合わせれば、バックアップをディスクに効率的にアーカイブできます。SnapManager でこれらのタスクを実行するには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して、その関係を初期化する必要があります。 
+---
+= SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムの準備
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager と Data ONTAP の SnapMirror テクノロジを使用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、 Data ONTAP SnapVault テクノロジと組み合わせれば、バックアップをディスクに効率的にアーカイブできます。SnapManager でこれらのタスクを実行するには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して、その関係を初期化する必要があります。
+
+
+NOTE: clustered Data ONTAP の同じソースボリュームに SnapMirror 関係と SnapVault 関係の両方を設定することはできません。これらの関係は異なるソースボリュームに設定する必要があります。
+
+* 関連情報 *
+
+xref:concept_understanding_the_differences_between_snapmirror_and_snapvault.adoc[SnapMirror と SnapVault の違いを理解する]
+
+xref:task_preparing_storage_systems_for_snapmirror_replication.adoc[SnapMirror レプリケーションのためのストレージシステムの準備]
+
+xref:task_preparing_storage_systems_for_snapvault_replication.adoc[SnapVault レプリケーションのためのストレージシステムの準備]

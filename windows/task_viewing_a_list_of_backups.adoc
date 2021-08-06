@@ -1,0 +1,20 @@
+---
+permalink: windows/task_viewing_a_list_of_backups.html 
+sidebar: sidebar 
+keywords: check, backup, create, profile, state, smo, list, command, view, display 
+summary: smo backup list コマンドを使用すると、プロファイルに作成されたバックアップおよびバックアップの状態を確認できます。各プロファイルについて、最新のバックアップの情報が表示され、すべてのバックアップの情報が表示されるまで処理が続行されます。 
+---
+= バックアップのリストを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+smo backup list コマンドを使用すると、プロファイルに作成されたバックアップおよびバックアップの状態を確認できます。各プロファイルについて、最新のバックアップの情報が表示され、すべてのバックアップの情報が表示されるまで処理が続行されます。
+
+. 次のコマンドを入力します。 smo backup list -profile profileprofile_name [-delimitercharacter] [data | -archivelogs ] [-quiet | -verbose
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_list_command.adoc[smo backup list コマンド]

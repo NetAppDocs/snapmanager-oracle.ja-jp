@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/concept_restoring_protected_backups_from_secondary_storage.html 
+sidebar: sidebar 
+keywords: restore, protect, backup, secondary, storage 
+summary: 保護されているバックアップはセカンダリストレージからリストアできます。ただし、プライマリストレージにバックアップが存在する場合、セカンダリストレージからバックアップをリストアすることはできません。 
+---
+= セカンダリストレージから保護されたバックアップをリストアする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保護されているバックアップはセカンダリストレージからリストアできます。ただし、プライマリストレージにバックアップが存在する場合、セカンダリストレージからバックアップをリストアすることはできません。
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_restore_command.adoc[smo backup restore コマンド]
+
+xref:task_restoring_backups_from_an_alternate_location.adoc[別の場所からのバックアップのリストア]
+
+xref:task_creating_restore_specifications.adoc[リストア仕様を作成しています]

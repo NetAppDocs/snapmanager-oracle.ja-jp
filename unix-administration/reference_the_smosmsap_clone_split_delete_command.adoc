@@ -1,0 +1,55 @@
+---
+permalink: unix-administration/reference_the_smosmsap_clone_split_delete_command.html 
+sidebar: sidebar 
+keywords: command, delete, clone, split, operation, cycle, entry, repository, database, delete, profile 
+summary: このコマンドを使用すると、リポジトリデータベースからクローンスプリット処理サイクルエントリを削除できます。 
+---
+= smo clone split -delete コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドを使用すると、リポジトリデータベースからクローンスプリット処理サイクルエントリを削除できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo clone split-delete
+-profile profile \[-host hostname\]
+\[-label split-label \| -id split-id\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+クローンのプロファイル名を指定します。
+
+* * - ホスト名 *
++
+クローンが存在するホスト名を指定します。
+
+* * -label split-label *
++
+クローンスプリットの開始プロセスで生成されるラベル名を指定します。
+
+* *-id split-id *
++
+クローンスプリットの開始プロセスで生成される一意の ID を示します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+

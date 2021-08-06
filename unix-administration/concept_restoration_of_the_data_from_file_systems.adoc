@@ -1,0 +1,26 @@
+---
+permalink: unix-administration/concept_restoration_of_the_data_from_file_systems.html 
+sidebar: sidebar 
+keywords: restore, data, alternate, location, necessary, file, system, local, host, asm 
+summary: 代替保存場所からデータをリストアする前に、必要なファイルシステムをリストアして、ローカル・ホストにマウントする必要があります。 
+---
+= ファイルシステムからのデータのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+代替保存場所からデータをリストアする前に、必要なファイルシステムをリストアして、ローカル・ホストにマウントする必要があります。
+
+代替保存場所からリストア処理を実行すると、代替ファイルシステムからアクティブ・ファイルシステムにファイルを複製できます。
+
+この処理を実行するには、リストア仕様ファイルを作成して、元のマウント・ポイントおよび元の Snapshot コピー名をリストアする代替マウント・ポイントを指定する必要があります。
+
+
+NOTE: Snapshot コピー名は、 1 回のバックアップ処理で同じファイルシステムが複数回 Snapshot される可能性があるため（データ・ファイル用とログ・ファイル用など）、必要なコンポーネントです。
+
+Automatic Storage Management （ ASM ）の場合は、バックアップを Oracle Recovery Manager （ RMAN ）に登録するために、 SnapManager でクローニングしたディスクグループと同じディスクグループ名を使用する必要があります。この名前は、バックアップのプロパティを表示すると確認できます。
+
+* 関連情報 *
+
+xref:task_creating_restore_specifications.adoc[リストア仕様を作成しています]

@@ -1,0 +1,90 @@
+---
+permalink: unix-administration/task_using_snapmanager_for_oracle_to_create_the_database_profile_and_assign_a_protection_policy.html 
+sidebar: sidebar 
+keywords: create, profile, snapmanager, oracle, enable, protect, client, payroll, paydb 
+summary: SnapManager for Oracle でプロファイルを作成し、プロファイルで保護を有効にし、保護ポリシーを割り当てて、保護されたバックアップを作成する必要があります。 
+---
+= SnapManager for Oracle を使用して、データベースプロファイルを作成し、保護ポリシーを割り当てます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle でプロファイルを作成し、プロファイルで保護を有効にし、保護ポリシーを割り当てて、保護されたバックアップを作成する必要があります。
+
+プロファイルには、クレデンシャル、バックアップの設定、バックアップの保護設定など、管理対象のデータベースに関する情報が含まれています。プロファイルの作成後は、処理を実行するたびにデータベースの詳細を指定する必要はありません。1 つのプロファイルで参照できるデータベースは 1 つだけですが、同じデータベースを複数のプロファイルで参照できます。
+
+. SnapManager for Oracle クライアントにアクセスします。
+. リポジトリツリーでホストを右クリックし、 * プロファイルの作成 * を選択します。
+. [Profile Configuration Information] ページで、プロファイルの詳細を入力し、 [Next] をクリックします。
++
+次の情報を入力できます。
+
++
+** プロファイル名： payroll_prod2
+** プロファイルパスワード： payroll123
+** コメント： Production Payroll データベース
+
+
+. Database Configuration Information ページで、データベースの詳細を入力し、 * Next * をクリックします。
++
+次の情報を入力できます。
+
++
+** データベース名： PAYDB
+** データベース SID ： payrolldb
+** Database host ：デフォルトの設定をそのまま使用します。リポジトリツリー内のホストからプロファイルを作成しているため、 SnapManager にホスト名が表示されます。
+** Oracle ユーザアカウントであるホストアカウント： oracle
+** ホストグループ。 Oracle グループの場合は、 dba です
+
+
+. [ データベース接続情報 ] ページで、 [ データベース認証を使用 ] をクリックして、ユーザーがデータベース情報を使用して認証できるようにします。
+. データベース接続の詳細を入力し、 * 次へ * をクリックします。
++
+次の情報を入力できます。
+
++
+** Administrator 権限を持つシステム・データベース管理者である sys を表す SYSDBA 特権ユーザ名
+** パスワード（ SYSDBA パスワード）： oracle
+** データベース・ホストに接続するポート： 1521
+
+
+. [RMAN 構成情報 ] ページで、 [* Do not use RMAN* ] をクリックし、 [ 次へ ] をクリックします。
++
+Oracle Recovery Manager （ RMAN ）は、ブロックレベルの検出機能を使用して Oracle データベースのバックアップとリカバリを行うための Oracle ツールです。
+
+. スナップショット命名情報ページで、変数を選択して、このプロファイルに関連付けられたスナップショットの命名規則を指定します。
++
+smid 変数は ' 一意のスナップショット識別子を作成します
+
++
+次の手順を実行します。
+
++
+.. [ 変数トークン ] リストで、 usertext を選択し、 [ * 追加 ] をクリックします。
+.. ホスト名として「 payroll.techco.com 」と入力し、「 * OK 」をクリックします。
+.. [Format] ボックスにホスト名が smo の直後に表示されるまで、 [*Left*] をクリックします。
+.. 「 * 次へ * 」をクリックします。
+
+
++
+smo _hostname_smosprof_dbsid_scope_mode_smid の Snapshot 命名規則は smo_payroll.techco.com_payroll_prod2_payrolldb_f_a_x" になります（「 f 」はフル・バックアップ、「 a 」は自動モード、「 x 」は一意の SMID を表します）。
+
+. [* Protection Manager Protection Policy] を選択します。
++
+Protection Manager Protection Policy * を使用すると、 NetApp Management Console を使用して設定した保護ポリシーを選択できます。
+
+. NetApp Management Console から取得した保護ポリシーで「 TechCo Payroll Data ： Backup * 」を選択し、「 * Next 」をクリックします。
+. [ 操作の実行 ] ページで、情報を確認し、 [ * 作成 ] をクリックします。
+. [* Operation Details] をクリックして、プロファイル作成処理およびボリューム・ベースのリストアの適格性情報を表示します。
++
+** データベースプロファイルに NetApp Management Console 保護ポリシーを割り当てると、自動的に非適合データセットが作成され、 NetApp Management Console オペレータには、 smo _<hostname> _<profilename> という命名規則に従うか、 smo_payroll.tech.com_PAYDB のように表示されます。
+** このプロファイルがボリュームリストア（高速リストア）の対象でない場合は、次のように処理されます。
++
+*** [ * 結果 * （ * Results * ） ] タブには、プロファイルの作成が成功し、操作中に警告が発生したことが示されます。
+*** [ * 操作の詳細 * ] タブには警告ログが含まれています。このログには、プロファイルが高速リストアの対象ではないこと、およびその理由が示されています。
+
+
+
+
+

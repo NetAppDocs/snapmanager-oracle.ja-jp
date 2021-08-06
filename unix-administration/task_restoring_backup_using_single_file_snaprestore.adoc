@@ -1,0 +1,45 @@
+---
+permalink: unix-administration/task_restoring_backup_using_single_file_snaprestore.html 
+sidebar: sidebar 
+keywords: restore, backup, single, file, snaprestore, sfsr, method, restoring, gui, snapmanager, network, system, nfs, secure, shell, ssh, cluster, service, log 
+summary: バックアップは、 Single File SnapRestore \ （ SFSR ）方式を使用してリストアできます。 
+---
+= Single File SnapRestore を使用したバックアップのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップは、 Single File SnapRestore （ SFSR ）方式を使用してリストアできます。
+
+. SnapManager のグラフィカルユーザインターフェイス（ GUI ）からプロファイルを作成します。
+. GUI を使用してデータベースをバックアップします。
+. Oracle および Network File System （ NFS ）サービスグループのクラスタサービスグループとのリンクを解除し、グループをフリーズします。
+. snapdrive.conf ファイルで、 # secure-communication -moing-cluster-nodes を on に設定して、ホストと SnapDrive for UNIX の間に Secure Shell （ SSH ）が設定されていることを確認します。
+. SnapManager の GUI から、 -alllogs を使用してフルバックアップのリストアとリカバリを実行します。
+. サービスグループのフリーズを解除し、クラスタサービスグループに再度リンクします。
++
+
+NOTE: この構成は、 UNIX 用に SnapDrive 4.1.1 D2 を、 UNIX 用に SnapDrive 4.2 を使用している場合にのみ適用されます。
+
++
+1 つのリストア処理に続けて別のリストア処理を実行すると、バックアップ Snapshot コピーの作成が失敗する可能性があります。指定した時間内に、 SFSR を完了できる連続したリストア操作を実行すると、 SnapManager for Oracle で Snapshot コピー作成エラーが発生します。
+
++
+Snapshot コピーの作成エラーを回避するには、 SFSR の実行中の期間後にリストア処理を実行する必要があります。
+
++
+これを行うには、ストレージシステムのコマンドラインインターフェイス（ CLI ）から次のコマンドを入力して、 LUN クローンスプリットプロセスのステータスを確認します。 rshfilernnamelun clone split statuslun -name
+
++
+[listing]
+----
+
+Sample Output:
+/vol/delaware_760gb/lun700gb (64% complete)..
+----
++
+
+NOTE: Veritas スタックを SFRAC 環境および VCS 環境で実行する Solaris ホストでは、 Volume-Based SnapRestore （ VBSR ）はサポートされません。
+
+

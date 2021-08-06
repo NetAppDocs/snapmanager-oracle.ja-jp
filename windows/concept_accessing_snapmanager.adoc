@@ -1,0 +1,32 @@
+---
+permalink: windows/concept_accessing_snapmanager.html 
+sidebar: sidebar 
+keywords: command-line, interface, cli, graphical, user, gui, accessing 
+summary: SnapManager には、コマンドラインインターフェイス（ CLI ）またはグラフィカルユーザインターフェイス（ GUI ）を使用してアクセスできます。 
+---
+= SnapManager へのアクセス
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager には、コマンドラインインターフェイス（ CLI ）またはグラフィカルユーザインターフェイス（ GUI ）を使用してアクセスできます。
+
+さまざまな SnapManager 処理を次の方法で実行できます。
+
+* データベース・ホストと同じネットワークにあるホストの CLI にコマンドを入力する。
++
+すべてのコマンドのリスト、およびオプションと引数の説明については、「コマンドリファレンス」の章を参照してください。
+
++
+CLI にアクセスするには、 * Start * > * All Programs * > * NetApp * > * SnapManager for Oracle * > * Start SMO Command-Line Interface （ CLI ；コマンドラインインターフェイス） * の順にクリックします。
+
+* データベース・ホストと同じネットワーク上にあるホストの GUI にアクセスする。
++
+GUI には使いやすいシンプルなウィザードが用意されており、さまざまな操作を実行できます。
+
+
+
+* 関連情報 *
+
+xref:concept_snapmanager_for_oraclefor_sap_command_reference.adoc[SnapManager for Oracle のコマンドリファレンスを参照してください]

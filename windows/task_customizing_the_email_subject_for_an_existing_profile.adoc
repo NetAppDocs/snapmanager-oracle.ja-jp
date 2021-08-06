@@ -1,0 +1,16 @@
+---
+permalink: windows/task_customizing_the_email_subject_for_an_existing_profile.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, customize, email, subject, pattern, existing, profile, customize, update, customizing 
+summary: SnapManager では、既存のプロファイルを更新することで、そのプロファイルの E メールの件名のパターンをカスタマイズできます。このカスタマイズされた件名パターンは、更新されたプロファイルにのみ適用されます。 
+---
+= 既存のプロファイルの電子メールの件名をカスタマイズする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager では、既存のプロファイルを更新することで、そのプロファイルの E メールの件名のパターンをカスタマイズできます。このカスタマイズされた件名パターンは、更新されたプロファイルにのみ適用されます。
+
+. 次のコマンドを入力します。 smo profile update-profileprofile [-profile-passwordprofile-password] [-database -db_dbdbname -host[-siddb_host] [-siddb_host] [-sidb_usernamedb_username -password-port db_port] [{-count_password-countm-drman_address_addresserman [-drman-email-password] [-drman[-drman] [-drman-password-password-password] [--stay] [--password-password-password-password-password] [-drman [--password] [-drman [-drman[--password] [--password-password] [--stay] [--password] [--password] [--password] [--password] [--password] [-drman [--password] [--st_address_address_address_address_addressm -rettstどれ すウチ [--password] [--password] -password] [--password] [--password] [--passwordパターン [--passwordパターン [--stay] [--atime-password] [-drman [--stどれ す ～
+

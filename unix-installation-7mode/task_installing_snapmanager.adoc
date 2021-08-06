@@ -1,0 +1,52 @@
+---
+permalink: unix-installation-7mode/task_installing_snapmanager.html 
+sidebar: sidebar 
+keywords: install, snapmanager, host, database, backup, run, snapdrive, unix, real, application, cluster, rac 
+summary: バックアップするデータベースが実行されている各ホストに SnapManager をインストールする必要があります。 
+---
+= SnapManager をインストールしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップするデータベースが実行されている各ホストに SnapManager をインストールする必要があります。
+
+データベースホストに SnapDrive for UNIX がインストールされ、ストレージシステムへの接続が確立されている必要があります。
+
+SnapDrive をインストールしてストレージ・システムへの接続を確立する方法については、 SnapDrive for UNIX のマニュアルを参照してください。
+
+データベースホストごとに 1 つの SnapManager インスタンスをインストールする必要があります。Real Application Cluster （ RAC ）データベースを使用している状況で RAC データベースをバックアップする場合は、 RAC データベースのすべてのホストに SnapManager をインストールする必要があります。
+
+. UNIX 用 SnapManager for Oracle インストールパッケージをネットアップサポートサイトからダウンロードし、ホストシステムにコピーします。
++
+http://mysupport.netapp.com/NOW/cgi-bin/software["ネットアップのダウンロード：ソフトウェア"]' ' '
+
+. root ユーザとしてデータベースホストにログインします。
+. コマンドプロンプトで、インストールパッケージをコピーしたディレクトリに移動します。
+. インストールパッケージを実行可能にします。 chmod 755install_package.bin
+. SnapManager をインストールします： ' ./install_package.bin '
+. Enter キーを押して続行します。
+. 次の手順を実行します。
++
+.. Enter キーを押して、オペレーティングシステムグループのデフォルト値を受け入れます。
++
+グループのデフォルト値は、 dba です。
+
+.. Enter キーを押して、スタートアップタイプのデフォルト値を受け入れます。
+
+
++
+設定の概要が表示されます。
+
+. 設定の概要を確認し、 Enter キーを押して続行します。
++
+SnapManager はにインストールされます
+
+
+
+* 関連情報 *
+
+xref:task_setting_up_snapmanager.adoc[SnapManager をセットアップしています]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050["ネットアップのマニュアル： SnapDrive for UNIX"]'

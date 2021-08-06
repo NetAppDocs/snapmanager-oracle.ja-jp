@@ -1,0 +1,43 @@
+---
+permalink: unix-administration/task_using_protection_manager_to_provision_the_new_dataset.html 
+sidebar: sidebar 
+keywords: smo_paydb, dataset, create, storage, administrator, protection, manager, assign, provision, node, netapp 
+summary: smo _paydb データセットの作成後、ストレージ管理者は Protection Manager を使用してストレージ・システム・リソースを割り当て、データセットのバックアップ・ノードをプロビジョニングします。 
+---
+= Protection Manager を使用して新しいデータセットをプロビジョニングする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+smo _paydb データセットの作成後、ストレージ管理者は Protection Manager を使用して、データセットのバックアップ・ノードのプロビジョニング用のストレージ・システム・リソースを割り当てます。
+
+新しく作成したデータセットをプロビジョニングする前に、ストレージ管理者は、プロファイルで指定したデータセット名について DBA パートナーに相談します。
+
+この場合、データセット名は smo_payroll.tech.com_PAYDB です。
+
+. Protection Manager の NetApp Management Console に移動します。
+. メニューバーで、 * データ * > * データセット * > * 概要 * をクリックします。
++
+[ データセット ] ウィンドウの [ データセット ] タブには、 SnapManager で作成したデータセットを含むデータセットのリストが表示されます。
+
+. smo_payroll.tech.com_PAYDB* データセットを探して選択します。
++
+このデータセットを選択すると、グラフ領域には、バックアップノードがプロビジョニングされていない smo _paydb データセットが表示されます。適合性ステータスは、非適合と判断されます。
+
+. smo _paydb データセットが強調表示されたまま、 * Edit * をクリックします。
++
+Protection Manager の NetApp Management Console に、 smo_payroll.tech.com_PAYDB* データセットの Edit Dataset ウィンドウが表示されます。ウィンドウのナビゲーションペインには、データセットのプライマリノード、バックアップ接続、およびバックアップノードの設定オプションが表示されます。
+
+. ナビゲーションペインで、データセットのバックアップノードのオプションを探し、 * プロビジョニング / リソースプール * を選択します。
++
+Edit Dataset ウィンドウには、デフォルトのプロビジョニングポリシーの設定と、使用可能なリソースプールのリストが表示されます。
+
+. この例では、 * paydb_backup_resource * リソースプールを選択し、 *>* をクリックします。
++
+選択したリソースプールが [ このノードのリソースプール ] フィールドに表示されます。
+
+. [ 完了 ] をクリックして変更を保存します。
+
+
+Protection Manager は、 padb_backup_resource リソースプールのリソースを使用して、セカンダリバックアップノードを自動的にプロビジョニングします。

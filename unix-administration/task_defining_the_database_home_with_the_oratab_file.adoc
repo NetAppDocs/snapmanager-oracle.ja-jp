@@ -1,0 +1,51 @@
+---
+permalink: unix-administration/task_defining_the_database_home_with_the_oratab_file.html 
+sidebar: sidebar 
+keywords: snapmanager, oratab, file, operation, determine, oracle, database, home, directory, installation 
+summary: SnapManager は、処理中に oratab ファイルを使用して、 Oracle データベースのホームディレクトリを判別します。SnapManager が正常に動作するには、 Oracle データベースのエントリが oratab ファイル内に存在する必要があります。oratab ファイルは、 Oracle ソフトウェアのインストール中に作成されます。 
+---
+= oratab ファイルを使用してデータベースホームを定義します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager は、処理中に oratab ファイルを使用して、 Oracle データベースのホームディレクトリを判別します。SnapManager が正常に動作するには、 Oracle データベースのエントリが oratab ファイル内に存在する必要があります。oratab ファイルは、 Oracle ソフトウェアのインストール中に作成されます。
+
+oratab ファイルは、次の表に示すように、ホストオペレーティングシステムに基づいて異なる場所に格納されます。
+
+|===
+| ホストオペレーティングシステム | ファイルの場所 
+
+
+ a| 
+Linux の場合
+ a| 
+/etc/oratab
+
+
+
+ a| 
+Solaris の場合
+ a| 
+/var/opt/oracle/oratab
+
+
+
+ a| 
+IBM AIX
+ a| 
+/etc/oratab
+
+|===
+サンプル oratab ファイルには、次の情報が含まれています。
+
+[listing]
+----
++ASM1:/u01/app/11.2.0/grid:N   # line added by Agent
+oelpro:/u01/app/11.2.0/oracle:N         # line added by Agent
+# SnapManager generated entry          (DO NOT REMOVE THIS LINE)
+smoclone:/u01/app/11.2.0/oracle:N
+----
+
+NOTE: Oracle をインストールしたら、 oratab ファイルが前の表に指定された場所に格納されていることを確認する必要があります。oratab ファイルがオペレーティングシステム内の正しい場所にない場合は、テクニカルサポートに連絡して支援を依頼する必要があります。

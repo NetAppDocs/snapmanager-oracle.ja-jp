@@ -1,0 +1,17 @@
+---
+permalink: unix-administration/concept_support_for_oracle_rac_asm_databases.html 
+sidebar: sidebar 
+keywords: oracle, rac, database, node, initasmdisk, file 
+summary: Oracle RAC データベースを使用している場合、マスター RAC ノードで操作が実行されるたびに、 RAC ノードを initasmdisks ファイルで更新する必要があります。 
+---
+= ASMLib のない Oracle RAC ASM データベースのサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle RAC データベースを使用している場合、マスター RAC ノードで操作が実行されるたびに、 RAC ノードを initasmdisks ファイルで更新する必要があります。
+
+マスターノードから RAC ノードにログインするための認証が不要な場合、 asmmain.sh はすべての RAC ノードに対して initasmdisks のセキュアコピー（ SCP ）を実行します。リストアが行われるたびにマスターノードの initasmdisks ファイルが呼び出され、 asmmain.sh スクリプトが更新されてすべての RAC ノードで同じスクリプトが起動されるようになります。
+
+/etc/initasmdisks ファイルは ' 起動スクリプトのいずれかから ' または rc3.d で新しく定義されたスクリプトから実行する必要があります/etc/initasmdisks ファイルは、常に oracleha サービスが開始される前に実行する必要があります。

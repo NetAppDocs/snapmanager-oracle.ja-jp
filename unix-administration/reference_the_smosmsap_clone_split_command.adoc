@@ -1,0 +1,268 @@
+---
+permalink: unix-administration/reference_the_smosmsap_clone_split_command.html 
+sidebar: sidebar 
+keywords: clone, split, command, independent, original, snapmanager 
+summary: clone split コマンドを実行してクローンをスプリットできます。スプリットクローンは、元のクローンから独立して作成されます。SnapManager では、クローンスプリット処理のあとに新しいプロファイルが生成され、このプロファイルを使用してスプリット・クローンを管理できます。 
+---
+= smo clone split コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+clone split コマンドを実行してクローンをスプリットできます。スプリットクローンは、元のクローンから独立して作成されます。SnapManager では、クローンスプリット処理のあとに新しいプロファイルが生成され、このプロファイルを使用してスプリット・クローンを管理できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo clone split
+-profile clone-profile
+\[-host hostname\]
+\{-label clone-label | -id clone-id\} \[-split-label split-operation_label\]
+\[-comment comment\]
+-new-profile new-profile-name \[-profile-password new-profile_password\]
+-repository -dbname repo_service_name
+-host repo_host
+-port repo_port
+-login -username repo_username
+-database -dbname db_dbname
+-host db_host \[-sid db_sid\] \[-login -username db_username -password db_password
+-port db_port\]
+\[-rman \{\{-controlfile \| \{-login -username rman_username
+-password rman_password\} -tnsname rman_tnsname\}\}\]
+-osaccount osaccount
+-osgroup osgroup
+\[-retain
+\[-hourly \[-count n\] \[-duration  m\]\]
+\[-daily \[-count n\] \[-duration m\]\]
+\[-weekly  \[-count n\] \[-duration m\]\]
+\[-monthly \[-count n\] \[-duration m\]\] \]
+\[-profile-comment profile-comment\]
+\[-snapname-pattern pattern\]
+\[-protect \[-protection-policy policy_name\]\] \| \[-noprotect\]\]
+\[-summary-notification
+\[-notification
+\[-success -email email_address1,email_address2
+-subject subject-pattern\]
+\[failure -email email_address1,email_address2
+-subject subject-pattern\] \]
+[-separate-archivelog-backups
+-retain-archivelog-backups
+ -hours  hours |
+-days days |
+-weeks weeks |
+-months months
+[-protect \[-protection-policy policy_name \| -noprotect]
+[-include-with-online-backups \| -no-include-with-online-backups]]
+[-dump]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile clone -profile *
++
+クローン作成元のプロファイルの名前を指定します。
+
+* * - ホスト名 *
++
+クローンが存在するホスト名を指定します。
+
+* * -label clone-label *
++
+クローニング処理で生成されるラベル名を示します。
+
+* *-id clone-id *
++
+クローニング処理で生成される一意の ID を示します。
+
+* *-split-label split-operation_label *
++
+クローニング処理で生成されるラベル名を示します。
+
+* * -new-profile new-profile_name *
++
+スプリット操作が正常に完了した後に SnapManager が生成する新しいプロファイル名を指定します。
+
+* *-profile-password new-profile-password * を入力します
++
+プロファイルのパスワードを指定します。
+
+* * - リポジトリ *
++
+リポジトリのデータベースの詳細を指定します。
+
+* * -dbname repo_service_name *
++
+リポジトリが格納されたデータベースの名前を指定します。グローバル名またはシステム ID を使用できます。
+
+* * -host repo_host *
++
+リポジトリ・データベースが置かれているホスト・コンピュータの名前または IP アドレスを指定します。
+
+* * -port repo_port *
++
+リポジトリ・データベースが置かれているホストへのアクセスに使用する TCP （ Transmission Control Protocol ）ポート番号を指定します。
+
+* * - ログイン *
++
+リポジトリ・ログインの詳細を指定します。これはオプションです。指定しない場合、 SnapManager はデフォルトで OS 認証接続モードになります。
+
+* * -username repo_username *
++
+リポジトリ・データベースが置かれているホストにアクセスするために必要なユーザ名を指定します。
+
+* * -database *
++
+バックアップ、リストア、またはクローニングするデータベースの詳細を指定します。
+
+* * -dbname db_dbname *
++
+プロファイルに記述されるデータベースの名前を指定します。グローバル名またはシステム ID を使用できます。
+
+* * -host db_host *
++
+データベースが存在するホストコンピュータの名前または IP アドレスを指定します。
+
+* *-sid db_sid *
++
+プロファイルに記述されるデータベースのシステム識別子を指定します。デフォルトでは、 SnapManager はデータベース名をシステム識別子として使用します。システム ID がデータベース名と異なる場合は、 -sid オプションを使用して指定する必要があります。
+
++
+たとえば、 Oracle Real Application Clusters （ RAC ）を使用している場合は、 SnapManager の実行元 RAC ノード上の RAC インスタンスのシステム識別子を指定する必要があります。
+
+* * - ログイン *
++
+データベース・ログインの詳細を指定します。
+
+* * -username repo_username *
++
+プロファイルに記述されるデータベースにアクセスするために必要なユーザ名を指定します。
+
+* * -password db_password *
++
+プロファイルに記述されるデータベースにアクセスするために必要なパスワードを指定します。
+
+* * - rman*
++
+SnapManager が Oracle Recovery Manager （ RMAN ）を使用してバックアップをカタログ化するために使用する詳細情報を指定します。
+
+* * -controlfile *
++
+ターゲットのデータベース制御ファイルを、カタログではなく RMAN リポジトリとして指定します。
+
+* * - ログイン *
++
+RMAN ログインの詳細を指定します。
+
+* * -password rman_password*
++
+RMAN カタログへのログインに使用するパスワードを指定します。
+
+* * -username rman_username *
++
+RMAN カタログへのログインに使用するユーザ名を指定します。
+
+* *-tnsname tnsname *
++
+tnsname 接続名を指定します（ tnsname.ora ファイルで定義されています）。
+
+* * -osaccount osaccount *
++
+Oracle データベースのユーザアカウントの名前を指定します。SnapManager はこのアカウントを使用して、起動やシャットダウンなどの Oracle 処理を実行します。通常は、 Oracle など、ホスト上で Oracle ソフトウェアを所有しているユーザがこれに該当します。
+
+* * -osgroup osgroup *
++
+Oracle アカウントに関連付けられた Oracle データベースグループの名前を指定します。
+
++
+
+NOTE: osaccount および -osgroup 変数は、 UNIX では必要ですが、 Windows で実行されるデータベースには使用できません。
+
+* * -retain [-hourly [-count n] [-duration m] [-daily [-count n] [-duration m] [-weekly ] [-weekly [-count n] [-duration n] [-duration m] ] [-monthly [-monthly ] [-duration n] ] *
++
+バックアップの保持ポリシーを指定します。
+
++
+保持クラスごとに、保持数または保持期間のいずれか、または両方を指定できます。期間はクラスの単位で指定します（たとえば、時間単位の場合は時間単位、日単位の場合は日単位）。たとえば、日次バックアップの保持期間として 7 のみを指定した場合、 SnapManager ではプロファイルの日次バックアップの数が制限されません（保持数が 0 であるため）。ただし、 SnapManager では、 7 日前に作成された日次バックアップが自動的に削除されます。
+
+* *-profile-comment profile-comment*
++
+プロファイルドメインを記述するプロファイルのコメントを指定します。
+
+* * - snapname - pattern pattern パターン *
++
+Snapshot コピーの命名パターンを示します。すべての Snapshot コピー名に、可用性の高い処理用の HAOPS などのカスタムテキストを含めることもできます。Snapshot コピーの命名パターンは、プロファイルの作成時、またはプロファイルの作成後に変更できます。更新後のパターンは、まだ作成されていない Snapshot コピーにのみ適用されます。存在する Snapshot コピーには、前の snapname パターンが保持されます。パターンテキストでは、複数の変数を使用できます。
+
+* * -protection-protection-policy policy_name *
++
+バックアップをセカンダリストレージで保護するかどうかを指定します。
+
++
+
+NOTE: protection-policy を指定しないと、データセットに保護ポリシーが設定されません。protect を指定し、かつ protection-policy がプロファイルの作成時に設定されない場合は、あとで smo profile update コマンドを使用して設定するか、 Protection Manager のコンソールを使用してストレージ管理者が設定できます。
+
+* *-summary-notification*
++
+リポジトリデータベース内の複数のプロファイルについて、サマリー E メール通知を設定するための詳細を指定します。SnapManager がこの E メールを生成します。
+
+* * - 通知 *
++
+新しいプロファイルの E メール通知を設定するための詳細を指定します。SnapManager がこの E メールを生成します。E メール通知を使用すると、データベース管理者は、このプロファイルを使用して実行されるデータベース処理の成功または失敗ステータスに関する E メールを受信できます。
+
+* * - success *
++
+SnapManager 処理が成功した場合にプロファイルに対して E メール通知を有効にするように指定します。
+
+* *- 電子メールアドレス 1 電子メールアドレス 2*
++
+受信者の E メールアドレスを指定します。
+
+* * -subject subject-pattern *
++
+E メールの件名を指定します。
+
+* * - 失敗 *
++
+SnapManager 処理が失敗した場合にプロファイルに対して E メール通知を有効にするように指定します。
+
+* *-Separe-archivelog -bbackups * を実行します
++
+アーカイブログのバックアップをデータファイルのバックアップと分離します。これは、プロファイルの作成時に指定できるオプションのパラメータです。このオプションを使用してバックアップを分離したら、データファイルのみのバックアップまたはアーカイブログのみのバックアップのどちらかを作成できます。
+
+* *-retain-archivelog -bbackups -hours | -daysdays | -weeksweeks | -monthsmonths *
++
+アーカイブログの保持期間（毎時、毎日、毎週、または毎月）に基づいてアーカイブログのバックアップを保持するように指定します。
+
+* * protect [-protection-policypolicy_name] | -nobprotect *
++
+アーカイブログの保護ポリシーに基づいてアーカイブログファイルを保護するように指定します。
+
++
+-noftect オプションを使用して、アーカイブログファイルを保護しないように指定します。
+
+* *-include-y-one-backups|-no-include-online-backups*
++
+オンラインデータベースバックアップにアーカイブログバックアップを含めるように指定します。
+
++
+オンラインデータベースバックアップにアーカイブログバックアップを含めないように指定します。
+
+* * -dump*
++
+プロファイル作成処理が成功したあとでダンプ・ファイルを収集しないように指定します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルト設定では、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+

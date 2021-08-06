@@ -1,0 +1,18 @@
+---
+permalink: windows/task_issuing_commands_from_an_alternate_host.html 
+sidebar: sidebar 
+keywords: issue, cli, command, host, database, snapmanager, route, appropriate, issuing, alternate 
+summary: データベース・ホスト以外のホストから問題 CLI コマンドを実行すると、入力したコマンドが SnapManager によって適切なホストにルーティングされます。 
+---
+= 代替ホストからのコマンドの実行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベース・ホスト以外のホストから問題 CLI コマンドを実行すると、入力したコマンドが SnapManager によって適切なホストにルーティングされます。
+
+システムから正しいホストに処理がディスパッチされるようにするには、まず、その処理に対応するプロファイルの場所を確認する必要があります。この手順では、プロファイルとリポジトリのマッピング情報が、ローカル・ホスト上のユーザのホーム・ディレクトリにあるファイルとして保管されます。
+
+. ローカル・ユーザのホーム・ディレクトリにプロファイル / リポジトリ間のマッピングを認識させて、処理要求を転送できるようにするには、次のコマンドを入力します。 smo profile sync -repository -dbname repo_dbname -hostrepo_host -port repo_port -login -username repo_username [-quiet | -verbose
+

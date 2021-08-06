@@ -1,0 +1,79 @@
+---
+permalink: windows/task_upgrading_snapmanager_for_oracle_hosts.html 
+sidebar: sidebar 
+keywords: upgrade, exist, snapmanager, host, latest, version, simultaneously, upgrading, operation 
+summary: 既存のすべての SnapManager ホストをアップグレードして、最新バージョンの SnapManager を使用できます。すべてのホストが同時にアップグレードされます。ただし、その際にすべての SnapManager ホストおよびスケジュールされた処理が停止する可能性があります。 
+---
+= SnapManager ホストをアップグレードする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存のすべての SnapManager ホストをアップグレードして、最新バージョンの SnapManager を使用できます。すべてのホストが同時にアップグレードされます。ただし、その際にすべての SnapManager ホストおよびスケジュールされた処理が停止する可能性があります。
+
+. 次の手順を実行して、 SnapManager サーバを停止します。
++
+.. Windows サービスウィンドウで、 * NetApp SnapManager for Oracle * を選択します。
+.. 左パネルで、 * 停止 * をクリックします。
+
+
+. SnapManager インストールファイルをダブルクリックします。
++
+|===
+
+
+| オペレーティングシステム | 使用する方法 
+
+
+ a| 
+Windows x86 の場合
+ a| 
+netapp.smo.windows-x86-version_number.exe
+
+
+
+ a| 
+Windows x64
+ a| 
+netapp.smo.windows-x64-version_number.exe
+
+|===
++
+次のメッセージが表示されます。パブリッシャを検証できませんでした。このソフトウェアを実行しますか？
+
+. [OK] をクリックします。
++
+Introduction ウィンドウが表示されます。
+
+. 「 * 次へ * 」をクリックします。
++
+[Choose Install Folder] ウィンドウが表示されます。
+
+. デフォルトのインストール場所をそのまま使用する場合は、 ［ * 次へ * ］ をクリックします。新しい場所を選択する場合は、 ［ 次へ
++
+デフォルトの場所は、 C ： \Program Files\NetApp\SnapManager for Oracle です。
+
+. [ メニューの可用性 ] ウィンドウで、 [ * 次へ * ] をクリックします。
+. Specify Service Properties （サービスプロパティの指定）ウィンドウで、 Windows サービスのアカウントおよびパスワード情報を入力します。
++
+指定するアカウントは、次のグループのメンバーである必要があります。
+
++
+** ストレージ・システムのローカル・アドミニストレーション・グループ
+** ローカル管理者のグループ
+** ORA_DBA グループ：再起動後にサービスを自動的に開始する必要があるか ' サービスを手動で開始する必要があるかを指定できます
+
+
+. [ インストール前の概要 ] ウィンドウで、 [*Install*] をクリックします。
+. Install Complete （インストールの完了）ウィンドウで、 * Next （次へ） * をクリックします。
+. [ 重要な情報 ] ウィンドウで、 [ 完了 ] をクリックしてインストーラを終了します。
+
+
+* 関連情報 *
+
+xref:concept_preparing_to_install_snapmanager_for_oracle.adoc[SnapManager for Oracle のインストールの準備をしています]
+
+xref:concept_preinstallation_tasks.adoc[インストール前のタスク]
+
+xref:task_downloading_snapmanager_for_oracle_installation_package.adoc[SnapManager for Oracle インストール・パッケージのダウンロード]

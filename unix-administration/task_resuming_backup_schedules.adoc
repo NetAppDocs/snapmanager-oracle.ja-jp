@@ -1,0 +1,18 @@
+---
+permalink: unix-administration/task_resuming_backup_schedules.html 
+sidebar: sidebar 
+keywords: administrator, option, resume, suspend, backup, schedule, smo 
+summary: 管理者は、中断したバックアップ・スケジュールを再開できます。 
+---
+= バックアップスケジュールを再開しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理者は、中断したバックアップ・スケジュールを再開できます。
+
+アクティブなスケジュールを再開しようとすると、「 Cannot resume ： schedule <schedulename> already in resume state 」というエラーメッセージが表示される場合があります。
+
+. 中断したバックアップスケジュールを再開するには、次のコマンドを入力します。 smo schedule resume -profile profile_name -schedule - nameschedulename [-quiet | -verbose
+

@@ -1,0 +1,23 @@
+---
+permalink: windows/task_authorizing_user_access_to_the_repository.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, credential, database, access, repository, restrict, prevent 
+summary: SnapManager を使用すると、データベースユーザがリポジトリにアクセスするためのクレデンシャルを設定できます。クレデンシャルを使用すると、 SnapManager ホスト、リポジトリ、プロファイル、およびデータベースへのアクセスを制限したり、禁止したりできます。 
+---
+= リポジトリへのアクセスを許可する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager を使用すると、データベースユーザがリポジトリにアクセスするためのクレデンシャルを設定できます。クレデンシャルを使用すると、 SnapManager ホスト、リポジトリ、プロファイル、およびデータベースへのアクセスを制限したり、禁止したりできます。
+
+credential set コマンドを使用してクレデンシャルを設定する場合、 SnapManager はパスワードの入力を求めません。
+
+ユーザクレデンシャルは、 SnapManager 以降のインストール時に設定できます。
+
+. 次のコマンドを入力します。
++
+smo credential set -repository -dbname repo_service_name -host repo_username repo_username [-password repo_password] -port repo_port
+
+

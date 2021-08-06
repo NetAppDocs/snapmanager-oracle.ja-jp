@@ -1,0 +1,32 @@
+---
+permalink: unix-administration/task_protecting_archive_log_backups.html 
+sidebar: sidebar 
+keywords: creating, profile, enable, protection, archive, log, backup, base, policy 
+summary: プロファイルの作成中に、アーカイブログの保護ポリシーに基づいてアーカイブログのバックアップの保護を有効にできます。 
+---
+= アーカイブログのバックアップを保護しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルの作成中に、アーカイブログの保護ポリシーに基づいてアーカイブログのバックアップの保護を有効にできます。
+
+. 次のコマンドを入力します。 `mo profile create -profile profile[-profile-passwordprofileprofile_password] -repository -dbname -hostrepo_host-portcomment-usernamerepo_usernamedbdbname -database -dbname -dbnamedb_host[-siddb_sdb_host] -password-durernadorm -password-drast_addressm -password-drast_password-usernamedb[ -weekendorman [-drst_password-password-password-password-password-usernamedbo [-drst_addressm -password] [-drst_addressm -password-password-password-usernamedbo -password-password-password-weekendorm -password] -password-password-password-atername -password-sto [-drsto [-drsto [-drst_addressm -password] -password-password-password-password-password] -username -usernamedbo [-drao [-drao [-drao [-drao -password] -sto [-drao [-drao [-drsto -password-
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+* アーカイブ・ログ・バックアップを個別にバックアップし ' アーカイブ・ログ・ファイルを保護する場合 *
+ a| 
+次のオプションを指定します。
+
+** -Separe-archivelog backups を使用すると、アーカイブ・ログ・ファイルをデータ・ファイルから分離できます。
+** - protect は、アーカイブログのアーカイブログのバックアップに、別の保護ポリシーを割り当てます。
+** -protection-policy は、アーカイブログバックアップに保護ポリシーを割り当てます。
+
+
+|===
+

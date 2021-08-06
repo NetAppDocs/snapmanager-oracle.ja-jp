@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/task_destroying_split_clone_and_associated_profile.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, destroy, profile, associate, split, clone, database, underlying, storage, 
+summary: SnapManager を使用すると、スプリットクローン \ （データベース \ ）に関連付けられたプロファイルを、基盤となるストレージとともに削除できます。プロファイルを削除する前に、関連付けられたバックアップとクローンを削除する必要があります。 
+---
+= プロファイルの削除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager を使用すると、スプリットクローン（データベース）に関連付けられたプロファイルを、基盤となるストレージとともに削除できます。プロファイルを削除する前に、関連付けられたバックアップとクローンを削除する必要があります。
+
+. スプリット・クローン操作およびスプリット・クローン・データベースを使用して作成したプロファイルを削除するには、次のコマンドを入力します。 `mo profile destroy -profile destroy -profile profileprofile[-hoshostname] [-quiet | -verbose
+
+
+[listing]
+----
+smo profile destroy -profile AUTO-REVEN
+----

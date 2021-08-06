@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_verifying_profiles.html 
+sidebar: sidebar 
+keywords: verify, exist, profile, set, up, correct, snapmanager, environment, smo 
+summary: 既存のプロファイルが正しく設定されていることを確認できます。プロファイルを検証すると、 SnapManager は指定されたプロファイルの環境をチェックし、プロファイルが設定されていて、このプロファイルのデータベースにアクセスできることを検証します。 
+---
+= プロファイルの検証
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存のプロファイルが正しく設定されていることを確認できます。プロファイルを検証すると、 SnapManager は指定されたプロファイルの環境をチェックし、プロファイルが設定されていて、このプロファイルのデータベースにアクセスできることを検証します。
+
+. プロファイルが正しく設定されているかどうかを確認するには、次のコマンドを入力します。 'mo profile verify -profile profile_name
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapprofile_verify_command.adoc[smo profile verify コマンド]

@@ -1,0 +1,49 @@
+---
+permalink: windows/reference_the_smosmsapsystem_dump_command.html 
+sidebar: sidebar 
+keywords: run, system, dump, command, create, jar, file, contain, diagnostic, information, smo 
+summary: システムダンプコマンドを実行して ' サーバ環境に関する診断情報を含む JAR ファイルを作成できます 
+---
+= smo system dump コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+システムダンプコマンドを実行して ' サーバ環境に関する診断情報を含む JAR ファイルを作成できます
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo system dump
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== system dump コマンドの例
+
+次に、 smo system dump コマンドを使用して JAR ファイルを作成する例を示します。
+
+[listing]
+----
+smo system dump
+Path: C:\\userhomedirectory\\netapp\\smo\\3.3.0\\smo_dump_hostname.jar
+----

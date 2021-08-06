@@ -1,0 +1,64 @@
+---
+permalink: unix-installation-cmode/reference_snapmanager_architecture.html 
+sidebar: sidebar 
+keywords: snapmanager, oracle, component, work, together, provide, comprehensive, powerful, backup, restore, recovery, cloning, database 
+summary: SnapManager for Oracle には解決策、 Oracle データベース向けの包括的で強力なバックアップ、リストア、リカバリ、クローニングを実行するためのコンポーネントが含まれています。 
+---
+= SnapManager アーキテクチャ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle には解決策、 Oracle データベース向けの包括的で強力なバックアップ、リストア、リカバリ、クローニングを実行するためのコンポーネントが含まれています。
+
+image::../media/smo_architecture.gif[この図は、 SnapManager のアーキテクチャを示しています。]
+
+
+
+== SnapDrive for UNIX の略
+
+SnapManager でストレージシステムとの接続を確立するには、 SnapDrive が必要です。SnapManager をインストールする前に、すべてのターゲットデータベースホストに SnapDrive for UNIX をインストールする必要があります。
+
+
+
+== SnapManager for Oracle の略
+
+すべてのターゲットデータベースホストに SnapManager for Oracle をインストールする必要があります。
+
+SnapManager for Oracle がインストールされているデータベースホストで、コマンドラインインターフェイス（ CLI ）または UI を使用できます。SnapManager がサポートするオペレーティングシステムで実行されている任意のシステムから Web ブラウザを使用して、 SnapManager UI をリモートから使用することもできます。
+
+
+NOTE: サポートされている JRE のバージョンは、 1.5 、 1.6 、および 1.7 です。
+
+
+
+== ターゲットデータベース
+
+ターゲットデータベースは、バックアップ、リストア、リカバリ、クローニングの各処理を実行して SnapManager で管理する Oracle データベースです。
+
+ターゲットデータベースは、スタンドアロン、 Real Application Clusters （ RAC ）、または Oracle Automatic Storage Management （ ASM ）ボリューム上に配置できます。サポート対象の Oracle データベースのバージョン、構成、オペレーティングシステム、プロトコルの詳細については、 NetApp Interoperability Matrix Tool を参照してください。
+
+
+
+== SnapManager リポジトリ
+
+SnapManager リポジトリは、 Oracle データベースに格納され、プロファイル、バックアップ、リストア、リカバリ、およびクローンに関するメタデータを格納します。1 つのリポジトリには、複数のデータベースプロファイルに対して実行された処理に関する情報を格納できます。
+
+SnapManager リポジトリは、ターゲットデータベースに格納できません。SnapManager の処理を実行する前に、 SnapManager リポジトリデータベースとターゲットデータベースがオンラインになっている必要があります。
+
+
+
+== プライマリストレージシステム
+
+SnapManager は、プライマリネットアップストレージシステム上のターゲットデータベースをバックアップします。
+
+
+
+== セカンダリストレージシステム
+
+データベースプロファイルでデータ保護を有効にすると、 SnapManager でプライマリストレージシステムに作成されたバックアップが、 SnapVault テクノロジと SnapMirror テクノロジを使用してセカンダリネットアップストレージシステムにレプリケートされます。
+
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]

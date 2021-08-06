@@ -1,0 +1,76 @@
+---
+permalink: unix-administration/task_upgrading_snapmanager_for_oracle_hosts_c1.html 
+sidebar: sidebar 
+keywords: upgrade, all, exist, host, latest, version, snapmanager, simultaneously, downtime, upgrading, command-line, interface, cli, smo, chmod 
+summary: 既存のすべてのホストをアップグレードして、最新バージョンの SnapManager を使用できます。すべてのホストが同時にアップグレードされます。ただし、その際にすべての SnapManager ホストおよびスケジュールされた処理が停止する可能性があります。 
+---
+= SnapManager ホストをアップグレードします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存のすべてのホストをアップグレードして、最新バージョンの SnapManager を使用できます。すべてのホストが同時にアップグレードされます。ただし、その際にすべての SnapManager ホストおよびスケジュールされた処理が停止する可能性があります。
+
+. root ユーザとしてホストシステムにログインします。
+. コマンドラインインターフェイス（ CLI ）で、インストールファイルをダウンロードした場所に移動します。
+. ファイルが実行可能でない場合は、「 chmod 544 NetApp.smo * 」権限を変更します
+. SnapManager サーバを停止します。「 mo_server stop
+. UNIX ホストに応じて、 SnapManager をインストールします。
++
+|===
+| オペレーティングシステム | 実行する操作 
+
+
+ a| 
+* Solaris （ SPARC64 ） *
+ a| 
+
+
+
+ a| 
+* Solaris （ x86_64 ） *
+ a| 
+
+
+
+ a| 
+* AIX （ PPC64 ） *
+ a| 
+
+
+
+ a| 
+* Linux x86 *
+ a| 
+
+
+
+ a| 
+* Linux x64 *
+ a| 
+
+|===
+. [ はじめに ] ページで *Enter* を押して続行します。
++
+「 Existing SnapManager for Oracle Detected. 」というメッセージが表示されます。
+
+. Enter キーを押します。
+. コマンドプロンプトで、次の手順を実行します。
++
+.. オペレーティング・システム・ユーザーのデフォルト値を受け入れるには、 * Enter * を押します。
+.. オペレーティング・システム・グループの正しい値を入力するか、または *Enter* キーを押して、デフォルト値を受け入れます。
+.. サーバの起動タイプに正しい値を入力するか、 *Enter* キーを押してデフォルト値を受け入れます。
+
+
++
+設定の概要が表示されます。
+
+. Enter * を押して続行します。
++
+「 Uninstall of Existing SnapManager for Oracle has started. 」というメッセージが表示されます。
+
++
+アンインストールが完了し、最新バージョンの SnapManager がインストールされます。
+
+

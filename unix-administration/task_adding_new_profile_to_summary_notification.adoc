@@ -1,0 +1,22 @@
+---
+permalink: unix-administration/task_adding_new_profile_to_summary_notification.html 
+sidebar: sidebar 
+keywords: configure, summary, email, notification, repository, database, add, new, profile 
+summary: リポジトリデータベースのサマリー E メール通知を設定したら、 summary notification コマンドを使用して、新しいプロファイルをサマリー通知に追加できます。 
+---
+= 概要 E メール通知に新しいプロファイルを追加します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リポジトリデータベースのサマリー E メール通知を設定したら、 summary notification コマンドを使用して、新しいプロファイルをサマリー通知に追加できます。
+
+. 次のコマンドを入力します。 smo profile create -profile profileprofile_name [-profile-password-dbnamerepo_service_name -hostrepppo_host-portrepo_username -usernamerepo_username -dbnamedb_dbname -hostdbname -hostdbname -hostdbname -hostdbname -steddbname -password-drstaname -durationdbname -password-dorman [-drdbname -password-password-drumb -username -username -username -username -username -username -staname -password-drumm-candorman [-username -username -username -username -password-drmano -username -username -username -username -username -username -username -passwordname -password-drmano -username -username -password-drmano -staname -staname -passwordn -staname -passwordn -username -passwordn -passwordn -passwordn -staname -username -username -stanimo -username -username -password-drmano -
++
+このコマンドの他のオプションは、次のとおりです。
+
++
+[-force]
+
+

@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/task_deleting_a_clone_split_operation_cycle_from_a_repository_database.html 
+sidebar: sidebar 
+keywords: delete, clone, split, operation, cycle, entry, repository, database 
+summary: リポジトリデータベースから、クローンスプリット処理サイクルエントリを削除できます。 
+---
+= リポジトリデータベースからクローンスプリット処理サイクルを削除します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リポジトリデータベースから、クローンスプリット処理サイクルエントリを削除できます。
+
+. リポジトリデータベースからクローンスプリット処理サイクルエントリを削除するには、次のコマンドを入力します。 smo clone split -delete -profile profile [-hosthosthostname] [-labelsplit -label|-idsplit-id] [-quiet | -verbose
+
+
+[listing]
+----
+smo clone split-delete -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
+----

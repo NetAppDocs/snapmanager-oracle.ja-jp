@@ -1,0 +1,39 @@
+---
+permalink: unix-administration/reference_the_smosmsap_schedule_suspend_command.html 
+sidebar: sidebar 
+keywords: command, suspend, backup, schedule, resume, smo 
+summary: このコマンドは、バックアップスケジュールが再開されるまでバックアップスケジュールを一時停止します。 
+---
+= smo schedule suspend コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、バックアップスケジュールが再開されるまでバックアップスケジュールを一時停止します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo schedule suspend
+-profile profile_name
+-schedule-name schedule_name
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+バックアップスケジュールを一時停止するデータベースに関連するプロファイルの名前を指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * -schedule - name schedule_name * と入力します
++
+バックアップスケジュールの作成時に指定したスケジュール名を指定します。
+
+

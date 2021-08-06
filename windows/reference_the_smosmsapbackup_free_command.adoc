@@ -1,0 +1,84 @@
+---
+permalink: windows/reference_the_smosmsapbackup_free_command.html 
+sidebar: sidebar 
+keywords: run, backup, free, command, snapshot, copies, copy, removing, remove, smo 
+summary: バックアップメタデータをリポジトリから削除せずにバックアップの Snapshot コピーを解放するには、 backup free コマンドを実行します。 
+---
+= smo backup free コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップメタデータをリポジトリから削除せずにバックアップの Snapshot コピーを解放するには、 backup free コマンドを実行します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo backup free
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id guid \| -all\]
+-force
+\[-dump\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+解放するバックアップに関連付けられたプロファイルを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* *-id GUID*
++
+指定した GUID を持つバックアップのリソースを指定します。GUID はバックアップを作成するときに SnapManager によって生成されます。各バックアップの GUID を表示する場合は、 smo backup list コマンドを使用します。verbose オプションを指定して、バックアップ ID を表示します。
+
+* * - ラベルラベル *
++
+指定したラベルを持つバックアップを指定します。
+
+* *-data*
++
+データファイルを指定します。
+
+* *-archivelogs*
++
+アーカイブログファイルを指定します。
+
+* * - すべて *
++
+すべてのバックアップを指定します。代わりに、指定されたバックアップを削除するには、 -id または -label オプションを使用します。
+
+* * -force *
++
+Snapshot コピーを強制的に削除します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次に、バックアップを解放する例を示します。
+
+[listing]
+----
+smo backup free -profile SALES1 -label full_backup_sales_May
+Operation Id [8abc01ec0e79004b010e79006da60001] succeeded.
+----
+* 関連情報 *
+
+xref:task_freeing_backups.adoc[バックアップの解放]

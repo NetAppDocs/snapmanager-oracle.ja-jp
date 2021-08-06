@@ -1,0 +1,22 @@
+---
+permalink: unix-administration/task_using_snapmanager_for_oracle_to_confirm_backup_protection.html 
+sidebar: sidebar 
+keywords: snapmanager, oracle, backup, associate, profile, determine, protection 
+summary: SnapManager for Oracle を使用すると、プロファイルに関連付けられたバックアップのリストを表示し、バックアップが保護に対して有効になっているかどうかを確認し、保持クラスを確認できます（この例では毎日または毎週）。 
+---
+= SnapManager for Oracle を使用したバックアップ保護の確認
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle を使用すると、プロファイルに関連付けられているバックアップのリストを表示し、バックアップが保護に対して有効になっているかどうかを確認し、保持クラス（この例では、毎日または毎週）を表示できます。
+
+この例の新しいバックアップでは、保護のスケジュールが設定されているがまだ保護されていないことが最初に示されます（ SnapManager のグラフィカルユーザインターフェイスおよび backup show コマンドの出力）。ストレージ管理者がセカンダリストレージにバックアップがコピーされたことを確認したあと、 SnapManager は、グラフィカルユーザインターフェイスと backup list コマンドの両方で、バックアップ保護状態を「 Not protected 」から「 Protected 」に変更します。
+
+. SnapManager for Oracle クライアントにアクセスします。
+. SnapManager リポジトリ・ツリーで、プロファイルを展開してバックアップを表示します。
+. [* Backups/Clones （ * バックアップ / クローン） ] タブをクリックします。
+. レポートペインで、 *Backup Details* を選択します。
+. Protection 列を表示し、ステータスが Protected であることを確認します。
+

@@ -1,0 +1,31 @@
+---
+permalink: windows/task_configuring_e_mail_notification_for_an_existing_profile.html 
+sidebar: sidebar 
+keywords: updating, profile, configure, receive, email, notification, completion, database, operation, configuring, existing 
+summary: プロファイルを更新する場合は、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。 
+---
+= 既存のプロファイルの E メール通知を設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルを更新する場合は、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。
+
+* アラートの送信元 E メールアドレスを設定する必要があります。
+* アラートの送信先となる E メールアドレスは 1 つまたは複数入力する必要があります。
++
+複数のアドレスをカンマで区切って指定できます。カンマと次の E メールアドレスの間にスペースを入れないようにしてください。必要に応じて、 E メールに件名を追加することもできます。
+
++
+
+NOTE: 一連の複数の E メールアドレスを二重引用符で囲む必要があります。
+
++
+.. 次のコマンドを入力します。 smo profile update-profileprofile [-profile-passwordprofile-password] [-datab_dbname -host[-sidb_host[-siddb_host] [-siddleb_usernamedb_username -password-port db_port] [{-count_addresserdan_addressm-drman [-drman] [--password-password-count[-drman [-drman] [-drman] [--password-password] [-drman[--password] [-drman [--password] [-drman [--password] [--st_address_address_address_address_addressm -password] [--password] [-drman [--st_address_address_addressm [--password] [-drman] [--password] [-drman [-drman [--password] [-drman [--password] [-drman [--st_addressm -password] -password] [--password] [--password] [--password] [--password] [--password] [--atime-mail-reta[-drman [-drman [-drman [
++
+success オプションを使用すると、成功したデータベース処理についてのみ通知が受信され、失敗したデータベース処理についてのみ通知が受信されます。
+
+
+
+

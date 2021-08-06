@@ -1,0 +1,9 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+---
+= Oracle 用 SnapManager 3.4.2
+
+
+[role="lead"]
+SnapManager for Oracle の情報ライブラリへようこそ。ここでは、 Data ONTAP 3.4.2 for Oracle に関する、 clustered Data ONTAP および SnapManager 7-Mode 向けのソフトウェアのセットアップ、管理、設定方法などの情報を提供しています。

@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html 
+sidebar: sidebar 
+keywords: view, detail, history, specific, snapmanager, operation, associate, profile, smo 
+summary: プロファイルに関連付けられた特定の SnapManager 処理の詳細な履歴を表示できます。 
+---
+= プロファイルに関連付けられている特定の処理の詳細履歴を表示する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルに関連付けられた特定の SnapManager 処理の詳細な履歴を表示できます。
+
+. プロファイルに関連付けられた特定の SnapManager 処理に関する詳細な履歴情報を表示するには、次のコマンドを入力します。「 mo history operation -show-profileprofile_name ｛ -labellabel | -idID ｝ [-quiet | -verbose 」
+

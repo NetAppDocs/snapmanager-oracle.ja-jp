@@ -1,0 +1,92 @@
+---
+permalink: unix-administration/reference_the_smosmsap_repository_rollingupgrade.html 
+sidebar: sidebar 
+keywords: command, perform, rolling, upgrade, single, multiple, host, associated, target, database, lovwer, version, snapmanager 
+summary: このコマンドは、単一のホストまたは複数のホスト、および関連するターゲットデータベースを下位バージョンの SnapManager から上位バージョンへローリングアップグレードします。アップグレードされたホストは、上位バージョンの SnapManager でのみ管理されます。 
+---
+= smo repository rolling upgrade コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、単一のホストまたは複数のホスト、および関連するターゲットデータベースを下位バージョンの SnapManager から上位バージョンへローリングアップグレードします。アップグレードされたホストは、上位バージョンの SnapManager でのみ管理されます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo repository rollingupgrade
+-repository
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+-port repo_port
+-upgradehost host_with_target_database
+[-force] [-noprompt]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - リポジトリ *
++
+repository のあとに続くオプションは、リポジトリに対応するデータベースの詳細を指定します。
+
+* * -dbname repo_service_name *
++
+リポジトリが格納されたデータベースの名前を指定します。グローバル名または SID を使用します。
+
+* * -host repo_host *
++
+リポジトリ・データベースが稼働しているホスト・コンピュータの名前または IP アドレスを指定します。
+
+* * - ログイン *
++
+リポジトリ・ログインの詳細設定を開始します。
+
+* * -username repo_username *
++
+リポジトリが格納されたデータベースにアクセスするために必要なユーザ名を指定します。
+
+* * - ホスト host_with _target_database * をアップグレードしています
++
+SnapManager の下位バージョンから上位バージョンにアップグレードするホストの名前を指定します。
+
+* * -port repo_port *
++
+リポジトリが格納されたデータベースへのアクセスに使用する TCP ポート番号を指定します。
+
+* * -force *
++
+リポジトリを強制的に更新しようとします。更新前に、現在のリポジトリのバックアップを作成するように要求されます。 SnapManager
+
+* * -noprompt *
++
+は、リポジトリデータベースを更新する前にプロンプトを表示しません。noprompt オプションを使用するとプロンプトが表示されないため、スクリプトを使用したリポジトリの更新が容易になります。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンドの例
+
+次に、データベース SALESDB 内のリポジトリを更新する例を示します。
+
+[listing]
+----
+smo repository rollingupgrade -repository -dbname SALESDB
+-host server1 -login -username admin -port 1521 -upgradehost hostA
+----

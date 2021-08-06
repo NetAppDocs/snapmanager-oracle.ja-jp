@@ -1,0 +1,54 @@
+---
+permalink: unix-administration/task_restoring_backups_using_fast_restore.html 
+sidebar: sidebar 
+keywords: force, snapmanager, oracle, volume-based, snaprestore, restore, process 
+summary: SnapRestore for Oracle では、必須の高速リストアの条件がすべて満たされていれば、他のリストアプロセスではなくボリュームベースの SnapManager プロセスを強制的に使用できます。 
+---
+= 高速リストアを使用したバックアップのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapRestore for Oracle では、必須の高速リストアの条件がすべて満たされていれば、他のリストアプロセスではなくボリュームベースの SnapManager プロセスを強制的に使用できます。
+
+backup restore コマンドに -ffast:'backup restore -ffast[require|override|fallback|off]' を指定して使用できます
+
+fast オプションは、フル・バックアップの完全なリストアを実行する場合にのみ使用できます。fast オプションには、次のパラメータが含まれています。
+
+* Require ：必須のリストア資格条件がすべて満たされ、オーバーライド可能なチェックが見つからなかった場合に、ボリュームのリストアを実行できます。
++
+fast オプションを指定した場合、 -fast パラメータを指定しないと、 SnapManager では -require パラメータをデフォルトとして使用します。
+
+* override ：必須でない適格性チェックを無視し、ボリュームベースの高速リストアを実行できます。
+* フォールバック： SnapManager で決定された任意の方法を使用してデータベースをリストアできます。
++
+fast を指定しない場合、 SnapManager ではデフォルトで -fallback パラメータが使用されます。
+
+* off ：高速リストア処理ではなく、ファイルベースのリストア処理を実行する場合に、資格チェックの実行に要する時間を短縮できます。
+
+
+バックアップが必須の適格性チェックに合格しなかった場合、高速リストアは正常に完了できません。
+
+SnapManager では、 UNIX ベースの環境でのみボリューム・ベースの高速リストアが実行されます。 Windows 環境では、高速リストアは実行されません。 SnapManager
+
+VBSR でデータファイルのバックアップを実行する際には、データファイルとアーカイブログファイルが同じボリュームに存在し、アクティブファイルシステムにアーカイブログファイルが存在しない場合は、データベースのリストアとリカバリが成功します。ただし、 VBSR では今後のアーカイブログの Snapshot が削除され、リポジトリ内のアーカイブログバックアップのエントリが古くなります。
+
+. 次のコマンドを入力します。 smo backup restore -profile profile_name -labellabel -complete -ffast require-verbose
++
+[listing]
+----
+smo backup restore -profile targetdb1_prof1
+      -label full_bkup_sales_nov_08  -complete -fast require -verbose
+----
+. 高速リストアの適格性チェックを確認します。
+. 資格チェックで、必須チェックが失敗していないことが確認された場合、特定の条件が無視可能であることが確認され、リストアプロセスを続行する場合は、 backup restore-fast override コマンドを入力します
+
+
+* 関連情報 *
+
+xref:task_creating_pretask_post_task_and_policy_scripts.adoc[プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成]
+
+xref:concept_variables_available_in_custom_script_for_restore_operation.adoc[リストア処理のタスクスクリプトで使用できる変数]
+
+xref:task_storing_the_task_scripts.adoc[タスクスクリプトの保存]

@@ -1,0 +1,16 @@
+---
+permalink: windows/task_adding_existing_profile_to_summary_notification.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, exist, profile, summary, email, notification, updating 
+summary: SnapManager を使用すると、既存のプロファイルを概要 E メール通知に追加し、そのプロファイルを更新できます。 
+---
+= サマリー E メール通知に既存のプロファイルを追加する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager を使用すると、既存のプロファイルを概要 E メール通知に追加し、そのプロファイルを更新できます。
+
+. 次のコマンドを入力します。 smo profile update-profileprofileprofileprofileprofileprofile_name [-profile-password-dberepo_service_name -hostrepppo_host-portnamerepo_username -dbnamedb_dbdb_name-host[-siddb_hosts-drdb_host] -password-drst全般 [-drumm-drorman [-drergy-password-durationdbname -password] -duration[-drman [-drman [--password-password] -usernamedb_password] -username -passwordname -adminb -password-drdb [-drman [-drman [-drum] -password-adminb -admin] -adminb -adminb -username -password-drman [-drman [-drman [-drman [-drman [-drman [-drman [-drman [-drman [-drman [--password] -password] -password] -password] -password] -password] -password] -passwordn -passwordn [--staname -passwordn [--sto -
+

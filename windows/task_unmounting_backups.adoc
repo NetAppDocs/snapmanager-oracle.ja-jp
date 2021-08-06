@@ -1,0 +1,22 @@
+---
+permalink: windows/task_unmounting_backups.html 
+sidebar: sidebar 
+keywords: snapmanager, automatic, unmount, backup, unavailable, host, server, remove, access 
+summary: SnapManager は、バックアップを自動的にアンマウントして、ホストサーバで使用できないようにします。SnapManager では、 Oracle Recovery Manager （ RMAN ）などの外部ツールを使用してバックアップ内のファイルにアクセスしたり、バックアップの状態を変更してアクセスを切断したりすることもできます。 
+---
+= バックアップのアンマウント
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager は、バックアップを自動的にアンマウントして、ホストサーバで使用できないようにします。SnapManager では、 Oracle Recovery Manager （ RMAN ）などの外部ツールを使用してバックアップ内のファイルにアクセスしたり、バックアップの状態を変更してアクセスを切断したりすることもできます。
+
+バックアップのアンマウント処理が成功した場合や失敗した場合に、ダンプファイルを収集することもできます。
+
+. 次のコマンドを入力します。 smo backup unmount -profile profile_name ｛ labelabel [data | -archivelogs] | -idID ｝ [-quiet | -verbose
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_unmount_command.adoc[smo backup unmount コマンドを使用します]

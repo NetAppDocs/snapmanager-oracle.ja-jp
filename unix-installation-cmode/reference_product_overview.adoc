@@ -1,0 +1,45 @@
+---
+permalink: unix-installation-cmode/reference_product_overview.html 
+sidebar: sidebar 
+keywords: snapmanager, oracle, automate, simplifies, complex, manual, time-consuming, process, associate, backup, recovery, clone, ontap, snapvault, disk, rac 
+summary: SnapManager for Oracle を使用すると、 Oracle データベースのバックアップ、リカバリ、クローニングに関連する、複雑で時間のかかる手動プロセスを自動化して簡易化できます。SnapManager と Data ONTAP の SnapMirror テクノロジを使用すると、別のボリュームにバックアップのコピーを作成できます。また、 Data ONTAP SnapVault テクノロジを使用すると、効率的にバックアップをディスクにアーカイブできます。 
+---
+= 製品の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle を使用すると、 Oracle データベースのバックアップ、リカバリ、クローニングに関連する、複雑で時間のかかる手動プロセスを自動化して簡易化できます。SnapManager と Data ONTAP の SnapMirror テクノロジを使用すると、別のボリュームにバックアップのコピーを作成できます。また、 Data ONTAP SnapVault テクノロジを使用すると、効率的にバックアップをディスクにアーカイブできます。
+
+SnapManager は、 Oracle Real Application Clusters （ Oracle RAC ）、 Automatic Storage Management （ ASM ）、 Direct NFS などのネイティブな Oracle テクノロジと FC 、 iSCSI 、 NFS の各プロトコルで統合されます。必要に応じて、 SnapManager を使用して作成されたバックアップを Oracle Recovery Manager （ RMAN ）でカタログ化することで、バックアップ情報を保持できます。これらのバックアップは、あとでブロックレベルのリストア処理または表領域のポイントインタイムリカバリ処理で使用できます。
+
+
+
+== SnapManager の特長
+
+SnapManager は、 UNIX ホスト上の Oracle データベースと、バックエンドのネットアップの Snapshot 、 SnapRestore 、および FlexClone テクノロジとのシームレスな統合を実現します使いやすいユーザインターフェイス（ UI ）と、管理機能用のコマンドラインインターフェイス（ CLI ）が用意されています。
+
+SnapManager では、次のデータベース処理を実行し、データを効率的に管理できます。
+
+* プライマリストレージまたはセカンダリストレージにスペース効率に優れたバックアップを作成する
++
+SnapManager では、データファイルとアーカイブログファイルを個別にバックアップできます。
+
+* バックアップのスケジュール設定
+* ファイルベースまたはボリュームベースのリストア処理を使用した、データベース全体またはデータベースの一部のリストア
+* バックアップからアーカイブログファイルを検出、マウント、および適用してデータベースをリカバリする
+* アーカイブログだけのバックアップを作成する場合に、アーカイブログデスティネーションからアーカイブログファイルを削除する
+* 一意のアーカイブログファイルを含むバックアップのみが保持されるため、アーカイブログバックアップの数を最小限に抑えることができます
+* 処理の詳細を追跡し、レポートを生成します
+* バックアップを有効なブロック形式で検証し、バックアップファイルが破損していないことを確認します
+* データベースプロファイルで実行された操作の履歴を保持します
++
+プロファイルには、 SnapManager で管理するデータベースの情報が含まれています。
+
+* セカンダリストレージシステム上のバックアップの保護
+* プライマリストレージまたはセカンダリストレージに、スペース効率に優れたバックアップのクローンを作成する
++
+SnapManager では、データベースのクローンをスプリットできます。
+
+

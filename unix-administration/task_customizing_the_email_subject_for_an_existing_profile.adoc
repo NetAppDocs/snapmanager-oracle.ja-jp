@@ -1,0 +1,25 @@
+---
+permalink: unix-administration/task_customizing_the_email_subject_for_an_existing_profile.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, customize, email, subject, pattern, exist, profile, smo 
+summary: SnapManager では、既存のプロファイルを更新することで、そのプロファイルの E メールの件名のパターンをカスタマイズできます。このカスタマイズされた件名パターンは、更新されたプロファイルにのみ適用されます。 
+---
+= 既存のプロファイルの電子メールの件名をカスタマイズする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager では、既存のプロファイルを更新することで、そのプロファイルの E メールの件名のパターンをカスタマイズできます。このカスタマイズされた件名パターンは、更新されたプロファイルにのみ適用されます。
+
+. 次のコマンドを入力します。 smo profile update-profileprofile [-profile-passwordprofile-password] [-database -db_dbdbname -host[-sidb_host] [-siddleb_host] [-sidb_username -password db_password-port db_port] [{-count_password-count_addressstay.atrman [-dran-password-password-password-retain-nodir_addressm [--password] [--password-password] [--password-reta[--password-password] [stanどれ すウチ [--password] [--password] [--stanどれ すウチ [--password] [--password-password-password-password-password-password] [--stanどれ す ～ stanどれ す ～ stanどれ す ～ stanどれ す ～ stanどれ す ～ stanどれ す ～ stどれ す ～ stどれ す ～ stanどれ す ～ stanどれ す ～ stどれ すぷれんどれすぷれんどれすぷろっどれすぷろっどれすぷろっどれすぷろっどれすぷろっどれす ] -password] -password] -password] -password] -
+
+
+次の例は、 E メールの件名のパターンを示しています。
+
+[listing]
+----
+
+smo profile update -profile sales1 -profile-password sales1 -repository -dbname repo2 -host 10.72.197.133 -port 1521 -login -username admin2 -database -dbname DB1 -host 10.72.197.142 -sid DB1
+-osaccount oracle -osgroup dba -profile-notification -success -email admin@org.com -subject {profile}_{operation-name}_{db-sid}_{db-host}_{start-date}_{end-date}_{status}
+----

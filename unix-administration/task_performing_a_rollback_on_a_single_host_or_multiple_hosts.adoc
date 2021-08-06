@@ -1,0 +1,65 @@
+---
+permalink: unix-administration/task_performing_a_rollback_on_a_single_host_or_multiple_hosts.html 
+sidebar: sidebar 
+keywords: perform, rollback, single, multiple, snapmanager, server, host, command-line, interface, cli 
+summary: コマンドラインインターフェイス \ （ CLI\ ）を使用して、 1 つまたは複数の SnapManager サーバホストでロールバックを実行できます。 
+---
+= 単一のホストまたは複数のホストでロールバックを実行する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+コマンドラインインターフェイス（ CLI ）を使用して、 1 つまたは複数の SnapManager サーバホストでロールバックを実行できます。
+
+ロールバックを実行するためのすべての前提条件が完了していることを確認する必要があります。
+
+. 単一のホストでロールバックを実行するには、次のコマンドを入力します。 'ソ リポジトリロールバック -repository -dbnamerepo_service_name -hostreppo_host-login -usernamerepo_username -portrepo_rollbackhosthost_with_target_database
++
+次の例は、 hostA にマウントされているすべてのターゲットデータベース、およびリポジトリホスト repo_host に格納されている repoA という名前のリポジトリデータベースをロールバックするコマンドを示しています。
+
++
+[listing]
+----
+
+smo repository rollback
+    -repository
+      -dbname repoA
+      -host repo_host
+      -login
+       -username repouser
+       -port 1521
+     -rollbackhost hostA
+----
+. 複数のホストでロールバックを実行するには、次のコマンドを入力します。 smorepository rollback-repository -dberepo_service_name -hostpo_host -login -usernamerepo_username -portrepo_rollbackhosthost_with_target_database2 、 host_with_target_database2
++
+
+NOTE: 複数のホストの場合は、ホスト名をカンマで区切って入力し、カンマと次のホスト名の間にスペースが入れられていないことを確認します。
+
++
+Real Application Clusters （ RAC ）構成を使用している場合は、 RAC に関連付けられたすべてのホストを手動でロールバックする必要があります。allhosts を使用すると、すべてのホストのロールバックを実行できます。
+
++
+次に、ホスト hostA 、 hostB 、およびリポジトリホスト repo_host に格納されている repoA という名前のリポジトリデータベースにマウントされているすべてのターゲットデータベースをロールバックするコマンドの例を示します。
+
++
+[listing]
+----
+
+smo repository rollback
+    -repository
+      -dbname repoA
+      -host repo_host
+      -login
+       -username repouser
+       -port 1521
+     -rollbackhost hostA,hostB
+----
++
+ホストのターゲットデータベースのプロファイルに関連付けられているホスト、プロファイル、スケジュール、バックアップ、およびクローンが、以前のリポジトリにリバートされます。
+
+
+
+* 関連情報 *
+
+xref:concept_prerequisites_for_performing_a_rollback.adoc[ロールバックを実行するための前提条件]

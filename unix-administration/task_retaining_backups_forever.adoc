@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_retaining_backups_forever.html 
+sidebar: sidebar 
+keywords: specify, backup, ineligible, deletion, retention, policy, indefinite, unlimited, basis, smo 
+summary: バックアップを無期限に保持するには、保持ポリシーの削除対象外にするように指定します。 
+---
+= バックアップを無期限に保持
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップを無期限に保持するには、保持ポリシーの削除対象外にするように指定します。
+
+. バックアップを無制限に保持するように指定するには、次のコマンドを入力します。 `mo backup update -profile profile_name {-labellabel[data|-archives]|-idID}-retain-unlimited`
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_update_command.adoc[smo backup update コマンド]

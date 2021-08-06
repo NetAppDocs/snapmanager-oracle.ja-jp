@@ -1,0 +1,25 @@
+---
+permalink: windows/reference_unable_to_restore_rac_database_from_rac_node_where_the_profile_was_not_created.html 
+sidebar: sidebar 
+keywords: oracle, rac, environment, node, cluster, database, fail 
+summary: 両方のノードが同じクラスタに属する Oracle RAC 環境で、バックアップが作成されたノードとは異なるノードからリストア処理を実行しようとすると、リストア処理に失敗します。 
+---
+= プロファイルが作成されていない RAC ノードの 1 つから RAC データベースをリストアできません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+両方のノードが同じクラスタに属する Oracle RAC 環境で、バックアップが作成されたノードとは異なるノードからリストア処理を実行しようとすると、リストア処理に失敗します。
+
+たとえば、ノード A でバックアップを作成してノード B からリストアしようとすると、リストア処理は失敗します。
+
+* するべきこと *
+
+ノード B からリストア処理を実行する前に、ノード B で次の作業を行います。
+
+. リポジトリを追加します。
+. smo profile sync コマンドを実行して、プロファイルを同期します。
+. smo credential set コマンドを実行して、リストア処理に使用するプロファイルのクレデンシャルを設定します。
+. smo profile update コマンドを実行して、プロファイルを更新し、新しいホスト名および対応する SID を追加します。
+

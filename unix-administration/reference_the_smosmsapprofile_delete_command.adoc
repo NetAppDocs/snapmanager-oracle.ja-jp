@@ -1,0 +1,57 @@
+---
+permalink: unix-administration/reference_the_smosmsapprofile_delete_command.html 
+sidebar: sidebar 
+keywords: run, profile, delete, command, database, smo 
+summary: profile delete コマンドを実行して、データベースのプロファイルを削除できます。 
+---
+= smo profile delete コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+profile delete コマンドを実行して、データベースのプロファイルを削除できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo profile delete
+-profile profile
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+削除するプロファイルを指定します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次に、プロファイルを削除する例を示します。
+
+[listing]
+----
+smo profile delete -profile SALES1
+Operation Id [Ncaf00af0242b3e8dba5c68a57a5ae932] succeeded.
+----
+* 関連情報 *
+
+xref:task_deleting_profiles.adoc[プロファイルの削除]

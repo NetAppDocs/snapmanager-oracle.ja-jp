@@ -1,0 +1,88 @@
+---
+permalink: windows/reference_the_smosmsapbackup_update_command.html 
+sidebar: sidebar 
+keywords: run, backup, update, command, retention, policy, smo 
+summary: バックアップ保持ポリシーは、 backup update コマンドを実行して更新できます。 
+---
+= smo backup update コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップ保持ポリシーは、 backup update コマンドを実行して更新できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo backup update
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id guid\]
+\[-retain \{-hourly \| -daily \| -weekly \| -monthly \| -unlimited\}\]
+\[-comment comment_text\]
+[-quiet | -verbose]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+バックアップを更新するプロファイルを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* *-id GUID*
++
+指定した GUID を持つバックアップを検証します。GUID はバックアップを作成するときに SnapManager によって生成されます。各バックアップの GUID を表示する場合は、 smo backup list コマンドを使用します。
+
+* * - ラベルラベル *
++
+バックアップのラベルと範囲をデータファイルまたはアーカイブログとして指定します。
+
+* *-data*
++
+データファイルを指定します。
+
+* *-archivelogs*
++
+アーカイブログファイルを指定します。
+
+* * -comment comment_text *
++
+バックアップの更新に関するテキスト（最大 200 文字）を入力します。スペースを含めることができます。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+* * - ｛ -hourly | -daily | -weekly | -monthly | -unlimited ｝ * を保持できます
++
+バックアップを時間単位、日単位、週単位、月単位、または無制限単位で保持するかどうかを指定します。retain を指定しない場合、保持クラスはデフォルトで -hourly に設定されます。バックアップを無期限に保持するには、 -unlimited オプションを使用します。unlimited オプションを指定すると、バックアップは削除できなくなります。
+
+
+
+
+
+== 例
+
+次の例では、バックアップを更新して保持ポリシーを unlimited に設定しています。
+
+[listing]
+----
+smo backup update -profile SALES1 -label full_backup_sales_May
+-retain -unlimited -comment save_forever_monthly_backup
+----
+* 関連情報 *
+
+xref:task_changing_the_backup_retention_policy.adoc[バックアップ保持ポリシーを変更する]
+
+xref:task_retaining_backups_forever.adoc[バックアップを無期限に保持]
+
+xref:task_freeing_or_deleting_retention_policy_exempt_backups.adoc[保持ポリシー適用除外バックアップの解放または削除]

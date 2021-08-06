@@ -1,0 +1,40 @@
+---
+permalink: unix-administration/task_splitting_a_clone_on_a_primary_or_secondary_storage.html 
+sidebar: sidebar 
+keywords: clone, split, command, complete, metadata, repository, primary, secondary 
+summary: clone split コマンドを使用すると、クローンをスプリットできます。クローンスプリットが完了すると、クローンメタデータはリポジトリデータベースから削除され、クローンに関連付けられているバックアップは削除または解放できます。 
+---
+= プライマリストレージまたはセカンダリストレージ上のクローンをスプリットする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+clone split コマンドを使用すると、クローンをスプリットできます。クローンスプリットが完了すると、クローンメタデータはリポジトリデータベースから削除され、クローンに関連付けられているバックアップは削除または解放できます。
+
+スプリット処理の成功後に作成された新しいプロファイルを使用して、スプリットクローンが管理されます。新しいプロファイルは、 SnapManager 内の他の既存のプロファイルと同様に作成されます。このプロファイルを使用して、バックアップ、リストア、およびクローニングの処理を実行できます。
+
+また、新しいプロファイルに E メール通知を設定することもできます。これにより、データベース管理者に、プロファイルを使用して実行されたデータベース処理のステータスを通知できます。
+
+
+NOTE: SnapManager でスプリット処理がサポートされるのは、 FlexClone で実行した場合のみです。
+
+スプリット処理が失敗した場合は、エラーの理由を示す適切なエラーメッセージが表示されます。複数の処理のステータスは、処理ログにも表示されます。例：
+
+[listing]
+----
+--[ INFO] The following operations were completed:
+Clone Split : Success
+Profile Create : Failed
+Clone Detach : Success
+----
+クローンスプリット処理の成功または失敗後にダンプファイルを収集することもできます。
+
+
+NOTE: clone split コマンドを入力したあとに、クローンスプリット処理が開始されるまで SnapManager サーバを停止しないでください。
+
+
+NOTE: SnapManager アカウント（ osaccount および osgroup ）に値を指定しなくても、プロファイルが生成されます。
+
+. 次のコマンドを入力します。 smo clone split-profilecdl-profile-hosdosthostname [-labelclone-label | -idclone-idclone-operation -labelsplit-commentnew-fenew-profile-profile-profile-profilenew-profile-password-dbnamerepername-hostname-hostname -usernamersdeldbname -hostname -hostname -hostdbandername -usernamedname -hostname -usernamedname -hostname -hostname -usernamedname -username -hostname -hostname -username -username -username -hostname -usernamedname -username -username -hostname -hostname -username -username -hostname -hostname -hostname -hostname -username -adminb -adminb -username -username -username -username -username -hostname -username -username -username -username -username -username -username -username -username -username -username -username -username -username -username -username -username -username -username -
+

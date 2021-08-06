@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/task_viewing_status_of_clone_split_process.html 
+sidebar: sidebar 
+keywords: view, progress, split, process, start, smo 
+summary: 開始したスプリットプロセスの進行状況を表示できます。 
+---
+= クローンスプリットプロセスのステータスを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+開始したスプリットプロセスの進行状況を表示できます。
+
+. クローンスプリット処理の進捗状況を表示するには、次のコマンドを入力します。 `mo clone split-status-profile [-hoshostname] [-labelsplit-label | -idsplit-id] [-quiet | -verbose
+
+
+[listing]
+----
+smo clone split-status -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
+----

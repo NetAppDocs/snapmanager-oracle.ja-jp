@@ -1,0 +1,88 @@
+---
+permalink: windows/task_customizing_e_mail_subject_for_a_new_profile.html 
+sidebar: sidebar 
+keywords: customize, email, subject, new, profile, create, customizing 
+summary: 新しいプロファイルを作成するときに、そのプロファイルの電子メールの件名をカスタマイズできます。 
+---
+= 新しいプロファイルの電子メールの件名をカスタマイズする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しいプロファイルを作成するときに、そのプロファイルの電子メールの件名をカスタマイズできます。
+
+E メールの件名は、 \｛ profile ｝ _\ ｛ operation-name ｝ _\ ｛ db-sid ｝ _\ ｛ db-host｝ _\ ｛ start-date ｝ _\ ｛ end-date ｝ _\ ｛ status ｝ パターンを使用してカスタマイズするか、独自のテキストを入力してください。
+
+|===
+
+
+| 変数名 | 説明 | 値の例 
+
+
+ a| 
+プロファイル（ Profile ）
+ a| 
+データベース処理に使用するプロファイル名
+ a| 
+PROF1 （プロ F1 ）
+
+
+
+ a| 
+処理名
+ a| 
+データベース処理の名前
+ a| 
+バックアップ、データバックアップ、データおよびアーカイブログのバックアップ
+
+
+
+ a| 
+db-sid
+ a| 
+データベースの SID
+ a| 
+DB1
+
+
+
+ a| 
+DB ホスト
+ a| 
+ホスト・サーバの名前
+ a| 
+ホスト A
+
+
+
+ a| 
+開始日
+ a| 
+データベース操作の開始時刻を mmdd ： hh ： ss yyyy 形式で指定します
+ a| 
+2012 年 4 月 27 日 21 ： 00 ： 45 PST
+
+
+
+ a| 
+終了日
+ a| 
+データベース操作の終了時刻を mmdd ： hh ： ss yyyy 形式で指定します
+ a| 
+2012 年 4 月 27 日 21 ： 10 ： 45 （太平洋標準時
+
+
+
+ a| 
+ステータス
+ a| 
+データベース処理のステータス
+ a| 
+成功
+
+|===
+変数に値を指定しないと、「 Missing value （ s ） -subject 」というエラーメッセージが SnapManager に表示されます。
+
+. 次のコマンドを入力します。 smo profile create -profile profileprofileprofile[-profile-password-passwordprofile_password] -repository -dberepo_service_name -hostreppo_host-portrepo_username -usernamedb_dbname -host[-siddb_host] -password-durerman [-drname -password-aterman [-drname -password] -password-drst_addressm [-drain [-drname -password] -atername -passwordname -atleman [-drname -password] -atleman [-drman [-drman [--password] -password] -atername -atername -atername -atername -atername -password] -passwordn [-drman [-drman [-drname -password] -password] -passwordn [-drst_addressm -passwordn [-drsto [-drman [--passwordn [--password] -password] -passwordn [-drname -passwordn [-drman [--password] -passwordn [-drname -passwordn [-drname -passwordn [-dr
+

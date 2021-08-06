@@ -1,0 +1,31 @@
+---
+permalink: unix-administration/concept_support_for_asm_databases_without_asmlib.html 
+sidebar: sidebar 
+keywords: snapmanager, asm, asmlib, requirement, asm, disk, group, primary, storage, vbsr, secondary 
+summary: SnapManager は、 ASMLib のない ASM をデフォルトでサポートします。基本的な要件として、 ASM ディスクグループに使用するデバイスはパーティショニングする必要があります。 
+---
+= ASMLib のない ASM データベースのサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager は、 ASMLib のない ASM をデフォルトでサポートします。基本的な要件として、 ASM ディスクグループに使用するデバイスはパーティショニングする必要があります。
+
+ASMLib がインストールされていない場合、次の操作を実行すると、 ASM ディスクグループに関連するデバイス許可が root:disk に変更されます。
+
+* ホストを再起動します
+* Volume-Based SnapRestore （ VBSR ）を使用してプライマリストレージからデータベースをリストアする
+* セカンダリストレージからデータベースをリストアする
+
+
+適切なデバイス権限を設定するには、 smo .conf の oracleasm.support.without .asmlib 構成変数に true を割り当てますASM ディスクグループに関連するデバイスは、新しいデバイスがホストに追加されたりホストから削除されたりするたびに、 initasmdisks ファイルに追加または削除されます。initasmdisks ファイルは /etc/initasmdisks にあります。
+
+たとえば、 oracleasm.support.without .asmlib=true を設定してバックアップマウントを実行すると、新しいデバイスが initasmdisks に追加されます。ホストが再起動されると、デバイスの権限と所有権はスタートアップスクリプトによって維持されます。
+
+
+NOTE: oracleasm.support.without .asmlib のデフォルト値は false です
+
+* 関連情報 *
+
+xref:reference_supported_partition_devices.adoc[サポートされているパーティションデバイス]

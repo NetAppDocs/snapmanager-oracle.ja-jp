@@ -1,0 +1,68 @@
+---
+permalink: unix-administration/reference_the_smosmsapclone_template_command.html 
+sidebar: sidebar 
+keywords: command, create, clone, specification, template, smo 
+summary: このコマンドを使用すると、クローン仕様テンプレートを作成できます。 
+---
+= smo clone template コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドを使用すると、クローン仕様テンプレートを作成できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo clone template
+-profile name
+\[-backup-id guid  \| -backup-label backup_name\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - プロファイル名 *
++
+クローン仕様を作成するデータベースを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * -backup-id GUID*
++
+指定した GUID を持つバックアップからクローン仕様を作成します。GUID はバックアップを作成するときに SnapManager によって生成されます。各バックアップの GUID を表示する場合は、 smo backup list コマンドを使用します。
+
+* * -backup-label backup_label_name *
++
+指定したバックアップ・ラベルを持つバックアップからクローン仕様を作成します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンドの例
+
+次に、 full_backup_sales_May というラベルのバックアップからクローン仕様テンプレートを作成する例を示します。smo clone template コマンドが完了すると、クローン仕様テンプレートががが完成します。
+
+[listing]
+----
+smo clone template -profile SALES1 -backup-label full_backup_sales_May
+Operation Id [8abc01ec0e79004b010e79006da60001] succeeded.
+----
+* 関連情報 *
+
+xref:task_creating_clone_specifications.adoc[クローン仕様を作成しています]
+
+xref:task_cloning_databases_from_backups.adoc[バックアップからデータベースをクローニングする]

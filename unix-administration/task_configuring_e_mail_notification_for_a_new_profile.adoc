@@ -1,0 +1,59 @@
+---
+permalink: unix-administration/task_configuring_e_mail_notification_for_a_new_profile.html 
+sidebar: sidebar 
+keywords: creating, new, profile, configure, receive, email, notification, completeion, database, operation, comma-seperated, list, multiple, address 
+summary: 新しいプロファイルを作成する場合、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。 
+---
+= 新しいプロファイルの E メール通知を設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しいプロファイルを作成する場合、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。
+
+* アラートの送信元 E メールアドレスを設定する必要があります。
+* 複数の E メールアドレスを指定する場合は、カンマで区切って指定する必要があります。
++
+カンマと次の E メールアドレスの間にスペースを入れないようにしてください。
+
++
+.. 次のコマンドを入力します。 smo profile create -profile profile[-profile-passwordprofile-password-dbnamerepo_service_name -hostreppo_host-portrepo_username -usernamerepo_username-database -dbname -hostdbnamedb_desdb_ host [-siddb_host [-sdbreidb_host] -password-durationdbname -duration[-drdbname -passwordname -username -adminb -admin] -adminb -< -< -< -< -username -username -username -username -username -username -username -username -username -username -username -username -adminb -username -username -username -< -< オプション > -< オプション > -< オプション > -username -< オプション > -username -username -username -< オプション > -username -username -< オプション > -< オプション > -username -username -username -username -username -username -username -username -< オプション > -< オプション > -username -< オプション > -username -< オプション
++
+このコマンドの他のオプションは、次のとおりです。
+
++
+[-force]
+
++
+
+NOTE: SnapManager では、 E メールアドレスが最大 1000 文字までサポートされます。
+
++
+プロファイルを使用して（アーカイブログの個別バックアップを作成するために）データファイルとアーカイブログファイルのバックアップを作成し、データファイルのバックアップの作成に失敗した場合は、データバックアップとアーカイブログのバックアップではなく、処理名としてデータバックアップが送信されます。データファイルおよびアーカイブログファイルのバックアップ処理が成功すると、出力は次のようになります。
+
++
+[listing]
+----
+
+Profile Name    : PROF_31
+Operation Name 	: Data Backup and Archive Logs Backup
+Database SID   	: TENDB1
+Database Host 	 : repo1.rtp.org.com
+Start Date 	    : Fri Sep 23 13:37:21 EDT 2011
+End Date 	      : Fri Sep 23 13:45:24 EDT 2011
+Status 	        : SUCCESS
+Error messages 	:
+----
+
+
+
+
+次の例は、新しいプロファイルの作成時に設定された E メール通知を表示します。
+
+[listing]
+----
+
+smo profile create -profile sales1 -profile-password sales1 -repository -dbname repo2 -host 10.72.197.133 -port 1521 -login -username oba5 -database -dbname DB1 -host 10.72.197.142 -sid DB1 -osaccount oracle
+-osgroup dba -notification -success -email admin1@org.com -subject {profile}_{operation-name}_{db-sid}_{db-host}_{start-date}_{end-date}_{status}
+----

@@ -1,0 +1,80 @@
+---
+permalink: unix-installation-7mode/task_configuring_the_snapmanager_repository.html 
+sidebar: sidebar 
+keywords: configure, snapmanager, repository, database, instance, manage, user, interface, ui, command-line, interface, cli 
+summary: リポジトリデータベースインスタンスに SnapManager リポジトリを設定する必要があります。リポジトリデータベースには、 SnapManager で管理されているデータベースのメタデータが格納されます。 
+---
+= SnapManager リポジトリの設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リポジトリデータベースインスタンスに SnapManager リポジトリを設定する必要があります。リポジトリデータベースには、 SnapManager で管理されているデータベースのメタデータが格納されます。
+
+* リポジトリデータベースのインスタンスを作成しておく必要があります。
+* 必要な権限を持つリポジトリデータベースインスタンスの Oracle ユーザを作成しておく必要があります。
+* リポジトリデータベースインスタンスの詳細を tnsnames.ora ファイルに含める必要があります。
+
+
+SnapManager リポジトリの設定は、 SnapManager のユーザインターフェイス（ UI ）またはコマンドラインインターフェイス（ CLI ）で行うことができます。以下の手順では、 SnapManager UI を使用してリポジトリを作成する方法を示します。必要に応じて、 CLI を使用することもできます。
+
+CLI を使用してリポジトリを作成する方法については、『 SnapManager for Oracle アドミニストレーションガイド UNIX_ 』を参照してください。
+
+. SnapManager UI の左ペインで、 * リポジトリ * を右クリックします。
+. [ 新しいリポジトリの作成 ] を選択し、 [ 次へ ] をクリックします。
+. [Repository Database Configuration Information] ウィンドウで、次の情報を入力します。
++
+|===
+| フィールド | 手順 
+
+
+ a| 
+* ユーザー名 *
+ a| 
+リポジトリデータベースインスタンス用に作成したユーザの名前を入力します。
+
+
+
+ a| 
+* パスワード *
+ a| 
+パスワードを入力します。
+
+
+
+ a| 
+* ホスト *
+ a| 
+リポジトリデータベースインスタンスを作成するホストの IP アドレスを入力します。
+
+
+
+ a| 
+* ポート *
+ a| 
+リポジトリデータベースインスタンスへの接続に使用するポートを入力します。デフォルトのポートは 1521 です。
+
+
+
+ a| 
+* サービス名 *
+ a| 
+SnapManager がリポジトリデータベースインスタンスへの接続に使用する名前を入力します。tnsnames.ora ファイルに含まれている詳細に応じて、これは短いサービス名または完全修飾サービス名になります。
+
+[+]
+
+|===
+. Perform Repository Add Operation （リポジトリ追加操作の実行）ウィンドウで、設定の概要を確認し、 * Add * （追加）をクリックします。
++
+処理が失敗した場合は、 * Operation Details * タブをクリックして、処理が失敗した原因を確認します。エラーの詳細は、 /var/log/smo にある処理ログにも記録されます。
+
+. [ 完了 ] をクリックします。
++
+リポジトリは左側のペインの *Repositories* ツリーの下に一覧表示されますリポジトリが表示されない場合は '[*Repositories*] を右クリックし '[*Refresh*] をクリックします
+
+
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12471546["『 SnapManager 3.4 for Oracle Administration Guide for UNIX 』"]

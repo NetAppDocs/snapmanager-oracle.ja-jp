@@ -1,0 +1,39 @@
+---
+permalink: windows/reference_the_smosmsap_schedule_resume_command.html 
+sidebar: sidebar 
+keywords: command, resume, suspend, backup, schedule, smo 
+summary: このコマンドは、中断したバックアップスケジュールを再開します。 
+---
+= smo schedule resume コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、中断したバックアップスケジュールを再開します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo schedule resume
+-profile profile_name
+-schedule-name schedule_name
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+中断したバックアップのスケジュールを再開するデータベースに関連するプロファイルの名前を指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * -schedule - name schedule_name * と入力します
++
+バックアップスケジュールの作成時に指定したスケジュール名を指定します。
+
+

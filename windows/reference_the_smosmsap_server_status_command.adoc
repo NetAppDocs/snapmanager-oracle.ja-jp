@@ -1,0 +1,50 @@
+---
+permalink: windows/reference_the_smosmsap_server_status_command.html 
+sidebar: sidebar 
+keywords: smo, server, status, command, host 
+summary: smo _server status コマンドを実行すると、 SnapManager ホスト・サーバのステータスを表示できます。 
+---
+= smo _server status コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+smo _server status コマンドを実行すると、 SnapManager ホスト・サーバのステータスを表示できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo_server status
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - Quiet *
++
+エラー・メッセージのみがコンソールに表示されるように指定します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されるように指定します。
+
+
+
+
+
+== 例
+
+次の例は、ホストサーバのステータスを表示します。
+
+[listing]
+----
+smo_server status
+SMO-17104: SnapManager Server version 3.3.1 is running on secure port 25204 with PID 11250
+  and has 0 operations in progress.
+----

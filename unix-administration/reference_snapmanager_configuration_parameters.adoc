@@ -1,0 +1,287 @@
+---
+permalink: unix-administration/reference_snapmanager_configuration_parameters.html 
+sidebar: sidebar 
+keywords: snapmanager, configuration, parameters, requirement, retain, hourly, monthly, count, duration 
+summary: SnapManager には、要件に応じて編集可能な設定パラメータのリストが用意されています。構成パラメータは、 smo .config ファイルに保存されます。ただし、 smo .config ファイルに、サポートされる設定パラメータがすべて含まれているわけではありません。要件に応じて構成パラメータを追加できます。 
+---
+= SnapManager の設定パラメータ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager には、要件に応じて編集可能な設定パラメータのリストが用意されています。構成パラメータは、 smo .config ファイルに保存されます。ただし、 smo .config ファイルに、サポートされる設定パラメータがすべて含まれているわけではありません。要件に応じて構成パラメータを追加できます。
+
+次の表に、サポートされるすべての SnapManager 構成パラメータと、それらのパラメータを使用する状況を示します。
+
+|===
+
+
+| パラメータ | 説明 
+
+
+ a| 
+* hourly.count のままにします
+* hourly.duration を保持します
+* retae.month.count を使用します
+* 毎月の期間を維持します
+
+ a| 
+これらのパラメータは、プロファイルの作成時に保持ポリシーを設定します。たとえば、次の値を割り当てることができます。 retain.hourly.count=12
+
+retain-hourly.duration = 2 のままにします
+
+retain.month.count=2
+
+retain.month.duration = 6
+
+
+
+ a| 
+restore.secondaryAccessPolicy
+ a| 
+このパラメータは、 Protection Manager を使用して直接リストアできない場合に、 SnapManager がセカンダリストレージ上のデータにアクセスする方法を定義します。セカンダリストレージ上のデータにアクセスするためのさまざまな方法は次のとおりです。
+
+* Direct （デフォルト）
++
+restore.secondaryAccessPolicy を direct に設定すると、 SnapManager はセカンダリストレージ上のデータのクローンを作成し、クローニングされたデータをセカンダリストレージからホストにマウントして、クローンのデータをアクティブ環境にコピーします。
+
+* 間接
++
+間接的に restore.secondaryAccessPolicy に割り当てると、 SnapManager はプライマリストレージ上の一時ボリュームにデータをコピーし、一時ボリュームからホストにデータをマウントして、一時ボリュームからアクティブ環境にデータをコピーします。
+
++
+間接方式を使用する必要があるのは、ホストからセカンダリストレージシステムに直接アクセスできない場合だけです。データのコピーが 2 つ作成されるため、この方法では直接方式の 2 倍の時間がかかります。
+
+
+
+
+NOTE: NFS （ネットワークファイルシステム）をプロトコルとして使用するストレージエリアネットワーク（ SAN ）では、 SnapManager をリストアのためにセカンダリストレージに直接接続する必要はありません。
+
+
+
+ a| 
+restore.temporaryVolumeName
+ a| 
+このパラメータは、一時ボリュームに名前を割り当てます。SnapManager でセカンダリストレージからデータをリストアする間接的な方法を使用する場合、プライマリストレージには、データベースファイルにコピーされてデータベースがリカバリされるまでの間、一時的なデータのコピーを保持するボリュームが必要になります。デフォルト値はありません。値を指定しない場合は、リストアコマンドで間接方式を使用する名前を入力する必要があります。たとえば、次の値を割り当てることができます。 restore.temporaryVolumeName=smo _temp_volume
+
+
+
+ a| 
+retain.alwaysFreeExpiredBackups を実行します
+ a| 
+このパラメータを指定すると、データ保護が設定されていない場合でも、 SnapManager はバックアップの期限が切れた時点および高速リストアが実行された時点でバックアップを解放します。このパラメータを指定すると、有効期限が切れた保護バックアップが解放され、有効期限が切れた保護されていないバックアップが削除割り当てることができる値は次のとおりです。
+
+* 正しいです
++
+retain.alwaysFreeExpiredBackups に true を割り当てると、バックアップが保護されているかどうかに関係なく、 SnapManager は期限切れになったバックアップを解放します。
+
++
+バックアップは、保護されていない場合、またはセカンダリストレージの保護コピーの期限が切れた場合に削除されます。
+
+* いいえ
++
+SnapManager では、 retain.alwaysFreeExpiredBackups に false を割り当てると、保護されている期限切れのバックアップが解放されます。
+
+
+
+
+
+ a| 
+host.credentialers.persist
+ a| 
+このパラメータは、 SnapManager にホストクレデンシャルを格納するかどうかを指定しデフォルトでは、ホストクレデンシャルは格納されません。ただし、リモートクローンで実行され、リモートサーバにアクセスする必要があるカスタムスクリプトがある場合は、ホストクレデンシャルを保存する必要があります。ホストクレデンシャルの保存を有効にするには、 host.credential.persist に true を割り当てます。SnapManager は、ホストクレデンシャルを暗号化して保存します。
+
+
+
+ a| 
+restorePlanMaxFilesDisplayed を実行しました
+ a| 
+このパラメータを使用すると、リストアプレビューに表示するファイルの最大数を定義できます。デフォルトでは、 SnapManager のリストアプレビューに表示されるファイルの最大数は 20 です。ただし、 0 より大きい値に変更することはできます。たとえば、次の値を割り当てることができます。
+
+* restorePlanMaxFilesDisplayed = 30
+
+
+
+NOTE: 無効な値を指定すると、デフォルトのファイル数が表示されます。
+
+
+
+ a| 
+snapshot.list.timeout.min
+ a| 
+このパラメータを使用すると、 SnapManager 操作の実行時に SnapManager が snap list コマンドの実行を待機する時間を分単位で定義できます。デフォルトでは、 SnapManager は 30 分間待機します。ただし、 0 より大きい値に変更することはできます。たとえば、次の値を割り当てることができます。
+
+* snapshot.list.timeout.min = 40
+
+
+
+NOTE: 無効な値を指定した場合は、デフォルト値が使用されます。
+
+SnapManager 処理で、 snap list コマンドの実行時間が snapshot. list.timeout.min に割り当てられた値を超えると、タイムアウトエラーメッセージが表示されて処理が失敗します。
+
+
+
+ a| 
+pruneIfFileExistsInOtherDestination
+ a| 
+このプルーニングパラメータを使用すると、アーカイブログファイルの宛先を定義できます。アーカイブログファイルは、複数の保存先に保存されます。アーカイブ・ログ・ファイルを削除する場合、 SnapManager はアーカイブ・ログ・ファイルのデスティネーションを認識している必要があります。割り当てることができる値は次のとおりです。
+
+* 指定したデスティネーションからアーカイブログファイルを削除する場合は、 pruneIfFileExistsInOtherDestination に false を割り当てる必要があります。
+* アーカイブログファイルを外部デスティネーションからプルーニングする場合は、 pruneIfFileExistsInOtherDestination に true を割り当てる必要があります。
+
+
+
+
+ a| 
+prune.archivelogs.backedup.from.otherdestination
+ a| 
+このプルーニングパラメータを使用すると、指定したアーカイブログ送信先からバックアップされるアーカイブログファイル、または外部アーカイブログ送信先からバックアップされるアーカイブログファイルをプルーニングできます。割り当てることができる値は次のとおりです。
+
+* 指定したデスティネーションからアーカイブログファイルを削除し、 -cprune dest を使用して指定したデスティネーションからアーカイブログファイルをバックアップする場合は、 prune.archivelogs.backedup.from.otherdestination に false を割り当てる必要があります。
+* 指定したデスティネーションからアーカイブログファイルを削除する場合、およびアーカイブログファイルが他のいずれかのデスティネーションから少なくとも 1 回バックアップされる場合は、 prune.archivelogs.backedup.from.otherdestination に true を割り当てる必要があります。
+
+
+
+
+ a| 
+最大 .archivelog .files.toprun.atATime
+ a| 
+このプルーニングパラメータを使用すると、指定した時間にプルーニングできるアーカイブログファイルの最大数を定義できます。たとえば、 maximum.archivelog.files.toprune.atATime=998 という値を割り当てることができます
+
+
+NOTE: 最大 .archivelog.files.toprun.atATime に割り当てることができる値は、 1000 未満である必要があります。
+
+
+
+ a| 
+archivelogs.Consolidate を実行します
+ a| 
+このパラメータを使用すると、 archivelogs.Consolidate に true を割り当てた場合に、 SnapManager は重複するアーカイブログのバックアップを解放できます。
+
+
+
+ a| 
+サフィックス -backup.label.with .logs
+ a| 
+このパラメータでは、データバックアップとアーカイブログバックアップのラベル名を区別するために追加するサフィックスを指定できます。たとえば、サフィックス -backup.label.with .log にログを割り当てると、アーカイブログのバックアップラベルにサフィックスとして _logs が追加されます。アーカイブログのバックアップラベルは arch_logs になります。
+
+
+
+ a| 
+backup.archivelogs.beyond.missingfiles
+ a| 
+このパラメータを使用すると、 SnapManager で不足しているアーカイブログファイルをバックアップに含めることができます。アクティブファイルシステムに存在しないアーカイブログファイルは、バックアップに含まれません。アクティブファイルシステムに存在しないアーカイブログファイルも含め、すべてのアーカイブログファイルを含める場合は、 backup.archivelogs.beyond.missingfiles に true を割り当てる必要があります。
+
+欠落しているアーカイブログファイルを無視するには、 false を割り当てます。
+
+
+
+ a| 
+srvctl.timeout の指定です
+ a| 
+このパラメータでは、 srvctl コマンドのタイムアウト値を定義できます。* 注： * Server Control （ srvctl ）は RAC インスタンスを管理するユーティリティです。
+
+SnapManager が srvctl コマンドの実行にタイムアウト値よりも時間がかかると、 SnapManager 処理が失敗して次のエラーメッセージが表示されます。 Error ： Timeout occurred while executing command ： srvctl status
+
+
+
+ a| 
+snapshot.restore.storageNameCheck です
+ a| 
+このパラメータは、 Data ONTAP 7-Mode から clustered Data ONTAP に移行する前に作成された Snapshot コピーを使用して、 SnapManager がリストア処理を実行できるようにします。パラメータに割り当てられるデフォルト値は false です。Data ONTAP 7-Mode から clustered Data ONTAP に移行したあとに、移行前に作成された Snapshot コピーを使用する場合は、 snapshot.restore.storageNameCheck=true を設定します。
+
+
+
+ a| 
+services.common.disableAbort
+ a| 
+このパラメータは、長時間実行されている処理が失敗した場合にクリーンアップを無効にします。Oracle のエラーが原因でクローニング処理に時間がかかって失敗する場合は、 services.common.disableAbort=true.For の例を設定して、クローンをクリーンアップしないようにすることができます。services.common.disableAbort=true を設定した場合、クローンは削除されません。Oracle 問題を修正して、障害が発生したポイントからクローニング処理を再開できます。
+
+
+
+ a| 
+* backup.sleep.DNFS レイアウト
+* backup.sleep.dnfs.secs
+
+ a| 
+これらのパラメータは、 Direct NFS （ dNFS ）レイアウトでスリープメカニズムをアクティブにします。dNFS またはネットワークファイルシステム（ NFS ）を使用して制御ファイルのバックアップを作成したあと、 SnapManager は制御ファイルの読み取りを試行しますが、ファイルが見つからない可能性があります。スリープメカニズムを有効にするには、 backup.sleep.DNFS .layout=true を確認してください。デフォルト値は true です。
+
+スリープメカニズムを有効にする場合は、 backup.sleep.dnfs.secs にスリープ時間を割り当てる必要があります。割り当てられたスリープ時間は秒単位で、値は環境によって異なります。デフォルト値は 5 秒です。
+
+例：
+
+* backup.sleep.DNFS .layout=true
+* backup.sleep.dnfs.secs=2
+
+
+
+
+ a| 
+* override.default.backup.pattern
+* new.default.backup.pattern
+
+ a| 
+バックアップラベルを指定しない場合、 SnapManager はデフォルトのバックアップラベルを作成します。これらの SnapManager パラメータでは、デフォルトのバックアップラベルをカスタマイズできます。バックアップラベルのカスタマイズを有効にするには、 override.default.backup.pattern の値が true に設定されていることを確認してください。デフォルト値は false です。
+
+バックアップラベルの新しいパターンを割り当てるには、データベース名、プロファイル名、スコープ、モード、ホスト名などのキーワードを new.default.backup.pattern に割り当てます。キーワードはアンダースコアで区切る必要があります。たとえば、 new.default.backup.pattern=dbname_profile_hostname_scope_mode などです。
+
+
+NOTE: タイムスタンプは、生成されたラベルの末尾に自動的に追加されます。
+
+
+
+ a| 
+allow.underscore.in.clone.sid
+ a| 
+Oracle では、 Oracle 11gR2 のクローン SID でアンダースコアを使用できます。この SnapManager パラメータでは、クローンの SID 名にアンダースコアを含めることができます。クローンの SID 名にアンダースコアを含めるには、 allow.underscore.in.clone.sid の値が true に設定されていることを確認します。デフォルト値は true です。
+
+Oracle 11gR2 より前のバージョンの Oracle を使用している場合やクローンの SID 名にアンダースコアを含めない場合は、この値を false に設定します。
+
+
+
+ a| 
+oracle.parameters.with.comma
+ a| 
+このパラメータを使用すると、カンマ（、）を含むすべての Oracle パラメータを値として指定できます。任意の操作を実行する SnapManager では、 oracle.parameters.with.comma を使用してすべての Oracle パラメータをチェックし、値のスプリットをスキップします。
+
+たとえば、 NLS_NUMERTH_characters = の値の場合は、 oracle.parameters.with.comma=nls_numeric_characters を指定します。複数の Oracle パラメータがあり、値がカンマである場合は、 oracle.parameters.with.comma ですべてのパラメータを指定する必要があります。
+
+
+
+ a| 
+* archivedLogs.exclude
+* archivedLogs.exclude.fileslike
+* <db-unique-name>.archiveLogs.exclude.fileslike
+
+ a| 
+これらのパラメータを使用すると、 Snapshot コピーが有効なストレージ・システム上にないデータベースで、 SnapManager 処理を実行する場合に、 SnapManager がプロファイルおよびバックアップからアーカイブ・ログ・ファイルを除外できます。 * 注： * を作成する前に、構成ファイルに除外パラメータを含める必要があります プロファイル（ Profile ）：
+
+これらのパラメータには、最上位のディレクトリまたはアーカイブログファイルが存在するマウントポイント、あるいはサブディレクトリの値を割り当てることができます。最上位のディレクトリまたはマウントポイントを指定し、ホストのプロファイルでデータ保護が有効になっている場合、そのマウントポイントまたはディレクトリは Protection Manager で作成されたデータセットに含まれません。ホストから除外するアーカイブログファイルが複数ある場合は、アーカイブログファイルのパスをカンマで区切る必要があります。
+
+アーカイブ・ログ・ファイルをプロファイルに含めてバックアップ対象から除外するには、次のいずれかのパラメータを指定する必要があります。
+
+* ArchiveedLogs.exclude ：すべてのプロファイルまたはバックアップからアーカイブログファイルを除外するための正規表現を指定します。
++
+正規表現に一致するアーカイブログファイルは、すべてのプロファイルおよびバックアップから除外されます。
+
++
+たとえば、 archivedLogs.exclude=/arch/logs/on/local/disk1/.* 、 /arch/logs/on/local/disk2/.* を設定できます。ASM データベースの場合は、 archiveLogs.exclude=\\+KHDB_arch_dest/khdb/archivelog/* 、 \\+KHDB_NONNAARCHTWO/khdb/archiveelog/ * を設定できます。
+
+* archivedLogs.exclude.files すべてのプロファイルまたはバックアップからアーカイブログファイルを除外するための SQL 式を指定する場合に使用します
++
+SQL 式に一致するアーカイブログファイルは、すべてのプロファイルとバックアップから除外されます。
+
++
+たとえば、 archivedLogs.exclude.fileslike =/arch/logs/on/local/disk1/% 、 /arch/logs/on/local/disk2/% を設定できます。
+
+* <db-unique-name>.archivedLogs.exclude.files 指定した db-unique-name でデータベース用に作成されたアーカイブログファイルだけをプロファイルから除外する SQL 式、またはバックアップを指定します。
++
+SQL 式に一致するアーカイブ・ログ・ファイルは、プロファイルおよびバックアップから除外されます。
+
++
+たとえば、 mydb.archiveLogs.exclude.fileslike =/arch/logs/on/local/disk1/% 、 /arch/logs/on/local/disk2/% を設定できます。
+
+
+
+|===

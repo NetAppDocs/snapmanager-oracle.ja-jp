@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/task_viewing_a_list_of_scheduled_operations.html 
+sidebar: sidebar 
+keywords: view, list, schedule, operation, profile, smo 
+summary: プロファイルに対してスケジュールされている処理のリストを表示できます。 
+---
+= スケジュールされた処理のリストを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルに対してスケジュールされている処理のリストを表示できます。
+
+. スケジュールされた処理に関する情報を表示するには、次のコマンドを入力します。「 mo schedule list -profile profile_name [-quiet | -verbose 」
+

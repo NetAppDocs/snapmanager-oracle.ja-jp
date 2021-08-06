@@ -1,0 +1,220 @@
+---
+permalink: unix-administration/task_creating_profiles.html 
+sidebar: sidebar 
+keywords: creating, profile, assign, particular, oracle, database, user, account 
+summary: プロファイルの作成時に、特定の Oracle データベースのユーザ・アカウントをプロファイルに割り当てることができます。プロファイルの保持ポリシーを設定し、このプロファイルを使用してすべてのバックアップに対してセカンダリストレージでのバックアップ保護を有効にし、各保持クラスの保持数と保持期間を設定できます。 
+---
+= プロファイルの作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルの作成時に、特定の Oracle データベースのユーザ・アカウントをプロファイルに割り当てることができます。プロファイルの保持ポリシーを設定し、このプロファイルを使用してすべてのバックアップに対してセカンダリストレージでのバックアップ保護を有効にし、各保持クラスの保持数と保持期間を設定できます。
+
+データベースの -login 、 -password 、および -port パラメータの値を指定した場合は、オペレーティングシステム（ OS ）認証モードでデフォルトクレデンシャルが使用されます。
+
+プロファイルの作成中に、 SnapManager はリストア適格性チェックを実行し、データベースのリストアに使用できるリストアメカニズムを決定します。データベースが qtree 上にあり、親ボリュームが高速リストアまたはボリュームベースリストアの対象でない場合は、分析が間違っている可能性があります。
+
+SnapManager （ 3.2 以降）を使用すると、新しいプロファイルの作成時または既存のプロファイルの更新時に、アーカイブ・ログ・ファイルをデータ・ファイルから分離できます。プロファイルを使用してバックアップを分離したら、データベースのデータファイルのみのバックアップを作成するか、アーカイブログのみのバックアップを作成できます。新しいプロファイルまたは更新したプロファイルを使用して、データ・ファイルとアーカイブ・ログ・ファイルの両方を含むバックアップを作成できます。ただし、プロファイルを使用してフル・バックアップを作成したり、設定を元に戻したりすることはできません。
+
+* フル・バックアップおよびパーシャル・バックアップを作成するためのプロファイル *
+
+プロファイルを作成すると、データ・ファイル、制御ファイル、アーカイブ・ログ・ファイル、および指定したデータ・ファイルまたは表領域を含むデータベースのパーシャル・バックアップ、すべての制御ファイル、およびすべてのアーカイブ・ログ・ファイルを含むフル・データベース・バックアップを作成できます。SnapManager では、フル・バックアップおよびパーシャル・バックアップ用に作成したプロファイルを使用して、個別のアーカイブ・ログ・バックアップを作成することはできません。
+
+* データファイルのみのバックアップとアーカイブログのみのバックアップを作成するためのプロファイル *
+
+新しいプロファイルを作成するときは、 -Separate -archivelog -backup を含めて、アーカイブログのバックアップをデータファイルのバックアップから分離できます。また、既存のプロファイルを更新して、アーカイブログバックアップとデータファイルバックアップを分離することもできます。
+
+新しいプロファイル・オプションを使用してアーカイブ・ログ・バックアップを分離すると、次の SnapManager 処理を実行できます。
+
+* アーカイブログのバックアップを作成します
+* アーカイブログバックアップを削除する
+* アーカイブログバックアップをマウントします
+* アーカイブログのバックアップを解放します
+
+
+プロファイルの作成時に、データ・ファイルのバックアップとアーカイブ・ログ・バックアップを分離するプロファイルを作成する際に、プロファイルが作成されたデータベースにアーカイブ・ログ・ファイルが存在しないと、アクティブ・ファイルシステムに警告メッセージ「アーカイブ・ログ・ファイル」が存在しません。<archive log thread version> ログファイルより前のアーカイブログファイルバージョンは、バックアップに含まれません。このデータベースのバックアップを作成する場合でも、データベースバックアップにアーカイブログファイルを使用できません。
+
+
+NOTE: プロファイルの作成中にエラーが発生した場合は、 smosystem dump コマンドを使用します。プロファイルの作成後にエラーが発生した場合は、 smodoperation dump および smosprofile dump コマンドを使用します。
+
+. ユーザ名、パスワード、およびポート（ Oracle 認証）を指定してプロファイルを作成するには、次のコマンドを入力します。 'smo profile create -profile profile[-profile-passwordprofileprofileprofile_password] -repository -dberepo_dbname -hostrepo_host-portcomment-usernamerepo_username-dbdbnamedbdb_name-host[-siddb_db_host] [-siddb_sid] [-password-usernamedbst_password-durationdbm -password-drman [-dainstorman [-drman [--password-password-password-usernamedb_password-username -usernamatum] [-daname -usernamedbo -usernamaterm -password-usernamedbo -usernamedbo -usernamedbo -usernamedb_password] -password-sto [-daname -sto [-daname -sto -username -username -usernamedbo -username -username -username -username -username -username -username -username -username -username -sto -username -username -username -username -username -username -username -username -user
++
+このコマンドの他のオプションは、次のとおりです。
+
++
+' [-force] [-noprompt] '
+
++
+' [ 静音 | 詳細 ] '
+
++
+
+NOTE: Real Application Clusters （ RAC ）環境で新しいプロファイルを作成する場合は、 db_unique_name パラメータの値を db_dbname として指定する必要があります。
+
++
+また、プロファイルの作成時に、データベースへのアクセス方法に応じて、他のオプションを指定することもできます。
+
++
+|===
+
+
+| 状況 | 作業 
+
+
+ a| 
+* オペレーティング・システム認証を使用してプロファイルを作成する場合 *
+ a| 
+DBA グループのオペレーティング・システム・アカウント（通常は Oracle のインストールに使用したアカウント）の変数を指定しますユーザ名、パスワード、およびポートを追加する代わりに、次の項目を指定します。
+
+** -osaccountaccount_name をオペレーティングシステムアカウントの名前にします
+** - オペレーティングシステムアカウントに関連付けられたグループとして osgroupgroup を指定します
+
+
+
+
+ a| 
+* 自動ストレージ管理（ ASM ）インスタンス認証を使用してプロファイルを作成する場合 *
+ a| 
+ASM インスタンス認証のクレデンシャルを指定します。
+
+** -asmusernameasminance_username は、 ASM インスタンスへのログインに使用するユーザ名です。
+** -asmpasswordasminstance_password は、 ASM インスタンスへのログインに使用するパスワードです。
+
+
+
+
+ a| 
+* データベース認証を使用してプロファイルを作成する場合 *
+ a| 
+データベースログインの詳細を指定します。パスワードに感嘆符（ ! ）、ドル記号（ $ ）、アクサンブアクセント（ ` ）などの特殊文字が含まれている場合、 SnapManager では、コマンドラインインターフェイス（ CLI ）からデータベース認証プロファイルを作成できません。
+
+
+
+ a| 
+* カタログを Oracle Recovery Manager （ RMAN ）リポジトリとして使用しています *
+ a| 
+次のオプションと変数を指定します。
+
+** -tnnametnsname tnsnames.ora ファイルで定義されている tnsname として指定します
+** -login-username USERNAME ： RMAN カタログへの接続に必要なユーザ名
++
+指定しない場合、 SnapManager はオペレーティングシステムの認証情報を使用します。RAC データベースでは、オペレーティングシステム認証を使用できません。
+
+** - RMAN カタログへの接続に必要な RMAN パスワードとして passwordpassword を使用します。
+
+
+
+
+ a| 
+* 制御ファイルを RMAN リポジトリとして使用しています *
+ a| 
+controlfile オプションを指定します。
+
+
+
+ a| 
+* バックアップの保持ポリシーを指定する場合 *
+ a| 
+保持クラスの保持数または保持期間、あるいはその両方を指定してください。期間はクラスの単位で指定します（たとえば、時間単位の場合は時間単位、日単位の場合は日単位）。
+
+** -hourly は、時間単位の保持クラスです。 [-count n] [-duration m] はそれぞれ、保持数および保持期間です。
+** -daily は、日単位の保持クラスです。 [-count n] [-durationm] は、それぞれ保持数および保持期間です。
+** -weekly は、週単位の保持クラスです。 [-count n] [-duration m] は、それぞれ保持数および保持期間です。
+** -monthly は、月単位の保持クラスです。 [-count n] [-durationm] は、それぞれ保持数および保持期間です。
+
+
+
+
+ a| 
+* プロファイルのバックアップ保護を有効にする *
+ a| 
+次のオプションと変数を指定します。
+
+** -protect はバックアップ保護を有効にします。
++
+Data ONTAP 7-Mode を使用している場合、このオプションを使用すると、 Data Fabric Manager （ DFM ）サーバにアプリケーションデータセットが作成され、データベース、データファイル、制御ファイル、およびアーカイブログに関連するメンバーが追加されます。データセットがすでに存在する場合は、プロファイルの作成時に同じデータセットが再利用されます。
+
+** -protection-policy では、保護ポリシーを指定できます。
++
+Data ONTAP 7-Mode を使用していて、 SnapManager が Protection Manager に統合されている場合は、いずれかの Protection Manager ポリシーを指定する必要があります。
+
++
+
+NOTE: 使用可能な保護ポリシーの一覧を表示するには、 smo protection-policy list コマンドを使用します。
+
++
+clustered Data ONTAP を使用している場合は、 _SnapManager_cDOT _ ミラー _ または _SnapManager_cDOT _ ボールト _ を選択する必要があります。
+
++
+
+NOTE: 次の場合にプロファイルの作成処理が失敗します。
+
++
+*** clustered Data ONTAP を使用していて、 Protection Manager ポリシーを選択している場合
+*** Data ONTAP 7-Mode を使用していて、 _SnapManager_cDOT ミラーポリシーまたは _SnapManager_cDOT _ ボールトポリシーを選択する
+*** SnapMirror 関係を作成したあとに、 _SnapManager_cDOT _Vault _ policy を選択した場合、または SnapVault 関係を作成した際に、 _SnapManager_cDOT _ Mirror _ policy を選択した場合
+*** SnapMirror 関係または SnapVault 関係を作成せずに、 _SnapManager_cDOT _Vault _ または _SnapManager_cDOT _Mirror_policy のいずれかを選択した場合
+
+
+** -nobprotect は、プロファイルを使用して作成されたデータベース・バックアップを保護しないことを示します。* 注： -protection-policy を指定しないと、データセットに保護ポリシーが設定されません。protect を指定し、かつ protection-policy がプロファイルの作成時に設定されない場合は、あとで smo profile update コマンドを使用して設定するか、ストレージ管理者が Protection Manager コンソールを使用して設定できます。
+
+
+
+
+ a| 
+* データベース処理の完了ステータスの E メール通知を有効にする場合 *
+ a| 
+次のオプションと変数を指定します。
+
+** -summary-notification を使用すると、リポジトリデータベース内の複数のプロファイルについて、サマリー E メール通知を設定できます。
+** -notification を使用すると、プロファイルのデータベース処理の完了ステータスに関する E メール通知を受信できます。
+** -success -email_address2 を使用すると、新規または既存のプロファイルを使用して実行されたデータベース処理の成功を通知する E メールを受け取ることができます。
+** -failure-email_address2 を使用すると、新しいプロファイルまたは既存のプロファイルを使用して実行された、失敗したデータベース処理に関する E メール通知を受け取ることができます。
+** -subjectsubjectsub_text ：新しいプロファイルまたは既存のプロファイルを作成する際の E メール通知の件名を指定します。リポジトリに通知設定が設定されていない場合に、 CLI を使用してプロファイルまたはサマリー通知を設定しようとすると、コンソールログに次のメッセージが記録されます。 'MO-14577: Notification Settings not configured. '
++
+通知設定を構成した後、リポジトリのサマリー通知を有効にせずに CLI を使用してサマリー通知を構成しようとすると、コンソールログに次のメッセージが表示されます。 'MO-14575: Summary notification configuration not available for this repository_**_'
+
+
+
+
+
+ a| 
+* アーカイブ・ログ・ファイルをデータ・ファイルとは別にバックアップする場合 *
+ a| 
+次のオプションと変数を指定します。
+
+** -Separe-archivelog -backup を使用すると、アーカイブログのバックアップをデータファイルのバックアップから分離できます。
+** -retain-archivedlog backups ：アーカイブログのバックアップの保存期間を設定します。正の保持期間を指定する必要があります。
++
+アーカイブログのバックアップは、アーカイブログの保持期間に基づいて保持されます。データファイルのバックアップは、既存の保持ポリシーに基づいて保持されます。
+
+** - protect を使用すると、アーカイブログのバックアップを保護できます。
+** -protection-policy は、保護ポリシーをアーカイブログバックアップに設定します。
++
+アーカイブログのバックアップは、アーカイブログの保護ポリシーに基づいて保護されます。データファイルのバックアップは、既存の保護ポリシーに基づいて保護されます。
+
+** -includes -with -online - バックアップには、アーカイブログのバックアップとオンラインデータベースのバックアップが含まれます。
++
+このオプションを使用すると、クローニング用にオンラインのデータファイルバックアップとアーカイブログバックアップを一緒に作成できます。このオプションを設定すると、オンラインデータファイルバックアップを作成するたびに、アーカイブログバックアップがデータファイルと一緒にただちに作成されます。
+
+** -no-include-y-online-backups ：データベース・バックアップとともにアーカイブ・ログ・バックアップを含みません
+
+
+
+
+ a| 
+* プロファイル作成処理が正常に完了したら、ダンプ・ファイルを収集できます。 *
+ a| 
+profile create コマンドの最後に -dump オプションを指定します。
+
+|===
++
+プロファイルを作成すると、プロファイルで指定されたファイルに対してボリュームベースのリストア処理をあとで実行する場合に、 SnapManager によってファイルが分析されます。
+
+
+
+* 関連情報 *
+
+xref:concept_how_to_collect_dump_files.adoc[ダンプ・ファイルの収集方法]

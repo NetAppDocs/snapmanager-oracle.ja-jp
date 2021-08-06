@@ -1,0 +1,39 @@
+---
+permalink: unix-installation-cmode/task_accessing_the_snapmanager_user_interface.html 
+sidebar: sidebar 
+keywords: acess, snapmanager, user, interface, ui, remote, web, browser, system, operating, system, smogui 
+summary: SnapManager ユーザインターフェイス（ UI ）には、 SnapManager がサポートするオペレーティングシステムで実行されている任意のシステムから Web ブラウザを使用して、リモートからアクセスできます。ターゲット・データベース・ホストから smogui コマンドを実行して SnapManager UI にアクセスすることもできます 
+---
+= SnapManager のユーザインターフェイスにアクセスします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager ユーザインターフェイス（ UI ）には、 SnapManager がサポートするオペレーティングシステムで実行されている任意のシステムから Web ブラウザを使用して、リモートからアクセスできます。ターゲット・データベース・ホストから smogui コマンドを実行して SnapManager UI にアクセスすることもできます
+
+* SnapManager が実行されていることを確認します。
+* SnapManager UI にアクセスするシステムに、サポートされているオペレーティングシステムと Java がインストールされていることを確認する必要があります。
++
+サポートされているオペレーティングシステムと Java については、 Interoperability Matrix Tool を参照してください。
+
++
+.. Web ブラウザウィンドウで、 https://server_name.domain.com:port_number と入力します
++
+*** server_name は、 SnapManager がインストールされているターゲットデータベースホストの名前です。
++
+ターゲットデータベースホストの IP アドレスを入力することもできます。
+
+*** port_number は、 SnapManager が実行されているポートです。
++
+デフォルト値は 27214 です。
+
+
+
+.. [Oracle 用 SnapManager の起動 *] リンクをクリックします。
++
+SnapManager for Oracle の UI が表示されます。
+
+
+
+

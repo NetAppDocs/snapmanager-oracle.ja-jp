@@ -1,0 +1,52 @@
+---
+permalink: unix-administration/reference_the_smo_smsap_history_show_command.html 
+sidebar: sidebar 
+keywords: command, enable, view, detail, history, information, specific, profile, smo, show, profile, character 
+summary: このコマンドを使用すると、特定のプロファイルの詳細な履歴情報を表示できます。 
+---
+= smo history show コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドを使用すると、特定のプロファイルの詳細な履歴情報を表示できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo history show
+-profile profile
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+プロファイルの名前を指定します。この名前には 30 文字まで使用でき、ホスト内で一意である必要があります。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンドの例
+
+[listing]
+----
+
+          smo  history show -profile -name PROFILE1
+ -verbose
+----

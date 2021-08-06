@@ -1,0 +1,96 @@
+---
+permalink: unix-administration/task_pruning_archive_log_files.html 
+sidebar: sidebar 
+keywords: prune, archive, log, file, location, creating, backup 
+summary: バックアップを作成する際に、アーカイブログの場所からアーカイブログファイルの削除を実行できます。 
+---
+= アーカイブ・ログ・ファイルの削除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップを作成する際に、アーカイブログの場所からアーカイブログファイルの削除を実行できます。
+
+* アーカイブログファイルは、現在のバックアップ処理でバックアップする必要があります。
++
+プルーニングをアーカイブログファイルを含まない他のバックアップとともに指定すると、アーカイブログファイルはプルーニングされません。
+
+* データベースはマウント済み状態である必要があります。
++
+データベースがマウント状態でない場合は、 backup コマンドとともに -force オプションを入力します。
+
+
+
+バックアップ処理を実行する際には、次の項目を指定できます。
+
+* プルーニングの範囲：
++
+** すべてのアーカイブログファイルを削除します。
+** 指定の System Change Number （ SCN ）までアーカイブログファイルを削除してください。
+** 指定された時間までアーカイブログファイルを削除します。
+** 指定した期間が経過する前にアーカイブログファイルを削除します。
+
+
+* アーカイブログファイルの削除元となるデスティネーション。
++
+
+NOTE: アーカイブ・ログ・ファイルの削除が 1 つのデスティネーションで失敗した場合でも、 SnapManager は、アーカイブ・ログ・ファイルを他のデスティネーションから削除し続けます。
+
+
+
+アーカイブログファイルを削除する前に、 SnapManager では次のことが検証されます。
+
+* アーカイブログファイルは少なくとも 1 回はバックアップされます。
+* アーカイブログファイルがある場合は、 Oracle Dataguard Standby データベースに送付されます。
+* アーカイブログファイルは、 Oracle ストリームキャプチャプロセスによってキャプチャされます（存在する場合）。
+
+
+アーカイブログファイルがバックアップされ、スタンバイに出荷され、キャプチャプロセスでキャプチャされた場合、 SnapManager はすべてのアーカイブログファイルを 1 回の実行で削除します。ただし、バックアップされていないアーカイブログファイル、スタンバイに出荷されていないアーカイブログファイル、またはキャプチャプロセスでキャプチャされていないアーカイブログファイルがある場合、 SnapManager はアーカイブログファイルを 1 つずつ削除します。アーカイブログファイルを 1 回の実行で削除するよりも、アーカイブログを 1 つずつ削除するほうが短時間で完了します。
+
+SnapManager では、アーカイブログファイルをグループ化してバッチ単位で削除することもできます。各バッチの最大ファイル数は 998 です。この値は、 smo .config ファイルで設定パラメータ maximum.archivelog.files.toprune.atATime を使用することにより、 998 よりも下位に設定できます。
+
+SnapManager では、 Oracle Recovery Manager （ RMAN ）コマンドを使用してアーカイブ・ログ・ファイルを削除します。ただし、 SnapManager は、 RMAN 保持ポリシーおよび削除ポリシーと統合しません。
+
+
+NOTE: アーカイブ・ログ・デスティネーションからアーカイブ・ログ・ファイルを削除すると、アーカイブ・ログ・ファイルの削除に失敗します。
+
+次のシナリオでは、 SnapManager はアーカイブログファイルの削除をサポートしていません。
+
+* アーカイブログファイルはフラッシュリカバリ領域にあります。
+* アーカイブログファイルはスタンバイデータベースにあります。
+* アーカイブ・ログ・ファイルは、 SnapManager と RMAN の両方で管理されます。
++
+.. 次のコマンドを入力します。 smo backup create -profile profile_name ｛ [-full ｛ -online | -offline-auto ｝ [-retain ｛ -hourly | [-daily | -comment|-monthly | -unlimited ｝ ] [-verify] | [-data [[-files[files] | [-tablespaces [--unlimited | -logabellabel] -online|-retain-abel] | -labe| -unlimited [-protect | -noproten|-proten] [-backup-destpath1[ 、 [path2]] [-exclude-destpath1[ 、 path2]] [-prunelogs {-all | -untscNilSCN | -untilscnil-datey-dn | -datey-dd ： mm -dd ： mm ： ss | destforce-untump-dest-d] -destpath1}] -destpath1}] -destpath|destpath1}] -destpath1}--destpath1}--destpath|destpath1}--destpath|destpath|destd}--destpath1}--destd}--destde-destde-dest
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+* アーカイブログファイルをプルーニング *
+ a| 
+次のオプションを指定します。
+
+*** -prunelogs ：バックアップを作成するときにアーカイブログファイルを削除するように指定します
++
+**** -all は、すべてのアーカイブログファイルを削除するように指定します。
+**** -untilSCN ：指定した SCN までアーカイブログファイルを削除するように指定します。
+**** -until - 指定した日時を含むアーカイブ・ログを削除します。
+**** - {-months より前
+
+
+
+
+
+
+| 日 | - 週 
+
+
+| -hours ｝ は、指定した期間が経過する前にアーカイブログファイルを削除するように指定します。  a| 
+* アーカイブログファイルを削除する場所を指定します。 *
+
+|===
+
+
+

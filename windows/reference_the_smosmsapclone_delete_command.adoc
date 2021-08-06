@@ -1,0 +1,101 @@
+---
+permalink: windows/reference_the_smosmsapclone_delete_command.html 
+sidebar: sidebar 
+keywords: run, clone, delete, command, operation, smo 
+summary: クローンを削除するには、 clone delete コマンドを実行します。どの処理でもクローンが使用されている場合、クローンは削除できません。 
+---
+= smo clone delete コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローンを削除するには、 clone delete コマンドを実行します。どの処理でもクローンが使用されている場合、クローンは削除できません。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo clone delete
+-profile profile_name
+\[-id guid \| -label clone_name\]
+[-login
+\[-username db_username -password db_password -port db_port\]
+ ]
+\[-syspassword syspassword\]
+-force
+\[-dump\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+削除するクローンが含まれているプロファイルの名前を指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * -force *
++
+クローンに関連付けられたリソースがある場合も、クローンを削除します。
+
+* *-id GUID*
++
+削除するクローンの GUID を指定します。GUID はクローンを作成するときに SnapManager によって生成されます。各クローンの GUID を表示する場合は、 smo clone list コマンドを使用します。
+
+* * - ラベル名 *
++
+削除するクローンのラベルを指定します。
+
+* *-syspassword syspassword*
++
+sys 特権ユーザのパスワードを指定します。
+
++
+
+NOTE: 指定されたデータベースクレデンシャルが sys 特権ユーザに対して同じでない場合は、 sys 特権ユーザのパスワードを指定する必要があります。
+
+* * - ログイン *
++
+データベースログインの詳細を入力できます。
+
+* * -username repo_username *
++
+データベースへのアクセスに必要なユーザ名を指定します。
+
+* * -password db_password *
++
+データベースへのアクセスに必要なパスワードを指定します。
+
+* * -port db_port *
++
+プロファイルに記述されるデータベースへのアクセスに使用する TCP ポート番号を指定します。
+
+* * -dump*
++
+クローンの削除処理後にダンプファイルを収集するように指定します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次の例は、クローンを削除します。
+
+[listing]
+----
+smo clone delete -profile SALES1 -label SALES_May
+Operation Id [8abc01ec0e79004b010e79006da60001] succeeded.
+----

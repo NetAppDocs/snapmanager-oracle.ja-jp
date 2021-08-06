@@ -1,0 +1,111 @@
+---
+permalink: unix-administration/reference_the_smosmsapbackup_show_command.html 
+sidebar: sidebar 
+keywords: backup, show, command, display, detail, information, backup, protection, status, retention, smo 
+summary: backup show コマンドを使用すると、バックアップの保護ステータス、バックアップ保持クラス、プライマリストレージとセカンダリストレージ上のバックアップなど、バックアップに関する詳細情報を表示できます。 
+---
+= smo backup show コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+backup show コマンドを使用すると、バックアップの保護ステータス、バックアップ保持クラス、プライマリストレージとセカンダリストレージ上のバックアップなど、バックアップに関する詳細情報を表示できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo backup show
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id id\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+バックアップを表示するプロファイルを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * - ラベルラベル *
++
+バックアップのラベルを指定します。
+
+* *-data*
++
+データファイルを指定します。
+
+* *-archivelogs*
++
+アーカイブログファイルを指定します。
+
+* * -id id *
++
+バックアップ ID を指定します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+クローンおよび検証情報のほかに、エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次に、バックアップの詳細情報の例を示します。
+
+[listing]
+----
+smo backup show -profile SALES1 -label BTNFS -verbose
+Backup id: 8abc013111a450480111a45066210001
+Backup status: SUCCESS
+Primary storage resources: EXISTS
+Protection sate: PROTECTED
+Retention class: DAILY
+Backup scope: FULL
+Backup mode: OFFLINE
+Mount status: NOT MOUNTED
+Backup label: BTNFS
+Backup comment:
+RMAN Tag: SMO_BTNFS_1175283108815
+Backup start time: 2007-03-30 15:26:30
+Backup end time: 2007-03-30 15:34:13
+Verification status: OK
+Backup Retention Policy: NORMAL
+Backup database: hsdb1
+Checkpoint: 2700620
+Tablespace: SYSAUX
+Datafile: /mnt/ssys1/data/hsdb/sysaux01.dbf [ONLINE]
+...
+Control Files:
+File: /mnt/ssys1/data/control03.ctl
+...
+Archive Logs:
+File: /mnt/ssys1/data/archive_logs/2_131_626174106.dbf
+...
+Host: Host1
+Filesystem: /mnt/ssys1/data
+File: /mnt/ssys1/data/hsdb/SMOBakCtl_1175283005231_0
+...
+Volume: hs_data
+Snapshot: SMO_HSDBR_hsdb1_F_C_1_
+8abc013111a450480111a45066210001_0
+File: /mnt/ssys1/data/hsdb/SMOBakCtl_1175283005231_0
+...
+Protected copies on Secondary Storage:
+  14448939 - manow
+  88309228 - graffe
+----
+* 関連情報 *
+
+xref:task_viewing_backup_details.adoc[バックアップの詳細を表示しています]

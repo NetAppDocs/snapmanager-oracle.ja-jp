@@ -1,0 +1,19 @@
+---
+permalink: unix-administration/concept_supported_scripts.html 
+sidebar: sidebar 
+keywords: asmmain.sh, asmquerydisk.sh, script, grid, group, user 
+summary: asmmain.sh スクリプトと asmquerydisk.sh スクリプトを使用して、グリッドユーザ、グループ、およびユーザを変更できます。これらはすべて、 ASM ディスクの照会に使用されます。スクリプトは常にルートから実行する必要があります。 
+---
+= サポートされているスクリプト
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+asmmain.sh スクリプトと asmquerydisk.sh スクリプトを使用して、グリッドユーザ、グループ、およびユーザを変更できます。これらはすべて、 ASM ディスクの照会に使用されます。スクリプトは常にルートから実行する必要があります。
+
+asmmain.sh は、デバイスを追加または削除する操作から呼び出されるメインスクリプトファイルです。asmmain.sh スクリプトは内部で別のスクリプトを呼び出しますが、このスクリプトは Oracle のグリッドクレデンシャルがあるルートから実行する必要があります。このスクリプトは、 ASM ディスクグループのデバイスを照会し、それらのエントリを initasmdisk ファイルに追加して権限とデバイスの所有権を付与します。このファイルの権限と所有権は、環境や、 /dev/mapper/* p1 のみの照合に使用される正規表現パターンに基づいて変更できます。
+
+asmquerydisk.sh スクリプトは、 ASM ディスクグループを作成する際に使用するディスクリストを照会するために使用します。構成に応じて、 ORACLE_BASE 、 ORACLE_HOME 、および ORACLE_SID に値を割り当てる必要があります。
+
+このスクリプトは、 /opt/NetApp/smo/plugins/examples/noasmlib にあります。ただし、これらのスクリプトは、ホストで SnapManager for Oracle サーバを起動する前に、 /opt/NetApp/smo/plugins/noasmlib に移動する必要があります。

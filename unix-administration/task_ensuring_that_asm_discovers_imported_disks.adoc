@@ -1,0 +1,73 @@
+---
+permalink: unix-administration/task_ensuring_that_asm_discovers_imported_disks.html 
+sidebar: sidebar 
+keywords: automatic, storage, management, asm, nfs, environment, install, snapmanager, discover, import, disk, snapmanager 
+summary: NFS 環境で Automatic Storage Management\ （ ASM\ ）を使用している場合は、 SnapManager のインストール後に、 ASM が SnapManager によってインポートされたディスクを検出できることを確認する必要があります。これを行うには、 ASM ディレクトリのパスを ASM_DISKSTRING パラメータに追加します。 
+---
+= ASM がインポートされたディスクを検出することを確認し
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS 環境で Automatic Storage Management （ ASM ）を使用している場合は、 SnapManager のインストール後に、 ASM が SnapManager によってインポートされたディスクを検出できることを確認する必要があります。これを行うには、 ASM ディレクトリのパスを ASM_DISKSTRING パラメータに追加します。
+
+Oracle ツールを使用して、 ASM_DISKSTRING パラメータを編集できます。ASM_DISKSTRING の編集については、 Oracle のマニュアルを参照してください。
+
+ASM ディスクパス /opt/NetApp/sm/ /mnt/* /*/disk*' は、 ASM_DISKSTRING パラメータで定義されている既存のパスに追加する必要があります。たとえば、 ASM_DISKSTRING に定義されたパスが /mnt/my-as-mdisks/dir1/disk* で、 ASM ディスクパスの追加後、更新されたパスは「 /mnt/my-as-mdisks/dir1/disk* 、 /opt/NetApp//mnt/*/disk* 」になります。
+
+
+NOTE: ASM_DISKSTRING パラメータは、 ASM ディスクファイルのみと一致し、その他のファイルは一致しない必要があります。
+
+* 最初のアスタリスク（ * ）は、 SnapManager がルートマウントポイントに対して生成した名前を示します。
+* 2 番目の * は、マウント・ポイント内のディレクトリを示します。
+* 3 番目の * は NFS ファイルの名前を示します。
+
+
+ディスクが /opt/netapp / smo/<smo -generated -name>// の下のディレクトリにマウントされている場合、 NFS ファイルシステムのトポロジに * が一致することを確認する必要があります。
+
+. NAS 環境で NFS を使用している ASM ディスクを使用している場合は、 ASM_DISKSTRING パラメータを編集して、現在の ASM ディレクトリパスを参照するようにします。
++
+ASM ディスクのマウントポイントが /mnt/my-asm-disks/*/disk* の場合、 ASM_DISKSTRING の編集後、更新されたパスは /opt/NetApp/smt/ mnt/my-asm-disks-20081012/disk2.nfs になります。ASM_DISKSTRING パラメータは、 /opt/netapp / smo//mnt/* /disk * という形式になります。
+
++
+** 最初の * は my-asm-disks-20081012 に一致します。
+** ディスク * は disk2.nfs と一致します。ASM_DISKSTRING パラメータを編集した後、 SnapManager によってインポートされたディスクを検出した ASM の結果は次のようになります。
+** NFS disk1 の ASM のクローンは、 /opt/netapp / sm/mnt/mnt -asm-disks-20081012/dir1/disk2.nfs です。
+** NFS ディスク 2 上の ASM のクローンは、 /opt/netapp / smnt/mnt /mnt -asm-disk-20081012 /dir1/disk2.nfs です。ASM_DISKSTRING パラメータは、 /opt/netapp/sm//mnt/*/disk* の形式になります。
+** 最初の * が -MNT-My-ASM-disks - 20081012 と一致します。
+** 2 つ目の * は dir1 と一致します。
+** 3 つ目の * は disk2.nfs と disk2.nfs に一致します。
+
+
+. Storage Area Network （ SAN ；ストレージエリアネットワーク）環境で ASM ディスクを使用する場合は、環境に応じて次のいずれかの処理を実行します。
++
+|===
+| ASM ディスクで使用するドライブ | 作業 
+
+
+ a| 
+Linux 上の FCP および iSCSI を使用した ASMlib
+ a| 
+文字デバイスのみを使用して、 Oracle ソフトウェアの所有者とユーザのプライマリグループの権限を変更します。ASM_DISKSTRING パスは、 ASM DISKSTRING = ORCL ： * である必要があります。
+
+
+
+ a| 
+AIX 上の FCP および iSCSI
+ a| 
+ASM ディレクトリパスまで、 ASM_DISKSTRING パラメータのパス名を追加します。ASM_DISKSTRING パスは、 ASM DISKSTRING = /dev/hdsk / * である必要があります。 * は ASM ディスク名です。
+
+
+
+ a| 
+Solaris の場合は FCP および iSCSI
+ a| 
+ASM ディレクトリパスまで、 ASM_DISKSTRING パラメータのパス名を追加します。ASM_DISKSTRING パスは、 ASM DISKSTRING = /dev/rdsk/ * である必要があります。 * は ASM ディスク名を示します。
+
+[+]
+
+|===
+
+
+http://www.oracle.com/technetwork/indexes/documentation/index.html["Oracle のマニュアル： www.oracle.com/technetwork/indexes/documentation/index.html"]

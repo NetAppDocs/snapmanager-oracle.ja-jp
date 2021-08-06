@@ -1,0 +1,21 @@
+---
+permalink: unix-administration/concept_restore_process_identification.html 
+sidebar: sidebar 
+keywords: restore, process, support, snapmanager, oracle, file-based, backup 
+summary: SnapManager for Oracle のすべてのバージョンで、すべてのリストアプロセスがサポートされるわけではありません。SnapManager をアップグレードしたら、バックアップのリストアに使用できるリストアプロセスを理解しておく必要があります。 
+---
+= リストアプロセスのタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle のすべてのバージョンで、すべてのリストアプロセスがサポートされるわけではありません。SnapManager をアップグレードしたら、バックアップのリストアに使用できるリストアプロセスを理解しておく必要があります。
+
+SnapManager 3.0 以降を使用して作成されたバックアップは、高速リストアとファイルベースのリストアの両方のプロセスを使用してリストアできます。ただし、 SnapManager 3.0 より前のバージョンを使用して作成されたバックアップは、ファイルベースのリストアプロセスだけを使用してリストアできます。
+
+バックアップの作成に使用した SnapManager のバージョンを確認するには、 -backup show コマンドを実行します。
+
+* 関連情報 *
+
+xref:concept_what_database_restore_is.adoc[データベースリストアとは]

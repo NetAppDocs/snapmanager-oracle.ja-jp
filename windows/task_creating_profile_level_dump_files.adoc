@@ -1,0 +1,28 @@
+---
+permalink: windows/task_creating_profile_level_dump_files.html 
+sidebar: sidebar 
+keywords: find, log, information, particular, profile, smo, dump, command, name, profile-level, dump, file, creating 
+summary: smo profile dump コマンドでプロファイル名を指定すると、特定のプロファイルに関するログ情報を検索できます。 
+---
+= プロファイルレベルのダンプ・ファイルの作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+smo profile dump コマンドでプロファイル名を指定すると、特定のプロファイルに関するログ情報を検索できます。
+
+. 次のコマンドを入力します。 smo profile dump -profile profile_name
++
+ダンプファイルの場所：
+
++
+[listing]
+----
+Path:\<user-home>\Application Data\NetApp\smo\3.3.0\smo_dump_8abc01c814649ebd0114649ec69d0001.jar
+----
++
+
+NOTE: プロファイルの作成中にエラーが発生した場合は、 smosystem dump コマンドを使用します。プロファイルが正常に作成されたら、 smodoperation dump および smosprofile dump コマンドを使用します。
+
+

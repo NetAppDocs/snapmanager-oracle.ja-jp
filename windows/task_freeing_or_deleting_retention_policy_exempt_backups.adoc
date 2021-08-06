@@ -1,0 +1,26 @@
+---
+permalink: windows/task_freeing_or_deleting_retention_policy_exempt_backups.html 
+sidebar: sidebar 
+keywords: backup, retention, class, unlimited, delete, freed, directly, assign, eligible, deletion, free, deleting, exempy 
+summary: 保持クラスが「 unlimited 」のバックアップは、直接削除または解放することはできません。これらのバックアップを削除したり解放したりするには、まず毎時、毎日、毎週、または毎月などの別の保持クラスを割り当てる必要があります。保持ポリシーの適用対象外になっているバックアップを削除または解放するには、削除または解放を可能にするために、最初にバックアップを更新する必要があります。 
+---
+= 保持ポリシー適用除外バックアップの解放または削除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保持クラスが「 unlimited 」のバックアップは、直接削除または解放することはできません。これらのバックアップを削除したり解放したりするには、まず毎時、毎日、毎週、または毎月などの別の保持クラスを割り当てる必要があります。保持ポリシーの適用対象外になっているバックアップを削除または解放するには、削除または解放を可能にするために、最初にバックアップを更新する必要があります。
+
+. 保持ポリシーによる削除の対象になるようにバックアップを更新するには、次のコマンドを入力します。 smo backup update -profile profile_name ｛ -labellabel [data|-archivelogs] | -idID ｝ -retain [-hourly | -daily | -weekly | -monthly ]
+. バックアップを更新して削除できるようにしたら、バックアップを削除するか、または解放しておくことができます。
++
+** バックアップを削除するには、次のコマンドを入力します。 smo backup delete -profile profile_name ｛ -labelabel [data | -archivelogs ] | -idID | -all ｝
+** バックアップを削除するのではなく、バックアップ・リソースを解放するには、次のコマンドを入力します。 smo backup free-profileprofileprofile_name ｛ -labelabel[data|-archivelogs] | -idID|-all ｝ [-force-][-dump] [-quiet | -verbose
+
+
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_update_command.adoc[smo backup update コマンド]

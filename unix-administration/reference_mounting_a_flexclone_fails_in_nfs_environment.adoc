@@ -1,0 +1,30 @@
+---
+permalink: unix-administration/reference_mounting_a_flexclone_fails_in_nfs_environment.html 
+sidebar: sidebar 
+keywords: snapmanager, flexclone, volume, nfs, environment, clone, backup, flexvol, ha, pair, configuration, export 
+summary: SnapManager 環境でボリュームの FlexClone を作成すると、 /etc/exports ファイルにエントリが追加されます。SnapManager ホストへのクローンまたはバックアップのマウントが失敗して、エラーメッセージが表示されます。 
+---
+= NFS 環境で FlexClone ボリュームのマウントが失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager 環境でボリュームの FlexClone を作成すると、 /etc/exports ファイルにエントリが追加されます。SnapManager ホストへのクローンまたはバックアップのマウントが失敗して、エラーメッセージが表示されます。
+
+次のエラーメッセージが表示されます。 0001-034 コマンドエラー： mount ： filer1 ： /vol/SnapManager_20090914112850837_vol14 on /opt/NTAPsmo /mnt/-ora_data02 -20090914112850735_1 - warning unknown option "zone14" NFS mount ： filer1 ： 914_vol2005012914_vol14_vol140.0514 ： SnapManager
+
+同時に、ストレージシステムコンソールで次のメッセージが生成されます。 Mon Sep 14 23 ： 58 ： 37 PDT [filer1 ： export.auto.update.disabled: warning] ： /etc/exports は、 vol clone create コマンドを実行したときに vol14 に対して更新されませんでした。/etc/exports を手動で更新するか、または /etc/exports に .new をコピーしてください。
+
+このメッセージは、 AutoSupport メッセージにキャプチャされない場合があります。
+
+
+NOTE: NFS で FlexVol ボリュームをクローニングする場合も、同様の問題が発生することがあります。同じ手順に従って、 nfs.export.auto-update オプションを有効にすることができます。
+
+* するべきこと *
+
+. /etc/exports ファイルが自動的に更新されるように、 nfs.export.auto-update オプションを on に設定します。オプション nfs.export.auto-updateon
+
+
+
+NOTE: HA ペア構成では、両方のストレージシステムで NFS エクスポートオプションを on に設定します。

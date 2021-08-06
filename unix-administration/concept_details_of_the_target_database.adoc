@@ -1,0 +1,30 @@
+---
+permalink: unix-administration/concept_details_of_the_target_database.html 
+sidebar: sidebar 
+keywords: integrated, database, protection, payroll, techco, dba, 3000-person, atlanta 
+summary: この統合データベース保護の例では、給与データベースの保護について説明します。この例では次のデータを使用しています。 
+---
+= ターゲットデータベースの詳細
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+この統合データベース保護の例では、給与データベースの保護について説明します。この例では次のデータを使用しています。
+
+アトランタに本社を置く 3000 人の企業 TechCo のデータベース管理者（ DBA ）は、生産給与データベース PAYDB の一貫したバックアップを作成する必要があります。プライマリストレージとセカンダリストレージにバックアップする保護戦略では、データベース管理者とストレージ管理者が協力して、プライマリストレージ上でローカルに Oracle データベースをバックアップするとともに、リモートサイトのセカンダリストレージにリモートで Oracle データベースをバックアップする必要があります。
+
+* * プロファイル情報 *
++
+SnapManager でプロファイルを作成する場合は、次のデータが必要です。
+
++
+** データベース名： PAYDB
+** ホスト名： payroll.techco.com
+** データベース ID ： payrolldb
+** プロファイル名： payroll_prod
+** 接続モード：データベース認証
+** Snapshot の命名方式： smo _hostname_dbsid_smproprofile_scope_mode_smid （「 smo_payroll.xyz.com_payrolldb_payroll_prod_f_h_x" 」に変換）
+
+
+

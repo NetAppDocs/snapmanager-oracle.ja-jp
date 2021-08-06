@@ -1,0 +1,22 @@
+---
+permalink: windows/task_verifying_the_environment.html 
+sidebar: sidebar 
+keywords: verify, environment, snapdrive, snapmanager, set, up, correctly 
+summary: 環境を検証して、 SnapDrive と SnapManager が正しく設定されていることを確認できます。 
+---
+= 環境の検証
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+環境を検証して、 SnapDrive と SnapManager が正しく設定されていることを確認できます。
+
+必要な前提条件をダウンロード、インストール、およびセットアップします。SnapManager がインストールされ、ホストサーバが実行されていることを確認します。
+
+. SnapDrive がインストールされ、 root アカウントから実行できることを確認するには、次のコマンドを実行します。 smo system verify
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapsystem_verify_command.adoc[smo system verify コマンド]

@@ -1,0 +1,19 @@
+---
+permalink: unix-administration/concept_restoration_of_the_data_from_raw_devices.html 
+sidebar: sidebar 
+keywords: restore, alternate, location, connect, necessary, raw, device, local, host 
+summary: 代替保存場所からリストアする前に、ローカル・ホスト上に存在する必要な raw デバイスに接続する必要があります。 
+---
+= raw デバイスからのデータのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+代替保存場所からリストアする前に、ローカル・ホスト上に存在する必要な raw デバイスに接続する必要があります。
+
+代替保存場所からのリストアを実行すると、代替 raw デバイスからアクティブ raw デバイスにデータ・ブロックをコピーできます。この処理を実行するには、リストア仕様を作成して、オリジナルの raw デバイスのリストア元となる代替 raw デバイスを指定する必要があります。
+
+* 関連情報 *
+
+xref:task_creating_restore_specifications.adoc[リストア仕様を作成しています]

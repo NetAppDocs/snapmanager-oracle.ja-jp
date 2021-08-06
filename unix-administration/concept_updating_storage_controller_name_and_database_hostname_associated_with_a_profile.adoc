@@ -1,0 +1,13 @@
+---
+permalink: unix-administration/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html 
+sidebar: sidebar 
+keywords: snapmanager, storage, system, host, name, address, target, database 
+summary: SnapManager 3.3 以降では、ストレージ・システムのホスト名またはストレージ・システムのアドレス、および SnapManager プロファイルに関連付けられたターゲット・データベースのホスト名を更新できます。 
+---
+= プロファイルに関連付けられたストレージ・システム名およびターゲット・データベース・ホスト名を更新しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager 3.3 以降では、ストレージ・システムのホスト名またはストレージ・システムのアドレス、および SnapManager プロファイルに関連付けられたターゲット・データベースのホスト名を更新できます。

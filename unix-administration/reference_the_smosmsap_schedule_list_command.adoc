@@ -1,0 +1,34 @@
+---
+permalink: unix-administration/reference_the_smosmsap_schedule_list_command.html 
+sidebar: sidebar 
+keywords: command, list, schedule, operation, associate, profile 
+summary: このコマンドは、プロファイルに関連付けられているスケジュール済み処理をリスト表示します。 
+---
+= smo schedule list コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、プロファイルに関連付けられているスケジュール済み処理をリスト表示します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo schedule list
+-profile profile_name
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+データベースに関連するプロファイルの名前を指定します。このプロファイルを使用すると、スケジュール済み処理のリストを表示できます。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+

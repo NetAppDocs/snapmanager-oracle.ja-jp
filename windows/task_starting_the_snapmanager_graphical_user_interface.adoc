@@ -1,0 +1,26 @@
+---
+permalink: windows/task_starting_the_snapmanager_graphical_user_interface.html 
+sidebar: sidebar 
+keywords: snapmanager, install, host, graphical, user, interface, gui, program, start 
+summary: SnapManager がホストにインストールされている場合は、プログラムのリストからプログラムを選択して、 SnapManager のグラフィカルユーザインターフェイス（ GUI ）を起動します。 
+---
+= SnapManager GUI を起動しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager がホストにインストールされている場合は、プログラムのリストからプログラムを選択して、 SnapManager のグラフィカルユーザインターフェイス（ GUI ）を起動します。
+
+* SnapManager サーバが起動していることを確認します。
+
+
+SnapManager GUI は、次のいずれかの方法で起動できます。
+
+* SnapManager ホストで、 * Start * > * All Programs * > * NetApp * > * SnapManager for Oracle * > * Start SMO GUI * をクリックします。
+* ホストに SnapManager がインストールされていない場合は、 Java Web Start を使用します。この Start を使用すると、 SnapManager コンポーネントがダウンロードされ、 GUI が起動します。
+
+
+* 関連情報 *
+
+xref:task_downloading_and_starting_the_graphical_user_interface_using_java_web_start_windows.adoc[Java Web Start を使用したグラフィカルユーザインターフェイスのダウンロードと起動]

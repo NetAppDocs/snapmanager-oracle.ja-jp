@@ -1,0 +1,101 @@
+---
+permalink: windows/reference_the_smosmsapbackup_mount_command.html 
+sidebar: sidebar 
+keywords: run, backup, mount, command, recover, operation, external 
+summary: 外部ツールを使用してリカバリ処理を実行するには、 backup mount コマンドを実行してバックアップをマウントします。 
+---
+= smo backup mount コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+外部ツールを使用してリカバリ処理を実行するには、 backup mount コマンドを実行してバックアップをマウントします。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo backup mount
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id id\]
+[-host  host]
+
+\[-dump\]
+[-quiet | -verbose]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+マウントするバックアップに関連付けられたプロファイルを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* *-id GUID*
++
+指定した GUID を持つバックアップをマウントします。GUID はバックアップを作成するときに SnapManager によって生成されます。各バックアップの GUID を表示する場合は、 smo backup list コマンドを使用します。
+
+* * - ラベルラベル *
++
+指定したラベルを持つバックアップをマウントします。
+
+* *-data*
++
+データファイルを指定します。
+
+* *-archivelogs*
++
+アーカイブログファイルを指定します。
+
+* * - ホストホストホスト *
++
+バックアップをマウントするホストを指定します。
+
+* * -dump*
++
+マウント処理が成功したか失敗したあとにダンプファイルを収集します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルト設定では、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+NOTE: このコマンドは、 Oracle Recovery Manager （ RMAN ）などの外部ツールを使用する場合にのみ使用する必要があります。smo backup restore コマンドを使用してバックアップをリストアする場合は、バックアップのマウントが SnapManager によって自動的に処理されます。このコマンドを実行すると、 Snapshot コピーがマウントされているパスのリストが表示されます。このリストは、 -verbose オプションを指定した場合のみ表示されます。
+
+
+
+== 例
+
+次に、バックアップをマウントする例を示します。
+
+[listing]
+----
+smo backup mount -profile SALES1 -label full_backup_sales_May -verbose
+[INFO ]: SMO-13051: Process PID=6852
+[INFO ]: SMO-13036: Starting operation Backup Mount on host hadley.domain.private
+[INFO ]: SMO-13036: Starting operation Backup Mount on host hadley.domain.private
+[INFO ]: SMO-13046: Operation GUID 8abc01573883daf0013883daf5ac0001 starting on Profile FAS_P1
+[INFO ]: SD-00025: Beginning to connect filesystem(s) [I:\] from snapshot smo_fas_p1_fasdb_d_h_2_8abc0157388344bc01388344c2d50001_0.
+[INFO ]: SD-00016: Discovering storage resources for C:\SnapManager_auto_mounts\I-2012071400592328_0.
+[INFO ]: SD-00017: Finished storage discovery for C:\SnapManager_auto_mounts\I-2012071400592328_0
+[INFO ]: SD-00026: Finished connecting filesystem(s) [I:\] from snapshot smo_fas_p1_fasdb_d_h_2_8abc0157388344bc01388344c2d50001_0.
+[INFO ]: SD-00025: Beginning to connect filesystem(s) [H:\] from snapshot smo_fas_p1_fasdb_d_h_1_8abc0157388344bc01388344c2d50001_0.
+[INFO ]: SD-00016: Discovering storage resources for C:\SnapManager_auto_mounts\H-2012071400592312_0.
+[INFO ]: SD-00017: Finished storage discovery for C:\SnapManager_auto_mounts\H-2012071400592312_0.
+[INFO ]: SD-00026: Finished connecting filesystem(s) [H:\] from snapshot smo_fas_p1_fasdb_d_h_1_8abc0157388344bc01388344c2d50001_0.
+[INFO ]: SMO-13048: Backup Mount Operation Status: SUCCESS
+[INFO ]: SMO-13049: Elapsed Time: 0:19:05.620
+----
+* 関連情報 *
+
+xref:task_mounting_backups.adoc[バックアップのマウント]

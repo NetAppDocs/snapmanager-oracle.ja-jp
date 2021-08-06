@@ -1,0 +1,37 @@
+---
+permalink: windows/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html 
+sidebar: sidebar 
+keywords: view, list, storage, system, associate, particular, profile 
+summary: 特定のプロファイルに関連付けられているストレージシステムのリストを表示できます。 
+---
+= プロファイルに関連付けられているストレージ・システムのリストの表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+特定のプロファイルに関連付けられているストレージシステムのリストを表示できます。
+
+リストには、特定のプロファイルに関連付けられているストレージ・システム名が表示されます。
+
+
+NOTE: プロファイルに使用できるバックアップがない場合、プロファイルに関連付けられているストレージ・システム名は表示できません。
+
+. 特定のプロファイルに関連付けられているストレージシステムに関する情報を表示するには、次のコマンドを入力します。 smo storage list -profile [-quiet | -verbose
+
+
+
+
+== 例
+
+[listing]
+----
+smo storage list -profile mjubllian
+----
+[listing]
+----
+Sample Output:
+Storage Controllers
+--------------------
+STCO1110-RTP07OLD
+----

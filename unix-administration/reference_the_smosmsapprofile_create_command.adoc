@@ -1,0 +1,282 @@
+---
+permalink: unix-administration/reference_the_smosmsapprofile_create_command.html 
+sidebar: sidebar 
+keywords: run, profile, create, command, database, repository, smo 
+summary: profile create コマンドを実行して、リポジトリ内にデータベースのプロファイルを作成できます。このコマンドを実行する前に、データベースをマウントする必要があります。 
+---
+= smo profile create コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+profile create コマンドを実行して、リポジトリ内にデータベースのプロファイルを作成できます。このコマンドを実行する前に、データベースをマウントする必要があります。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo profile create
+-profile profile
+\[-profile-password profile_password\]
+-repository
+-dbname repo_service_name
+-host repo_host
+-port repo_port
+-login -username repo_username
+-database
+-dbname db_dbname
+-host db_host
+[-sid  db_sid\]
+[-login
+\[-username db_username -password db_password -port db_port\]
+ \[-asminstance -asmusername asminstance_username  -asmpassword asminstance_password\]]
+[-rman \{-controlfile \| \{-login
+-username  rman_username -password  rman_password\}
+-tnsname  rman_tnsname\}\}]
+\[-osaccount osaccount \]
+\[-osgroup osgroup\]
+[-retain
+\[-hourly \[-count n\] \[-duration m\]\]
+\[-daily \[-count n\] \[-duration m\]]
+\[-weekly \[-count n\] \[-duration m\]]
+\[-monthly \[-count n\] \[-duration m\]]]]
+-comment comment
+-snapname-pattern pattern
+[-protect \[-protection-policy policy\]]
+[-summary-notification]
+[-notification
+\[-success
+-email email_address1,email_address2
+-subject subject_pattern\]
+\[-failure
+-email email_address1,email_address2
+-subject subject_pattern]
+[-separate-archivelog-backups
+-retain-archivelog-backups
+ -hours hours |
+-days days |
+-weeks weeks |
+-months months
+[-protect \[-protection-policy policy_name \| -noprotect]
+[-include-with-online-backups \| -no-include-with-online-backups]]
+[-dump]
+[-quiet | -verbose]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+プロファイルの名前を指定します。この名前には 30 文字まで使用でき、ホスト内で一意である必要があります。
+
+* * -profile-password profile_password * を入力します
++
+プロファイルのパスワードを指定します。
+
+* * - リポジトリ *
++
+repository のあとに続くオプションは、プロファイルが格納されるデータベースの詳細を指定します。
+
+* * -dbname repo_service_name *
++
+プロファイルが格納されたデータベースの名前を指定します。グローバル名または SID を使用します。
+
+* * -host repo_host *
++
+リポジトリ・データベースが稼働しているホスト・コンピュータの名前または IP アドレスを指定します。
+
+* *-sid db_sid *
++
+プロファイルに記述されるデータベースのシステム識別子を指定します。デフォルトでは、 SnapManager はデータベース名をシステム識別子として使用します。システム ID がデータベース名と異なる場合は、 -sid オプションを使用して指定する必要があります。
+
++
+たとえば、 Oracle Real Application Clusters （ RAC ）を使用している場合は、 SnapManager の実行元 RAC ノード上の RAC インスタンスのシステム識別子を指定する必要があります。
+
+* * - ログイン *
++
+リポジトリ・ログインの詳細を指定します。
+
+* * -username repo_username *
++
+リポジトリ・データベースへのアクセスに必要なユーザ名を指定します。
+
+* * -port repo_port *
++
+リポジトリ・データベースへのアクセスに使用する TCP ポート番号を指定します。
+
+* * -database *
++
+プロファイルに記述されるデータベースの詳細を指定します。このデータベースに対してバックアップ、リストア、またはクローニングが実行されます。
+
+* * -dbname db_dbname *
++
+プロファイルに記述されるデータベースの名前を指定します。グローバル名またはシステム ID を使用できます。
+
+* * -host db_host db_host *
++
+データベースが稼働しているホスト・コンピュータの名前または IP アドレスを指定します。
+
+* *-asminstance*
++
+Automatic Storage Management （ ASM ）インスタンスへのログインに使用するクレデンシャルを指定します。
+
+* *-asmusername asminstance_username*
++
+ASM インスタンスへのログインに使用するユーザ名を指定します。
+
+* *-asmpassword asminstance_password*
++
+ASM インスタンスへのログインに使用するパスワードを指定します。
+
+* * - ログイン *
++
+データベース・ログインの詳細を指定します。
+
+* * -username repo_username *
++
+プロファイルに記述されるデータベースにアクセスするために必要なユーザ名を指定します。
+
+* * -password db_password *
++
+プロファイルに記述されるデータベースにアクセスするために必要なパスワードを指定します。
+
+* * -port db_port *
++
+プロファイルに記述されるデータベースへのアクセスに使用する TCP ポート番号を指定します。
+
+* * - rman*
++
+SnapManager が Oracle Recovery Manager （ RMAN ）を使用してバックアップをカタログ化するために使用する詳細情報を指定します。
+
+* * -controlfile *
++
+カタログではなくターゲットのデータベース制御ファイルを RMAN リポジトリとして指定します。
+
+* * - ログイン *
++
+RMAN ログインの詳細を指定します。
+
+* * -password rman_password*
++
+RMAN カタログへのログインに使用するパスワードを指定します。
+
+* * -username rman_username *
++
+RMAN カタログへのログインに使用するユーザ名を指定します。
+
+* *-tnsname tnsname *
++
+tnsname 接続名を指定します（ tnsname.ora ファイルで定義されています）。
+
+* * -osaccount osaccount *
++
+Oracle データベースのユーザアカウントの名前を指定します。SnapManager はこのアカウントを使用して、起動やシャットダウンなどの Oracle 処理を実行します。通常は、 Oracle など、ホスト上で Oracle ソフトウェアを所有しているユーザがこれに該当します。
+
+* * -osgroup osgroup *
++
+Oracle アカウントに関連付けられた Oracle データベースグループの名前を指定します。
+
+* * -retain [-hourly [-count n] [-duration m] [-daily [-count n] [-duration m] [-weekly ] [-weekly [-count n] [-duration n] [-duration m] ] [-monthly [-monthly ] [-duration n] ] *
++
+バックアップの保持ポリシーを指定します。保持数のどちらか、または両方に加えて、保持クラス（毎時、毎日、毎週、毎月）の保持期間を指定します。
+
++
+保持クラスごとに、保持数または保持期間のどちらか、または両方を指定できます。期間はクラスの単位で指定します（たとえば、時間単位の場合は時間単位、日単位の場合は日単位）。たとえば、日次バックアップの保持期間として 7 のみを指定した場合、 SnapManager ではプロファイルの日次バックアップの数が制限されません（保持数が 0 であるため）。ただし、 SnapManager では、 7 日前に作成された日次バックアップが自動的に削除されます。
+
+* * -comment comment*
++
+プロファイルドメインを記述するプロファイルのコメントを指定します。
+
+* * - snapname - pattern pattern パターン *
++
+Snapshot コピーの命名パターンを示します。すべての Snapshot コピー名に、可用性の高い処理用の HAOPS などのカスタムテキストを含めることもできます。Snapshot コピーの命名パターンは、プロファイルの作成時、またはプロファイルの作成後に変更できます。更新後のパターンは、まだ作成されていない Snapshot コピーにのみ適用されます。存在する Snapshot コピーには、前の snapname パターンが保持されます。パターンテキストでは、複数の変数を使用できます。
+
+* * -protection-protection-policy ポリシー *
++
+バックアップをセカンダリストレージで保護するかどうかを指定します。
+
++
+
+NOTE: protection-policy を指定しないと、データセットに保護ポリシーが設定されません。protect を指定し、かつ protection-policy を設定しない場合、プロファイルの作成時に bysmo profile update コマンドを使用するか、ストレージ管理者が Protection Manager のコンソールから設定できます。
+
+* *-summary-notification*
++
+新しいプロファイルでサマリー E メール通知を有効にします。
+
+* *-notification-success -email email_address1, e-mail address2-subject_pattern *
++
+SnapManager の処理が成功したときに受信者に E メールが送信されるように、新しいプロファイルで E メール通知を有効にします。E メールアラートの送信先となる 1 つまたは複数の E メールアドレスと新しいプロファイルの E メール件名のパターンを入力する必要があります。
+
++
+また、新しいプロファイルにカスタムの件名を含めることもできます。件名テキストは、プロファイルの作成時またはプロファイルの作成後に変更できます。更新された件名は、送信されない E メールにのみ適用されます。E メールの件名にはいくつかの変数を使用できます。
+
+* *-notification-failure-email email_address1, e-mail address2-subject_pattern *
++
+新しいプロファイルで E メール通知を有効にして、 SnapManager の処理が失敗したときに受信者に E メールを送信するように指定します。E メールアラートの送信先となる 1 つまたは複数の E メールアドレスと新しいプロファイルの E メール件名のパターンを入力する必要があります。
+
++
+また、新しいプロファイルにカスタムの件名を含めることもできます。件名テキストは、プロファイルの作成時またはプロファイルの作成後に変更できます。更新された件名は、送信されない E メールにのみ適用されます。E メールの件名にはいくつかの変数を使用できます。
+
+* *-Separe-archivelog -bbackups * を実行します
++
+アーカイブログのバックアップをデータファイルのバックアップから分離します。これは、プロファイルの作成時に指定できるオプションのパラメータです。このオプションを使用してバックアップを分けたあと、データファイルのみのバックアップを作成するか、ログのみのバックアップをアーカイブするかを選択できます。
+
+* *-retain-archivelog -bbackups -hours | -daysdays | -weeksweeks | -monthsmonths *
++
+アーカイブログの保持期間（毎時、毎日、毎週、毎月）に基づいてアーカイブログのバックアップを保持するように指定します。
+
+* * protect [-protection-policypolicy_name] | -nobprotect *
++
+アーカイブログの保護ポリシーに基づいてアーカイブログファイルを保護するように指定します。
+
++
+-noftect オプションは、アーカイブログファイルを保護しないように指定します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+* * -include-y-one-backup*
++
+オンラインデータベースバックアップにアーカイブログバックアップを含めるように指定します。
+
+* * -no-include-y-online-backups *
++
+オンラインデータベースバックアップにアーカイブログバックアップを含めないように指定します。
+
+* * -dump*
++
+プロファイル作成処理が成功したあとにダンプ・ファイルを収集するように指定します。
+
+
+
+
+
+== 例
+
+次の例は、時間単位の保持ポリシーと E メール通知を使用してプロファイルを作成する方法を示しています。
+
+[listing]
+----
+smo profile create -profile test_rbac -profile-password netapp -repository -dbname SMOREP -host hostname.org.com -port 1521 -login -username smorep -database -dbname
+RACB -host saal -sid racb1 -login -username sys -password netapp -port 1521 -rman -controlfile -retain -hourly -count 30 -verbose
+Operation Id [8abc01ec0e78ebda010e78ebe6a40005] succeeded.
+----
+* 関連情報 *
+
+xref:concept_managing_profiles_for_efficient_backups.adoc[効率的なバックアップを行うためのプロファイルの管理]
+
+xref:reference_the_smosmsapprotection_policy_command.adoc[smo protection-policy コマンド]
+
+xref:concept_snapshot_copy_naming.adoc[Snapshot コピーの命名規則]
+
+xref:concept_how_snapmanager_retains_backups_on_the_local_storage.adoc[SnapManager がローカルストレージ上にバックアップを保持する方法]

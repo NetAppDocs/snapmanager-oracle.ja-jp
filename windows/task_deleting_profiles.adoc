@@ -1,0 +1,20 @@
+---
+permalink: windows/task_deleting_profiles.html 
+sidebar: sidebar 
+keywords: delete, profile, anytime, successful, incomplete, backup, delete 
+summary: 成功したバックアップまたは未完了のバックアップが含まれていないかぎり、プロファイルはいつでも削除できます。解放または削除されたバックアップを含むプロファイルを削除できます。 
+---
+= プロファイルの削除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+成功したバックアップまたは未完了のバックアップが含まれていないかぎり、プロファイルはいつでも削除できます。解放または削除されたバックアップを含むプロファイルを削除できます。
+
+. プロファイルを削除するには、次のコマンドを入力します。 smo profile delete -profile profile_name
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapprofile_delete_command.adoc[smo profile delete コマンド]

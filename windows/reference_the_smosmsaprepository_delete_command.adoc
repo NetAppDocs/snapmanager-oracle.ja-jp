@@ -1,0 +1,100 @@
+---
+permalink: windows/reference_the_smosmsaprepository_delete_command.html 
+sidebar: sidebar 
+keywords: command, delete, repository, store, database, associate, credential, delete, smo 
+summary: このコマンドは、データベースプロファイルおよび関連付けられているクレデンシャルを格納するリポジトリを削除します。リポジトリを削除できるのは、リポジトリにプロファイルがない場合だけです。 
+---
+= smo repository delete コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、データベースプロファイルおよび関連付けられているクレデンシャルを格納するリポジトリを削除します。リポジトリを削除できるのは、リポジトリにプロファイルがない場合だけです。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo repository delete
+-repository
+-port repo_port
+-dbname repo_service_name
+-host repo_host
+-login -username repo_username
+[-force] [-noprompt]
+[-quiet | -verbose]
+----
+
+
+== パラメータ
+
+* * - リポジトリ *
++
+repository のあとに続くオプションは、リポジトリに対応するデータベースの詳細を指定します。
+
+* * -port repo_port *
++
+リポジトリが格納されたデータベースへのアクセスに使用する TCP ポート番号を指定します。
+
+* * -dbname repo_service_name *
++
+リポジトリが格納されたデータベースの名前を指定します。グローバル名または SID を使用します。
+
+* * -host repo_host *
++
+リポジトリ・データベースが稼働しているホスト・コンピュータの名前または IP アドレスを指定します。
+
+* * - ログイン *
++
+リポジトリ・ログインの詳細設定を開始します。
+
+* * -username repo_username *
++
+リポジトリが格納されたデータベースにアクセスするために必要なユーザ名を指定します。
+
+* * -force *
++
+未完了の処理がある場合でも、リポジトリを強制的に削除しようとします。未完了の処理がある場合、 SnapManager はリポジトリを削除するかどうかを確認するプロンプトを表示します。
+
+* * -noprompt *
++
+は、リポジトリを削除する前にプロンプトを表示しません。noprompt オプションを使用するとプロンプトが表示されないため、スクリプトを使用したリポジトリの削除が容易になります。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンド例
+
+次に、データベース SALESDB 内のリポジトリを削除する例を示します。
+
+[listing]
+----
+smo repository delete -repository -port 1521 -dbname smorep
+-host nila -login -username smofresno -force -verbose
+This command will delete repository "smofresno@smorep/nila".
+Any resources maintained by the repository must be cleaned up manually.
+This may include snapshots, mounted backups, and clones.
+Are you sure you wish to proceed (Y/N)?Y
+[ INFO] SMO-09201: Dropping existing schema as smofresno
+  on jdbc:oracle:thin:@//nila:1521/smorep.
+[ INFO] SMO-13048: Repository Delete Operation Status: SUCCESS
+[ INFO] SMO-13049: Elapsed Time: 0:00:06.372
+[ INFO] SMO-20010: Synchronizing mapping for profiles in
+   repository "smofresno@smorep/nila:1521".
+[ WARN] SMO-20029: No repository schema exists in "smofresno@smorep/nila:1521".
+ Deleting all profile mappings for this repository.
+[ INFO] SMO-20012: Deleted stale mapping for profile "TESTPASS".
+----

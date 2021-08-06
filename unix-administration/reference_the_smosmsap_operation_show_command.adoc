@@ -1,0 +1,93 @@
+---
+permalink: unix-administration/reference_the_smosmsap_operation_show_command.html 
+sidebar: sidebar 
+keywords: run, operation, show, command, list, summary, information, perform, specified, profile, smo, list 
+summary: operation show コマンドを実行して、指定したプロファイルに対して実行されたすべての処理の概要情報をリストできます。この出力には、クライアントユーザ（クライアント PC のユーザ）と有効なユーザ（選択したホストで有効な SnapManager のユーザ）が表示されます。 
+---
+= smo operation show コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+operation show コマンドを実行して、指定したプロファイルに対して実行されたすべての処理の概要情報をリストできます。この出力には、クライアントユーザ（クライアント PC のユーザ）と有効なユーザ（選択したホストで有効な SnapManager のユーザ）が表示されます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo operation show
+-profile profile_name
+\[-label label \| -id id\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+プロファイルの名前を指定します。この名前には 30 文字まで使用でき、ホスト内で一意である必要があります。
+
+* * - ラベルラベル *
++
+処理のラベルを指定します。
+
+* * -id id *
++
+処理の識別子を指定します。
+
+* * - Quiet *
++
+オプション：コンソールにエラーメッセージだけを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+オプション：エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次のコマンド・ラインを使用すると、処理に関する詳細情報を表示できます。
+
+[listing]
+----
+# smo operation show -profile myprofile -id ff8080811295eb1c011295eb28230001
+----
+[listing]
+----
+Operation Attempted
+   Operation ID: ff8080811295eb1c011295eb28230001
+   Type:RestoreFor profile: myprofile
+   With Force: No
+   Performed on backup
+   Operation ID: ff8080811295eb1c011296eb23290001
+   Label: mylabel
+Operation Runtime Information
+   Status: SUCCESS
+   Start date: 2007-07-16 13:24:09 IST
+   End date: 2007-07-16 14:10:10 IST
+   Client user: amorrow
+   Effective user: amorrow
+Host
+   Host Run upon: Host3
+   Process ID: 3122
+   SnapManager version: 3.3
+Repository
+   Connection: user1@SMOREPO/hotspur:1521
+   Repository version: 3.3
+Resources in use
+   Volume:
+     ssys1:/vol/luke_ES0_0 (FlexClone)
+   Filesystems:
+     /opt/NetApp/smo/mnt/-mnt_ssys1_luke_ES0_smo_e_es0_f_c_1_8abc0112129b0f81580001_0
+----
+* 関連情報 *
+
+xref:task_viewing_operation_details.adoc[処理の詳細を表示しています]

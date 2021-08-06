@@ -1,0 +1,28 @@
+---
+permalink: windows/task_creating_operation_level_dump_files.html 
+sidebar: sidebar 
+keywords: smo, operation, dump, command, name, id, fail, particular, host, environment 
+summary: smo operation dump コマンドでは、失敗した処理の名前または ID を指定して、特定の処理に関するログ情報を取得できます。さまざまなログレベルを指定して、特定の処理、プロファイル、ホスト、または環境に関する情報を収集できます。 
+---
+= 処理レベルのダンプ・ファイルの作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+smo operation dump コマンドでは、失敗した処理の名前または ID を指定して、特定の処理に関するログ情報を取得できます。さまざまなログレベルを指定して、特定の処理、プロファイル、ホスト、または環境に関する情報を収集できます。
+
+. 次のコマンドを入力します。 smo operation dump -idguid
++
+
+NOTE: smo operation dump コマンドは、 smo profile dump コマンドで得られる情報のスーパーセットを提供し、 smoprofile dump コマンドは、 smo system dump コマンドで得られる情報のスーパーセットを提供します。
+
++
+ダンプファイルの場所：
+
++
+[listing]
+----
+Path:\<user-home>\Application Data\NetApp\smo\3.3.0\smo_dump_8abc01c814649ebd0114649ec69d0001.jar
+----
+

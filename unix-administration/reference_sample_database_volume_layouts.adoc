@@ -1,0 +1,378 @@
+---
+permalink: unix-administration/reference_sample_database_volume_layouts.html 
+sidebar: sidebar 
+keywords: refer, sample, database, volume, layout, configuring, database 
+summary: データベースの設定方法については、サンプルのデータベースボリュームレイアウトを参照してください。 
+---
+= データベースボリュームのレイアウト例
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースの設定方法については、サンプルのデータベースボリュームレイアウトを参照してください。
+
+
+
+== シングルインスタンスデータベース
+
+|===
+| ファイルの種類 | ボリューム名 | ファイルタイプ専用ボリューム | 自動 Snapshot コピー 
+
+
+ a| 
+Oracle バイナリ
+ a| 
+orabin_host 名
+ a| 
+はい。
+ a| 
+オン
+
+
+
+ a| 
+データ・ファイル
+ a| 
+oradata_sid
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+一時データファイル
+ a| 
+または 'p_sid を使用します
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+制御ファイル
+ a| 
+oracntrl01_sid （多重化）
+
+oracntrl02_sid （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+REDO ログ
+ a| 
+oralog01_sid （多重化）
+
+oralog02_sid （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+ログのアーカイブ
+ a| 
+oraarch_sid
+ a| 
+はい。
+ a| 
+オフ
+
+|===
+
+
+== Real Application Clusters （ RAC ）データベースの略
+
+|===
+| ファイルの種類 | ボリューム名 | ファイルタイプ専用ボリューム | 自動 Snapshot コピー 
+
+
+ a| 
+Oracle バイナリ
+ a| 
+orabin_host 名
+ a| 
+はい。
+ a| 
+オン
+
+
+
+ a| 
+データ・ファイル
+ a| 
+ORADATA _ DBName
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+一時データファイル
+ a| 
+データベース名を使用する
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+制御ファイル
+ a| 
+oracntrl01_dbname （多重化）
+
+oracntrl02_dbname （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+REDO ログ
+ a| 
+ORalog01_dbname （多重化）
+
+ORalog02_dbname （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+ログのアーカイブ
+ a| 
+oraarch_dbdbname
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+クラスタファイル
+ a| 
+oracrs_clustername
+ a| 
+はい。
+ a| 
+オン
+
+|===
+
+
+== Automatic Storage Management （ ASM ）データベースの単一インスタンス
+
+|===
+| ファイルの種類 | ボリューム名 | LUN 名 | ファイルタイプ専用ボリューム | 自動 Snapshot コピー 
+
+
+ a| 
+Oracle バイナリ
+ a| 
+orabin_host 名
+ a| 
+orabin_host namelun
+ a| 
+はい。
+ a| 
+オン
+
+
+
+ a| 
+データ・ファイル
+ a| 
+oradata_sid
+ a| 
+oradata_sidlun
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+一時データファイル
+ a| 
+または 'p_sid を使用します
+ a| 
+Oremit p_sidlun
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+制御ファイル
+ a| 
+oracntrl01_sid （多重化）
+
+oracntrl02_sid （多重化）
+ a| 
+oracntrl01_sidlun （多重化）
+
+oracntrl02_sidlun （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+REDO ログ
+ a| 
+ORalog01_dbname （多重化）
+
+ORalog02_dbname （多重化）
+ a| 
+oralog01_dbnamelun （多重化）
+
+oralog02_dbnamelun （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+ログのアーカイブ
+ a| 
+oraarch_sid
+ a| 
+Oraarch_sidlun
+ a| 
+はい。
+ a| 
+オフ
+
+|===
+
+
+== ASM RAC データベース
+
+|===
+| ファイルの種類 | ボリューム名 | LUN 名 | ファイルタイプ専用ボリューム | 自動 Snapshot コピー 
+
+
+ a| 
+Oracle バイナリ
+ a| 
+orabin_host 名
+ a| 
+orabin_host namelun
+ a| 
+はい。
+ a| 
+オン
+
+
+
+ a| 
+データ・ファイル
+ a| 
+oradata_sid
+ a| 
+oradata_sidlun
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+一時データファイル
+ a| 
+または 'p_sid を使用します
+ a| 
+Oremit p_sidlun
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+制御ファイル
+ a| 
+oracntrl01_sid （多重化）
+
+oracntrl02_sid （多重化）
+ a| 
+oracntrl01_sidlun （多重化）
+
+oracntrl02_sidlun （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+REDO ログ
+ a| 
+ORalog01_dbname （多重化）
+
+ORalog02_dbname （多重化）
+ a| 
+oralog01_dbnamelun （多重化）
+
+oralog02_dbnamelun （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+ログのアーカイブ
+ a| 
+oraarch_sid
+ a| 
+Oraarch_sidlun
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+クラスタファイル
+ a| 
+oracrs_clustername
+ a| 
+oracrs_clusternamelun
+ a| 
+はい。
+ a| 
+オン
+
+|===

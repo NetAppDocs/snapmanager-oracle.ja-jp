@@ -1,0 +1,23 @@
+---
+permalink: unix-administration/task_stopping_the_clone_split_process.html 
+sidebar: sidebar 
+keywords: stop, run, clone, split, process, smo 
+summary: 実行中のクローンスプリットプロセスを停止できます。 
+---
+= クローンスプリット処理を停止しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+実行中のクローンスプリットプロセスを停止できます。
+
+スプリットプロセスを停止した後で再開することはできません。
+
+. クローンスプリット処理を停止するには、次のコマンドを入力します。「 mo clone split -stop-profile profile [-hosthosthostname] [-labelsplit-label | -idsplit-id 」 [-quiet | -verbose 」
+
+
+[listing]
+----
+smo clone split-stop -profile p1 -id 8abc01ec0e78f3e2010e78f3fdd00001
+----

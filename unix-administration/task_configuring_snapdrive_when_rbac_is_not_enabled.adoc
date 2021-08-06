@@ -1,0 +1,27 @@
+---
+permalink: unix-administration/task_configuring_snapdrive_when_rbac_is_not_enabled.html 
+sidebar: sidebar 
+keywords: register, root, user, administrator, datafabric, manager, server, root, user, storage, system, snapdrive, rbac 
+summary: データ保護を有効にするには、 DataFabric Manager サーバの root ユーザまたはストレージシステムの root ユーザを SnapDrive に登録する必要があります。 
+---
+= RBAC が有効になっていない場合の SnapDrive の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データ保護を有効にするには、 DataFabric Manager サーバの root ユーザまたはストレージシステムの root ユーザを SnapDrive に登録する必要があります。
+
+. DataFabric Manager サーバを更新して、ターゲットデータベースによってストレージシステム上で直接行われた変更を更新するには、次のコマンドを入力します。
++
+dfm host discover storage_system のように入力します
+
+. DataFabric Manager サーバの root ユーザまたは管理者を SnapDrive に登録するには、次のコマンドを入力します。
++
+SnapDrive config set - dfm Administratordfm_host
+
+. SnapDrive に root ユーザまたはストレージ・システムの管理者を登録するには、次のコマンドを入力します。
++
+SnapDrive の設定で root storage_system と指定します
+
+

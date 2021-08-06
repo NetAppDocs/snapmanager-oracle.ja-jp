@@ -1,0 +1,24 @@
+---
+permalink: windows/task_creating_system_level_dump_files.html 
+sidebar: sidebar 
+keywords: smo, system, dump, command, log, information, snapmanager, environment, level, operation, profile, host 
+summary: smo system dump コマンドを使用すると、 SnapManager ホストおよび環境に関するログ情報を取得できます。さまざまなログレベルを指定して、特定の処理、プロファイル、またはホストと環境に関する情報を収集できます。 
+---
+= システムレベルのダンプファイルを作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+smo system dump コマンドを使用すると、 SnapManager ホストおよび環境に関するログ情報を取得できます。さまざまなログレベルを指定して、特定の処理、プロファイル、またはホストと環境に関する情報を収集できます。
+
+. 次のコマンドを入力します。 smo system dump
++
+作成されたダンプ
+
++
+[listing]
+----
+Path:\<user-home>\Application Data\NetApp\smo\3.3.0\smo_dump_server_host.jar
+----
+

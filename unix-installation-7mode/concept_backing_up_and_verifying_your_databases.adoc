@@ -1,0 +1,27 @@
+---
+permalink: unix-installation-7mode/concept_backing_up_and_verifying_your_databases.html 
+sidebar: sidebar 
+keywords: install, snapmanager, create, basic, backup, database, verify, corrupt, file 
+summary: SnapManager のインストール後、データベースの基本的なバックアップを作成し、バックアップに破損ファイルが含まれていないことを確認できます。 
+---
+= データベースのバックアップと検証
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager のインストール後、データベースの基本的なバックアップを作成し、バックアップに破損ファイルが含まれていないことを確認できます。
+
+* 関連情報 *
+
+xref:concept_snapmanager_backup_overview.adoc[SnapManager バックアップの概要]
+
+xref:concept_defining_a_backup_strategy.adoc[バックアップ戦略の定義]
+
+xref:task_creating_a_profile_for_your_database.adoc[データベースのプロファイルを作成しています]
+
+xref:task_backing_up_your_database.adoc[データベースをバックアップしています]
+
+xref:task_verifying_database_backups.adoc[データベースのバックアップの検証]
+
+xref:task_scheduling_recurring_backups.adoc[定期的なバックアップのスケジュール設定]

@@ -1,0 +1,325 @@
+---
+permalink: unix-administration/reference_troubleshooting_known_issues.html 
+sidebar: sidebar 
+keywords: aware, known, issue, snapmanager, troubleshoot, identify, cluster-mode 
+summary: SnapManager の使用時に発生する可能性がある既知の問題とその回避方法について理解しておく必要があります。 
+---
+= 既知の問題のトラブルシューティング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager の使用時に発生する可能性がある既知の問題とその回避方法について理解しておく必要があります。
+
+
+
+== SnapManager for Oracle で clustered Data ONTAP のプロファイルを特定できません
+
+SnapManager for Oracle のインストール・ディレクトリ内の cmode_profiles.config ファイルに clustered Data ONTAP プロファイル名が存在しない場合は、次のエラー・メッセージがトリガーされることがあります。
+
+SnapDrive config set -dfm user_name apply_name を使用して DFM サーバを設定してください。
+
+また、 SnapManager for Oracle のアップグレード中に /opt/NetApp/smo/* フォルダを削除すると、 clustered Data ONTAP のプロファイル名が含まれる cmode_profiles.config ファイルも削除されます。この問題も同じエラーメッセージをトリガーします。
+
+* 回避策 *
+
+プロファイルを更新します。 smo profile update -profile <profile_name>
+
+
+NOTE: SnapManager for Oracle が /opt/NetApp/smo/ パスにインストールされている場合、ファイルの場所は /opt/NetApp/smo/cmode_profile/cmode_profiles.config になります。
+
+
+
+== サーバを起動できません
+
+サーバの起動時に、次のようなエラーメッセージが表示されることがあります。
+
+SMO -01104 ：コマンドの呼び出しエラー： SMO - 17107 ： SnapManager Server failed to start on port 8074 because of the following errors ： java.net.BindException: Address already in use.
+
+これは、 SnapManager リスニングポート（デフォルトは 27214 および 27215 ）が別のアプリケーションによって現在使用されているためです。
+
+このエラーは、 smo _server コマンドが実行中であるにもかかわらず、 SnapManager が既存プロセスを検出しない場合にも発生することがあります。
+
+* 回避策 *
+
+別のポートを使用するように SnapManager または他のアプリケーションを再設定できます。
+
+SnapManager を再設定するには、次のファイルを編集します。 /opt/NT2/smo/properties/smo.config
+
+次の値を割り当てます。
+
+* SMO Server.port=27214
+* SMO Server.rmiRegistry.port=27215
+* remote.registry.ocijdbc.port=27215
++
+remote.registry.ocijdbc.port を Server.rmiRegistry.port と同じにする必要があります。
+
+
+
+SnapManager サーバを起動するには、次のコマンドを入力します。 smo _server start
+
+
+NOTE: サーバがすでに実行中の場合は、エラーメッセージが表示されます。
+
+サーバがすでに稼働している場合は、次の手順を実行します。
+
+. 次のコマンドを入力して、サーバを停止します。 smo _server stop
+. 次のコマンドを入力して、サーバを再起動します。 smo _server start
+
+
+
+
+== 現在実行中の SnapManager 処理を終了します
+
+SnapManager サーバがハングし、処理を正常に実行できない場合には、 SnapManager とその処理を終了できます。
+
+* 回避策 *
+
+SnapManager は、 SnapManager と Protection Manager の両方で機能します。実行中のさまざまなプロセスを表示し、最後に実行されたプロセスを停止するには、次の手順を実行する必要があります。
+
+. 実行中のすべての SnapDrive プロセスを PS で一覧表示します
++
+例： ps | grep SnapDrive
+
+. SnapDrive プロセスを停止します。 kill <pid>
++
+PID は、 PS コマンドを使用して検出したプロセスのリストです。
+
++
+
+NOTE: すべての SnapDrive プロセスを停止しないでください。実行中の最後のプロセスだけを終了することもできます。
+
+. いずれかの処理で保護されているバックアップをセカンダリストレージからリストアする場合は、 Protection Manager コンソールを開き、次の手順を実行します。
++
+.. 「システム」メニューから「 * ジョブ * 」を選択します。
+.. [* Restore] を選択します。
+.. SnapManager プロファイル内のデータセットと一致する名前を確認します。
+.. 右クリックして、 * キャンセル * を選択します。
+
+
+. SnapManager プロセスを一覧表示します。
++
+.. root ユーザとしてログインします。
+.. PS コマンドを使用して、プロセスの一覧を表示します。
++
+例： ps | grep java
+
+
+
+. SnapManager プロセスを終了します。 kill <pid>
+
+
+
+
+== 最後に保護されたバックアップを削除または解放できません
+
+セカンダリストレージ上のプロファイルに対して最初のバックアップを作成すると、 SnapManager からそのバックアップに関するすべての情報が Protection Manager に送信されます。このプロファイルに関連する後続のバックアップでは、 SnapManager は変更された情報のみを送信します。最後に保護されたバックアップを削除すると、 SnapManager はバックアップ間の違いを識別できなくなり、これらの関係のベースラインを再設定する方法を見つける必要があります。したがって、最後に保護されたバックアップを削除しようとすると、エラー・メッセージが表示されます。
+
+* 回避策 *
+
+プロファイルを削除するか、プロファイル・バックアップだけを削除できます。
+
+プロファイルを削除するには、次の手順を実行します。
+
+. プロファイルのバックアップを削除します。
+. プロファイルを更新し、プロファイルの保護を無効にします。
++
+これにより、データセットが削除されます。
+
+. 最後に保護されたバックアップを削除します。
+. プロファイルを削除します。
+
+
+バックアップだけを削除するには、次の手順を実行します。
+
+. プロファイルの別のバックアップ・コピーを作成します。
+. そのバックアップコピーをセカンダリストレージに転送します。
+. 前のバックアップコピーを削除する
+
+
+
+
+== デスティネーション名が他のデスティネーション名に含まれている場合、アーカイブログファイルのデスティネーション名を管理できません
+
+アーカイブログのバックアップ作成時に、ユーザが他のデスティネーション名の一部であるデスティネーションを除外する場合は、その他のデスティネーション名も除外されます。
+
+たとえば、除外できるデスティネーションが、 /dest 、 /dest1 、 /dest2 の 3 つあるとします。アーカイブログファイルのバックアップを作成する際に、コマンドを使用して /dest を除外する場合
+
+[listing]
+----
+smo backup create -profile almsamp1 -data -online -archivelogs  -exclude-dest /dest
+----
+、 SnapManager for Oracle は、 /dest で始まるすべての宛先を除外します。
+
+* 回避策 *
+
+* デスティネーションが vs$archive_dest に設定されたあとにパス区切り文字を追加します。たとえば、 /dest を /dest/ に変更します。
+* バックアップを作成する際には、デスティネーションを除外するのではなく、バックアップ先を指定してください。
+
+
+
+
+== Automatic Storage Management （ ASM ）および非 ASM ストレージで多重化されている制御ファイルのリストアに失敗します
+
+制御ファイルが ASM および非 ASM ストレージで多重化されると、バックアップ処理は成功します。ただし、そのバックアップから制御ファイルをリストアしようとすると、リストア処理に失敗します。
+
+
+
+== SnapManager のクローニング処理が失敗する
+
+SnapManager でバックアップをクローニングすると、 DataFabric Manager サーバでボリュームを検出できず、次のエラーメッセージが表示されることがあります。
+
+SMO -13032 ：処理を実行できません：クローンの作成。ルート原因： SMO -11007 ： Snapshot からのエラークローニング： flow-11019 ： ExecuteConnectionSteps ： SD-00018 ： /mnt/datafileclone3 ： sd-10016 ： SnapDrive コマンドの実行時のエラー「 /usr/sbin/snapdrive storage show -fs/mnt/clone_11007 ： 0002-719 Warning ： 500x.sd&r1.0/data.2000.data.asp 上のストレージボリュームに対する操作のストレージの確認： 5000.250.950.5.x2.350.5.x2.350.25 ： SnapManager for サーバでのストレージのストレージのストレージのストレージのエラー
+
+理由：無効なリソースが指定されました。Operations Manager サーバ 10.x.x.x に ID が見つかりません
+
+ストレージシステムに大量のボリュームがある場合に発生します。
+
+* 回避策 *
+
+次のいずれかを実行する必要があります。
+
+* Data Fabric Manager サーバで、 dfm host discover source_system を実行します。
++
+また、シェルスクリプトファイルにコマンドを追加して、 DataFabric Manager サーバでジョブをスケジュールし、スクリプトを頻繁に実行することもできます。
+
+* snapdrive.conf ファイルの dfm-rbac -retries 値を大きくします。
++
+SnapDrive では、デフォルトの更新間隔値とデフォルトの再試行回数が使用されます。dfs-rbac -retry-sleep-secs のデフォルト値は 15 秒で、 DFM-RBAC の再試行回数は 12 回です。
+
++
+
+NOTE: Operations Manager の更新間隔は、ストレージシステムの数、ストレージシステム内のストレージオブジェクトの数、および DataFabric Manager サーバの負荷によって異なります。
+
++
+推奨事項として、次の手順を実行します。
+
++
+.. DataFabric Manager サーバから、データセットに関連付けられているすべてのセカンダリストレージシステムに対して、次のコマンドを手動で実行します。 dfm host discover storage_system
+.. ホスト検出処理の実行にかかった時間を 2 倍にして、 dfs-rbac -retry-sleep-secs に割り当てます。
++
+たとえば、処理に 11 秒かかった場合は、 dfs-rbac -retry-sleep-secs の値を 22 （ 11 * 2 ）に設定できます。
+
+
+
+
+
+
+
+== リポジトリデータベースのサイズは、バックアップの数ではなく、時間とともに増加します
+
+リポジトリデータベースのサイズは時間とともに大きくなります。これは、 SnapManager の処理によってリポジトリデータベーステーブル内のスキーマにデータが挿入または削除され、インデックススペースの使用率が高くなるためです。
+
+* 回避策 *
+
+リポジトリスキーマによって消費されるスペースを制御するには、 Oracle のガイドラインに従ってインデックスを監視し、再構築する必要があります。
+
+
+
+== リポジトリデータベースがダウンしていると、 SnapManager GUI にアクセスできず、 SnapManager 処理に失敗します
+
+SnapManager 処理は失敗し、リポジトリデータベースがダウンしていると GUI にアクセスできません。
+
+次の表に、実行するアクションとその例外を示します。
+
+|===
+
+
+| 処理 | 例外 
+
+
+ a| 
+閉じたリポジトリを開く
+ a| 
+次のエラーメッセージが SM_GUI.log に記録されます。 [WARN] ： SMO -01106 ：リポジトリの照会中にエラーが発生しました。 Closed Connection java.SQL.SQLException ： Closed Connection
+
+
+
+ a| 
+F5 キーを押して、開いているリポジトリを更新します
+ a| 
+GUI にリポジトリの例外が表示され、 sm_gui.log ファイルに NullPointerException も記録されます。
+
+
+
+ a| 
+ホストサーバを更新しています
+ a| 
+sumo_gui.log ファイルに NullPointerException が記録されています。
+
+
+
+ a| 
+新しいプロファイルを作成します
+ a| 
+Profile Configuration ウィンドウに NullPointerException が表示されます。
+
+
+
+ a| 
+プロファイルを更新しています
+ a| 
+次の SQL 例外が sm_created に記録されています。 log ： [WARN] ： SMO -01106 ：リポジトリの照会中にエラーが発生しました：接続が閉じています。
+
+
+
+ a| 
+バックアップへのアクセス
+ a| 
+次のエラーメッセージが SM_GUI.log に記録されています：コレクションの初期化に失敗しました。
+
+
+
+ a| 
+クローンのプロパティの表示
+ a| 
+次のエラーメッセージが sm_gui.log および sumo_GUI.log に記録されます。コレクションの初期化に失敗しました。
+
+|===
+* 回避策 *
+
+GUI にアクセスする場合や SnapManager の処理を実行する場合は、リポジトリデータベースが稼働していることを確認する必要があります。
+
+
+
+== クローンデータベースの一時ファイルを作成できません
+
+ターゲットデータベースの一時表領域ファイルが、データファイルのマウントポイントとは異なるマウントポイントに配置されている場合、クローンの作成は成功しますが、 SnapManager でクローンデータベースの一時ファイルが作成されません。
+
+* 回避策 *
+
+次のいずれかを実行する必要があります。
+
+* 一時ファイルがデータファイルと同じマウントポイントに配置されるように、ターゲットデータベースをレイアウトしてください。
+* クローンデータベースに一時ファイルを手動で作成または追加する。
+
+
+
+
+== プロトコルを NFSv3 から NFSv4 に移行できません
+
+プロトコルを NFSv3 から NFSv4 に移行するには、 snapdrive.conf ファイルで enable-migring-nfs-version パラメータを有効にします。移行中、 SnapDrive は、マウントポイントのオプション（ rw 、 largefiles 、 nosuid など）に関係なく、プロトコルバージョンのみを考慮します。
+
+ただし、プロトコルを NFSv4 に移行したあとに NFSv3 を使用して作成されたバックアップをリストアすると、次の処理が実行されます。
+
+* NFSv3 と NFSv4 がストレージレベルで有効になっている場合は、リストア処理は成功しますが、バックアップ時に使用できたマウントポイントオプションを使用してマウントされます。
+* ストレージレベルで NFSv4 のみが有効になっている場合は、リストア処理が成功し、プロトコルバージョン（ NFSv4 ）のみが保持されます。
++
+ただし、 rw 、 largefiles 、 nosuid など、その他のマウントポイントオプションは維持されません。
+
+
+
+* 回避策 *
+
+リストアの前に、データベースを手動でシャットダウンし、データベースのマウントポイントをアンマウントし、オプションを使用してマウントする必要があります。
+
+
+
+== Data Guard スタンバイデータベースのバックアップに失敗する
+
+いずれかのアーカイブログの場所にプライマリデータベースのサービス名が設定されていると、 Data Guard スタンバイデータベースのバックアップに失敗します。
+
+* 回避策 *
+
+GUI で、プライマリデータベースのサービス名に対応する [* 外部アーカイブログの場所を指定します（ Specify External Archive Log location* ） ] をクリアする必要があります。

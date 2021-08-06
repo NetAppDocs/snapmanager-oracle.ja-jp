@@ -1,0 +1,23 @@
+---
+permalink: unix-administration/concept_volume_management_restrictions.html 
+sidebar: sidebar 
+keywords: snapmanager, volume, management, restriction, environment, asm, disk, group, linux 
+summary: SnapManager には、環境に影響する可能性があるボリューム管理の制限があります。 
+---
+= ボリューム管理の制限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager には、環境に影響する可能性があるボリューム管理の制限があります。
+
+データベースには複数のディスクグループを使用できますが、特定のデータベースのすべてのディスクグループに次の制限事項が適用されます。
+
+* データベースのディスク・グループを管理できるのは、 1 つのボリューム・マネージャだけです。
+* Oracle データの保護では、論理ボリュームマネージャによってサポートされている raw デバイスはサポートされません。
++
+raw デバイスストレージおよび Automatic Storage Management （ ASM ）ディスクグループは、物理デバイス上で直接プロビジョニングする必要があります。場合によっては、パーティショニングが必要になります。
+
+* 論理ボリューム管理を使用しない Linux 環境には、パーティションが必要です。
+

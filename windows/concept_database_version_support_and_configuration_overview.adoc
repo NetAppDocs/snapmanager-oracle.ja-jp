@@ -1,0 +1,22 @@
+---
+permalink: windows/concept_database_version_support_and_configuration_overview.html 
+sidebar: sidebar 
+keywords: database, configuration, overview 
+summary: SnapManager でサポートされるデータベースのバージョンと設定を確認しておく必要があります。基本的なデータベースレイアウトと設定のセットアップを実行して、処理を正常に実行する必要があります。 
+---
+= データベースバージョンのサポートと設定の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager でサポートされるデータベースのバージョンと設定を確認しておく必要があります。基本的なデータベースレイアウトと設定のセットアップを実行して、処理を正常に実行する必要があります。
+
+SnapManager for Oracle は、 Oracle バージョン 10gR2 （ 10.2.0.5 ）、 11gR1 、 11gR2 （ 11.2.0.1 および 11.2.0.2 ）、および 12_c__ と統合され、 Recovery Manager （ RMAN ）などのネイティブの Oracle テクノロジ、およびファイバチャネル（ FC ）および Internet Small Computer System Interface （ iSCSI ）プロトコルを使用します。
+
+
+NOTE: SnapManager 3.2 および 10g R2 （ 10.2.0.5 より前）では、 Oracle データベース 9i は SnapManager 3.3.1 ではサポートされません。
+
+SnapManager for Oracle で管理する Oracle データベースを導入する場合は、 _ SnapManager for Oracle Best Practices _ を参照してください。
+
+http://media.netapp.com/documents/tr-3761.pdf["SnapManager for Oracle のベストプラクティス： media.netapp.com/documents/tr-3761.pdf"]

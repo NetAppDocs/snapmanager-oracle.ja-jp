@@ -1,0 +1,21 @@
+---
+permalink: unix-installation-cmode/task_verifying_the_oracle_listener_configuration.html 
+sidebar: sidebar 
+keywords: listener, process, listen, client, connection, request, receive, incoming, client, request, traffic, status, listener, configuration 
+summary: リスナーは、クライアントの接続要求をリスンするプロセスです。受信したクライアント接続要求を受信し、これらの要求のトラフィックをデータベースに管理します。ターゲットデータベースまたはリポジトリデータベースのインスタンスに接続する前に、 status コマンドを使用してリスナーの設定を確認できます。 
+---
+= Oracle リスナーの設定の確認
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リスナーは、クライアントの接続要求をリスンするプロセスです。受信したクライアント接続要求を受信し、これらの要求のトラフィックをデータベースに管理します。ターゲットデータベースまたはリポジトリデータベースのインスタンスに接続する前に、 status コマンドを使用してリスナーの設定を確認できます。
+
+status コマンドを実行すると、リスナーの設定、リスニングプロトコルアドレス、およびリスナーに登録されているサービスの概要など、特定のリスナーに関する基本的なステータス情報が表示されます。
+
+. コマンドプロンプトで「 lsnrctl status 」と入力します
++
+リスナー・ポートに割り当てられるデフォルト値は、 1521 です。
+
+

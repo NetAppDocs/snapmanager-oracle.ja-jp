@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/task_purging_history_of_snapmanager_operation.html 
+sidebar: sidebar 
+keywords: delete, history, snapmanager, operation, longer, require, detail, smo 
+summary: 履歴の詳細が不要になった場合は、 SnapManager 処理の履歴を削除できます。 
+---
+= SnapManager 処理の履歴を削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+履歴の詳細が不要になった場合は、 SnapManager 処理の履歴を削除できます。
+
+. SnapManager 操作の履歴を削除するには、次のコマンドを入力します。 `mo history purge -profile {-name 、 profile_NameProfile_name1 、 profile_name2]|allrepository -login [-passwordippo_password] -usernamerepo_username-dbname -dhost-hostrepo_host-portrepo_port name|verbose|operationsname} -verbose -operational_name|operationalsname|operationsname|use.name
+

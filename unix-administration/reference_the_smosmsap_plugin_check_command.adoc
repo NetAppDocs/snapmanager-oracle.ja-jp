@@ -1,0 +1,71 @@
+---
+permalink: unix-administration/reference_the_smosmsap_plugin_check_command.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, install, custom, script, various, operation, restore, clone, operation, pre, backup 
+summary: SnapManager では、さまざまな処理にカスタムスクリプトをインストールして使用できます。SnapManager には、バックアップ、リストア、クローニングの各プラグインが用意されており、バックアップ、リストア、クローニングの処理の前後にカスタムスクリプトを自動化できます。プラグインのバックアップ、リストア、およびクローニングを使用する前に、 plugin check コマンドを実行してプラグインスクリプトのインストールを確認できます。カスタムスクリプトは、 3 つのディレクトリに格納されます。ポリシー（バックアップ、リストア、クローニングの処理が実行される前に常に実行する必要があるスクリプトの場合）、 PRE （前処理スクリプトの場合）、 POST （後処理スクリプトの場合）の 3 つです。 
+---
+= smo plugin check コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager では、さまざまな処理にカスタムスクリプトをインストールして使用できます。SnapManager には、バックアップ、リストア、クローニングの各プラグインが用意されており、バックアップ、リストア、クローニングの処理の前後にカスタムスクリプトを自動化できます。プラグインのバックアップ、リストア、およびクローニングを使用する前に、 plugin check コマンドを実行してプラグインスクリプトのインストールを確認できます。カスタムスクリプトは、 3 つのディレクトリに格納されます。ポリシー（バックアップ、リストア、クローニングの処理が実行される前に常に実行する必要があるスクリプトの場合）、 PRE （前処理スクリプトの場合）、 POST （後処理スクリプトの場合）の 3 つです。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo plugin check
+
+-osaccount os_db_user_name
+----
+
+
+== パラメータ
+
+* * -osaccount *
++
+オペレーティングシステム（ OS ）データベースのユーザ名を指定します。osaccount オプションを入力しないと、 SnapManager は特定のユーザに対してではなく root ユーザとしてプラグインスクリプトをチェックします。
+
+
+
+
+
+== 例
+
+次の例は、 plugin check コマンドが policy1 カスタムスクリプトを検出したことを示しています。このスクリプトは、ポリシーディレクトリに実行可能ファイルとして保存されています。この例では、 pre ディレクトリに保存されている他の 2 つのカスタムスクリプトがエラーメッセージを返していないことも示されています（ステータスが 0 ）。ただし、 post-plug in1 の 4 番目のカスタムスクリプトには、 post-directory に見つかったエラーが含まれています（ステータスが 3 ）。
+
+[listing]
+----
+smo plugin check
+Checking plugin directory structure ...
+<installdir>/plugins/clone/policy
+OK: 'policy1' is executable
+<installdir>/plugins/clone/pre
+OK: 'pre-plugin1' is executable and returned status 0
+OK: 'pre-plugin2' is executable and returned status 0
+<installdir>/plugins/clone/post
+ERROR: 'post-plugin1' is executable and returned status 3
+<installdir>/plugins/backup/policy
+OK: 'policy1' is executable
+<installdir>/plugins/backup/pre
+OK: 'pre-plugin1' is executable and returned status 0
+OK: 'pre-plugin2' is executable and returned status 0
+<installdir>/plugins/backup/post
+ERROR: 'post-plugin1' is executable and returned status 3
+<installdir>/plugins/restore/policy
+OK: 'policy1' is executable
+<installdir>/plugins/restore/pre
+OK: 'pre-plugin1' is executable and returned status 0
+OK: 'pre-plugin2' is executable and returned status 0
+<installdir>/plugins/restore/post
+ERROR: 'post-plugin1' is executable and returned status 3
+Command complete.
+----
+* 関連情報 *
+
+xref:task_cloning_databases_and_using_custom_plugin_scripts.adoc[データベースのクローニングおよびカスタムプラグインスクリプトの使用]

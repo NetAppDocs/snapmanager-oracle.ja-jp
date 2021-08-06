@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/task_deleting_backup_schedules.html 
+sidebar: sidebar 
+keywords: delete, backup, schedule, necessary, deleting, smo 
+summary: 不要になったバックアップスケジュールを削除できます。 
+---
+= バックアップスケジュールを削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要になったバックアップスケジュールを削除できます。
+
+. バックアップスケジュールを削除するには、次のコマンドを入力します。 smo schedule delete -profile profile_name -schedule - nameschedulename [-quiet | -verbose
+

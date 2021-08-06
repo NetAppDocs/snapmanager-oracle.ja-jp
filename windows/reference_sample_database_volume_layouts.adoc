@@ -1,0 +1,93 @@
+---
+permalink: windows/reference_sample_database_volume_layouts.html 
+sidebar: sidebar 
+keywords: refer, sample, database, volume, layout, configuring, configure 
+summary: データベースの設定方法については、サンプルのデータベースボリュームレイアウトを参照してください。 
+---
+= データベースボリュームのレイアウト例
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースの設定方法については、サンプルのデータベースボリュームレイアウトを参照してください。
+
+
+
+== シングルインスタンスデータベース
+
+|===
+
+
+| ファイルの種類 | ボリューム名 | ファイルタイプ専用ボリューム | 自動 Snapshot コピー 
+
+
+ a| 
+Oracle バイナリ
+ a| 
+orabin_host 名
+ a| 
+はい。
+ a| 
+オン
+
+
+
+ a| 
+データ・ファイル
+ a| 
+oradata_sid
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+一時データファイル
+ a| 
+または 'p_sid を使用します
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+制御ファイル
+ a| 
+oracntrl01_sid （多重化）
+
+oracntrl02_sid （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+REDO ログ
+ a| 
+oralog01_sid （多重化）
+
+oralog02_sid （多重化）
+ a| 
+はい。
+ a| 
+オフ
+
+
+
+ a| 
+ログのアーカイブ
+ a| 
+oraarch_sid
+ a| 
+はい。
+ a| 
+オフ
+
+|===

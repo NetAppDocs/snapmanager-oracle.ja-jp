@@ -1,0 +1,20 @@
+---
+permalink: unix-administration/task_stopping_the_snapmanager_host_server.html 
+sidebar: sidebar 
+keywords: snapmanager, stop, server, host, smo 
+summary: SnapManager の使用が終了したら、必要に応じてサーバを停止できます。 
+---
+= SnapManager ホストサーバを停止します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager の使用が終了したら、必要に応じてサーバを停止できます。
+
+. サーバを停止するには、 root ユーザとして次のコマンドを入力します。 'mo_server stop
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsap_server_stop_command.adoc[smo _server stop コマンド]

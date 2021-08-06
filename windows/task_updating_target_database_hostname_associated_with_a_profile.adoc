@@ -1,0 +1,57 @@
+---
+permalink: windows/task_updating_target_database_hostname_associated_with_a_profile.html 
+sidebar: sidebar 
+keywords: snapmanager, oracle, ability, update, host, name, target, database, profile, updating, profile 
+summary: SnapManager （ 3.2 以降） for Oracle を使用すると、 SnapManager プロファイル内のターゲット・データベースのホスト名を更新できます。 
+---
+= プロファイルに関連付けられたターゲット・データベースのホスト名を更新しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager （ 3.2 以降） for Oracle を使用すると、 SnapManager プロファイル内のターゲット・データベースのホスト名を更新できます。
+
+* ローカルユーザのホームディレクトリには、プロファイルとリポジトリのマッピングが格納されている必要があります。
+* SnapManager のグラフィカルユーザインターフェイス（ GUI ）セッションを終了する必要があります。
+
+
+プロファイルを新しいホスト名で更新するには、 CLI を使用する必要があります。
+
+* プロファイル * でターゲット・データベースのホスト名を変更するシナリオはサポートされていません
+
+プロファイル内のターゲット・データベースのホスト名の変更では、次のシナリオはサポートされていません。
+
+* SnapManager GUI を使用してターゲット・データベースのホスト名を変更する方法
+* プロファイルのターゲットデータベースのホスト名を更新したあとに、リポジトリデータベースをロールバックする
+* 1 つのコマンドを実行して、新しいターゲットデータベースホスト名に対する複数のプロファイルを更新する
+* SnapManager 処理の実行中にターゲット・データベースのホスト名を変更する場合
+
+
+
+NOTE: プロファイル内のターゲット・データベースのホスト名を更新すると、ターゲット・データベースのホスト名だけが変更されます。プロファイルに設定されている他の設定パラメータはすべて保持されます。
+
+ターゲットデータベースのホスト名を更新したあとで、クローンまたはマウントされたバックアップが新しいホストで使用できない場合、バックアップを削除またはアンマウントできません。その場合、新しいホストから SnapManager 処理を実行すると、障害が発生したり、古いホストのエントリが古いエントリになったりすることがあります。SnapManager 処理を実行するには、プロファイルの更新を使用して、以前のホスト名に戻す必要があります。
+
+. 次のコマンドを入力します。 smo profile update-profileprofileprofileprofileprofileprofileprofile[-profile-passwordprofile-password] [-datab_dbname -hostdb_host[-siddb_host] [-siddleb_usernamedb_username -password-portdb_port] [{-count｛ -password-subaddressemst全員 [-drum_addresserman [-drman] -email-email-password-password-returst全員 [-drman] [-drman [--password-password-password-password-password-atleman [-drman] [-drman] [-durb_addressemst_addressemst_addressバン -password-password-password-password-password-password] [-durb_addressemst全員 [-drman] [-drman] [-drman] [-durst_addressemst_addressemst全員 [-durb_addressm -email-email-password] [-drman] [-drman] [-drman] [-drman] [--st全員 ウチ [-drman] [-durst全員 [-durb_addressバン
++
+このコマンドの他のオプションは、次のとおりです。
+
++
+[-force] [-nopromp]
+
++
+|===
+
+
+| 状況 | 作業 
+
+
+ a| 
+* ターゲット・データベースのホスト名を変更します *
+ a| 
+hostnew_db_host を指定します
+
+|===
+. プロファイルのターゲット・データベースのホスト名を表示するには、次のコマンドを入力します。 smo profile show
+

@@ -1,0 +1,15 @@
+---
+permalink: unix-administration/concept_snapmanager_for_oracle_uses_protection_manager_to_protect_a_database_backup.html 
+sidebar: sidebar 
+keywords: snapmanager, oracle, protection, manager, unix, dba 
+summary: SnapManager for Oracle および Protection Manager を UNIX ホストとサーバにそれぞれインストールした場合、 SnapManager データベース管理者（ DBA ）はポリシーベースの Oracle データベースバックアップを設定し、セカンダリストレージに実行することができます。 また、必要に応じてのバックアップデータをセカンダリストレージからプライマリストレージにリストアすることもできます。 
+---
+= SnapManager for Oracle では、 Protection Manager を使用してデータベースバックアップを保護します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle および Protection Manager を UNIX ホストとサーバにそれぞれインストールした場合、 SnapManager データベース管理者（ DBA ）はポリシーベースの Oracle データベースバックアップを設定し、セカンダリストレージに実行することができます。 また、必要に応じてのバックアップデータをセカンダリストレージからプライマリストレージにリストアすることもできます。
+
+次の例では、 SnapManager を使用しているデータベース管理者が、プライマリストレージ上のローカルバックアップ用のプロファイルと、セカンダリストレージへの保護されたバックアップ用のプロファイルを作成しています。次に、 Protection Manager のコンソールを使用しているネットワーク・ストレージ管理者と協力し、プライマリ・ストレージからセカンダリ・ストレージにデータベースのポリシー・ベースのバックアップを設定します。

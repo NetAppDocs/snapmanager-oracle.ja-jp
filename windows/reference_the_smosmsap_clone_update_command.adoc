@@ -1,0 +1,68 @@
+---
+permalink: windows/reference_the_smosmsap_clone_update_command.html 
+sidebar: sidebar 
+keywords: command, update, information, clone, comment, smo 
+summary: このコマンドは、クローンに関する情報を更新します。コメントを更新できます。 
+---
+= smo clone update コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、クローンに関する情報を更新します。コメントを更新できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo clone update
+-profile profile_name
+\[-label label \| -id id\]
+-comment  commment_text
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+更新するクローンが含まれているプロファイルの名前を指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * -id id *
++
+クローンの ID を指定します。この ID は、クローンを作成するときに SnapManager によって生成されます。各クローンの ID を表示するには、 smo clone list コマンドを使用します。
+
+* * - ラベルラベル *
++
+クローンのラベルを指定します。
+
+* * -comment*
++
+クローンの作成時に入力したコメントが表示されます。これはオプションパラメータです。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンドの例
+
+次に、クローンのコメントを更新する例を示します。
+
+[listing]
+----
+smo clone update -profile anson.pcrac5
+-label clone_pcrac51_20080820141624EDT -comment See updated clone
+----

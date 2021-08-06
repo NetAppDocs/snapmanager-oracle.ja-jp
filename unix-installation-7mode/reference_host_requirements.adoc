@@ -1,0 +1,22 @@
+---
+permalink: unix-installation-7mode/reference_host_requirements.html 
+sidebar: sidebar 
+keywords: install, snapmanager, oracle, host, database, minimum, requirement, configuration, unix 
+summary: バックアップ対象の Oracle データベースをホストしているすべてのホストに、 SnapManager for Oracle をインストールする必要があります。SnapManager 構成の最小要件をホストが満たしていることを確認する必要があります。 
+---
+= UNIX ホストの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップ対象の Oracle データベースをホストしているすべてのホストに、 SnapManager for Oracle をインストールする必要があります。SnapManager 構成の最小要件をホストが満たしていることを確認する必要があります。
+
+* SnapManager をインストールする前に、データベースホストに SnapDrive をインストールする必要があります。
+* SnapManager は物理マシンまたは仮想マシンにインストールできます。
+* 同じリポジトリを共有するすべてのホストに、同じバージョンの SnapManager をインストールする必要があります。
+* Oracle データベース 11.2.0.2 または 11.2.0.3 を使用している場合は、 Oracle パッチ 13366202 をインストールする必要があります。
++
+DNFS を使用している場合は、最大のパフォーマンスと安定性を実現するために、 My Oracle Support （ MOS ）レポート 1495104.1 に記載されたパッチもインストールする必要があります。
+
+

@@ -1,0 +1,61 @@
+---
+permalink: windows/task_cloning_databases_from_backups.html 
+sidebar: sidebar 
+keywords: clone, database, backup, create, command, cloning 
+summary: バックアップからデータベースをクローニングするには、 clone create コマンドを使用します。 
+---
+= バックアップからデータベースをクローニングする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップからデータベースをクローニングするには、 clone create コマンドを使用します。
+
+最初に、データベースのクローン仕様ファイルを作成する必要があります。SnapManager は、この仕様ファイル内の情報に基づいてクローンを作成します。
+
+クローンには新しい Oracle System Identifier （ SID ；システム ID ）を設定する必要があります。SID が同じ 2 つのデータベースを、同じホスト上で同時に実行することはできません。同じ SID を使用する別のホストにクローンを作成することは可能です。クローンに一意の名前を指定するには、 -label を使用します。このオプションを使用しない場合、 SnapManager は SID 、日付、時刻を含む一意のクローン名を作成します。
+
+データベースをクローニングした後、新しいクローンデータベース接続情報を使用して、クライアントマシン上の tnsnames.ora ファイルを更新することができます。tnsnames.ora ファイルは、完全なデータベース情報を指定することなく Oracle インスタンスに接続するために使用されます。SnapManager は tnsnames.ora ファイルを更新しません。
+
+プロファイルに -include-pone-backups を指定して作成したものを使用している場合は、必ずアーカイブ・ログ・ファイルを含むバックアップを作成します。 SnapManagerSnapManager でクローニングできるのは、フルデータベースバックアップのみです。
+
+SnapManager （ 3.2 以降）では、データ・ファイルおよびアーカイブ・ログ・ファイルが含まれているバックアップをクローニングできます。
+
+アーカイブログが外部の場所から利用できる場合、クローニング中に外部の場所を指定して、クローンデータベースを整合性のある状態にリカバリできます。外部の場所に Oracle からアクセスできることを確認する必要があります。アーカイブログのみのバックアップのクローニングはサポートされていません。
+
+アーカイブログのバックアップは、オンラインのパーシャルバックアップとともに作成されますが、このバックアップを使用してデータベースのクローンを作成することはできません。
+
+クローニングされたデータベースを整合性のある状態にリカバリするために外部アーカイブログの場所を指定する場合は、外部の場所の名前を完全に大文字で指定する必要があります。ファイルシステムでは、すべてのフォルダとサブフォルダの名前が大文字である必要があります。これは、 Oracle データベースではデスティネーションパスが大文字に変換され、外部のデスティネーションパス、フォルダ名、サブフォルダ名が大文字であることが前提となるためです。外部アーカイブログのデスティネーションパスを小文字で指定すると、指定されたパスがデータベースで識別できず、クローンデータベースのリカバリに失敗することがあります。
+
+外部アーカイブログファイルの場所からデータベースバックアップをクローニングできるのは、スタンドアロンデータベースの場合だけです。
+
+オプションのパラメータとして -dump オプションを指定すると、クローン作成処理の成功後または失敗後にダンプファイルを収集できます。
+
+* アーカイブログバックアップなしのデータファイルバックアップのクローニング *
+
+データファイルのバックアップにアーカイブログバックアップが含まれていない場合、 SnapManager for Oracle は、バックアップ時に記録された System Change Number （ SCN ）に基づいてデータベースのクローンを作成します。クローニングされたデータベースをリカバリできない場合は、 SnapManager for Oracle がデータベースのクローニングを続行していて、最後にクローンの作成に成功したにもかかわらず、「 The Archived log file for thread <number> and change <scn > required to complete recovery 」というエラーメッセージが表示されます。
+
+アーカイブログのバックアップを含めずにデータファイルのバックアップを使用してクローニングする場合、 SnapManager は、バックアップ中に記録される最後のアーカイブログ SCN まで、クローニングされたデータベースをリカバリします。
+
+. クローン仕様ファイルを作成します。
+. クローンを作成するには、次のコマンドを入力します。 smo clone create -backup-labelbackup_name -newsidnew_sid -labelclone_label-profileprofileprofileprofileprofileprofile_name -clonespecfull_path_to_clonespecfile [-taskspectaskspec] [-recover-from-location] path1[,<path2>] [-dump]
+
+
+* 関連情報 *
+
+xref:task_cloning_databases_in_the_current_state.adoc[現在の状態のデータベースをクローニングしています]
+
+xref:concept_considerations_for_cloning_a_database_to_an_alternate_host.adoc[代替ホストにデータベースをクローニングする場合の考慮事項]
+
+xref:task_creating_clone_specifications.adoc[クローン仕様を作成しています]
+
+xref:reference_the_smosmsapclone_create_command.adoc[smo clone create コマンド]
+
+xref:task_creating_pretask_post_task_and_policy_scripts.adoc[プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成]
+
+xref:concept_variables_available_in_the_task_scripts_for_clone_operation.adoc[クローニング処理のタスクスクリプトで使用できる変数]
+
+xref:task_creating_task_scripts.adoc[タスクスクリプトの作成]
+
+xref:task_storing_the_task_scripts.adoc[タスクスクリプトの保存]

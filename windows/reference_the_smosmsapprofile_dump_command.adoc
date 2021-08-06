@@ -1,0 +1,55 @@
+---
+permalink: windows/reference_the_smosmsapprofile_dump_command.html 
+sidebar: sidebar 
+keywords: run, profile, dump, command, jar, diagnostic, information, smo 
+summary: profile dump コマンドを実行すると、プロファイルに関する診断情報が格納された .jar ファイルを作成できます。 
+---
+= smo profile dump コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+profile dump コマンドを実行すると、プロファイルに関する診断情報が格納された .jar ファイルを作成できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo profile dump
+-profile profile_name
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+ダンプ・ファイルを作成するプロファイルを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次に、プロファイル SALES1 のダンプを作成する例を示します。
+
+[listing]
+----
+smo profile dump -profile SALES1
+Dump file created
+Path: C:\\userhomedirectory\\netapp\\smo\\3.3.0\\smo_dump_SALES1_hostname.jar
+----

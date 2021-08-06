@@ -1,0 +1,87 @@
+---
+permalink: unix-administration/task_deploying_and_running_the_scripts.html 
+sidebar: sidebar 
+keywords: deploy, run, asmmain.sh, asmquerydisk.sh, script, support, asm, database, asmlib, disk, group, oracleasm 
+summary: ASMLib なしで ASM データベースをサポートするために、 asmmain.sh および asmquerydisk.sh スクリプトを展開して実行できます。 
+---
+= スクリプトの導入と実行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASMLib なしで ASM データベースをサポートするために、 asmmain.sh および asmquerydisk.sh スクリプトを展開して実行できます。
+
+これらのスクリプトは ' プリスクリプトやポストスクリプト構文には準拠していませんまた ' intitasmdisks が有効になっている場合にワークフローが呼び出されますスクリプト内の構成設定に関連する項目を変更できます。クイックドライランを実行して、スクリプト内のすべてが期待どおりに動作しているかどうかを検証することをお勧めします。
+
+
+NOTE: これらのスクリプトは、システムに障害を与えたり、システムに影響を与えたりすることはありません。これらのスクリプトを実行して、 ASM 関連ディスクに対する適切な権限と所有権を更新し、ディスクが常に ASM インスタンス制御の対象になるようにします。
+
+. パーティショニングされたディスクを含む ASM ディスクグループを作成します。
+. ディスクグループに Oracle データベースを作成します。
+. SnapManager for Oracle サーバを停止します。
++
+
+NOTE: RAC 環境では、この手順をすべての RAC ノードで実行する必要があります。
+
+. smo .conf を変更し、次のパラメータを追加します。
++
+.. oracleasm.support.without .asmlib = true
+.. oracleasm.support.without .asmlib.ownership=true
+.. oracleasm.support.without.asmlib.username = ASM インスタンス環境のユーザ名
+.. oracleasm.support.without.asmlib.groupname = ASM インスタンス環境のグループ名
+
+
++
+これらの変更は絶対パスのみの権限を設定します。つまり、パーティションデバイスではなく、アクセス権は dm- * デバイスに対してのみ設定されます。
+
+. /opt/NetApp/smo/plugins/examples/noasmlib で使用できるプラグインスクリプトを変更して、スクリプトに構成設定を含めます。
+. ホストで SnapManager for Oracle サーバを起動する前に、 /opt/NetApp/smo/plugins/noasmlib にスクリプトをコピーします。
+. /opt/NetApp/smo ディレクトリに移動し、次のスクリプトを実行してリハーサルを実行します。 sh plugins/noasmlib / asmmain.sh
++
+使用されるメインファイルである /etc/initasmdisks ファイルが作成されます。
+
++
+/etc/initasmdisks ファイルには、 ASM データベースの設定に関連するすべてのデバイスが含まれていることを確認できます。たとえば、次のようになります。
+
++
+[listing]
+----
+chown -R grid:oinstall /dev/mapper/360a98000316b61396c3f394645776863p1
+	     chmod 777 /dev/mapper/360a98000316b61396c3f394645776863p1
+	     chown -R grid:oinstall /dev/mapper/360a980003754322f7a2b433469714239p1
+	     chmod 777 /dev/mapper/360a980003754322f7a2b433469714239p1
+	     chown -R grid:oinstall /dev/mapper/360a980003754322f7a2b433469714241p1
+	     chmod 777 /dev/mapper/360a980003754322f7a2b433469714241p1
+	     chown -R grid:oinstall /dev/mapper/360a980003754322f7a2b433469714243p1
+	     chmod 777 /dev/mapper/360a980003754322f7a2b433469714243p1
+----
+. SnapManager for Oracle サーバを起動します。
+. snapdrive.conf ファイルに次の項目を追加して、 SnapDrive for UNIX を設定します。 disconnect-luns -befor-bssr=on
+. SnapDrive for UNIX サーバを再起動します。
++
+
+NOTE: RAC 環境では、すべての RAC ノードで手順 3~10 を実行する必要があります。
+
+
+
+/etc/initasmdisks ファイルを作成するには ' 起動スクリプトのいずれかから実行するか 'rc3.d で新しく定義されたスクリプトから実行する必要があります/etc/initasmdisks ファイルは、常に oracleha サービスが開始される前に実行する必要があります。
+
+例
+
+[listing]
+----
+# ls -ltr *ohasd*
+	      lrwxrwxrwx 1 root root 17 Aug  7 02:34 S96ohasd -> /etc/init.d/ohasd
+    	  lrwxrwxrwx 1 root root 17 Aug  7 02:34 K15ohasd -> /etc/init.d/ohasd
+----
+次の例では 'sh-x/etc/initasmdisks はデフォルトでは使用できず 'ohasd スクリプトの関数 'tart_stack()' の最初の行として追加する必要があります
+
+[listing]
+----
+start_stack()
+{
+sh -x /etc/initasmdisks
+# see init.ohasd.sbs for a full rationale case $PLATFORM in Linux
+}
+----

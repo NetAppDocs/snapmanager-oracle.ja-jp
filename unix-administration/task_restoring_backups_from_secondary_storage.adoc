@@ -1,0 +1,69 @@
+---
+permalink: unix-administration/task_restoring_backups_from_secondary_storage.html 
+sidebar: sidebar 
+keywords: restore, protect, backup, secondary, storage, copy, data, primary, storage 
+summary: 保護されたバックアップをセカンダリストレージからリストアして、データをプライマリストレージにコピーする方法を選択できます。 
+---
+= セカンダリストレージからのバックアップのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保護されたバックアップをセカンダリストレージからリストアして、データをプライマリストレージにコピーする方法を選択できます。
+
+セカンダリストレージからデータをリストアするには、 backup restore コマンドで -from-secondary オプションを使用します。from-secondary オプションを指定しない場合、 SnapManager はプライマリストレージ上の Snapshot コピーからデータをリストアします。
+
+プライマリストレージにバックアップが存在する場合は、セカンダリストレージからそのバックアップをリストアする前にプライマリバックアップを解放する必要があります。一時ボリュームを使用する場合は、 -temp-volume オプションを使用してボリュームを指定する必要があります。
+
+from-secondary オプションを指定した場合は、必ず -copy-id オプションを指定する必要があります。セカンダリストレージシステムに複数のバックアップがある場合は、 -copy-id オプションを使用して、リストア処理に使用するセカンダリストレージ上のバックアップコピーを指定します。
+
+
+NOTE: Data ONTAP 7-Mode を使用している場合は、 -copy-id オプションに有効な値を指定する必要があります。ただし、 clustered Data ONTAP を使用している場合は、 -copy-id オプションは不要です。
+
+SnapManager は、セカンダリストレージからデータをリストアする際、最初に（ホストを介さずに）セカンダリストレージシステムからプライマリストレージシステムへの直接データのリストアを試みます。SnapManager がこのタイプのリストアを実行できない場合（ファイルがファイルシステムの一部でない場合など）、 SnapManager はホスト側のファイルコピーのリストアにフォールバックします。SnapManager では、ホスト側のファイルコピーのリストアをセカンダリストレージから実行する方法が 2 つあります。SnapManager で選択される方法は、 smo .config ファイルに設定されています。
+
+* restore.secondaryAccessPolicy = direct の場合、 SnapManager はセカンダリストレージ上のデータのクローンを作成し、セカンダリストレージシステムからホストにクローンデータをマウントしてから、クローンのデータをアクティブ環境にコピーします。
++
+これはデフォルトのセカンダリアクセスポリシーです。
+
+* restore.secondaryAccessPolicy が間接的な場合、 SnapManager は最初にプライマリストレージ上の一時ボリュームにデータをコピーし、一時ボリュームからホストにデータをマウントして、一時ボリュームからアクティブ環境にデータをコピーします。
++
+このポリシーは、ホストがセカンダリストレージシステムに直接アクセスできない場合にのみ使用してください。間接方式を使用したリストアでは、データのコピーが 2 つ作成されるため、直接方式の場合は 2 倍の時間がかかります。
+
++
+.. 次のいずれかを実行します。
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+選択したバックアップがプライマリストレージに存在する場合は、データベース全体をリストアします
+ a| 
+次のコマンドを入力します。 smo backup restore -profile profile_name -labellabel -complete-recover-alllogs [-copy-idID]
+
+
+
+ a| 
+選択したバックアップがプライマリストレージに存在しない場合は、データベース全体をリストアします
+ a| 
+次のコマンドを入力します。 smo backup restore -profile profile_name -labellabel -complete-recover-alllogs -from-secondary [-temp-volume <temp_volume>] [-copy-idID]
+
+|===
+
+
+
+
+
+
+== 例
+
+次のコマンドは、保護されているバックアップをセカンダリストレージシステムからリストアします。
+
+[listing]
+----
+smo backup restore -profile PAYDB -label daily_monday -complete
+-recover alllogs -from-secondary -copy-id 3042 -temp-volume smo_scratch_restore_volume
+Operation Id [8abc011215d385920115d38599470001] succeeded.
+----

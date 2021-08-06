@@ -1,0 +1,92 @@
+---
+permalink: windows/reference_the_smosmsapbackup_delete_command.html 
+sidebar: sidebar 
+keywords: run, backup, delete, command, remove, remove, create, clone, retention, class, smo 
+summary: backup delete コマンドを実行すると、クローン作成に使用したバックアップや失敗したバックアップなど、自動的に削除されないバックアップを削除できます。保持するバックアップは、保持クラスを変更することなく、無制限に削除できます。 
+---
+= smo backup delete コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+backup delete コマンドを実行すると、クローン作成に使用したバックアップや失敗したバックアップなど、自動的に削除されないバックアップを削除できます。保持するバックアップは、保持クラスを変更することなく、無制限に削除できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo backup delete
+-profile profile_name
+[-label label \[-data \| -archivelogs\] \| \[-id guid \| -all\]
+-force
+\[-dump\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+削除するバックアップに関連付けられたデータベースを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* *-id GUID*
++
+指定した GUID を持つバックアップを指定します。GUID はバックアップを作成するときに SnapManager によって生成されます。各バックアップの GUID を表示する場合は、 smo backup list コマンドを使用します。
+
+* * - ラベルラベル *
++
+指定したラベルを持つバックアップを指定します。必要に応じて、バックアップの範囲をデータファイルまたはアーカイブログとして指定します。
+
+* *-data*
++
+データファイルを指定します。
+
+* *-archivelogs*
++
+アーカイブログファイルを指定します。
+
+* * - すべて *
++
+すべてのバックアップを指定します。指定したバックアップだけを削除するには、 -id または -label オプションを使用します。
+
+* * -dump*
++
+バックアップの削除処理が成功したか失敗したあとにダンプファイルを収集します。
+
+* * -force *
++
+バックアップを強制的に削除します。バックアップに関連付けられたリソースを解放する際に問題が発生した場合も、 SnapManager はバックアップを削除します。たとえば、バックアップが Oracle Recovery Manager （ RMAN ）でカタログ化されていても、 RMAN データベースが存在しない場合、 -force を指定すると指定すると、 RMAN に接続できない場合でもバックアップが削除されます。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次の例は、バックアップを削除します。
+
+[listing]
+----
+smo backup delete -profile SALES1 -label full_backup_sales_May
+Operation Id [8abc01ec0e79004b010e79006da60001] succeeded.
+----
+* 関連情報 *
+
+xref:task_deleting_backups.adoc[バックアップを削除する]
+
+xref:reference_the_smosmsapprofile_create_command.adoc[smo profile create コマンド]
+
+xref:reference_the_smosmsapprofile_update_command.adoc[smo profile update コマンド]

@@ -1,0 +1,58 @@
+---
+permalink: unix-administration/reference_the_smosmsap_profile_destroy_command.html 
+sidebar: sidebar 
+keywords: command, delete, split, clone, database, profile, generate, snapmanager, process 
+summary: このコマンドは、クローンスプリット処理中に SnapManager によって生成されたプロファイルに加え、スプリットクローン \ （データベース \ ）を削除します。 
+---
+= smo profile destroy コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、スプリットクローン（データベース）を、クローンスプリット処理中に SnapManager で生成されたプロファイルとともに削除します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo profile destroy
+-profile profile
+\[-host hostname\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+クローンスプリットプロセスが正常に完了したあとに SnapManager で生成されるプロファイルを指定します。
+
+* * - ホスト名 *
++
+スプリットクローンが存在するホスト名を指定します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンドの例
+
+次に、プロファイル SALES1 を削除する例を示します。
+
+[listing]
+----
+smo profile destroy -profile SALES1
+----

@@ -1,0 +1,34 @@
+---
+permalink: windows/concept_general_layout_and_configuration.html 
+sidebar: sidebar 
+keywords: general, layout, configuration, information, storage, disk, group 
+summary: ディスクグループ、ファイルタイプ、表領域に関する問題を回避するために、推奨される一般的なデータベースレイアウトおよびストレージ構成に関する情報を参照できます。 
+---
+= 一般的なレイアウトと構成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ディスクグループ、ファイルタイプ、表領域に関する問題を回避するために、推奨される一般的なデータベースレイアウトおよびストレージ構成に関する情報を参照できます。
+
+* 複数のタイプの SAN ファイルシステムのファイルをデータベースに含めないでください。
++
+データベースを構成するすべてのファイルは、同じタイプのファイルシステム上に存在している必要があります。
+
+* SnapManager には 4K ブロックのサイズが複数必要です。
+* SnapManager バックアップを Oracle Recovery Manager （ RMAN ）に登録する場合は、 RMAN 対応プロファイルを作成する必要があります。
+
+
+ボリュームを分離する際のいくつかのガイドラインを次に示します。
+
+* ボリュームに格納できるのは、 1 つのデータベースのデータファイルだけです。
+* データベースバイナリ、データファイル、オンライン REDO ログファイル、アーカイブ REDO ログファイル、および制御ファイルという分類のファイルごとに、別々のボリュームを使用する必要があります。
+* SnapManager では一時データベースファイルがバックアップされないため、一時データベースファイル用に別のボリュームを作成する必要はありません。
+
+
+詳細については、 SnapManager for Oracle Best Practices _ を参照してください。
+
+* 関連情報 *
+
+http://media.netapp.com/documents/tr-3761.pdf["SnapManager for Oracle のベストプラクティス： media.netapp.com/documents/tr-3761.pdf"]

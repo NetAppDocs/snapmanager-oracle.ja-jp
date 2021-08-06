@@ -1,0 +1,25 @@
+---
+permalink: unix-administration/task_restoring_backups_from_an_alternate_location.html 
+sidebar: sidebar 
+keywords: restore, backup, alternate, location, data, file, intermediate, system, active, smo, xml 
+summary: 別の場所からバックアップをリストアして、中間ファイルシステムからアクティブファイルシステムにデータファイルをリストアしたり、中間 raw デバイスからアクティブ raw デバイスにデータブロックをリストアしたりできます。 
+---
+= 別の場所からのバックアップのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+別の場所からバックアップをリストアして、中間ファイルシステムからアクティブファイルシステムにデータファイルをリストアしたり、中間 raw デバイスからアクティブ raw デバイスにデータブロックをリストアしたりできます。
+
+* リストア仕様 XML ファイルを作成し、使用するリストア方式を指定します。
+
+
+smo backup restore コマンドを使用し、作成したリストア仕様 XML ファイルを指定して、代替保存場所からバックアップをリストアできます。
+
+. 次のコマンドを入力します。 smo backup restore-file -labellabel -complete alllogs -restorespecespec
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_restore_command.adoc[smo backup restore コマンド]

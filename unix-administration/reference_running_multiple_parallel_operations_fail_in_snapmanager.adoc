@@ -1,0 +1,27 @@
+---
+permalink: unix-administration/reference_running_multiple_parallel_operations_fail_in_snapmanager.html 
+sidebar: sidebar 
+keywords: multiple, parallel, operation, seperate, database, storage, system, lun, igroup, command, delete, create 
+summary: 同じストレージシステム上の異なるデータベースに対して複数の並列処理を実行すると、一方の処理が原因で、両方のデータベースに関連付けられている LUN の igroup が削除されることがあります。そのあとに他の処理が削除された igroup を使用しようとすると、 SnapManager にエラーメッセージが表示されます。 
+---
+= SnapManager で複数の並列処理を実行すると失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+同じストレージシステム上の異なるデータベースに対して複数の並列処理を実行すると、一方の処理が原因で、両方のデータベースに関連付けられている LUN の igroup が削除されることがあります。そのあとに他の処理が削除された igroup を使用しようとすると、 SnapManager にエラーメッセージが表示されます。
+
+たとえば、ほとんど同時に異なるデータベースに対して backup delete 処理と backup create 処理を実行すると、バックアップ作成処理は失敗します。以下に示す手順は、ほとんどの場合、異なるデータベースに対してバックアップの削除処理とバックアップの作成処理を同時に実行したときの動作を示しています。
+
+. backup delete コマンドを実行します。
+. backup create コマンドを実行します。
+. backup create コマンドを実行すると、既存の igroup が特定され、同じ igroup を使用して LUN がマッピングされます。
+. backup delete コマンドを実行すると、同じ igroup にマッピングされているバックアップ LUN が削除されます。
+. この igroup には LUN が関連付けられていないため、 backup delete コマンドで igroup を削除します。
+. backup create コマンドを実行すると、バックアップが作成され、存在しない igroup にマッピングが試行されるため、処理に失敗します。
+
+
+* するべきこと *
+
+データベースで使用されるストレージシステムごとに igroup を作成し、次のコマンドを使用して SDU に igroup の情報を更新します。 SnapDrive igroup add

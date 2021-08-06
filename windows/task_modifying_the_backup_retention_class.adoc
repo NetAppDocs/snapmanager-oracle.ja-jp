@@ -1,0 +1,58 @@
+---
+permalink: windows/task_modifying_the_backup_retention_class.html 
+sidebar: sidebar 
+keywords: upgrade, snapmanager, assign, default, retention, class, exist, backup, requirement, modify 
+summary: アップグレード後の SnapManager では、既存のバックアップにデフォルトのバックアップ保持クラスが割り当てられます。デフォルトの保持クラスの値は、バックアップの要件に合わせて変更することができます。 
+---
+= バックアップ保持クラスを変更しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アップグレード後の SnapManager では、既存のバックアップにデフォルトのバックアップ保持クラスが割り当てられます。デフォルトの保持クラスの値は、バックアップの要件に合わせて変更することができます。
+
+既存のバックアップに割り当てられるデフォルトのバックアップ保持クラスは次のとおりです。
+
+|===
+
+
+| バックアップタイプ | アップグレード後の保持クラスの割り当て 
+
+
+ a| 
+バックアップを無期限に保持する
+ a| 
+無制限
+
+
+
+ a| 
+その他のバックアップ
+ a| 
+毎日
+
+|===
+* 注： * 保持クラスを変更せずに、永続的に保持されているバックアップを削除できます。
+
+SnapManager 3.0 以降にアップグレードすると、次の 2 つのうち大きい方の値が既存のプロファイルに割り当てられます。
+
+* プロファイルの以前の保持数
+* smo .config ファイルで指定された、日次バックアップの保持数と保持期間のデフォルト値
++
+.. smo .config ファイルで、 retain.hourly.count および reta.duration に割り当てられている値を変更します。
++
+次の値を入力できます。
+
++
+*** retain.hourly.count = 12
+*** retain-hourly.duration = 2 のままにします
+
+
+
+
+
+
+* 関連情報 *
+
+xref:reference_snapmanager_configuration_parameters.adoc[SnapManager の設定パラメータ]

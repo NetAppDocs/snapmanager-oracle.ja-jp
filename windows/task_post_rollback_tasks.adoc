@@ -1,0 +1,31 @@
+---
+permalink: windows/task_post_rollback_tasks.html 
+sidebar: sidebar 
+keywords: perform, additional, step, rollback, repository, database, snapmanager, post, task 
+summary: リポジトリ・データベースをロールバックし、 SnapManager ホストを SnapManager 3.2 から SnapManager 3.0 にダウングレードしたあと、以前のバージョンのリポジトリ・データベースで作成されたスケジュールを表示するには、いくつかの追加手順を実行する必要があります。 
+---
+= ロールバック後のタスク
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リポジトリ・データベースをロールバックし、 SnapManager ホストを SnapManager 3.2 から SnapManager 3.0 にダウングレードしたあと、以前のバージョンのリポジトリ・データベースで作成されたスケジュールを表示するには、いくつかの追加手順を実行する必要があります。
+
+. C ： \Program Files\NetApp\SnapManager for Oracle\repositories に移動します。
++
+repository ディレクトリには、リポジトリごとに 2 つのファイルが含まれる場合があります。番号記号（ # ）の付いたファイル名は SnapManager 3.1 以降を使用して作成され、ハイフン（ - ）の付いたファイル名は SnapManager 3.0 を使用して作成されます。
+
++
+ファイル名は次のようになります。
+
++
+** リポジトリ #SMO300a #SMOREPO1#10.72.197.141#1521
+** repository-smo300a -smorepo1-10.72.197.141-1521
+
+
+. ファイル名のシャープ記号（ # ）をハイフン（ - ）に置き換えます。
++
+番号記号（ # ）の付いたファイル名にハイフン（ - ）が追加されました。 repository-SMO300A-SMOREPO1-10.72.197.141-1521 。
+
+

@@ -1,0 +1,30 @@
+---
+permalink: windows/task_changing_the_retention_policy_default_behavior.html 
+sidebar: sidebar 
+keywords: backup, expire, retention, policy, snapmanager, delete, settings, default, behavior, protect, unprotected 
+summary: 保持ポリシーに基づいてバックアップが期限切れになると、 SnapManager は保持設定に基づいてバックアップを削除するかどうかを決定します。デフォルトでは、バックアップの削除が実行されます。このデフォルトの動作を変更して、保護されていないバックアップを解放するように選択できます。 
+---
+= 保持ポリシーのデフォルト動作を変更する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保持ポリシーに基づいてバックアップが期限切れになると、 SnapManager は保持設定に基づいてバックアップを削除するかどうかを決定します。デフォルトでは、バックアップの削除が実行されます。このデフォルトの動作を変更して、保護されていないバックアップを解放するように選択できます。
+
+デフォルトでは、 SnapManager は有効期限が切れたバックアップを削除します。
+
+. 次のデフォルトの場所にアクセスします。
++
+smo installation location \properties\smo .config のデフォルト値
+
+. smo .config ファイルを編集します。
+. smo .config ファイルの retain.alwaysFreeExpiredBackups プロパティを true に設定します。
++
+たとえば、 retain.alwaysFreeExpiredBackups = true となります
+
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_update_command.adoc[smo backup update コマンド]

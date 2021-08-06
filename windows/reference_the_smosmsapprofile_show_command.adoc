@@ -1,0 +1,42 @@
+---
+permalink: windows/reference_the_smosmsapprofile_show_command.html 
+sidebar: sidebar 
+keywords: run, profile, show, command, display, smo 
+summary: profile show コマンドを実行すると、プロファイルに関する情報を表示できます。 
+---
+= smo profile show コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+profile show コマンドを実行すると、プロファイルに関する情報を表示できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo profile show
+-profile profile_name
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+プロファイルの名前を指定します。この名前には 30 文字まで使用でき、ホスト内で一意である必要があります。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+

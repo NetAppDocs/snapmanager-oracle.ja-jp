@@ -1,0 +1,13 @@
+---
+permalink: windows/index.html 
+sidebar: sidebar 
+keywords: install, installation, administer, administration, guide, document 
+summary: 『 SnapManager for Oracle 3.4.2 Installation and Administration Guide 』を参照してください 
+---
+= 『インストレーションアドミニストレーションガイド』を参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このマニュアルでは、 SnapManager 3.4.2 for Oracle を Windows 環境でインストールおよび管理する方法について説明します。製品のインストール、アップグレード、アンインストール、および構成方法、データベースのバックアップ、リストア、クローニングの方法などが含まれます。

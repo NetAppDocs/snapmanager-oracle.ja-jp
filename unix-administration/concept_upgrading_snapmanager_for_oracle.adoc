@@ -1,0 +1,13 @@
+---
+permalink: unix-administration/concept_upgrading_snapmanager_for_oracle.html 
+sidebar: sidebar 
+keywords: upgrade, version, snapmanager, oracle 
+summary: どのバージョンよりも前のバージョンから SnapManager for Oracle の最新バージョンにアップグレードすることができます。すべての SnapManager ホストを同時にアップグレードすることも、ローリングアップグレードを実行することもできます。これにより、ホストを段階的にホスト単位でアップグレードできます。 
+---
+= SnapManager のアップグレード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+どのバージョンよりも前のバージョンから SnapManager for Oracle の最新バージョンにアップグレードすることができます。すべての SnapManager ホストを同時にアップグレードすることも、ローリングアップグレードを実行することもできます。これにより、ホストを段階的にホスト単位でアップグレードできます。

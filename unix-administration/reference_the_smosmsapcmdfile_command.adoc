@@ -1,0 +1,69 @@
+---
+permalink: unix-administration/reference_the_smosmsapcmdfile_command.html 
+sidebar: sidebar 
+keywords: cmdfile, command, run, shell, host, limit, number, character, appear, line, smo 
+summary: ホスト上のシェルでコマンド・ラインに表示できる文字数が制限されている場合は、 cmdfile コマンドを使用して、任意のコマンドを実行できます。 
+---
+= smo cmdfile コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホスト上のシェルでコマンド・ラインに表示できる文字数が制限されている場合は、 cmdfile コマンドを使用して、任意のコマンドを実行できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo cmdfile
+-file file_name
+\[-quiet \| -verbose\]
+----
+このコマンドをテキスト・ファイルに格納して、 smo cmdfile コマンドを使用して、コマンドを実行できます。テキストファイルに追加できるコマンドは 1 つだけです。コマンド構文には、 smo を含めないでください。
+
+
+NOTE: smo cmdfile コマンドは、 smo pfile コマンドの代替として使用されます。smo cmdfile は、 smo pfile コマンドと互換性はありません。
+
+
+
+== パラメータ
+
+* * -file file_name *
++
+実行するコマンドを含むテキスト・ファイルのパスを指定します。
+
+* * - Quiet *
++
+エラー・メッセージのみがコンソールに表示されるように指定します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されるように指定します。
+
+
+
+
+
+== 例
+
+この例では、 /tmp にある command.txt に profile create コマンドを含めることで、プロファイルを作成します。この場合は、 smo cmdfile コマンドを実行してください。
+
+テキストファイルには次の情報が含まれています。
+
+[listing]
+----
+profile create -profile SALES1 -repository -dbname SNAPMGRR
+-login -username server1_user -password ontap -port 1521 -host server1
+-database -dbname SMO -sid SMO -login -username sys -password oracle -port 1521
+-host Host2 -osaccount oracle -osgroup db2
+----
+この場合、 command.txt ファイルを指定して smo cmdfile コマンドを実行すると、プロファイルを作成できます。
+
+[listing]
+----
+smo cmdfile -file /tmp/command.txt
+----

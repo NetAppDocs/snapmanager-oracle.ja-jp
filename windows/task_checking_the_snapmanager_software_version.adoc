@@ -1,0 +1,20 @@
+---
+permalink: windows/task_checking_the_snapmanager_software_version.html 
+sidebar: sidebar 
+keywords: determine, version, product, running, local, host, comand, snapmanager 
+summary: version コマンドを実行すると ' ローカル・ホストで稼働している製品のバージョンを確認できます 
+---
+= SnapManager ソフトウェアのバージョンを確認しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+version コマンドを実行すると ' ローカル・ホストで稼働している製品のバージョンを確認できます
+
+. SnapManager のバージョンを確認するには、次のコマンドを入力します。 smo version
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapversion_command.adoc[smo version コマンド]

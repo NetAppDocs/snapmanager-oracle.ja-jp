@@ -1,0 +1,108 @@
+---
+permalink: unix-installation-cmode/task_preparing_storage_systems_for_snapvault_replication.html 
+sidebar: sidebar 
+keywords: snapmanager, integrated, snapvault, technology, archive, snapshot, copies, disk, configure, data-portection, source, volume, relationship, initialization, snapshot 
+summary: SnapManager の統合 SnapVault テクノロジを使用して Snapshot コピーをディスクにアーカイブするには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。初期化の際に、 SnapVault はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。 
+---
+= SnapVault レプリケーションのためのストレージシステムの準備
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager の統合された SnapVault テクノロジを使用して Snapshot コピーをディスクにアーカイブするには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。初期化の際に、 SnapVault はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。
+
+* ピア Storage Virtual Machine （ SVM ）を含むピアクラスタにソースボリュームとデスティネーションボリュームを作成する必要があります。詳細については、『 clustered Data ONTAP クラスタピアリングエクスプレスガイド』を参照してください。
+* クラスタ管理者である必要があります。
+
+
+SnapVault 関係は、 Data ONTAP コマンドラインインターフェイス（ CLI ）または OnCommand の System Manager を使用して作成できます。次の手順は、 CLI を使用することを前提としています。OnCommand System Manager を使用して SnapVault 関係を作成する方法については、『 clustered Data ONTAP SnapVault によるボリュームバックアップエクスプレスガイド』を参照してください。
+
+次の図は、 SnapVault 関係を初期化するための手順を示しています。
+
+image::../media/snapvault_steps_clustered.gif[この図は、 SnapVault 関係を初期化するための手順を示しています。デスティネーションクラスタを特定しています,creating a destination volume,creating a policy]
+
+. デスティネーションクラスタを特定します。
+. デスティネーションクラスタで、 -type DP オプションを指定して volume create コマンドを実行し、ソースボリュームと同じサイズ以上の SnapVault デスティネーションボリュームを作成します。
++
+
+IMPORTANT: デスティネーションボリュームの言語設定とソースボリュームの言語設定が一致している必要があります。
+
++
+次のコマンドでは、アグリゲート node01_aggr の SVM2 に、 dstvolB という名前の 2GB のデスティネーションボリュームを作成します。
+
++
+[listing]
+----
+cluster2::> volume create -vserver SVM2 -volume dstvolB -aggregate node01_aggr -type DP
+-size 2GB
+----
+. デスティネーション SVM で、 snapmirror policy create コマンドを使用して、 SnapVault ポリシーを作成します。
++
+次のコマンドでは、 SVM 全体のポリシー SVM1-vault を作成します。
+
++
+[listing]
+----
+SVM2::> snapmirror policy create -vserver SVM2 -policy SVM1-vault
+----
++
+
+NOTE: SnapVault 関係用の cron スケジュールまたは Snapshot コピーポリシーを定義しないでください。これは、バックアップスケジュールの作成時に SnapManager によって自動的に定義されます。
+
+. snapmirror policy add-rule コマンドを使用して、次の Snapshot コピーラベルと各ラベルの保持ポリシーを定義するルールをポリシーに追加します。
++
+** 毎日
+** 毎週
+** 毎月
+** 毎時
+** 無制限 * 重要： * ラベルでは大文字と小文字が区別されます。
+
+
++
+これらは SnapManager で使用される固定ラベルです。バックアップをアーカイブする際には、いずれかのオプションを選択します。追加するルールごとにこのコマンドを実行する必要があります。
+
++
++ 次のコマンドは、「毎日」ラベルを定義し、ラベルに一致する 30 個の Snapshot コピーをヴォールトに保持するように指定するルールを SVM1-vault ポリシーに追加します。
+
++
+[+]
+
++
+[listing]
+----
+SVM2::> snapmirror policy add-rule -vserver SVM2 -policy SVM1-vault
+-snapmirror-label Daily -keep 30
+----
+. type XDP パラメータと -policy パラメータを指定して snapmirror create コマンドを実行し、 SnapVault 関係を作成してバックアップポリシーを割り当てます。
++
+XDP タイプは、関係を SnapVault 関係として定義します。
+
++
+次のコマンドでは、 SVM1 のソースボリューム srcvolA と SVM2 のデスティネーションボリューム dstvolB との SnapVault 関係を作成します。この例では、 SVM1-vault という名前のポリシーを割り当てています。
+
++
+[listing]
+----
+SVM2::> snapmirror create -source-path SVM1:srcvolA -destination-path SVM2:dstvolB
+-type XDP -policy SVM1-vault
+----
+. snapmirror initialize コマンドを使用して、関係を初期化します。
++
+初期化プロセスでは、デスティネーションボリュームへのベースライン転送が実行されます。SnapMirror はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。
+
++
+次のコマンドでは、 SVM1 のソースボリューム srcvolA と SVM2 のデスティネーションボリューム dstvolB との関係を初期化します。
+
++
+[listing]
+----
+SVM2::> snapmirror initialize -destination-path SVM2:dstvolB
+----
+
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1547469["clustered Data ONTAP 8.3 クラスタピアリングエクスプレスガイド"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1653496["clustered Data ONTAP 8.3 SnapVault によるボリュームバックアップエクスプレスガイド』"]

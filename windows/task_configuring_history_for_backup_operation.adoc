@@ -1,0 +1,29 @@
+---
+permalink: windows/task_configuring_history_for_backup_operation.html 
+sidebar: sidebar 
+keywords: snapmanager, oracle, cli, gui, history, configuring, history, operation, report 
+summary: SnapManager for Oracle を使用すると、 SnapManager の CLI または GUI から SnapManager 処理の履歴を保持できます。SnapManager 処理の履歴はレポートとして表示できます。 
+---
+= SnapManager 操作の履歴を設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle を使用すると、 SnapManager の CLI または GUI から SnapManager 処理の履歴を保持できます。SnapManager 処理の履歴はレポートとして表示できます。
+
+. SnapManager 処理の履歴を設定するには、次のコマンドを入力します。 smo history set -profile ｛ -name 、 profile_name [profile_name1 、 profile_name2 ]|-all repository -login [-passwordrepo_password] -usernamerepo_username-dbname -dhesbo_host-portrepo_retain ｛ weeklyname1 ｝ -retays1_operation 、 weeklyname|weeklyname -retays1_operation [ -weeklyname | weeklyname | weeklyname -retays1 日次処理
+
+
+[listing]
+----
+
+        smo
+history set -profile -name PROFILE1 -operation -operations backup -retain -daily 6 -verbose
+----
+[listing]
+----
+
+        smo
+history set -profile -name PROFILE1 -operation -all -retain -weekly 3 -verbose
+----

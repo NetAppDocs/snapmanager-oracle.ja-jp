@@ -1,0 +1,63 @@
+---
+permalink: unix-administration/reference_the_smosmsap_storage_rename_command.html 
+sidebar: sidebar 
+keywords: command, update, name, ip, address, storage, system, smo, rename 
+summary: このコマンドは、ストレージシステムの名前または IP アドレスを更新します。 
+---
+= smo storage rename コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、ストレージシステムの名前または IP アドレスを更新します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo storage rename
+-profile profile
+-oldname old_storage_name
+-newname new_storage_name
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+プロファイルの名前を指定します。この名前には 30 文字まで使用でき、ホスト内で一意である必要があります。
+
+* * -oldname old_storage_name *
++
+ストレージシステムの名前を変更する前の、ストレージシステムの IP アドレスまたは名前を指定します。smo storage list コマンドを実行したときに表示されるストレージ・システムの IP アドレスまたは名前を入力する必要があります。
+
+* * - newname new_storage_name *
++
+ストレージシステムの名前を変更したあとの、ストレージシステムの IP アドレスまたは名前を示します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次に、 smo storage rename コマンドを使用してストレージ・システムの名前を変更する例を示します。
+
+[listing]
+----
+smo storage rename -profile mjullian -oldname lech -newname hudson -verbose
+----

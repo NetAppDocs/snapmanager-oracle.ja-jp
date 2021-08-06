@@ -1,0 +1,24 @@
+---
+permalink: unix-administration/task_deleting_profile.html 
+sidebar: sidebar 
+keywords: delete, profile, contain, succesful, backup, operation, deleting, smo 
+summary: プロファイルは、他の処理で現在使用されている成功したバックアップが含まれていないかぎり削除できます。解放または削除されたバックアップを含むプロファイルを削除できます。 
+---
+= プロファイルの削除
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルは、他の処理で現在使用されている成功したバックアップが含まれていないかぎり削除できます。解放または削除されたバックアップを含むプロファイルを削除できます。
+
+. 次のコマンドを入力します。 `mo profile delete -profile profile [-quiet | -verbose ]
++
+クローンスプリット用に作成された新しいプロファイルを削除できます。プロファイルの削除中にを削除しても、 SnapManager のコマンドラインインターフェイスにプロファイルを削除しようとすると、あとで破棄できないことを示す警告メッセージが表示されます。
+
+
+
+[listing]
+----
+smo profile delete -profile AUTO-REVEN
+----

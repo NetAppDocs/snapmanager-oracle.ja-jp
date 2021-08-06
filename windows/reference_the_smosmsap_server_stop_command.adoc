@@ -1,0 +1,48 @@
+---
+permalink: windows/reference_the_smosmsap_server_stop_command.html 
+sidebar: sidebar 
+keywords: command, stop, host, server, root, smo 
+summary: このコマンドは、 SnapManager ホスト・サーバを停止し、ルートに入力します。 
+---
+= smo _server stop コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、 SnapManager ホスト・サーバを停止し、ルートに入力します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo_server stop
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - Quiet *
++
+エラー・メッセージのみがコンソールに表示されるように指定します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されるように指定します。
+
+
+
+
+
+== コマンドの例
+
+次に、 smo _server stop コマンドの使用例を示します。
+
+[listing]
+----
+smo_server stop
+----

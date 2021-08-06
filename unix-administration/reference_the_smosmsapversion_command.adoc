@@ -1,0 +1,49 @@
+---
+permalink: unix-administration/reference_the_smosmsapversion_command.html 
+sidebar: sidebar 
+keywords: run, version, command, determine, snapmanager, local, host, smo 
+summary: version コマンドを実行すると、ローカル・ホストで稼働している SnapManager のバージョンを確認できます。 
+---
+= smo version コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+version コマンドを実行すると、ローカル・ホストで稼働している SnapManager のバージョンを確認できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo version
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+各プロファイルのビルドの日付と内容を表示します。エラー、警告、および情報メッセージもコンソールに表示されます。
+
+
+
+
+
+== version コマンドの例
+
+次の例は、 SnapManager のバージョンを表示します。
+
+[listing]
+----
+smo version
+SnapManager for Oracle Version: 3.3.1
+----

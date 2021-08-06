@@ -1,0 +1,20 @@
+---
+permalink: windows/task_using_snapmanager_commands.html 
+sidebar: sidebar 
+keywords: snapmanager, host, server, enter, command, prompt 
+summary: SnapManager ホストサーバを起動したら、ホストのプロンプトでコマンドを入力して、 SnapManager を使用できます。 
+---
+= SnapManager コマンドを使用する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager ホストサーバを起動したら、ホストのプロンプトでコマンドを入力して、 SnapManager を使用できます。
+
+. 操作を実行するには：
++
+** Windows ホストの場合は、「 * Start * > * All Programs * > * NetApp * > * SnapManager for Oracle * > * Start SMO Command Line Interface （ CLI ；コマンドラインインターフェイス）」の順に選択します
+
+
+

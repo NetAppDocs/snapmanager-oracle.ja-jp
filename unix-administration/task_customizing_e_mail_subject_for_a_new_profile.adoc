@@ -1,0 +1,95 @@
+---
+permalink: unix-administration/task_customizing_e_mail_subject_for_a_new_profile.html 
+sidebar: sidebar 
+keywords: customize, email, subject, new, profile, create 
+summary: 新しいプロファイルを作成するときに、そのプロファイルの電子メールの件名をカスタマイズできます。 
+---
+= 新しいプロファイルの電子メールの件名をカスタマイズする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しいプロファイルを作成するときに、そのプロファイルの電子メールの件名をカスタマイズできます。
+
+E メールの件名は、 \｛ profile ｝ _\ ｛ operation-name ｝ _\ ｛ db-sid ｝ _\ ｛ db-host｝ _\ ｛ start-date ｝ _\ ｛ end-date ｝ _\ ｛ status ｝ パターンを使用してカスタマイズするか、独自のテキストを入力してください。
+
+|===
+| 変数名 | 説明 | 値の例 
+
+
+ a| 
+プロファイル（ Profile ）
+ a| 
+データベース処理に使用するプロファイル名
+ a| 
+PROF1 （プロ F1 ）
+
+
+
+ a| 
+処理名
+ a| 
+データベース処理の名前
+ a| 
+バックアップ、データバックアップ、データおよびアーカイブログのバックアップ
+
+
+
+ a| 
+db-sid
+ a| 
+データベースの SID
+ a| 
+DB1
+
+
+
+ a| 
+DB ホスト
+ a| 
+ホスト・サーバの名前
+ a| 
+ホスト A
+
+
+
+ a| 
+開始日
+ a| 
+データベース操作の開始時刻を mmdd ： hh ： ss yyyy 形式で指定します
+ a| 
+2012 年 4 月 27 日 21 ： 00 ： 45 PST
+
+
+
+ a| 
+終了日
+ a| 
+データベース操作の終了時刻を mmdd ： hh ： ss yyyy 形式で指定します
+ a| 
+2012 年 4 月 27 日 21 ： 10 ： 45 （太平洋標準時
+
+
+
+ a| 
+ステータス
+ a| 
+データベース処理のステータス
+ a| 
+成功
+
+|===
+変数に値を指定しないと、「 Missing value （ s ） -subject 」というエラーメッセージが SnapManager に表示されます。
+
+. 次のコマンドを入力します。 smo profile create -profile profile[-profile-passwordprofile-password-dbnamerepo_service_name -hostreppo_host-portrepo_username -usernamerepo_username-database -dbname -hostdbnamedb_desdb_ host [-siddb_host [-sdbreidb_host] -password-durationdbname -duration[-drdbname -passwordname -username -adminb -admin] -adminb -< -< -< -< -username -username -username -username -username -username -username -username -username -username -username -username -adminb -username -username -username -< -< オプション > -< オプション > -< オプション > -username -< オプション > -username -username -username -< オプション > -username -username -< オプション > -< オプション > -username -username -username -username -username -username -username -username -< オプション > -< オプション > -username -< オプション > -username -< オプション
+
+
+次の例は、 E メールの件名のパターンを示しています。
+
+[listing]
+----
+
+smo profile create -profile sales1 -profile-password admin1 -repository -dbname repo2 -host 10.72.197.133 -port 1521 -login -username admin2 -database -dbname DB1 -host 10.72.197.142 -sid DB1
+-osaccount oracle -osgroup dba -profile-notification -success -email admin@org.com -subject {profile}_{operation-name}_{db-sid}_{db-host}_{start-date}_{end-date}_{status}
+----

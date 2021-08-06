@@ -1,0 +1,32 @@
+---
+permalink: unix-installation-cmode/task_verifying_database_backups.html 
+sidebar: sidebar 
+keywords: verify, backup, database, backed-up, file, not, corrupt, snapmanager 
+summary: データベースのバックアップを検証して、バックアップファイルが破損していないことを確認できます。 
+---
+= データベースのバックアップの検証
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースのバックアップを検証して、バックアップファイルが破損していないことを確認できます。
+
+バックアップの作成時に [Oracle DBVERIFY ユーティリティ * を使用してバックアップを検証する *] チェックボックスを選択しなかった場合は、これらの手順を手動で実行してバックアップを検証する必要があります。ただし、このチェックボックスを選択すると、 SnapManager によってバックアップが自動的に検証されます。
+
+. [ リポジトリ（ Repositories ） ] ツリーから、プロファイルを選択します。
+. 検証するバックアップを右クリックし、 * Verify * を選択します。
+. [ 完了 ] をクリックします。
++
+処理が失敗した場合は、 * Operation Details * をクリックして、処理が失敗した原因を確認します。
+
++
+* リポジトリ * ツリーで、バックアップを右クリックし、 * プロパティ * をクリックして、検証操作の結果を表示します。
+
+
+
+バックアップファイルを使用してリストア処理を実行できます。SnapManager のユーザインターフェイス（ UI ）を使用してリストア処理を実行する方法については、 _ オンラインヘルプ _ を参照してください。コマンドラインインターフェイス（ CLI ）を使用してリストア処理を実行する場合は、 SnapManager for Oracle アドミニストレーションガイド UNIX_ を参照してください。
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12471546["『 SnapManager 3.4 for Oracle Administration Guide for UNIX 』"]

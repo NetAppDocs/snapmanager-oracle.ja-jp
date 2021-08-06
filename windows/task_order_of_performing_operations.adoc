@@ -1,0 +1,67 @@
+---
+permalink: windows/task_order_of_performing_operations.html 
+sidebar: sidebar 
+keywords: snapmanager, enable, perform, operation, backup, cloning, clone, operation, order, perform 
+summary: SnapManager では、プロファイルの作成、バックアップの実行、バックアップのクローニングなど、さまざまな処理を実行できます。これらの処理は、特定の順序で実行する必要があります。 
+---
+= 処理の実行順序
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager では、プロファイルの作成、バックアップの実行、バックアップのクローニングなど、さまざまな処理を実行できます。これらの処理は、特定の順序で実行する必要があります。
+
+. smo profile create コマンドを使用して、既存のリポジトリにプロファイルを作成します。
++
+
+NOTE: ターゲットデータベースに指定する Oracle ユーザには、 sysdba 権限が必要です。
+
++
+次の例は、プロファイルを作成するコマンドを示しています。
+
++
+[listing]
+----
+smo profile create -profile prof1 -profile-password prof1cred
+-repository -dbname HR1 -login -username admin -host server1 -port 1521
+-database -dbname dedb -login -username db_oper2
+-password dbpw1 -host server1 -port 1521
+----
+. smo backup create コマンドを使用して、既存のプロファイルにバックアップを作成します。
++
+次の例は、バックアップを作成するコマンドを示しています。
+
++
+[listing]
+----
+smo backup create -profile prof1 -full -offline -label full_backup_prof1 -force
+----
+. smo backup restore コマンドを使用して、プライマリ・ストレージ上のデータベース・バックアップをリストアおよびリカバリします。
++
+次の例は、バックアップをリストアするコマンドを示しています。
+
++
+[listing]
+----
+smo backup restore -profile prof1 -label full_backup_prof1
+-complete -recover -alllogs
+----
+. smo clone template コマンドを使用して、クローン仕様を作成します。
++
+グラフィカルユーザインターフェイス（ GUI ）のクローンウィザードを使用して、テンプレートクローン仕様を作成できます。テキスト・エディタを使用して、クローン仕様ファイルを作成することもできます。
+
+. smo clone create コマンドを使用して、既存のバックアップを含むデータベースをクローニングします。
++
+既存のクローン仕様を使用するか、またはクローン用のストレージおよびデータベース仕様を指定するクローン仕様を作成する必要があります。
+
++
+次の例は、クローンを作成するコマンドを示しています。
+
++
+[listing]
+----
+smo clone create -profile prof1 -backup-label full_backup_prof1
+-newsid clone1 -label prof1_clone -clonespec C:\\clone_spec\\prof1_clonespec.xml
+----
+

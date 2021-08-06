@@ -1,0 +1,68 @@
+---
+permalink: unix-administration/task_scheduling_archive_log_file_pruning.html 
+sidebar: sidebar 
+keywords: create, backup, schedule, pruning, archive, log, file, occur, specified, time, smo 
+summary: バックアップを作成する場合、指定した時間にアーカイブ・ログ・ファイルが削除されるようにスケジュールを設定できます。 
+---
+= アーカイブ・ログ・ファイルの削除のスケジュール設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+バックアップを作成する場合、指定した時間にアーカイブ・ログ・ファイルが削除されるようにスケジュールを設定できます。
+
+SnapManager を使用すると、アクティブファイルシステムからアーカイブログファイルを定期的に削除できます。
+
+. 次のコマンドを入力します。 `s mo schedule create -profile profile_name {[-full ｛ -online | -offline-auto | [-retain [-hourly | -daily | -weekly | -unlimited ] [-verify] | [-data [-files[files]] | [--log-files] | [-offearch-retaes] | -retain-daily. comments|-retain-dataablespaces | -unlimited | -retain-inde|-retain-inde|-retain-inde|-unlimited | -unlimited | -retain-inde|-retain-inde| -retain-data[ -come| -unlimited | -unlimited | -ontap|-reta| -reta -noprot] [-backup-destpath1[,[path2][-exclude-destpath1[,path2]][-prunelogs {-all |-untSCNuntilscnilsc|-before {-ddateyyyyyy-md HH:mm:mm:ss | -monsmonths | -weekly-weekly-scandle-time|-weekly-run-time|-destrun-time|-time-candle-user-dle-user-dle-time|-time|-time-candle-user-dle-untle-user-dle-time|-time}-user-desday|-state-time}-user-des-desday|-state-schedule]-user-desday|-pruntle-untle-pruntle-pruntle-dest-state-string}-user|-state-time|-user|-user|-user-user-user-dest-
++
+|===
+| 状況 | 作業 
+
+
+ a| 
+* アーカイブ・ログ・ファイルの削除をスケジュール *
+ a| 
+次のオプションを指定します。
+
+** -prunelogs ：アーカイブログファイルのプルーニングをスケジュールする場合
+** -prune-dest ：アーカイブ・ログ・デスティネーションからアーカイブ・ログ・ファイルをプルーニングします
+
+
+
+
+ a| 
+* スケジュール名を入力 *
+ a| 
+schedule-name オプションを指定します。
+
+
+
+ a| 
+* 特定の時間間隔でアーカイブ・ログ・ファイルを削除するようにスケジュールします *
+ a| 
+interval オプションを指定し、次の間隔クラスに基づいて、アーカイブログファイルを削除するかどうかを指定します。
+
+** 毎時
+** 毎日
+** 毎週
+** 毎月
+** - onetimeonly
+
+
+
+
+ a| 
+* スケジュール操作に関するコメントを追加します。 *
+ a| 
+schedule-comment オプションのあとに、概要文字列を指定します。
+
+
+
+ a| 
+* スケジュール操作の開始時刻 * を指定します
+ a| 
+yyyy-mm-dd hh:mm 形式で -start-time オプションを指定します。
+
+|===
+

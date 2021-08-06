@@ -1,0 +1,18 @@
+---
+permalink: unix-administration/concept_limitations_of_using_scripts_to_support_asm_database_without_asmlib.html 
+sidebar: sidebar 
+keywords: certain, limitation, script, asm, database, asmlib, root, grid, oracle 
+summary: ASMLib のない ASM データベースをサポートするためにスクリプトを使用する場合は、一定の制限事項に注意する必要があります。 
+---
+= ASMLib のない ASM データベースをサポートするスクリプトの使用に関する制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASMLib のない ASM データベースをサポートするためにスクリプトを使用する場合は、一定の制限事項に注意する必要があります。
+
+* スクリプトは、どのバージョンのカーネルにも代替解決策を提供しますが、 ASMLib がインストールされていない場合に限ります。
+* スクリプトの権限は、 root 、グリッド、 Oracle 、または同等のユーザがスクリプトにアクセスできるように設定する必要があります。
+* スクリプトは、セカンダリストレージからのリストアをサポートしていません。
+

@@ -1,0 +1,118 @@
+---
+permalink: unix-administration/concept_variables_available_in_the_task_scripts_for_clone_operation.html 
+sidebar: sidebar 
+keywords: snapmanager, context, information, environment, variable, clone, operation 
+summary: SnapManager は、実行するクローン処理に関連する環境変数の形式でコンテキスト情報を提供します。たとえば、元のホストの名前、クローンデータベースの名前、バックアップのラベルを取得できます。 
+---
+= クローニング処理のタスクスクリプトで使用できる変数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager は、実行するクローン処理に関連する環境変数の形式でコンテキスト情報を提供します。たとえば、元のホストの名前、クローンデータベースの名前、バックアップのラベルを取得できます。
+
+次の表に、スクリプトで使用できる環境変数を示します。
+
+|===
+| 変数（ variables ） | 説明 | の形式で入力し 
+
+
+ a| 
+sm_created ：元の SID
+ a| 
+元のデータベースの SID
+ a| 
+文字列
+
+
+
+ a| 
+sm_created ：元のホスト
+ a| 
+元のデータベースに関連付けられているホスト名
+ a| 
+文字列
+
+
+
+ a| 
+sm_created は次のように設定されています
+ a| 
+元のデータベースの OS 所有者
+ a| 
+文字列
+
+
+
+ a| 
+sm_created は、元の OS グループです
+ a| 
+元のデータベースの OS グループ
+ a| 
+文字列
+
+
+
+ a| 
+sm_created
+ a| 
+クローンデータベースの SID
+ a| 
+文字列
+
+
+
+ a| 
+sm_created ：ターゲットホスト
+ a| 
+クローンデータベースに関連付けられたホスト名
+ a| 
+文字列
+
+
+
+ a| 
+sm_created は次のように設定されています
+ a| 
+クローンデータベースの OS 所有者
+ a| 
+文字列
+
+
+
+ a| 
+sm_created は、ターゲットの OS グループです
+ a| 
+クローンデータベースの OS グループ
+ a| 
+文字列
+
+
+
+ a| 
+sm_created ： target_DB_port
+ a| 
+ターゲットデータベースのポート
+ a| 
+整数
+
+
+
+ a| 
+sm_created グローバルデータベース名を指定します
+ a| 
+ターゲットデータベースのグローバルデータベース名
+ a| 
+文字列
+
+
+
+ a| 
+sm_created ：バックアップラベル
+ a| 
+クローンに使用されるバックアップのラベル
+ a| 
+文字列
+
+|===

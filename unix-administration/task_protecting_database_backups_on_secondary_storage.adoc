@@ -1,0 +1,102 @@
+---
+permalink: unix-administration/task_protecting_database_backups_on_secondary_storage.html 
+sidebar: sidebar 
+keywords: snapmanager, protect, backup, copies, secondary, tertiary, storage, system, smo 
+summary: SnapManager を使用して、セカンダリストレージシステムまたはターシャリストレージシステム上のバックアップコピーを保護できます。 
+---
+= セカンダリストレージまたはターシャリストレージ上のデータベースバックアップを保護する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager を使用して、セカンダリストレージシステムまたはターシャリストレージシステム上のバックアップコピーを保護できます。
+
+. 次のコマンドを入力します。 `mo backup create -profile profile_name ｛ [-full ｛ -online | -offline-auto ｝ [-retain ｛ -hourly | -daily | -comment| -monthly | -unlimited ｝ ] [-verify] | [-data [[-files[files] | [-tablespaces [--unlimited | -logabellabel] -retain-abel|-daily. [-snapvaultlabelSnapVault_label] [-prot|-noproten|-protnow] [-backup-destpath1[,[path2]] [-exclude-destpath1[, path2]] [-prunelogs {-all | -untSCNuntilscntilsc|-untilscn | -date yyym-des]-dest-dump-date-dest-des|-dest-dump-as|-dest-des]|-dest-des} -dest-deste|-dest-deste|-dest-des} -date-dest-deste|-dest-deste|-date-dest-des} -dest-des| -dest-des} -dest-destime-dest-des} -dest
++
+|===
+| 状況 | 操作 
+
+
+ a| 
+* オンラインまたはオフラインのデータベースのバックアップを作成します。 SnapManager がオンラインとオフラインのどちらであるかを管理できるようにするのではありません *
+ a| 
+オフラインデータベースまたはオンラインデータベースのバックアップを作成するには、 -offline オプションまたは -online オプションを指定します。offline オプションまたは -online オプションを使用する場合は、 -auto オプションは使用できません。
+
+
+
+ a| 
+* データベースがオンラインかオフラインかにかかわらず、 SnapManager がデータベースのバックアップを管理できるようにします。 *
+ a| 
+auto オプションを指定します。auto オプションを使用する場合、 -offline オプションまたは -online オプションは使用できません。
+
+
+
+ a| 
+* バックアップに関するコメントを追加します *
+ a| 
+comment オプションに続いて、概要文字列を指定します。
+
+
+
+ a| 
+* 現在の状態にかかわらず、データベースをバックアップするように指定した状態に強制的に移行します
+ a| 
+force オプションを指定します。
+
+
+
+ a| 
+* 作成時にバックアップを検証 *
+ a| 
+verify オプションを指定します。
+
+
+
+ a| 
+* セカンダリ・ストレージ上にバックアップを作成 *
+ a| 
+protect オプションを指定します。
+
+** ONTAP を使用していて、バックアップをセカンダリストレージですぐに保護する場合は、 -protect オプションを指定します。
++
+
+NOTE: clustered Data ONTAP では、 -protectnow オプションは使用できません。
+
+** Data ONTAP 7-Mode を使用していて、 Protection Manager の保護スケジュールを無視してバックアップをセカンダリストレージですぐに保護する場合は、 -protectnow オプションを指定します。
+** セカンダリストレージへのバックアップが実行されないようにするには、 -noprotect オプションを指定します。ONTAP を使用していて、プロファイルの作成時に _SnapManager_cDOT _Vault_protection ポリシーを選択した場合は、 -snapvaultlabel オプションを指定する必要があります。SnapMirror 関係を SnapVault に設定するときに、 SnapMirror ポリシーのルールで指定した SnapMirror ラベルを指定する必要があります。
+
+
+
+
+ a| 
+* 保持クラスの値を指定します *
+ a| 
+retain オプションを指定し、次のいずれかの保持クラスに基づいてバックアップを保持するかどうかを指定します。
+
+** 毎時
+** 毎日
+** 毎週
+** 毎月
+** - unlimited 保持クラスを指定しない場合、 SnapManager ではデフォルトで -hourly が使用されます。
+
+
+|===
+
+
+
+
+== 例
+
+次のコマンドは、データベースバックアップを保護します。
+
+[listing]
+----
+smo backup create -profile PAYDB -protect -retain -daily -full auto -label full_bkup_sales
+----
+次のコマンドは、データベースバックアップをただちに保護します。
+
+[listing]
+----
+smo backup create -profile PAYDB -protectnow -retain -daily -full auto -label full_bkup_sales
+----

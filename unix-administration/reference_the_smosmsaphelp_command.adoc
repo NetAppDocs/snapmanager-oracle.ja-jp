@@ -1,0 +1,50 @@
+---
+permalink: unix-administration/reference_the_smosmsaphelp_command.html 
+sidebar: sidebar 
+keywords: run, help, command, display, information, snapmanager, name, smo 
+summary: help コマンドを実行すると、 SnapManager コマンドとそのオプションに関する情報を表示できます。コマンド名を指定しない場合は、有効なコマンドのリストが表示されます。コマンド名を指定すると、そのコマンドの構文が表示されます。 
+---
+= smo help コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+help コマンドを実行すると、 SnapManager コマンドとそのオプションに関する情報を表示できます。コマンド名を指定しない場合は、有効なコマンドのリストが表示されます。コマンド名を指定すると、そのコマンドの構文が表示されます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo help
+\[backup\|cmdfile\|clone\|credential\|help\|operation\|profile\|protection-policy\|repository\|system\|version\|plugin\|diag\|history\|schedule\|notification\|storage\|get\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+このコマンドで使用できるコマンド名の一部を次に示します。
+
+* バックアップ
+* クローン
+* cmdfile
+* クレデンシャル
+* 診断
+* 取得
+* 通知
+* ヘルプ
+* 履歴
+* 操作
+* プラグイン
+* プロファイル（ Profile ）
+* 保護ポリシー
+* リポジトリ
+* スケジュール
+* ストレージ
+* システム
+* バージョン
+

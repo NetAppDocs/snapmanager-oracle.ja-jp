@@ -1,0 +1,24 @@
+---
+permalink: windows/task_starting_the_snapmanager_windows_host_server.html 
+sidebar: sidebar 
+keywords: start, snapmanager, server, windows, service, host 
+summary: SnapManager サーバは、 Windows サービスを使用して起動できます。 
+---
+= SnapManager ホスト・サーバを起動しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager サーバは、 Windows サービスを使用して起動できます。
+
+. [ * スタート * > * コントロールパネル * > * 管理ツール * > * サービス * ] をクリックします。
+. Services ウィンドウで、 Oracle 用の NetAppSnapManager 3.3 を選択します。
+. サーバは、次の 3 つの方法のいずれかで起動できます。
++
+** 左パネルで、 * スタート * をクリックします。
+** NetAppSnapManager 3.3 for Oracle を右クリックし、ドロップダウン・メニューから * Start * を選択します。
+** NetAppSnapManager 3.3 for Oracle をダブルクリックし、プロパティウィンドウで * Start * をクリックします。
+
+
+

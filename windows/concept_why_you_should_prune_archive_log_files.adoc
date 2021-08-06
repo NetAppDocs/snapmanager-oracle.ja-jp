@@ -1,0 +1,18 @@
+---
+permalink: windows/concept_why_you_should_prune_archive_log_files.html 
+sidebar: sidebar 
+keywords: oracle, enable, delete, archive, log, file, back, up, prune 
+summary: SnapManager for Oracle を使用すると、すでにバックアップされているアクティブ・ファイルシステムからアーカイブ・ログ・ファイルを削除できます。 
+---
+= アーカイブログファイルの削除が必要な理由
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle を使用すると、すでにバックアップされているアクティブ・ファイルシステムからアーカイブ・ログ・ファイルを削除できます。
+
+プルーニングを使用すると、 SnapManager で個別のアーカイブ・ログ・ファイルのバックアップを作成できます。バックアップ保持ポリシーと一緒に削除すると、バックアップがパージされるときにアーカイブ・ログのスペースが解放されます。
+
+
+NOTE: アーカイブログファイルに対して Flash Recovery Area （ FRA ）が有効になっている場合は、アーカイブログファイルのプルーニングを実行できません。フラッシュリカバリ領域でアーカイブログの場所を指定する場合は、 archive_log_dest パラメータでアーカイブログの場所も指定してください。

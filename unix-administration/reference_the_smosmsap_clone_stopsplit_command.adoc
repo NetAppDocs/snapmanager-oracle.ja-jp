@@ -1,0 +1,56 @@
+---
+permalink: unix-administration/reference_the_smosmsap_clone_stopsplit_command.html 
+sidebar: sidebar 
+keywords: command, stop, running, clone, split, process, split-stop, smo 
+summary: このコマンドは、実行中のクローンスプリットプロセスを停止します。 
+---
+= smo clone split -stop コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、実行中のクローンスプリットプロセスを停止します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo clone split-stop
+-profile profile
+\[-host hostname\]
+\[-label split-label \| -id split-id\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+クローンのプロファイル名を指定します。
+
+* * - ホスト名 *
++
+クローンが存在するホスト名を指定します。
+
+* * -label split-label *
++
+クローニングプロセスで生成されるラベル名を示します。
+
+* *-id split-id *
++
+クローンプロセスによって生成される一意の ID です。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+

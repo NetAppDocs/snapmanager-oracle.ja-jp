@@ -1,0 +1,190 @@
+---
+permalink: windows/reference_troubleshooting_known_issues.html 
+sidebar: sidebar 
+keywords: known, issues, snapmanager, troubleshooting 
+summary: SnapManager の使用時に発生する可能性がある既知の問題とその回避方法について理解しておく必要があります。 
+---
+= 既知の問題のトラブルシューティング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager の使用時に発生する可能性がある既知の問題とその回避方法について理解しておく必要があります。
+
+
+
+== SnapManager for Oracle で clustered Data ONTAP のプロファイルを特定できません
+
+SnapManager for Oracle のインストール・ディレクトリ内の cmode_profiles.config ファイルに clustered Data ONTAP プロファイル名が存在しない場合は、次のエラー・メッセージがトリガーされることがあります。
+
+SnapDrive config set -dfm user_name apply_name を使用して DFM サーバを設定してください。
+
+また、 SnapManager for Oracle のアップグレード中に /opt/NetApp/smo/* フォルダを削除すると、 clustered Data ONTAP のプロファイル名が含まれる cmode_profiles.config ファイルも削除されます。この問題も同じエラーメッセージをトリガーします。
+
+* 回避策 *
+
+プロファイルを更新します。 smo profile update -profile <profile_name>
+
+
+NOTE: SnapManager for Oracle が /opt/NetApp/smo/ パスにインストールされている場合、ファイルの場所は /opt/NetApp/smo/cmode_profile/cmode_profiles.config になります。
+
+
+
+== サーバを起動できません
+
+サーバの起動時に、次のようなエラーメッセージが表示されることがあります。
+
+SMO -01104 ：コマンドの呼び出しエラー： SMO - 17107 ： SnapManager Server failed to start on port 8074 because of the following errors ： java.net.BindException: Address already in use.
+
+これは、 SnapManager リスニングポート（デフォルトは 27214 および 27215 ）が別のアプリケーションによって現在使用されているためです。
+
+このエラーは、 smo _server コマンドが実行中であるにもかかわらず、 SnapManager が既存プロセスを検出しない場合にも発生することがあります。
+
+* 回避策 *
+
+別のポートを使用するように SnapManager または他のアプリケーションを再設定できます。
+
+SnapManager を再設定するには、次のファイルを編集します。 C ： \Program Files\NetApp\SnapManager for oracle\properties\smo.config
+
+次の値を割り当てます。
+
+* SMO Server.port=27214
+* SMO Server.rmiRegistry.port=27215
+* remote.registry.ocijdbc.port=27215
++
+remote.registry.ocijdbc.port を Server.rmiRegistry.port と同じにする必要があります。
+
+
+
+SnapManager サーバを起動するには、次の手順を実行します。
+
+. [ * スタート * > * コントロールパネル * > * 管理ツール * > * サービス * ] をクリックします。
+. サーバは、次の 3 つの方法のいずれかで起動できます。
++
+** 左パネルで、 * スタート * をクリックします。
+** Oracle 用 NetApp SnapManager 3.3 を右クリックし、ドロップダウンメニューから * Start * を選択します。
+** Oracle 用 NetApp SnapManager 3.3 をダブルクリックし、表示されるプロパティウィンドウで、 * Start * をクリックします。
+
+
+
+
+
+
+== デスティネーション名が他のデスティネーション名に含まれている場合、アーカイブログファイルのデスティネーション名を管理できません
+
+アーカイブログのバックアップ作成時に、ユーザが他のデスティネーション名の一部であるデスティネーションを除外する場合は、その他のデスティネーション名も除外されます。
+
+たとえば、除外するデスティネーションとして E ： \\arch 、 G ： \\arch 、 H ： \\arch の 3 つがあるとします。アーカイブログファイルのバックアップを作成する際に、コマンドを使用して E ： \\ arch を除外した場合
+
+[listing]
+----
+smo backup create -profile almsamp1 -data -online -archivelogs  -exclude-dest E:\\arch
+----
+、 SnapManager for Oracle では、 E:\\arch で始まるすべての宛先が除外されます。
+
+* 回避策 *
+
+* デスティネーションが vs$archive_dest に設定されたあとにパス区切り文字を追加します。たとえば、 E ： \\arch を E ： \\arch\ に変更します。
+* バックアップを作成する際には、デスティネーションを除外するのではなく、バックアップ先を指定してください。
+
+
+
+
+== リポジトリデータベースのサイズは、バックアップの数ではなく、時間とともに増加します
+
+リポジトリデータベースのサイズは時間とともに大きくなります。これは、 SnapManager の処理によってリポジトリデータベーステーブル内のスキーマにデータが挿入または削除され、インデックススペースの使用率が高くなるためです。
+
+* 回避策 *
+
+リポジトリスキーマによって消費されるスペースを制御するには、 Oracle のガイドラインに従ってインデックスを監視し、再構築する必要があります。
+
+
+
+== リポジトリデータベースがダウンしていると、 SnapManager GUI にアクセスできず、 SnapManager 処理に失敗します
+
+SnapManager 処理は失敗し、リポジトリデータベースがダウンしていると GUI にアクセスできません。
+
+次の表に、実行するアクションとその例外を示します。
+
+|===
+
+
+| 処理 | 例外 
+
+
+ a| 
+閉じたリポジトリを開く
+ a| 
+次のエラーメッセージが SM_GUI.log に記録されます。 [WARN] ： SMO -01106 ：リポジトリの照会中にエラーが発生しました。 Closed Connection java.SQL.SQLException ： Closed Connection
+
+
+
+ a| 
+F5 キーを押して、開いているリポジトリを更新します
+ a| 
+GUI にリポジトリの例外が表示され、 sm_gui.log ファイルに NullPointerException も記録されます。
+
+
+
+ a| 
+ホストサーバを更新しています
+ a| 
+sumo_gui.log ファイルに NullPointerException が記録されています。
+
+
+
+ a| 
+新しいプロファイルを作成します
+ a| 
+Profile Configuration ウィンドウに NullPointerException が表示されます。
+
+
+
+ a| 
+プロファイルを更新しています
+ a| 
+次の SQL 例外が sm_created に記録されています。 log ： [WARN] ： SMO -01106 ：リポジトリの照会中にエラーが発生しました：接続が閉じています。
+
+
+
+ a| 
+バックアップへのアクセス
+ a| 
+次のエラーメッセージが SM_GUI.log に記録されています：コレクションの初期化に失敗しました。
+
+
+
+ a| 
+クローンのプロパティの表示
+ a| 
+次のエラーメッセージが sm_gui.log および sumo_GUI.log に記録されます。コレクションの初期化に失敗しました。
+
+|===
+* 回避策 *
+
+GUI にアクセスする場合や SnapManager の処理を実行する場合は、リポジトリデータベースが稼働していることを確認する必要があります。
+
+
+
+== クローンデータベースの一時ファイルを作成できません
+
+ターゲットデータベースの一時表領域ファイルが、データファイルのマウントポイントとは異なるマウントポイントに配置されている場合、クローンの作成は成功しますが、 SnapManager でクローンデータベースの一時ファイルが作成されません。
+
+* 回避策 *
+
+次のいずれかを実行する必要があります。
+
+* 一時ファイルがデータファイルと同じマウントポイントに配置されるように、ターゲットデータベースをレイアウトしてください。
+* クローンデータベースに一時ファイルを手動で作成または追加する。
+
+
+
+
+== Data Guard スタンバイデータベースのバックアップに失敗する
+
+いずれかのアーカイブログの場所にプライマリデータベースのサービス名が設定されていると、 Data Guard スタンバイデータベースのバックアップに失敗します。
+
+* 回避策 *
+
+GUI で、プライマリデータベースのサービス名に対応する [* 外部アーカイブログの場所を指定します（ Specify External Archive Log location* ） ] をクリアする必要があります。

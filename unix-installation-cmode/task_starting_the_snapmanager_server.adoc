@@ -1,0 +1,27 @@
+---
+permalink: unix-installation-cmode/task_starting_the_snapmanager_server.html 
+sidebar: sidebar 
+keywords: start, snapmanager, server, target, database, host, smo 
+summary: ターゲットデータベースホストから SnapManager サーバを起動する必要があります。 
+---
+= SnapManager サーバを起動しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ターゲットデータベースホストから SnapManager サーバを起動する必要があります。
+
+. ターゲット・データベース・ホストにログインし ' SnapManager サーバ 'mo_server start' を起動します
++
+次のメッセージが表示されます。 SnapManager Server started on secure port port_number with PID PID_NUMBER
+
++
+
+NOTE: デフォルトポートは 27214 です。
+
+
+
+SnapManager が正しく実行されていることを確認できます。 smo system verify
+
+次のメッセージが表示されます。 Operation ID operation_ID_number succeeded 。

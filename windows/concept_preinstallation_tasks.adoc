@@ -1,0 +1,36 @@
+---
+permalink: windows/concept_preinstallation_tasks.html 
+sidebar: sidebar 
+keywords: install, snapmanager, oracle, environment, preinstallation, task 
+summary: SnapManager for Oracle をインストールする前に、いくつかの追加タスクを実行して環境をセットアップする必要があります。実行する必要があるタスクは、使用するオペレーティングシステム、 Oracle コンポーネント、およびデータベースバージョンによって異なります。 
+---
+= インストール前のタスク
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle をインストールする前に、いくつかの追加タスクを実行して環境をセットアップする必要があります。実行する必要があるタスクは、使用するオペレーティングシステム、 Oracle コンポーネント、およびデータベースバージョンによって異なります。
+
+* 適切なパッチを適用して、ライセンスが付与されたオペレーティングシステムをインストールします
+* オペレーティング・システムと Oracle データベースの言語を英語に設定します
++
+たとえば、 Oracle データベースの言語を English に設定するには、 NLS_LANG=America_AmericA.WE8MSWIN1252 を割り当てます。言語の設定方法の詳細については、「 SnapManager for ORACLE_Troubleshooting 」を参照してください。
+
+* Oracle 用 SnapManager で RMAN を使用する場合は、 Oracle Recovery Manager （ RMAN ）をインストールします。
+* SnapRestore のライセンスが有効になっている Data ONTAP と、 Fibre Channel （ FC ）や Internet Small Computer System Interface （ iSCSI ）などのサポートされているプロトコルをすべてのストレージシステムにインストールします。
+* Oracle データベース 11.2.0.2 および 11.2.0.3 を使用している場合は、次の Oracle パッチをインストールします。
++
+** 13413167 （ Windows 32 ビット用）
+** 13555974 （ Windows 64 ビット用）
+
+
+
+
+* 関連情報 *
+
+xref:reference_troubleshooting_snapmanager.adoc[SnapManager のトラブルシューティング]
+
+http://support.netapp.com/NOW/products/interoperability/["NetApp Interoperability Matrix ： support.netapp.com/NOW/products/interoperability"]
+
+http://media.netapp.com/documents/tr-3761.pdf["SnapManager for Oracle のベストプラクティス： media.netapp.com/documents/tr-3761.pdf"]

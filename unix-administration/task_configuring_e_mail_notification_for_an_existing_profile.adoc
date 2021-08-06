@@ -1,0 +1,27 @@
+---
+permalink: unix-administration/task_configuring_e_mail_notification_for_an_existing_profile.html 
+sidebar: sidebar 
+keywords: updating, profile, configure, receive, email, notification, completion, database, operation, exist, comma-seperated, list 
+summary: プロファイルを更新する場合は、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。 
+---
+= 既存のプロファイルの E メール通知を設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+プロファイルを更新する場合は、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。
+
+* アラートの送信元 E メールアドレスを設定する必要があります。
+* アラートの送信先となる E メールアドレスは 1 つまたは複数入力する必要があります。
++
+複数のアドレスをカンマで区切って指定できます。カンマと次の E メールアドレスの間にスペースを入れないようにしてください。必要に応じて、 E メールに件名を追加することもできます。
+
++
+.. 次のコマンドを入力します。 smo profile update-profileprofile [-profile-passwordprofile-password] [-database -db_dbdbname -host[-sidb_host] [-siddleb_host] [-sidb_username -password db_password-port db_port] [{-count_password-count_addressstay.atrman [-dran-password-password-password-retain-nodir_addressm [--password] [--password-password] [--password-reta[--password-password] [stanどれ すウチ [--password] [--password] [--stanどれ すウチ [--password] [--password-password-password-password-password-password] [--stanどれ す ～ stanどれ す ～ stanどれ す ～ stanどれ す ～ stanどれ す ～ stanどれ す ～ stどれ す ～ stどれ す ～ stanどれ す ～ stanどれ す ～ stどれ すぷれんどれすぷれんどれすぷろっどれすぷろっどれすぷろっどれすぷろっどれすぷろっどれす ] -password] -password] -password] -password] -
++
+success オプションを使用すると、成功したデータベース処理についてのみ通知が受信され、失敗したデータベース処理についてのみ通知が受信されます。
+
+
+
+

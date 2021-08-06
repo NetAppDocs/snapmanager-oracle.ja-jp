@@ -1,0 +1,168 @@
+---
+permalink: windows/task_performing_block_level_recovery_with_rman.html 
+sidebar: sidebar 
+keywords: configure, snapmanager, catalog, backup, recovery, manager, rman, oracle, tool, perform, block-level 
+summary: RMAN を使用してブロックレベルのリカバリを実行できるようにするために、 Oracle ツールである Recovery Manager （ RMAN ）でバックアップのカタログを作成するように SnapManager を設定できます。RMAN は ' データベースの制御ファイルまたは個別のリカバリ・カタログ・データベースのいずれかをリポジトリとして使用できます 
+---
+= Oracle Recovery Manager （ RMAN ）を使用したブロックレベル・リカバリの実行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RMAN を使用してブロックレベルのリカバリを実行できるようにするために、 Oracle ツールである Recovery Manager （ RMAN ）でバックアップのカタログを作成するように SnapManager を設定できます。RMAN は、データベースの制御ファイルまたは個別のリカバリ・カタログ・データベースのいずれかをリポジトリとして使用できます。
+
+. SnapManager を使用してオフラインのフルバックアップを実行するには、次のコマンドを入力します。
++
+smo backup create -offline-full-profileprofileprofileprofileprofile_name -labelbackup_label_name -verbose
+
++
+ここで、
+
++
+** profile_name は、バックアップが関連付けられたプロファイルの名前です
+** backup_label_name は、バックアップ・ラベルの名前です
+
+
+
+
+[source]
+----
+smo backup create -offline -full -profile profile_monthly
+-label full_backup -verbose
+
++
+SMO-07109 [INFO ]: Cataloguing all files in backup set with RMAN
+TAG=SMC_full_backup_1158773581857, RMAN=ES0/controlfile.
+...
+SMO-13037 [INFO ]: Successfully completed operation: Backup
+SMO-13048 [INFO ]: Operation Status: SUCCESS
+SMO-13049 [INFO ]: Elapsed Time: 0:02:20.506
+Operation Id [ff8080810dcc47e3010dcc47eb7a0001] succeeded.
++
+----
+. RMAN を使用してバックアップがカタログ化されているかどうかを確認するには、データベース・ホストから、 RMAN プロンプトで次のコマンドを入力します。
++
+list datafilecopy tag tag_name ；
+
+. データベースを検証し、破損したブロックがないかどうかを確認するには、次のコマンドを入力します。
++
+DBV ファイル = user01.dbf
+
++
+次の出力は、 2 つのページが破損していることを示しています。
+
++
+[listing]
+----
+DBVERIFY: Release 10.2.0.1.0 - Production on Wed Sep 20 13:35:44 2006
+Copyright (c) 1982, 2005, Oracle. All rights reserved.
+DBVERIFY - Verification starting : FILE = user01.dbf
+Page 625 is marked corrupt
+Corrupt block relative dba: 0x01400271 (file 5, block 625)
+Bad header found during dbv:
+Data in bad block:
+type: 240 format: 6 rdba: 0xed323b81
+last change scn: 0x6f07.faa74628 seq: 0x87 flg: 0x02
+spare1: 0x60 spare2: 0x5 spare3: 0xef7d
+consistency value in tail: 0xa210fe71
+check value in block header: 0x13c7
+block checksum disabled...
+Page 627 is marked corrupt
+Corrupt block relative dba: 0x01400273 (file 5, block 627)
+Bad header found during dbv:
+Data in bad block:
+type: 158 format: 7 rdba: 0x2101e16d
+last change scn: 0xe828.42414628 seq: 0xb4 flg: 0xff
+spare1: 0xcc spare2: 0x81 spare3: 0x8665
+consistency value in tail: 0x46d20601
+check value in block header: 0x1a84
+computed block checksum: 0x6c30
+DBVERIFY - Verification complete
+Total Pages Examined : 1280
+Total Pages Processed (Data) : 1123
+Total Pages Failing (Data) : 0
+Total Pages Processed (Index): 0
+Total Pages Failing (Index): 0
+Total Pages Processed (Other): 34
+Total Pages Processed (Seg) : 0
+Total Pages Failing (Seg) : 0
+Total Pages Empty : 120
+Total Pages Marked Corrupt: 2
+Total Pages Influx : 0
+Highest block SCN : 1337349 (0.1337349)
+----
+. バックアップのファイルにホスト上でアクセスし、 RMAN で利用できるようにするには、次のコマンドを使用してバックアップをマウントします。
++
+smo backup mount -profile profile_name -labellabel -verbose
+
++
+[listing]
+----
+smo backup mount -profile SALES1 -label full_backup -verbose
+
+SMO-13046 [INFO ]: Operation GUID 8abc013111b9088e0111b908a7560001 starting on Profile SALES1
+SMO-08052 [INFO ]: Beginning to connect mount(s) [E:\logs,F:\data] from logical snapshot SMO_SALES1_hsdb1_F_C_1_8abc013111a450480111a45066210001.
+SMO-08025 [INFO ]: Beginning to connect mount E:\logs from snapshot SMO_SALES1_hsdb1_F_C_1_8abc013111a450480111a45066210001_0 of volume hs_logs.
+SMO-08027 [INFO ]: Finished connecting mount E:\logs from snapshot SMO_SALES1_hsdb1_F_C_1_8abc013111a450480111a45066210001_0 of volume hs_logs.
+SMO-08025 [INFO ]: Beginning to connect mount F:\data from snapshot SMO_SALES1_hsdb1_F_C_1_8abc013111a450480111a45066210001_0 of volume hs_data.
+SMO-08027 [INFO ]: Finished connecting mount F:\data from snapshot SMO_SALES1_hsdb1_F_C_1_8abc013111a450480111a45066210001_0 of volume hs_data.
+SMO-08053 [INFO ]: Finished connecting mount(s) [E:\logs,F:\data] from logical snapshot SMO_SALES1_hsdb1_F_C_1_8abc013111a450480111a45066210001.
+SMO-13037 [INFO ]: Successfully completed operation: Backup Mount
+SMO-13048 [INFO ]: Operation Status: SUCCESS
+SMO-13049 [INFO ]: Elapsed Time: 0:01:00.981
+Operation Id [8abc013111b9088e0111b908a7560001] succeeded.
+----
+. RMAN で次のコマンドを入力して、ブロックをリカバリします。
++
+blockrecover は ' タグ backup_rman_tag から ' データファイル 'E:\path\file.dbf' ブロック block_id をリカバリします
+
++
+[listing]
+----
+RMAN> blockrecover datafile
+‘E:\sys\file01.dbf’ block 625, 626, 627
+from tag SMO_full_backup_1158773581857;
+
+Starting blockrecover at 20-SEP-08 using target database control file instead of recovery catalog
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: sid=153 devtype=DISK
+channel ORA_DISK_1: restoring block(s) from datafile copy
+ C:\myfs\user01.dbf
+starting media recovery
+media recovery complete, elapsed time: 00:00:01
+Finished blockrecover at 20-SEP-08
+----
+. ブロックが修復されたかどうかを確認するには、次のコマンドを使用します。
++
+DBV ファイル = filename.dbf
+
++
+次の出力は、破損したページがないことを示しています。
+
++
+[listing]
+----
+dbv FILE=user01.dbf
+
+DBVERIFY: Release 10.2.0.1.0 - Production on Wed Sep 20 13:40:01 2008
+Copyright (c) 1982, 2008, Oracle. All rights reserved.
+DBVERIFY - Verification starting : FILE = user01.dbf
+DBVERIFY - Verification complete
+Total Pages Examined : 1280
+Total Pages Processed (Data) : 1126
+Total Pages Failing (Data) : 0
+Total Pages Processed (Index): 0
+Total Pages Failing (Index): 0
+Total Pages Processed (Other): 34
+Total Pages Processed (Seg) : 0
+Total Pages Failing (Seg) : 0
+Total Pages Empty : 120
+Total Pages Marked Corrupt : 0
+Total Pages Influx : 0
+Highest block SCN : 1337349 (0.1337349)
+----
++
+破損したブロックはすべて修復され、リストアされました。
+
+

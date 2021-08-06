@@ -1,0 +1,48 @@
+---
+permalink: windows/task_downloading_snapmanager_for_oracle_installation_package.html 
+sidebar: sidebar 
+keywords: download, snapmanager, oracle, installation, package, netapp, support, site 
+summary: SnapManager for Oracle のインストールパッケージは、ネットアップサポートサイトからダウンロードできます。 
+---
+= SnapManager for Oracle インストール・パッケージのダウンロード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager for Oracle のインストールパッケージは、ネットアップサポートサイトからダウンロードできます。
+
+. ネットアップサポートサイトにログインします。
+. ネットアップサポートサイトのページで、 * Downloads * > * Software * をクリックします。
+. Software Download テーブルで、 SnapManager 製品の行に移動し、 Select Platform ドロップダウンリストから *Oracle (Windows) * を選択します。
+. [Go*] をクリックします。
++
+SnapManager のリリースが一覧表示されます。
+
+. インストールする SnapManager リリースの [* View & Download] をクリックします。
++
+概要ページが表示されます。
+
++
+
+NOTE: このページにある情報を確認してください。
+
+. このページの下部にある [* 続行 ] をクリックします。
++
+ライセンス契約ページが表示されます。
+
++
+
+NOTE: このページにある情報を確認してください。
+
+. [* 同意する * ] をクリックします。
++
+ダウンロードページが表示されます。
+
+. ホストに対応したインストールパッケージをダウンロードします。
++
+SnapManager for Oracle をインストールするマシン上の任意の場所にインストールファイルをダウンロードできます。
+
+
+
+http://mysupport.netapp.com/["ネットアップサポートサイト： mysupport.netapp.com"]

@@ -1,0 +1,70 @@
+---
+permalink: unix-administration/reference_the_smosmsapoperation_dump_command.html 
+sidebar: sidebar 
+keywords: run, operation, dump, command, create, jar, file, diagnostic, information, smo 
+summary: operation dump コマンドを実行して、操作に関する診断情報を含む JAR ファイルを作成できます。 
+---
+= smo operation dump コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+operation dump コマンドを実行して、操作に関する診断情報を含む JAR ファイルを作成できます。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo operation dump
+-profile profile_name
+\[-label label_name \| -id guid\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile_name *
++
+ダンプ・ファイルを作成するプロファイルを指定します。プロファイルには、データベースの識別子およびその他のデータベース情報が含まれています。
+
+* * -label label_name *
++
+処理のダンプ・ファイルを作成し、指定したラベルを割り当てます。
+
+* *-id GUID*
++
+指定した GUID を持つ処理のダンプ・ファイルを作成します。GUID は、処理を開始するときに SnapManager によって生成されます。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== 例
+
+次に、バックアップのダンプ・ファイルを作成する例を示します。
+
+[listing]
+----
+smo operation dump -profile SALES1
+-id 8abc01ec0e78f3e2010e78f3fdd00001
+----
+[listing]
+----
+Dump file created Path:/userhomedirectory/.netapp/smo/3.3/smo_dump_8abc01ec0e78f3e2010e78f3fdd00001.jar
+----
+* 関連情報 *
+
+xref:concept_dump_files.adoc[ダンプ・ファイル]

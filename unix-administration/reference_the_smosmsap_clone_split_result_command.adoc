@@ -1,0 +1,55 @@
+---
+permalink: unix-administration/reference_the_smosmsap_clone_split_result_command.html 
+sidebar: sidebar 
+keywords: smo, clone, split-result, command 
+summary: smo clone split -result コマンドを使用します。 
+---
+= smo clone split -result コマンドを使用します
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 構文
+
+このコマンドを使用すると、クローンスプリットプロセスの結果を表示できます。
+
+[listing]
+----
+
+        smo clone split-result
+-profile profile
+\[-host hostname\]
+\[-label split-label \| -id split-id\]
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+クローンのプロファイル名を指定します。
+
+* * - ホスト名 *
++
+クローンが存在するホスト名を指定します。
+
+* * -label split-label *
++
+クローンスプリットの開始プロセスで生成されるラベル名を指定します。
+
+* *-id split-id *
++
+クローンスプリットの開始プロセスで生成される一意の ID を示します。
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+

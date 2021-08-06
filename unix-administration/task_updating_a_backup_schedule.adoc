@@ -1,0 +1,16 @@
+---
+permalink: unix-administration/task_updating_a_backup_schedule.html 
+sidebar: sidebar 
+keywords: list, schedule, operation, update, scheduling, frequency, cronstring, expression, smo 
+summary: スケジュールされた処理のリストを表示し、必要に応じて更新できます。スケジューリング頻度、スケジュールの開始時刻、 cronstring 式、バックアップをスケジュールしたユーザを更新できます。 
+---
+= バックアップスケジュールを更新しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スケジュールされた処理のリストを表示し、必要に応じて更新できます。スケジューリング頻度、スケジュールの開始時刻、 cronstring 式、バックアップをスケジュールしたユーザを更新できます。
+
+. バックアップのスケジュールを更新するには、次のコマンドを入力します。「 mo schedule update -profile profile_name -schedule - nameschedulname [-schedule-commentschedule comment] -interval ｛ -hourly | -weekly | -monthly | -onetimeonly ｝ -start-timestarttime -stringcronstringstring-userrunasuserrunasuserrunasuser [ -verbose
+

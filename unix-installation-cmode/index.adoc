@@ -1,0 +1,13 @@
+---
+permalink: unix-installation-cmode/index.html 
+sidebar: sidebar 
+keywords: installation, setup, guide, unix, 3.4.2 
+summary: 『 SnapManager for Oracle 3.4.2 Installation and Setup Guide for UNIX ® 』 
+---
+= 『 Installation and Setup Guide for UNIX ® 』を参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このガイドでは、 UNIX 環境で Data ONTAP 3.4.2 for Oracle with clustered SnapManager を導入するために最初に実行する必要があるタスクについて説明します。製品をインストールして設定する方法、およびデータベースをバックアップする方法について説明するトピックが含まれます。

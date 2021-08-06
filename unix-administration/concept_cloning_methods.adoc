@@ -1,0 +1,55 @@
+---
+permalink: unix-administration/concept_cloning_methods.html 
+sidebar: sidebar 
+keywords: clone, database, method, create, operation, lun 
+summary: データベースのクローニングは、次の 2 つの方法のいずれかを使用して実行できます。選択する方法はクローン作成処理に影響します。 
+---
+= クローニングの方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データベースのクローニングは、次の 2 つの方法のいずれかを使用して実行できます。選択する方法はクローン作成処理に影響します。
+
+次の表に、クローニング方法、およびクローン作成処理とその -reserve オプションに対する影響を示します。LUN は、どちらの方法でもクローニングできます。
+
+|===
+| クローニング方法 
+
+
+| 説明 
+
+
+| クローンの create リザーブ 
+
+
+ a| 
+LUN のクローニング
+
+
+
+ a| 
+同じボリューム内に新しいクローン LUN が作成されます。
+
+
+
+ a| 
+LUN の -reserve を yes に設定すると、ボリューム内の全 LUN サイズ用にスペースがリザーブされます。
+
+
+
+ a| 
+ボリュームクローニング
+
+
+
+ a| 
+新しい FlexClone が作成され、クローン LUN が新しいクローンボリューム内に存在するようになります。FlexClone テクノロジを使用します。
+
+
+
+ a| 
+ボリュームの -reserve を yes に設定すると、スペースはアグリゲート内のフル・ボリューム・サイズ用にリザーブされます。
+
+|===

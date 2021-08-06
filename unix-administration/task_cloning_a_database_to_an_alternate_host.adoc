@@ -1,0 +1,35 @@
+---
+permalink: unix-administration/task_cloning_a_database_to_an_alternate_host.html 
+sidebar: sidebar 
+keywords: clone, create, command, database, backup, alternate, host, cloning, exist 
+summary: clone create コマンドを使用すると、代替ホスト上でデータベース・バックアップをクローニングできます。 
+---
+= 代替ホストへのデータベースのクローニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+clone create コマンドを使用すると、代替ホスト上でデータベース・バックアップをクローニングできます。
+
+* プロファイルを作成するか、既存のプロファイルを用意します。
+* フルバックアップを作成するか、既存のデータベースバックアップを用意します。
+* クローン仕様を作成するか、既存のクローン仕様を用意します。
++
+.. 代替ホストにデータベースをクローニングするには、次のコマンドを入力します。 smo clone create -backup-label backup_label_name -newsid newsid news_host -label clone_label clone_label -commentcomment comment_text -profileprofile_name -clonespecfile
++
+Oracle では、 SID が同じ 2 つのデータベースを、同じホスト上で同時に実行することはできません。そのため、クローンごとに新しい SID を指定する必要があります。ただし、同じ SID を持つデータベースを別のホストに配置することは可能です。
+
+
+
+
+
+* 関連情報 *
+
+xref:task_creating_profiles.adoc[プロファイルの作成]
+
+xref:task_cloning_databases_from_backups.adoc[バックアップからデータベースをクローニングする]
+
+xref:task_creating_clone_specifications.adoc[クローン仕様を作成しています]
+
+xref:reference_the_smosmsapclone_create_command.adoc[smo clone create コマンド]

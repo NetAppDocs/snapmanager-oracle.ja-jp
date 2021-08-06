@@ -1,0 +1,52 @@
+---
+permalink: windows/reference_the_smosmsap_storage_list_command.html 
+sidebar: sidebar 
+keywords: run, storage, list, command, display, system, associate, particular, profile, smo 
+summary: 特定のプロファイルに関連付けられているストレージ・システムのリストを表示するには、 storage list コマンドを実行します。 
+---
+= smo storage list コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+特定のプロファイルに関連付けられているストレージ・システムのリストを表示するには、 storage list コマンドを実行します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo storage list
+-profile profile
+----
+
+
+== パラメータ
+
+* * -profile profile *
++
+プロファイルの名前を指定します。名前は 30 文字以内で指定し、ホスト内で一意である必要があります。
+
+
+
+
+
+== 例
+
+次の例は、プロファイル mjullian に関連付けられているストレージシステムを表示します。
+
+[listing]
+----
+smo storage list -profile mjullian
+----
+[listing]
+----
+
+Sample Output:
+Storage Controllers
+--------------------
+FAS3020-RTP07OLD
+----

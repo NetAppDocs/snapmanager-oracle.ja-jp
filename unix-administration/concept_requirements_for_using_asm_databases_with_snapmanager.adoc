@@ -1,0 +1,50 @@
+---
+permalink: unix-administration/concept_requirements_for_using_asm_databases_with_snapmanager.html 
+sidebar: sidebar 
+keywords: automatic, storage, management, asm, snapmanager, database, snapmanager, 
+summary: SnapManager で Automatic Storage Management （ ASM ）データベースを使用するための要件を理解しておく必要があります。これらの要件を理解しておくと、 ASMLib 、パーティション、クローン仕様に関する問題などの回避に役立ちます。 
+---
+= SnapManager で ASM データベースを使用する場合の要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager で Automatic Storage Management （ ASM ）データベースを使用するための要件を理解しておく必要があります。これらの要件を理解しておくと、 ASMLib 、パーティション、クローン仕様に関する問題などの回避に役立ちます。
+
+* SnapManager （ 3.0.3 以降）は、 Oracle ASM インスタンスの管理に sysdba 権限ではなく、 Oracle 11gR2 で使用可能な新しい SYSASM 権限を使用します。
++
+sysdba 権限を使用して ASM インスタンスに対して管理コマンドを実行すると、エラーメッセージが表示されます。データベースは、 sysdba 権限を使用してディスクグループにアクセスします。SYSASM 特権を使用して ASM インスタンスに接続すると、使用可能なすべての Oracle ASM ディスクグループおよび管理機能に完全にアクセスできます。
+
++
+
+NOTE: Oracle 10gR2 および 11gR1 を使用している場合は、引き続き sysdba 権限を使用する必要があります。
+
+* SnapManager （ 3.0.3 以降）は、 ASM ディスクグループに Automatic Cluster File System （ ACFS ）ボリュームも含まれている場合、 ASM ディスクグループに直接格納されているデータベースのバックアップをサポートしています。
++
+これらのファイルは SnapManager によって間接的に保護されており、 ASM ディスクグループの残りの内容を使用してリストアされる可能性がありますが、 SnapManager (3.0.3 以降 ) は ACFS をサポートしていません。
+
++
+
+NOTE: ACFS は、 Oracle 11gR2 で利用できる、マルチプラットフォームの拡張性に優れたファイルシステムストレージ管理テクノロジです。ACFS は ASM 機能を拡張して、 Oracle データベース以外で保持されている顧客ファイルをサポートします。
+
+* SnapManager （ 3.0.3 以降）は、ディスクグループに Oracle Cluster Registry （ OCR ）ファイルまたは投票ディスクファイルも含まれている場合に、 ASM ディスクグループに格納されているファイルのバックアップをサポートします。ただし、リストア処理には、低速のホストベースまたは部分ファイルスナップリストア（ PFSR ）方式が必要です。
++
+データベースファイルを含まないディスクグループには OCR と投票ディスクを配置することを推奨します。
+
+* ASM に使用する各ディスクには、パーティションを 1 つだけ含める必要があります。
+* ASM データをホストするパーティションを適切にアライメントし、重大なパフォーマンスの問題を回避する必要があります。
++
+これは、 LUN のタイプが正しいこと、およびパーティションのオフセットが 4K バイトの倍数である必要があることを意味します。
+
++
+
+NOTE: 4K にアライメントされたパーティションを作成する方法の詳細については、ナレッジベースの記事 1010717 を参照してください。
+
+* ASM 設定はクローン仕様の一部として指定されていません。
++
+ホストを SnapManager （ 2.2 以降）にアップグレードする前に、 SnapManager 2.1 を使用して作成されたクローンの仕様から、 ASM 設定情報を手動で削除する必要があります。
+
+* SnapManager 3.1 、 3.1p1 、および 3.2 以降では、 ASMLib 2.1.4 がサポートされています。
+* SnapManager 3.1p4 以降は、 ASMLib 2.1.4 、 2.1.0.7 、および 2.1.8 をサポートします。
+

@@ -1,0 +1,47 @@
+---
+permalink: unix-installation-7mode/reference_where_to_go_next.html 
+sidebar: sidebar 
+keywords: install, snapmanager, successful, creating, backup, restore, recovery, cloning, operation, history 
+summary: SnapManager をインストールしてバックアップを正常に作成したら、 SnapManager を使用してリストア、リカバリ、およびクローニングの処理を実行できます。また、スケジュール設定、 SnapManager 処理の管理、処理履歴の保持など、 SnapManager のその他の機能に関する情報も必要になる場合があります。 
+---
+= 次の手順
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager をインストールしてバックアップを正常に作成したら、 SnapManager を使用してリストア、リカバリ、およびクローニングの処理を実行できます。また、スケジュール設定、 SnapManager 処理の管理、処理履歴の保持など、 SnapManager のその他の機能に関する情報も必要になる場合があります。
+
+これらの機能に関する詳細情報および SnapManager のリリース固有の情報については、次のドキュメントを参照してください。これらはすべてにあり、から入手できます http://mysupport.netapp.com["ネットアップサポート"]。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12471546["『 SnapManager 3.4 for Oracle Administration Guide for UNIX 』"]
++
+SnapManager for Oracle を設定および管理する方法について説明します。データベースの設定、バックアップ、リストア、クローニング、二次保護の実行の方法について説明します。 また、製品のアップグレードとアンインストールの方法に関する CLI コマンドと手順も記載しています。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12471548["『 SnapManager 3.4 for Oracle Release Notes 』"]
++
+SnapManager for Oracle の新機能、解決済みの問題、重要な注意事項、既知の問題、および制限事項について説明します。
+
+* SnapManager for Oracle オンラインヘルプ _
++
+SnapManager UI を使用してさまざまな SnapManager 処理を実行するためのステップバイステップの手順について説明します。
+
++
+
+NOTE: オンラインヘルプ _ は SnapManager UI に統合されており、サポートサイトでは利用できません。
+
+* http://www.netapp.com/us/media/tr-3761.pdf["ネットアップテクニカルレポート 3761 ：『 SnapManager for Oracle ： Best Practices 』"]
++
+SnapManager for Oracle のベストプラクティスについて説明します。
+
+* http://www.netapp.com/us/media/tr-3633.pdf["ネットアップテクニカルレポート 3633 ：『 Best Practices for Oracle Databases on NetApp Storage 』"]
++
+ネットアップストレージシステムに Oracle データベースを設定するためのベストプラクティスについて説明します。
+
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com["ネットアップサポート"]
+
+http://mysupport.netapp.com/documentation/productsatoz/index.html["ネットアップのマニュアル： Product Library A-Z"]

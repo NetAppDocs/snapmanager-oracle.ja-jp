@@ -1,0 +1,96 @@
+---
+permalink: unix-administration/reference_the_smosmsapprofile_list_command.html 
+sidebar: sidebar 
+keywords: command, display, list, current, profile, smo 
+summary: このコマンドは、現在のプロファイルのリストを表示します。 
+---
+= smo profile list コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、現在のプロファイルのリストを表示します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo profile list
+\[-quiet \| -verbose\]
+----
+
+
+== パラメータ
+
+* * - Quiet *
++
+コンソールにエラーメッセージのみを表示します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されます。
+
+
+
+
+
+== コマンドの例
+
+次の例は、既存のプロファイルとその詳細情報を表示します。
+
+[listing]
+----
+smo profile list -verbose
+Profile name: FGTER
+Repository:
+  Database name: SMOREPO
+  SID: SMOREPO
+  Host: hotspur
+  Port: 1521
+  Username: swagrahn
+  Password: ********
+Profile name: TEST_RBAC
+Repository:
+  Database name: smorep
+  SID: smorep
+  Host: elbe.rtp.org.com
+  Port: 1521
+  Username: smosaal
+  Password: ********
+Profile name: TEST_RBAC_DP_PROTECT
+Repository:
+  Database name: smorep
+  SID: smorep
+  Host: elbe.rtp.org.com
+  Port: 1521
+  Username: smosaal
+  Password: ********
+Profile name: TEST_HOSTCREDEN_OFF
+Repository:
+  Database name: smorep
+  SID: smorep
+  Host: elbe.rtp.org.com
+  Port: 1521
+  Username: smosaal
+  Password: ********
+Profile name: SMK_PRF
+Repository:
+  Database name: smorep
+  SID: smorep
+  Host: elbe.rtp.org.com
+  Port: 1521
+  Username: smosaal
+  Password: ********
+Profile name: FGLEX
+Repository:
+  Database name: SMOREPO
+  SID: SMOREPO
+  Host: hotspur
+  Port: 1521
+  Username: swagrahn
+  Password: ********
+----

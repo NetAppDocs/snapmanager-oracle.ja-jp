@@ -1,0 +1,30 @@
+---
+permalink: unix-administration/concept_support_for_asmlib.html 
+sidebar: sidebar 
+keywords: snapmanager, asmlib, support 
+summary: SnapManager では ASMLib のバージョンは異なりますが、 ASMLib で SnapManager を使用する場合に考慮する必要がある要因はいくつかあります。 
+---
+= ASMLib のサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager では ASMLib のバージョンは異なりますが、 ASMLib で SnapManager を使用する場合に考慮する必要がある要因はいくつかあります。
+
+SnapManager は、 ASMLib 2.1.4 、 2.1.7 、および 2.1.8 をサポートしています。すべての SnapManager 操作は、 ASMLib 2.1.4 、 2.1.0.7 、および 2.1.0.8 を使用して実行できます。
+
+ASMLib 2.1.4 から ASM 2.1.7 にアップグレードした場合は、 ASMLib 2.1.4 で作成されたものと同じプロファイルおよびバックアップを使用して、バックアップをリストアし、クローンを作成できます。
+
+ASMLib で SnapManager を使用する場合は、次の点を考慮する必要があります。
+
+* SnapManager 3.1 は、 ASMLib 2.1.7 をサポートしていません。
++
+SnapManager 3.1p4 以降は、 ASMLib 2.1.4 、 2.1.0.7 、および 2.1.8 をサポートします。
+
+* SnapManager 3.1 から 3.2 へのローリングアップグレードの実行後、 ASMLib 2.1.7 を使用して作成されたバックアップは、リポジトリが SnapManager 3.1 にロールバックされ、 ASMLib 2.1.7 が ASMLib 2.1.4 にダウングレードされた場合にのみ機能します。
+* SnapManager 3.1 から 3.2 へのローリングアップグレードの実行後、 ASMLib 2.1.7 を使用して作成されたバックアップは、リポジトリが ASMLib 2.1.7 を使用して SnapManager 3.1 にロールバックされている場合は機能しません。
++
+ロールバックは成功しますが、プロファイルとバックアップは使用できません。
+
+

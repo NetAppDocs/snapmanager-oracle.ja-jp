@@ -1,0 +1,48 @@
+---
+permalink: windows/reference_the_smosmsap_server_restart_command.html 
+sidebar: sidebar 
+keywords: command, restart, host, server, enter, root, smo 
+summary: このコマンドは、 SnapManager ホストサーバを再起動し、 root として入力します。 
+---
+= smo _server restart コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このコマンドは、 SnapManager ホストサーバを再起動し、 root として入力します。
+
+
+
+== 構文
+
+[listing]
+----
+
+        smo_server restart
+[-quiet | -verbose]
+----
+
+
+== パラメータ
+
+* * - Quiet *
++
+エラー・メッセージのみがコンソールに表示されるように指定します。デフォルトでは、エラーおよび警告メッセージが表示されます。
+
+* * -verbose *
++
+エラー、警告、および情報メッセージがコンソールに表示されるように指定します。
+
+
+
+
+
+== コマンドの例
+
+次に、ホスト・サーバを再起動する例を示します。
+
+[listing]
+----
+smo_server restart
+----

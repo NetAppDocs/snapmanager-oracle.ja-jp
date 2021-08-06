@@ -1,0 +1,36 @@
+---
+permalink: unix-administration/task_mounting_backups.html 
+sidebar: sidebar 
+keywords: snapmanager, automatic, handle, mount, backup, available, host, scenario, rman, 7-mode 
+summary: SnapManager は、バックアップのマウントを自動的に処理して、ホストで使用できるようにします。また、 Oracle Recovery Manager\ （ RMAN \ ）などの外部ツールを使用してバックアップ内のファイルにアクセスする場合にも、バックアップをマウントできます。 
+---
+= バックアップのマウント
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapManager は、バックアップのマウントを自動的に処理して、ホストで使用できるようにします。また、 Oracle Recovery Manager （ RMAN ）などの外部ツールを使用してバックアップ内のファイルにアクセスする場合にも、バックアップをマウントできます。
+
+RMAN を使用している場合は、マウント処理によってバックアップの状態（アクセスを許可）を変更し、アンマウント処理によってバックアップの状態を変更（アクセスを禁止）する必要があります。
+
+smo backup mount コマンドを実行すると、バックアップを構成する Snapshot コピーのマウント場所のパスのリストが表示されます。
+
+セカンダリストレージからバックアップをマウントするには、 -from-ssecondary オプションを使用します。このオプションを使用しない場合、 SnapManager はプライマリストレージからバックアップをマウントします。
+
+from-secondary オプションを指定した場合は、必ず -copy-id オプションを指定する必要があります。セカンダリストレージシステムに複数のバックアップがある場合は、 -copy-id オプションを使用して、セカンダリストレージにバックアップをマウントするときに使用するバックアップコピーを指定します。 6.
+
+
+NOTE: Data ONTAP 7-Mode を使用している場合は、 -copy-id オプションに有効な値を指定する必要があります。ただし、 clustered Data ONTAP を使用している場合は、 -copy-id オプションは不要です。
+
+データベースバックアップをリモートホストにマウントする場合は、 Automatic Storage Management （ ASM ）クレデンシャルが両方のホストで同じであることを確認する必要があります。
+
+
+NOTE: バックアップのマウント処理が成功した場合や失敗した場合に、ダンプファイルを収集することもできます。
+
+. バックアップをマウントするには、次のコマンドを入力します。「 mo backup mount -profile profile_name ｛ labelabel[data|-archivelogs]|-idID ｝ [-host-host] [-from-secondary [-copy-id id]] [-dump] [-quiet | -verbose
+
+
+* 関連情報 *
+
+xref:reference_the_smosmsapbackup_mount_command.adoc[smo backup mount コマンド]

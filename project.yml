@@ -1,0 +1,1557 @@
+---
+sidebar:
+  entries:
+  - title: ホーム
+    url: "/index.html"
+  - title: リリースノート
+    url: "/releasenotes.html"
+  - title: UNIX for clustered Data ONTAP のインストールとセットアップ
+    url: "/unix-installation-cmode/index.html"
+    entries:
+    - title: 製品の概要
+      url: "/unix-installation-cmode/reference_product_overview.html"
+      entries:
+      - title: SnapManager アーキテクチャ
+        url: "/unix-installation-cmode/reference_snapmanager_architecture.html"
+    - title: 導入のワークフロー
+      url: "/unix-installation-cmode/reference_deployment_workflow.html"
+    - title: 導入の準備
+      url: "/unix-installation-cmode/task_preparing_for_deployment.html"
+      entries:
+      - title: SnapManager ライセンス
+        url: "/unix-installation-cmode/reference_snapmanager_licensing.html"
+      - title: サポートされている構成
+        url: "/unix-installation-cmode/reference_supported_configurations.html"
+      - title: サポートされているストレージタイプ
+        url: "/unix-installation-cmode/reference_supported_storage_types.html"
+      - title: UNIX ホストの要件
+        url: "/unix-installation-cmode/reference_host_requirements.html"
+    - title: データベースを設定しています
+      url: "/unix-installation-cmode/task_configuring_databases.html"
+      entries:
+      - title: ターゲットデータベースを設定しています
+        url: "/unix-installation-cmode/task_configuring_the_target_database.html"
+      - title: ターゲットデータベースの Oracle データベースユーザを作成しています
+        url: "/unix-installation-cmode/task_creating_an_oracle_user_for_the_target_database.html"
+      - title: リポジトリデータベースインスタンスを作成しています
+        url: "/unix-installation-cmode/task_creating_the_repository_database_instance.html"
+      - title: リポジトリデータベースインスタンスの Oracle ユーザを作成します
+        url: "/unix-installation-cmode/task_creating_an_oracle_user_for_the_repository_database_instance.html"
+      - title: Oracle リスナーの設定の確認
+        url: "/unix-installation-cmode/task_verifying_the_oracle_listener_configuration.html"
+    - title: SnapManager をインストールしています
+      url: "/unix-installation-cmode/task_installing_snapmanager.html"
+    - title: SnapManager をセットアップしています
+      url: "/unix-installation-cmode/task_setting_up_snapmanager.html"
+      entries:
+      - title: SnapManager サーバを起動しています
+        url: "/unix-installation-cmode/task_starting_the_snapmanager_server.html"
+      - title: SnapManager のユーザインターフェイスにアクセスします
+        url: "/unix-installation-cmode/task_accessing_the_snapmanager_user_interface.html"
+      - title: SnapManager リポジトリの設定
+        url: "/unix-installation-cmode/task_configuring_the_snapmanager_repository.html"
+    - title: SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムの準備
+      url: "/unix-installation-cmode/reference_preparing_storage_systems_for_snapmirror_and_snapvault_replication.html"
+      entries:
+      - title: SnapMirror と SnapVault の違いを理解する
+        url: "/unix-installation-cmode/concept_understanding_the_differences_between_snapmirror_and_snapvault.html"
+      - title: SnapMirror レプリケーションのためのストレージシステムの準備
+        url: "/unix-installation-cmode/task_preparing_storage_systems_for_snapmirror_replication.html"
+      - title: SnapVault レプリケーションのためのストレージシステムの準備
+        url: "/unix-installation-cmode/task_preparing_storage_systems_for_snapvault_replication.html"
+    - title: データベースのバックアップと検証
+      url: "/unix-installation-cmode/concept_backing_up_and_verifying_your_databases.html"
+      entries:
+      - title: SnapManager バックアップの概要
+        url: "/unix-installation-cmode/concept_snapmanager_backup_overview.html"
+      - title: バックアップ戦略の定義
+        url: "/unix-installation-cmode/concept_defining_a_backup_strategy.html"
+      - title: データベースのプロファイルを作成しています
+        url: "/unix-installation-cmode/task_creating_a_profile_for_your_database.html"
+      - title: データベースをバックアップしています
+        url: "/unix-installation-cmode/task_backing_up_your_database.html"
+      - title: データベースのバックアップの検証
+        url: "/unix-installation-cmode/task_verifying_database_backups.html"
+      - title: 定期的なバックアップのスケジュール設定
+        url: "/unix-installation-cmode/task_scheduling_recurring_backups.html"
+    - title: 次の手順
+      url: "/unix-installation-cmode/reference_where_to_go_next.html"
+  - title: 7-Mode での UNIX for Data ONTAP のインストールとセットアップ
+    url: "/unix-installation-7mode/index.html"
+    entries:
+    - title: 製品の概要
+      url: "/unix-installation-7mode/reference_product_overview.html"
+      entries:
+      - title: SnapManager アーキテクチャ
+        url: "/unix-installation-7mode/reference_snapmanager_architecture.html"
+    - title: 導入のワークフロー
+      url: "/unix-installation-7mode/reference_deployment_workflow.html"
+    - title: 導入の準備
+      url: "/unix-installation-7mode/task_preparing_for_deployment.html"
+      entries:
+      - title: SnapManager ライセンス
+        url: "/unix-installation-7mode/reference_snapmanager_licensing.html"
+      - title: サポートされている構成
+        url: "/unix-installation-7mode/reference_supported_configurations.html"
+      - title: サポートされているストレージタイプ
+        url: "/unix-installation-7mode/reference_supported_storage_types.html"
+      - title: UNIX ホストの要件
+        url: "/unix-installation-7mode/reference_host_requirements.html"
+    - title: データベースを設定しています
+      url: "/unix-installation-7mode/task_configuring_databases.html"
+      entries:
+      - title: ターゲットデータベースを設定しています
+        url: "/unix-installation-7mode/task_configuring_the_target_database.html"
+      - title: ターゲットデータベースの Oracle データベースユーザを作成しています
+        url: "/unix-installation-7mode/task_creating_an_oracle_user_for_the_target_database.html"
+      - title: リポジトリデータベースインスタンスを作成しています
+        url: "/unix-installation-7mode/task_creating_the_repository_database_instance.html"
+      - title: リポジトリデータベースインスタンスの Oracle ユーザを作成します
+        url: "/unix-installation-7mode/task_creating_an_oracle_user_for_the_repository_database_instance.html"
+      - title: Oracle リスナーの設定の確認
+        url: "/unix-installation-7mode/task_verifying_the_oracle_listener_configuration.html"
+    - title: SnapManager をインストールしています
+      url: "/unix-installation-7mode/task_installing_snapmanager.html"
+    - title: SnapManager をセットアップしています
+      url: "/unix-installation-7mode/task_setting_up_snapmanager.html"
+      entries:
+      - title: SnapManager サーバを起動しています
+        url: "/unix-installation-7mode/task_starting_the_snapmanager_server.html"
+      - title: SnapManager のユーザインターフェイスにアクセスします
+        url: "/unix-installation-7mode/task_accessing_the_snapmanager_user_interface.html"
+      - title: SnapManager リポジトリの設定
+        url: "/unix-installation-7mode/task_configuring_the_snapmanager_repository.html"
+    - title: データベースのバックアップと検証
+      url: "/unix-installation-7mode/concept_backing_up_and_verifying_your_databases.html"
+      entries:
+      - title: SnapManager バックアップの概要
+        url: "/unix-installation-7mode/concept_snapmanager_backup_overview.html"
+      - title: バックアップ戦略の定義
+        url: "/unix-installation-7mode/concept_defining_a_backup_strategy.html"
+      - title: データベースのプロファイルを作成しています
+        url: "/unix-installation-7mode/task_creating_a_profile_for_your_database.html"
+      - title: データベースをバックアップしています
+        url: "/unix-installation-7mode/task_backing_up_your_database.html"
+      - title: データベースのバックアップの検証
+        url: "/unix-installation-7mode/task_verifying_database_backups.html"
+      - title: 定期的なバックアップのスケジュール設定
+        url: "/unix-installation-7mode/task_scheduling_recurring_backups.html"
+    - title: 次の手順
+      url: "/unix-installation-7mode/reference_where_to_go_next.html"
+  - title: UNIX の管理
+    url: "/unix-administration/index.html"
+    entries:
+    - title: 製品の概要
+      url: "/unix-administration/reference_product_overview.html"
+      entries:
+      - title: Snapshot コピーを使用してバックアップを作成する
+        url: "/unix-administration/concept_create_backups_using_snapshot_copies.html"
+      - title: アーカイブログファイルの削除が必要な理由
+        url: "/unix-administration/concept_why_you_should_prune_archive_log_files.html"
+      - title: アーカイブログの統合
+        url: "/unix-administration/concept_archive_log_consolidation.html"
+      - title: データベースの完全リストアまたは部分リストア
+        url: "/unix-administration/concept_full_or_partial_restoration_of_the_database.html"
+      - title: バックアップのステータスを確認
+        url: "/unix-administration/concept_verify_backup_status.html"
+      - title: データベースバックアップクローン
+        url: "/unix-administration/concept_clone_database_backups.html"
+      - title: 詳細を追跡し、レポートを作成します
+        url: "/unix-administration/concept_track_details_and_produce_reports.html"
+      - title: リポジトリとは何ですか
+        url: "/unix-administration/concept_what_repositories_are.html"
+      - title: プロファイルとは
+        url: "/unix-administration/concept_what_profiles_are.html"
+      - title: SnapManager の動作状態
+        url: "/unix-administration/concept_what_snapmanager_operation_states_are.html"
+      - title: SnapManager によるセキュリティの維持方法
+        url: "/unix-administration/concept_snapmanager_security.html"
+      - title: オンラインヘルプへのアクセスと印刷
+        url: "/unix-administration/task_accessing_and_printing_online_help.html"
+      - title: 一般的なデータベースレイアウトとストレージ構成を推奨します
+        url: "/unix-administration/concept_general_layout_and_configuration.html"
+        entries:
+        - title: oratab ファイルを使用してデータベースホームを定義します
+          url: "/unix-administration/task_defining_the_database_home_with_the_oratab_file.html"
+        - title: SnapManager で RAC データベースを使用するための要件
+          url: "/unix-administration/concept_requirements_for_using_rac_databases_with_snapmanager.html"
+        - title: SnapManager で ASM データベースを使用する場合の要件
+          url: "/unix-administration/concept_requirements_for_using_asm_databases_with_snapmanager.html"
+        - title: サポートされているパーティションデバイス
+          url: "/unix-administration/reference_supported_partition_devices.html"
+        - title: ASMLib のサポート
+          url: "/unix-administration/concept_support_for_asmlib.html"
+        - title: ASMLib のない ASM データベースのサポート
+          url: "/unix-administration/concept_support_for_asm_databases_without_asmlib.html"
+          entries:
+          - title: サポートされているスクリプト
+            url: "/unix-administration/concept_supported_scripts.html"
+          - title: ASMLib のない ASM データベースをサポートするスクリプトの使用に関する制限事項
+            url: "/unix-administration/concept_limitations_of_using_scripts_to_support_asm_database_without_asmlib.html"
+          - title: スクリプトの導入と実行
+            url: "/unix-administration/task_deploying_and_running_the_scripts.html"
+            entries:
+            - title: ASMLib のない Oracle RAC ASM データベースのサポート
+              url: "/unix-administration/concept_support_for_oracle_rac_asm_databases.html"
+            - title: ASMLib のない Oracle 10g ASM データベースのサポート
+              url: "/unix-administration/concept_support_for_oracle_10g_asm_databases.html"
+          - title: ASMLib のない ASM データベースをサポートするサンプルスクリプト
+            url: "/unix-administration/reference_sample_scripts_to_support_asm_databases_without_asmlib.html"
+        - title: NFS および SnapManager でデータベースを使用するための要件
+          url: "/unix-administration/concept_requirements_for_using_databases_with_nfs_and_snapmanager.html"
+        - title: データベースボリュームのレイアウト例
+          url: "/unix-administration/reference_sample_database_volume_layouts.html"
+      - title: SnapManager で作業する際の制限事項
+        url: "/unix-administration/concept_limitations.html"
+        entries:
+        - title: clustered Data ONTAP での SnapManager の制限事項
+          url: "/unix-administration/concept_snapmanger_limitations_for_clustered_data_ontap.html"
+        - title: Oracle データベースに関する制限事項
+          url: "/unix-administration/concept_limitations_related_to_oracle_database.html"
+          entries:
+          - title: Oracle データベースの廃止されたバージョン
+            url: "/unix-administration/concept_deprecated_versions_of_oracle_database.html"
+        - title: ボリューム管理の制限
+          url: "/unix-administration/concept_volume_management_restrictions.html"
+    - title: Snapshot コピーを使用してバックアップを作成する
+      url: "/unix-administration/concept_create_backups_using_snapshot_copies.html"
+    - title: アーカイブログファイルの削除が必要な理由
+      url: "/unix-administration/concept_why_you_should_prune_archive_log_files.html"
+    - title: アーカイブログの統合
+      url: "/unix-administration/concept_archive_log_consolidation.html"
+    - title: データベースの完全リストアまたは部分リストア
+      url: "/unix-administration/concept_full_or_partial_restoration_of_the_database.html"
+    - title: バックアップのステータスを確認
+      url: "/unix-administration/concept_verify_backup_status.html"
+    - title: データベースバックアップクローン
+      url: "/unix-administration/concept_clone_database_backups.html"
+    - title: 詳細を追跡し、レポートを作成します
+      url: "/unix-administration/concept_track_details_and_produce_reports.html"
+    - title: リポジトリとは何ですか
+      url: "/unix-administration/concept_what_repositories_are.html"
+    - title: プロファイルとは
+      url: "/unix-administration/concept_what_profiles_are.html"
+    - title: SnapManager の動作状態
+      url: "/unix-administration/concept_what_snapmanager_operation_states_are.html"
+    - title: SnapManager によるセキュリティの維持方法
+      url: "/unix-administration/concept_snapmanager_security.html"
+    - title: オンラインヘルプへのアクセスと印刷
+      url: "/unix-administration/task_accessing_and_printing_online_help.html"
+    - title: 一般的なデータベースレイアウトとストレージ構成を推奨します
+      url: "/unix-administration/concept_general_layout_and_configuration.html"
+      entries:
+      - title: oratab ファイルを使用してデータベースホームを定義します
+        url: "/unix-administration/task_defining_the_database_home_with_the_oratab_file.html"
+      - title: SnapManager で RAC データベースを使用するための要件
+        url: "/unix-administration/concept_requirements_for_using_rac_databases_with_snapmanager.html"
+      - title: SnapManager で ASM データベースを使用する場合の要件
+        url: "/unix-administration/concept_requirements_for_using_asm_databases_with_snapmanager.html"
+      - title: サポートされているパーティションデバイス
+        url: "/unix-administration/reference_supported_partition_devices.html"
+      - title: ASMLib のサポート
+        url: "/unix-administration/concept_support_for_asmlib.html"
+      - title: ASMLib のない ASM データベースのサポート
+        url: "/unix-administration/concept_support_for_asm_databases_without_asmlib.html"
+        entries:
+        - title: サポートされているスクリプト
+          url: "/unix-administration/concept_supported_scripts.html"
+        - title: ASMLib のない ASM データベースをサポートするスクリプトの使用に関する制限事項
+          url: "/unix-administration/concept_limitations_of_using_scripts_to_support_asm_database_without_asmlib.html"
+        - title: スクリプトの導入と実行
+          url: "/unix-administration/task_deploying_and_running_the_scripts.html"
+          entries:
+          - title: ASMLib のない Oracle RAC ASM データベースのサポート
+            url: "/unix-administration/concept_support_for_oracle_rac_asm_databases.html"
+          - title: ASMLib のない Oracle 10g ASM データベースのサポート
+            url: "/unix-administration/concept_support_for_oracle_10g_asm_databases.html"
+        - title: ASMLib のない ASM データベースをサポートするサンプルスクリプト
+          url: "/unix-administration/reference_sample_scripts_to_support_asm_databases_without_asmlib.html"
+      - title: NFS および SnapManager でデータベースを使用するための要件
+        url: "/unix-administration/concept_requirements_for_using_databases_with_nfs_and_snapmanager.html"
+      - title: データベースボリュームのレイアウト例
+        url: "/unix-administration/reference_sample_database_volume_layouts.html"
+    - title: SnapManager で作業する際の制限事項
+      url: "/unix-administration/concept_limitations.html"
+      entries:
+      - title: clustered Data ONTAP での SnapManager の制限事項
+        url: "/unix-administration/concept_snapmanger_limitations_for_clustered_data_ontap.html"
+      - title: Oracle データベースに関する制限事項
+        url: "/unix-administration/concept_limitations_related_to_oracle_database.html"
+        entries:
+        - title: Oracle データベースの廃止されたバージョン
+          url: "/unix-administration/concept_deprecated_versions_of_oracle_database.html"
+      - title: ボリューム管理の制限
+        url: "/unix-administration/concept_volume_management_restrictions.html"
+    - title: SnapManager のアップグレード
+      url: "/unix-administration/concept_upgrading_snapmanager_for_oracle.html"
+      entries:
+      - title: SnapManager のアップグレード準備をしています
+        url: "/unix-administration/concept_preparing_to_upgrade_snapmanager_for_oracle.html"
+      - title: SnapManager ホストをアップグレードします
+        url: "/unix-administration/task_upgrading_snapmanager_for_oracle_hosts_c1.html"
+      - title: アップグレード後の手順
+        url: "/unix-administration/concept_post_upgrade_tasks.html"
+        entries:
+        - title: 既存のリポジトリを更新しています
+          url: "/unix-administration/task_updating_the_existing_repository.html"
+        - title: バックアップ保持クラスを変更しています
+          url: "/unix-administration/task_modifying_the_backup_retention_class.html"
+        - title: リストアプロセスのタイプ
+          url: "/unix-administration/concept_restore_process_identification.html"
+      - title: ローリングアップグレードを使用した SnapManager ホストのアップグレード
+        url: "/unix-administration/concept_upgrading_snapmanager_hosts_by_using_rolling_upgrade.html"
+        entries:
+        - title: ローリングアップグレードを実行するための前提条件
+          url: "/unix-administration/concept_prerequisites_for_performing_rolling_upgrade.html"
+        - title: 単一のホストまたは複数のホストでローリングアップグレードを実行する
+          url: "/unix-administration/task_performing_rolling_upgrade_on_a_single_host_or_multiple_hosts.html"
+        - title: ロールバックとは
+          url: "/unix-administration/concept_what_a_rollback_is.html"
+          entries:
+          - title: ロールバックの実行に関する制限事項
+            url: "/unix-administration/concept_limitations_for_performing_a_rollback.html"
+          - title: ロールバックを実行するための前提条件
+            url: "/unix-administration/concept_prerequisites_for_performing_a_rollback.html"
+          - title: 単一のホストまたは複数のホストでロールバックを実行する
+            url: "/unix-administration/task_performing_a_rollback_on_a_single_host_or_multiple_hosts.html"
+          - title: ロールバック後のタスク
+            url: "/unix-administration/task_post_rollback_tasks.html"
+    - title: SnapManager を設定しています
+      url: "/unix-administration/concept_configuring_snapmanager_for_oraclesap.html"
+      entries:
+      - title: SnapManager の設定パラメータ
+        url: "/unix-administration/reference_snapmanager_configuration_parameters.html"
+        entries:
+        - title: 設定パラメータを編集する
+          url: "/unix-administration/task_editing_the_configuration_parameters.html"
+      - title: アクティブ / アクティブ Veritas SFRAC 環境用の SnapDrive の設定
+        url: "/unix-administration/task_configuring_snapdrive_in_an_active_active_unix_environment.html"
+      - title: Veritas SFRAC 環境をサポートするように SnapManager を設定します
+        url: "/unix-administration/task_configuring_snapmanager_for_oracle_with_veritas_file_system.html"
+      - title: ASM がインポートされたディスクを検出することを確認し
+        url: "/unix-administration/task_ensuring_that_asm_discovers_imported_disks.html"
+    - title: セキュリティと資格情報の管理
+      url: "/unix-administration/concept_managing_security_and_credentials.html"
+      entries:
+      - title: ユーザ認証とは
+        url: "/unix-administration/concept_what_user_authentication_is.html"
+      - title: ロールベースアクセス制御について
+        url: "/unix-administration/concept_about_role_based_access_control.html"
+        entries:
+        - title: ロールベースアクセス制御の有効化
+          url: "/unix-administration/task_enabling_role_based_access_control.html"
+        - title: ロールベースアクセス制御の機能とロールを設定する
+          url: "/unix-administration/task_setting_role-based_access_control_capabilities_and_roles.html"
+      - title: カスタムスクリプト用に暗号化されたパスワードを保存する
+        url: "/unix-administration/task_storing_encrypted_passwords_for_custom_scripts.html"
+      - title: リポジトリへのアクセスを許可する
+        url: "/unix-administration/task_authorizing_user_access_to_the_repository.html"
+      - title: プロファイルへのアクセスの許可
+        url: "/unix-administration/task_authorizing_user_access_to_profiles.html"
+      - title: ユーザクレデンシャルの表示
+        url: "/unix-administration/task_viewing_user_credentials.html"
+      - title: すべてのホスト、リポジトリ、およびプロファイルのユーザ・クレデンシャルの消去
+        url: "/unix-administration/task_clearing_user_credentials_for_all_hosts_repositories_and_profiles.html"
+        entries:
+        - title: クレデンシャルキャッシュをクリアしたあとにクレデンシャルを設定
+          url: "/unix-administration/task_setting_credentials_after_clearing_credential_cache.html"
+      - title: 個々のリソースのクレデンシャルを削除する
+        url: "/unix-administration/task_deleting_credentials_for_individual_resources.html"
+        entries:
+        - title: リポジトリのユーザクレデンシャルを削除します
+          url: "/unix-administration/task_deleting_user_credentials_for_repositories.html"
+        - title: ホストのユーザクレデンシャルを削除する
+          url: "/unix-administration/task_deleting_user_credentials_for_hosts.html"
+        - title: プロファイルのユーザクレデンシャルを削除する
+          url: "/unix-administration/task_deleting_user_credentials_for_profiles.html"
+    - title: 効率的なバックアップを行うためのプロファイルの管理
+      url: "/unix-administration/concept_managing_profiles_for_efficient_backups.html"
+      entries:
+      - title: プロファイルの作成
+        url: "/unix-administration/task_creating_profiles.html"
+      - title: Snapshot コピーの命名規則
+        url: "/unix-administration/concept_snapshot_copy_naming.html"
+      - title: プロファイル名の変更
+        url: "/unix-administration/task_renaming_profiles.html"
+      - title: プロファイルのパスワードを変更する
+        url: "/unix-administration/task_changing_profile_passwords.html"
+      - title: プロファイルパスワードをリセットしています
+        url: "/unix-administration/task_resetting_profile_password.html"
+      - title: プロファイルへのアクセスの許可
+        url: "/unix-administration/task_authorizing_user_access_to_profiles.html"
+      - title: プロファイルの検証
+        url: "/unix-administration/task_verifying_profiles.html"
+      - title: プロファイルの更新
+        url: "/unix-administration/task_updating_profiles.html"
+      - title: プロファイルの削除
+        url: "/unix-administration/task_deleting_profiles.html"
+    - title: データベースをバックアップしています
+      url: "/unix-administration/concept_database_backup_management.html"
+      entries:
+      - title: SnapManager データベースバックアップとは
+        url: "/unix-administration/concept_what_snapmanager_database_backups_are.html"
+      - title: フル・バックアップおよびパーシャル・バックアップとは
+        url: "/unix-administration/concept_what_full_and_partial_backups_are.html"
+        entries:
+        - title: バックアップのタイプおよび Snapshot コピーの数
+          url: "/unix-administration/concept_backup_types_and_the_number_of_snapshot_copies.html"
+        - title: フルオンラインバックアップ
+          url: "/unix-administration/concept_full_online_backups.html"
+        - title: パーシャル・オンライン・バックアップ
+          url: "/unix-administration/concept_partial_online_backups.html"
+        - title: バックアップ、リストア、リカバリ処理の例
+          url: "/unix-administration/reference_examples_of_backup_restore_and_recover_operations.html"
+      - title: 制御ファイルおよびアーカイブログファイルの処理について
+        url: "/unix-administration/concept_about_control_file_and_archive_log_file_handling.html"
+      - title: データベースバックアップのスケジュールとは
+        url: "/unix-administration/concept_what_database_backup_scheduling_is.html"
+      - title: データベースバックアップを作成しています
+        url: "/unix-administration/task_creating_database_backups.html"
+        entries:
+        - title: アーカイブ・ログ・ファイルの削除
+          url: "/unix-administration/task_pruning_archive_log_files.html"
+        - title: アーカイブログバックアップの統合
+          url: "/unix-administration/task_consolidating_archive_log_backups.html"
+        - title: アーカイブ・ログ・ファイルの削除のスケジュール設定
+          url: "/unix-administration/task_scheduling_archive_log_file_pruning.html"
+        - title: アーカイブログのバックアップを保護しています
+          url: "/unix-administration/task_protecting_archive_log_backups.html"
+      - title: AutoSupport とは
+        url: "/unix-administration/concept_what_autosupport_is.html"
+        entries:
+        - title: clustered Data ONTAP で動作しているストレージシステムを SnapManager サーバホストに追加する
+          url: "/unix-administration/task_adding_storage_systems_to_the_snapmanager_server_host.html"
+        - title: SnapManager での AutoSupport の有効化
+          url: "/unix-administration/task_enabling_autosupport_in_snapmanager.html"
+        - title: SnapManager で AutoSupport を無効にします
+          url: "/unix-administration/task_disabling_autosupport_in_snapmanager.html"
+      - title: データベースのバックアップの検証
+        url: "/unix-administration/task_verifying_database_backups.html"
+      - title: バックアップ保持ポリシーを変更する
+        url: "/unix-administration/task_changing_the_backup_retention_policy.html"
+        entries:
+        - title: バックアップを無期限に保持
+          url: "/unix-administration/task_retaining_backups_forever.html"
+        - title: 特定の保持クラスを持つバックアップを割り当てています
+          url: "/unix-administration/task_assigning_backups_with_a_specific_retention_class.html"
+        - title: 保持ポリシーのデフォルト動作を変更する
+          url: "/unix-administration/task_changing_the_retention_policy_default_behavior.html"
+        - title: 保持ポリシー適用除外バックアップの解放または削除
+          url: "/unix-administration/task_freeing_or_deleting_retention_policy_exempt_backups.html"
+      - title: バックアップのリストを表示します
+        url: "/unix-administration/task_viewing_a_list_of_backups.html"
+      - title: バックアップの詳細を表示しています
+        url: "/unix-administration/task_viewing_backup_details.html"
+      - title: バックアップのマウント
+        url: "/unix-administration/task_mounting_backups.html"
+      - title: バックアップのアンマウント
+        url: "/unix-administration/task_unmounting_backups.html"
+      - title: バックアップの解放
+        url: "/unix-administration/task_freeing_backups.html"
+      - title: バックアップを削除する
+        url: "/unix-administration/task_deleting_backups.html"
+    - title: データベースのバックアップをスケジュール設定する
+      url: "/unix-administration/concept_scheduling_database_backups.html"
+      entries:
+      - title: バックアップスケジュールを作成しています
+        url: "/unix-administration/task_creating_backup_schedules.html"
+      - title: バックアップスケジュールを更新しています
+        url: "/unix-administration/task_updating_a_backup_schedule.html"
+      - title: スケジュールされた処理のリストを表示します
+        url: "/unix-administration/task_viewing_a_list_of_scheduled_operations.html"
+      - title: バックアップスケジュールを一時停止する
+        url: "/unix-administration/task_suspending_backup_schedules.html"
+      - title: バックアップスケジュールを再開しています
+        url: "/unix-administration/task_resuming_backup_schedules.html"
+      - title: バックアップスケジュールを削除しています
+        url: "/unix-administration/task_deleting_backup_schedules.html"
+    - title: データベースバックアップのリストア
+      url: "/unix-administration/concept_restoring_database_backup.html"
+      entries:
+      - title: データベースリストアとは
+        url: "/unix-administration/concept_what_database_restore_is.html"
+        entries:
+        - title: 高速リストアを使用できる状況については、次のガイドラインを参照してください
+          url: "/unix-administration/concept_when_can_you_use_fast_restore.html"
+          entries:
+          - title: 高速リストアを使用する利点と欠点
+            url: "/unix-administration/concept_advantages_and_disadvantages_of_using_fast_restore.html"
+        - title: リストアへの対応状況のチェックが高速
+          url: "/unix-administration/concept_fast_restore_eligibility_checks.html"
+        - title: バックアップリカバリ
+          url: "/unix-administration/concept_backup_recovery.html"
+        - title: リストアプロセスに必要なデータベースの状態
+          url: "/unix-administration/concept_database_state_needed_for_restore_process.html"
+        - title: リストアプレビュープランとは
+          url: "/unix-administration/concept_restore_preview_plans.html"
+      - title: バックアップリストア情報をプレビューしています
+        url: "/unix-administration/task_previewing_backup_restore_information.html"
+      - title: 高速リストアを使用したバックアップのリストア
+        url: "/unix-administration/task_restoring_backups_using_fast_restore.html"
+      - title: Single File SnapRestore を使用したバックアップのリストア
+        url: "/unix-administration/task_restoring_backup_using_single_file_snaprestore.html"
+      - title: プライマリストレージでのバックアップのリストア
+        url: "/unix-administration/task_restoring_backups_on_primary_storage.html"
+      - title: Oracle Recovery Manager （ RMAN ）を使用したブロックレベル・リカバリの実行
+        url: "/unix-administration/task_performing_block_level_recovery_with_rman.html"
+      - title: 別の場所からファイルをリストアする
+        url: "/unix-administration/concept_restore_files_from_an_alternate_location.html"
+        entries:
+        - title: 代替保存場所からのバックアップのリストアの概要
+          url: "/unix-administration/concept_restore_backups_from_an_alternate_location_overview.html"
+          entries:
+          - title: ファイルからのデータのリストア
+            url: "/unix-administration/concept_restoration_of_the_data_from_files.html"
+          - title: ファイルシステムからのデータのリストア
+            url: "/unix-administration/concept_restoration_of_the_data_from_file_systems.html"
+          - title: raw デバイスからのデータのリストア
+            url: "/unix-administration/concept_restoration_of_the_data_from_raw_devices.html"
+        - title: リストア仕様を作成しています
+          url: "/unix-administration/task_creating_restore_specifications.html"
+        - title: 別の場所からのバックアップのリストア
+          url: "/unix-administration/task_restoring_backups_from_an_alternate_location.html"
+    - title: データベースバックアップをクローニングしています
+      url: "/unix-administration/concept_cloning_database_backup.html"
+      entries:
+      - title: クローニングとは
+        url: "/unix-administration/concept_what_cloning_is.html"
+      - title: クローニングの方法
+        url: "/unix-administration/concept_cloning_methods.html"
+      - title: クローン仕様を作成しています
+        url: "/unix-administration/task_creating_clone_specifications.html"
+        entries:
+        - title: データベースのクローニングおよびカスタムプラグインスクリプトの使用
+          url: "/unix-administration/task_cloning_databases_and_using_custom_plugin_scripts.html"
+      - title: バックアップからデータベースをクローニングする
+        url: "/unix-administration/task_cloning_databases_from_backups.html"
+      - title: 現在の状態のデータベースをクローニングしています
+        url: "/unix-administration/task_cloning_databases_in_the_current_state.html"
+      - title: resetlogs を実行しないでデータベースバックアップをクローニングする
+        url: "/unix-administration/task_cloning_database_backups_without_resetlogs.html"
+      - title: 代替ホストにデータベースをクローニングする場合の考慮事項
+        url: "/unix-administration/concept_considerations_for_cloning_a_database_to_an_alternate_host.html"
+        entries:
+        - title: 代替ホストへのデータベースのクローニング
+          url: "/unix-administration/task_cloning_a_database_to_an_alternate_host.html"
+      - title: クローンのリストを表示しています
+        url: "/unix-administration/task_viewing_a_list_of_clones.html"
+      - title: クローンの詳細情報を表示します
+        url: "/unix-administration/task_viewing_detailed_clone_information.html"
+      - title: クローンを削除します
+        url: "/unix-administration/task_deleting_clones.html"
+      - title: クローンのスプリット
+        url: "/unix-administration/concept_splitting_a_clone.html"
+        entries:
+        - title: クローンスプリットの見積もりを表示します
+          url: "/unix-administration/task_viewing_clone_split_estimate.html"
+        - title: プライマリストレージまたはセカンダリストレージ上のクローンをスプリットする
+          url: "/unix-administration/task_splitting_a_clone_on_a_primary_or_secondary_storage.html"
+        - title: クローンスプリットプロセスのステータスを表示します
+          url: "/unix-administration/task_viewing_status_of_clone_split_process.html"
+        - title: クローンスプリットプロセスの結果を表示します
+          url: "/unix-administration/task_viewing_the_result_of_the_clone_split_process.html"
+        - title: クローンスプリット処理を停止しています
+          url: "/unix-administration/task_stopping_the_clone_split_process.html"
+        - title: プロファイルの削除
+          url: "/unix-administration/task_deleting_profile.html"
+        - title: プロファイルの削除
+          url: "/unix-administration/task_destroying_split_clone_and_associated_profile.html"
+        - title: リポジトリデータベースからクローンスプリット処理サイクルを削除します
+          url: "/unix-administration/task_deleting_a_clone_split_operation_cycle_from_a_repository_database.html"
+    - title: SnapManager でのデータ保護の概要
+      url: "/unix-administration/concept_introduction_to_data_protection_in_snapmanager.html"
+      entries:
+      - title: 保護ポリシーとは
+        url: "/unix-administration/concept_what_protection_policies_are.html"
+      - title: 保護状態とは
+        url: "/unix-administration/concept_what_protection_states_are.html"
+      - title: リソースプールとは
+        url: "/unix-administration/concept_what_resource_pools_are.html"
+      - title: 各種の保護ポリシーについて
+        url: "/unix-administration/concept_about_different_protection_policies.html"
+      - title: ポリシーベースのデータ保護の設定と有効化
+        url: "/unix-administration/concept_configuring_and_enabling_policy_driven_data_protection.html"
+        entries:
+        - title: RBAC が有効な場合の DataFabric Manager サーバおよび SnapDrive の設定
+          url: "/unix-administration/task_configuring_snapdrive_when_rbac_is_enabled.html"
+        - title: RBAC が有効になっていない場合の SnapDrive の設定
+          url: "/unix-administration/task_configuring_snapdrive_when_rbac_is_not_enabled.html"
+        - title: プロファイルでのデータ保護の有効化または無効化の概要
+          url: "/unix-administration/concept_understanding_enabling_or_disabling_of_data_protection_in_profile.html"
+      - title: SnapManager がローカルストレージ上にバックアップを保持する方法
+        url: "/unix-administration/concept_how_snapmanager_retains_backups_on_the_local_storage.html"
+      - title: データ保護を実行する場合の考慮事項
+        url: "/unix-administration/concept_prerequisites_for_data_protection.html"
+        entries:
+        - title: SnapManager でのデータ保護に必要なライセンス
+          url: "/unix-administration/concept_licenses_required_for_data_protection.html"
+      - title: セカンダリストレージまたはターシャリストレージ上のデータベースバックアップを保護する
+        url: "/unix-administration/task_protecting_database_backups_on_secondary_storage.html"
+      - title: セカンダリストレージから保護されたバックアップをリストアする
+        url: "/unix-administration/concept_restoring_protected_backups_from_secondary_storage.html"
+        entries:
+        - title: 保護されたバックアップのリストアの概要
+          url: "/unix-administration/concept_restores_of_protected_backups_overview.html"
+        - title: セカンダリストレージからのバックアップのリストア
+          url: "/unix-administration/task_restoring_backups_from_secondary_storage.html"
+      - title: 保護されたバックアップをクローニングする
+        url: "/unix-administration/task_cloning_protected_backups.html"
+    - title: SnapManager for Oracle では、 Protection Manager を使用してデータベースバックアップを保護します
+      url: "/unix-administration/concept_snapmanager_for_oracle_uses_protection_manager_to_protect_a_database_backup.html"
+      entries:
+      - title: ターゲットデータベースの詳細
+        url: "/unix-administration/concept_details_of_the_target_database.html"
+      - title: プライマリストレージとセカンダリストレージの構成とトポロジ
+        url: "/unix-administration/concept_primary_and_secondary_storage_configuration_and_topology.html"
+      - title: バックアップのスケジュールと保持に関する戦略
+        url: "/unix-administration/concept_backup_schedule_and_retention_strategy.html"
+      - title: ローカルおよびセカンダリデータベースバックアップのワークフローの概要
+        url: "/unix-administration/concept_workflow_summary_for_local_and_secondary_database_backup.html"
+      - title: 保護されたバックアップ構成と実行
+        url: "/unix-administration/task_protected_backup_configuration_and_execution.html"
+        entries:
+        - title: SnapManager for Oracle を使用して、ローカル・バックアップのデータベース・プロファイルを作成する
+          url: "/unix-administration/task_using_snapmanager_for_oracle_to_create_the_database_profile_for_a_local_backup.html"
+        - title: Protection Manager を使用してセカンダリリソースプールを設定する
+          url: "/unix-administration/task_using_protection_manager_to_configure_a_secondary_resource_pool.html"
+        - title: Protection Manager を使用して、セカンダリバックアップスケジュールを設定する
+          url: "/unix-administration/task_using_protection_manager_to_configure_secondary_backup_schedules.html"
+        - title: Protection Manager を使用して、セカンダリバックアップ保護ポリシーを設定する
+          url: "/unix-administration/task_using_protection_manager_to_configure_a_secondary_backup_protection_policy.html"
+        - title: SnapManager for Oracle を使用して、データベースプロファイルを作成し、保護ポリシーを割り当てます
+          url: "/unix-administration/task_using_snapmanager_for_oracle_to_create_the_database_profile_and_assign_a_protection_policy.html"
+        - title: Protection Manager を使用して新しいデータセットをプロビジョニングする
+          url: "/unix-administration/task_using_protection_manager_to_provision_the_new_dataset.html"
+        - title: SnapManager for Oracle を使用して、保護されたバックアップを作成する
+          url: "/unix-administration/task_using_snapmanager_for_oracle_to_create_a_protected_backup.html"
+        - title: SnapManager for Oracle を使用したバックアップ保護の確認
+          url: "/unix-administration/task_using_snapmanager_for_oracle_to_confirm_backup_protection.html"
+      - title: バックアップからのデータベースリストア
+        url: "/unix-administration/task_database_restoration_from_backup.html"
+        entries:
+        - title: SnapManager for Oracle を使用してプライマリストレージ上のローカルバックアップをリストアする
+          url: "/unix-administration/task_use_snapmanager_for_oracle_to_restore_a_local_backup_on_primary_storage.html"
+        - title: SnapManager for Oracle を使用してセカンダリストレージからバックアップをリストアする
+          url: "/unix-administration/task_using_snapmanager_for_oracle_to_restore_backups_from_secondary_storage.html"
+    - title: 管理処理を実行しています
+      url: "/unix-administration/concept_performing_management_operations.html"
+      entries:
+      - title: 処理のリストを表示する
+        url: "/unix-administration/task_viewing_a_list_of_operations.html"
+      - title: 処理の詳細を表示しています
+        url: "/unix-administration/task_viewing_operation_details.html"
+      - title: 代替ホストからのコマンドの実行
+        url: "/unix-administration/task_issuing_commands_from_an_alternate_host.html"
+      - title: SnapManager ソフトウェアのバージョンを確認しています
+        url: "/unix-administration/task_checking_the_snapmanager_software_version.html"
+      - title: SnapManager ホストサーバを停止します
+        url: "/unix-administration/task_stopping_the_snapmanager_host_server.html"
+      - title: SnapManager UNIX ホスト・サーバを再起動します
+        url: "/unix-administration/task_restarting_the_snapmanager_unix_host_server.html"
+      - title: UNIX ホストからソフトウェアをアンインストールします
+        url: "/unix-administration/task_uninstalling_the_software_from_a_unix_host.html"
+    - title: E メール通知の設定
+      url: "/unix-administration/concept_configuring_e_mail_notification.html"
+      entries:
+      - title: リポジトリのメールサーバを設定する
+        url: "/unix-administration/task_configuring_mail_server_for_a_repository.html"
+      - title: 新しいプロファイルの E メール通知を設定しています
+        url: "/unix-administration/task_configuring_e_mail_notification_for_a_new_profile.html"
+        entries:
+        - title: 新しいプロファイルの電子メールの件名をカスタマイズする
+          url: "/unix-administration/task_customizing_e_mail_subject_for_a_new_profile.html"
+      - title: 既存のプロファイルの E メール通知を設定する
+        url: "/unix-administration/task_configuring_e_mail_notification_for_an_existing_profile.html"
+        entries:
+        - title: 既存のプロファイルの電子メールの件名をカスタマイズする
+          url: "/unix-administration/task_customizing_the_email_subject_for_an_existing_profile.html"
+      - title: 複数のプロファイルに関するサマリー E メール通知の設定
+        url: "/unix-administration/task_configuring_summary_e_mail_notification_for_multiple_profiles.html"
+      - title: 概要 E メール通知に新しいプロファイルを追加します
+        url: "/unix-administration/task_adding_new_profile_to_summary_notification.html"
+      - title: サマリー E メール通知に既存のプロファイルを追加する
+        url: "/unix-administration/task_adding_existing_profile_to_summary_notification.html"
+      - title: 複数のプロファイルの E メール通知を無効にする
+        url: "/unix-administration/task_disabling_email_notification_for_multiple_profiles.html"
+    - title: SnapManager 処理用のタスク仕様ファイルおよびスクリプトの作成
+      url: "/unix-administration/concept_creating_task_specification_file_and_scripts_for_snapmanager_operations.html"
+      entries:
+      - title: プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成
+        url: "/unix-administration/task_creating_pretask_post_task_and_policy_scripts.html"
+        entries:
+        - title: タスクスクリプト内の操作
+          url: "/unix-administration/concept_operations_in_task_scripts.html"
+        - title: バックアップ処理のタスクスクリプトで使用できる変数
+          url: "/unix-administration/concept_variables_available_in_the_task_scripts_for_backup_operation.html"
+        - title: リストア処理のタスクスクリプトで使用できる変数
+          url: "/unix-administration/concept_variables_available_in_custom_script_for_restore_operation.html"
+        - title: クローニング処理のタスクスクリプトで使用できる変数
+          url: "/unix-administration/concept_variables_available_in_the_task_scripts_for_clone_operation.html"
+        - title: カスタムスクリプトでのエラー処理
+          url: "/unix-administration/concept_error_handling_in_custom_scripts.html"
+      - title: サンプルのプラグインスクリプトの表示
+        url: "/unix-administration/task_viewing_sample_plugin_scripts.html"
+      - title: タスクスクリプトの作成
+        url: "/unix-administration/task_creating_task_scripts.html"
+      - title: タスクスクリプトの保存
+        url: "/unix-administration/task_storing_the_task_scripts.html"
+      - title: プラグインスクリプトのインストールの確認
+        url: "/unix-administration/task_verifying_installation_of_plugin_scripts.html"
+      - title: タスク仕様ファイルを作成しています
+        url: "/unix-administration/task_creating_a_task_specification_file.html"
+      - title: プリスクリプトとポストスクリプトを使用してバックアップ、リストア、クローニングの処理を実行する
+        url: "/unix-administration/task_performing_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html"
+    - title: プロファイルに関連付けられたストレージ・システム名およびターゲット・データベース・ホスト名を更新しています
+      url: "/unix-administration/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html"
+      entries:
+      - title: プロファイルに関連付けられたストレージ・システムの名前を更新する
+        url: "/unix-administration/task_updating_storage_system_name_associated_with_a_profile.html"
+      - title: プロファイルに関連付けられているストレージ・システムのリストの表示
+        url: "/unix-administration/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html"
+      - title: プロファイルに関連付けられたターゲット・データベースのホスト名を更新しています
+        url: "/unix-administration/task_updating_target_database_hostname_associated_with_a_profile.html"
+    - title: SnapManager 操作の履歴を保持する
+      url: "/unix-administration/concept_maintaining_history_of_snapmanager_operations.html"
+      entries:
+      - title: SnapManager 操作の履歴を設定しています
+        url: "/unix-administration/task_configuring_history_for_backup_operation.html"
+      - title: SnapManager 処理の履歴のリストを表示する
+        url: "/unix-administration/task_viewing_a_list_of_snapmanager_history_operation_as_a_report.html"
+      - title: プロファイルに関連付けられている特定の処理の詳細履歴を表示する
+        url: "/unix-administration/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
+      - title: SnapManager 処理の履歴を削除しています
+        url: "/unix-administration/task_purging_history_of_snapmanager_operation.html"
+      - title: 単一のプロファイルまたは複数のプロファイルに関連付けられている履歴設定を削除する
+        url: "/unix-administration/task_removing_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
+      - title: SnapManager の履歴の設定の詳細を表示する
+        url: "/unix-administration/task_viewing_snapmanger_history_operation_details.html"
+    - title: SnapManager for Oracle のコマンドリファレンスを参照してください
+      url: "/unix-administration/concept_snapmanager_for_oraclefor_sap_command_reference.html"
+      entries:
+      - title: smo _server restart コマンド
+        url: "/unix-administration/reference_the_smosmsap_server_restart_command.html"
+      - title: smo _server start コマンド
+        url: "/unix-administration/reference_the_smosmsap_server_start_command.html"
+      - title: smo _server status コマンド
+        url: "/unix-administration/reference_the_smosmsap_server_status_command.html"
+      - title: smo _server stop コマンド
+        url: "/unix-administration/reference_the_smosmsap_server_stop_command.html"
+      - title: smo backup create コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_create_command.html"
+      - title: smo backup delete コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_delete_command.html"
+      - title: smo backup free コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_free_command.html"
+      - title: smo backup list コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_list_command.html"
+      - title: smo backup mount コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_mount_command.html"
+      - title: smo backup restore コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_restore_command.html"
+      - title: smo backup show コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_show_command.html"
+      - title: smo backup unmount コマンドを使用します
+        url: "/unix-administration/reference_the_smosmsapbackup_unmount_command.html"
+      - title: smo backup update コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_update_command.html"
+      - title: smo backup verify コマンド
+        url: "/unix-administration/reference_the_smosmsapbackup_verify_command.html"
+      - title: smo clone create コマンド
+        url: "/unix-administration/reference_the_smosmsapclone_create_command.html"
+      - title: smo clone delete コマンド
+        url: "/unix-administration/reference_the_smosmsapclone_delete_command.html"
+      - title: smo clone list コマンド
+        url: "/unix-administration/reference_the_smosmsapclone_list_command.html"
+      - title: smo clone show コマンド
+        url: "/unix-administration/reference_the_smosmsapclone_show_command.html"
+      - title: smo clone template コマンド
+        url: "/unix-administration/reference_the_smosmsapclone_template_command.html"
+      - title: smo clone update コマンド
+        url: "/unix-administration/reference_the_smosmsap_clone_update_command.html"
+      - title: smo clone split -delete コマンド
+        url: "/unix-administration/reference_the_smosmsap_clone_split_delete_command.html"
+      - title: smo clone split -estimate コマンドを使用します
+        url: "/unix-administration/reference_the_smosmsap_clone_splitestimate_command.html"
+      - title: smo clone split コマンド
+        url: "/unix-administration/reference_the_smosmsap_clone_split_command.html"
+      - title: smo clone split -result コマンドを使用します
+        url: "/unix-administration/reference_the_smosmsap_clone_split_result_command.html"
+      - title: smo clone split -stop コマンド
+        url: "/unix-administration/reference_the_smosmsap_clone_stopsplit_command.html"
+      - title: smo clone split -status コマンドを使用します
+        url: "/unix-administration/reference_the_smosmsap_clone_splitstatus_command.html"
+      - title: smo clone detach コマンド
+        url: "/unix-administration/reference_the_smosmsap_clone_detach_command.html"
+      - title: smo cmdfile コマンド
+        url: "/unix-administration/reference_the_smosmsapcmdfile_command.html"
+      - title: smo credential clear コマンド
+        url: "/unix-administration/reference_the_smosmsapcredential_clear_command.html"
+      - title: smo credential delete コマンド
+        url: "/unix-administration/reference_the_smosmsapcredential_delete_command.html"
+      - title: smo credential list コマンド
+        url: "/unix-administration/reference_the_smosmsapcredential_list_command.html"
+      - title: smo credential set コマンドです
+        url: "/unix-administration/reference_the_smosmsapcredential_set_command.html"
+      - title: smo history list コマンド
+        url: "/unix-administration/reference_the_smosmsap_history_list_command.html"
+      - title: smo history operation-show コマンド
+        url: "/unix-administration/reference_the_smosmsap_history_operation_show_command.html"
+      - title: smo history purge コマンド
+        url: "/unix-administration/reference_the_smosmsap_history_purge_command.html"
+      - title: smo history remove コマンド
+        url: "/unix-administration/reference_the_smosmsap_history_remove_command.html"
+      - title: smo history set コマンド
+        url: "/unix-administration/reference_the_smosmsap_history_set_command.html"
+      - title: smo history show コマンド
+        url: "/unix-administration/reference_the_smo_smsap_history_show_command.html"
+      - title: smo help コマンド
+        url: "/unix-administration/reference_the_smosmsaphelp_command.html"
+      - title: smo notification remove-summary-notification コマンド
+        url: "/unix-administration/reference_the_smo_notification_removesummarynotification_command.html"
+      - title: smo notification update-summary-notification コマンド
+        url: "/unix-administration/reference_the_smosmsap_notification_updatesummarynotification_command.html"
+      - title: smo notification set コマンド
+        url: "/unix-administration/reference_the_smosmsap_notification_set_command.html"
+      - title: smo operation dump コマンド
+        url: "/unix-administration/reference_the_smosmsapoperation_dump_command.html"
+      - title: smo operation list コマンド
+        url: "/unix-administration/reference_the_smosmsapoperation_list_command.html"
+      - title: smo operation show コマンド
+        url: "/unix-administration/reference_the_smosmsap_operation_show_command.html"
+      - title: smo password reset コマンド
+        url: "/unix-administration/reference_the_smosmsap_password_reset_command.html"
+      - title: smo plugin check コマンド
+        url: "/unix-administration/reference_the_smosmsap_plugin_check_command.html"
+      - title: smo profile create コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_create_command.html"
+      - title: smo profile delete コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_delete_command.html"
+      - title: smo profile destroy コマンド
+        url: "/unix-administration/reference_the_smosmsap_profile_destroy_command.html"
+      - title: smo profile dump コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_dump_command.html"
+      - title: smo profile list コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_list_command.html"
+      - title: smo profile show コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_show_command.html"
+      - title: smo profile sync コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_sync_command.html"
+      - title: smo profile update コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_update_command.html"
+      - title: smo profile verify コマンド
+        url: "/unix-administration/reference_the_smosmsapprofile_verify_command.html"
+      - title: smo protection-policy コマンド
+        url: "/unix-administration/reference_the_smosmsapprotection_policy_command.html"
+      - title: smo repository create コマンド
+        url: "/unix-administration/reference_the_smosmsaprepository_create_command.html"
+      - title: smo repository delete コマンド
+        url: "/unix-administration/reference_the_smosmsaprepository_delete_command.html"
+      - title: smo repository rollback コマンド
+        url: "/unix-administration/reference_the_smosmsap_repository_rollingback_command.html"
+      - title: smo repository rollingupgrade コマンドは、次のようになります
+        url: "/unix-administration/reference_the_smosmsap_repository_rollingupgrade.html"
+      - title: smo repository show コマンド
+        url: "/unix-administration/reference_the_smosmsaprepository_show_command.html"
+      - title: smo repository update コマンド
+        url: "/unix-administration/reference_the_smosmsaprepository_update_command.html"
+      - title: smo schedule create コマンド
+        url: "/unix-administration/reference_the_smosmsap_schedule_create_command.html"
+      - title: smo schedule delete コマンド
+        url: "/unix-administration/reference_the_smosmsap_schedule_delete_command.html"
+      - title: smo schedule list コマンド
+        url: "/unix-administration/reference_the_smosmsap_schedule_list_command.html"
+      - title: smo schedule resume コマンド
+        url: "/unix-administration/reference_the_smosmsap_schedule_resume_command.html"
+      - title: smo schedule suspend コマンド
+        url: "/unix-administration/reference_the_smosmsap_schedule_suspend_command.html"
+      - title: smo schedule update コマンド
+        url: "/unix-administration/reference_the_smosmsap_schedule_update_command.html"
+      - title: smo storage list コマンド
+        url: "/unix-administration/reference_the_smosmsap_storage_list_command.html"
+      - title: smo storage rename コマンド
+        url: "/unix-administration/reference_the_smosmsap_storage_rename_command.html"
+      - title: smo system dump コマンド
+        url: "/unix-administration/reference_the_smosmsapsystem_dump_command.html"
+      - title: smo system verify コマンド
+        url: "/unix-administration/reference_the_smosmsapsystem_verify_command.html"
+      - title: smo version コマンド
+        url: "/unix-administration/reference_the_smosmsapversion_command.html"
+    - title: SnapManager のトラブルシューティング
+      url: "/unix-administration/reference_troubleshooting_snapmanager.html"
+      entries:
+      - title: ダンプ・ファイル
+        url: "/unix-administration/concept_dump_files.html"
+        entries:
+        - title: 処理レベルのダンプ・ファイルの作成
+          url: "/unix-administration/task_creating_operation_level_dump_files.html"
+        - title: プロファイルレベルのダンプ・ファイルの作成
+          url: "/unix-administration/task_creating_profile_level_dump_files.html"
+        - title: システムレベルのダンプファイルを作成しています
+          url: "/unix-administration/task_creating_system_level_dump_files.html"
+        - title: ダンプ・ファイルの検索方法
+          url: "/unix-administration/reference_how_to_locate_dump_files.html"
+        - title: ダンプ・ファイルの収集方法
+          url: "/unix-administration/concept_how_to_collect_dump_files.html"
+        - title: デバッグを容易にするために追加のログ情報を収集する
+          url: "/unix-administration/concept_collecting_additional_log_information_for_easier_debugging.html"
+      - title: クローニングの問題のトラブルシューティング
+        url: "/unix-administration/reference_troubleshooting_clone_issues.html"
+      - title: グラフィカルユーザインターフェイスの問題のトラブルシューティング
+        url: "/unix-administration/reference_troubleshooting_graphical_user_interface_issues.html"
+      - title: SnapDrive の問題のトラブルシューティング
+        url: "/unix-administration/reference_troubleshooting_snapdrive_issues.html"
+      - title: ストレージ・システムで問題名が変更された場合の
+        url: "/unix-administration/reference_troubleshooting_storage_system_renaming_issue.html"
+      - title: 既知の問題のトラブルシューティング
+        url: "/unix-administration/reference_troubleshooting_known_issues.html"
+      - title: NFS 環境で FlexClone ボリュームのマウントが失敗する
+        url: "/unix-administration/reference_mounting_a_flexclone_fails_in_nfs_environment.html"
+      - title: SnapManager で複数の並列処理を実行すると失敗します
+        url: "/unix-administration/reference_running_multiple_parallel_operations_fail_in_snapmanager.html"
+      - title: プロファイルが作成されていない RAC ノードの 1 つから RAC データベースをリストアできません
+        url: "/unix-administration/reference_unable_to_restore_rac_database_from_rac_node_where_the_profile_was_not_created.html"
+      - title: 詳細については、こちらを参照してください
+        url: "/unix-administration/reference_where_to_go_for_more_information.html"
+    - title: エラーメッセージの分類
+      url: "/unix-administration/reference_error_message_classifications.html"
+    - title: エラーメッセージ
+      url: "/unix-administration/reference_error_messages.html"
+  - title: Windows のインストールとセットアップ
+    url: "/windows/index.html"
+    entries:
+    - title: SnapManagerfor Oracle とは
+      url: "/windows/concept_what_snapmanager_for_oraclefor_sap_is.html"
+      entries:
+      - title: SnapManager for Oracle の機能
+        url: "/windows/concept_what_snapmanager_for_oraclesnapmanager_for_sap_does.html"
+      - title: 他のネットアップのアプリケーションやテクノロジとの統合
+        url: "/windows/concept_integration_with_other_netapp_applications_and_technologies.html"
+      - title: SnapManager を使用する利点
+        url: "/windows/concept_advantages_of_using_snapmanager.html"
+        entries:
+        - title: Snapshot コピーを使用してバックアップを作成する
+          url: "/windows/concept_create_backups_using_snapshot_copies.html"
+        - title: アーカイブログファイルの削除が必要な理由
+          url: "/windows/concept_why_you_should_prune_archive_log_files.html"
+        - title: アーカイブログの統合
+          url: "/windows/concept_archive_log_consolidation.html"
+        - title: データベースの完全リストアまたは部分リストア
+          url: "/windows/concept_full_or_partial_restoration_of_the_database.html"
+        - title: バックアップのステータスを確認
+          url: "/windows/concept_verify_backup_status.html"
+        - title: データベースバックアップクローン
+          url: "/windows/concept_clone_database_backups.html"
+        - title: 詳細を追跡し、レポートを作成します
+          url: "/windows/concept_track_details_and_produce_reports.html"
+      - title: SnapManager for Oracle のアーキテクチャとは
+        url: "/windows/concept_what_the_snapmanager_architecture_is.html"
+        entries:
+        - title: SnapManager ホスト
+          url: "/windows/concept_snapmanager_host.html"
+        - title: SnapManager のグラフィカルユーザインターフェイスとコマンドラインインターフェイス
+          url: "/windows/concept_snapmanager_graphical_user_and_command_line_interfaces.html"
+        - title: SnapManager リポジトリ
+          url: "/windows/concept_snapmanager_repository.html"
+        - title: SnapManager サーバの SnapDrive
+          url: "/windows/concept_snapdrive_on_snapmanager_server.html"
+      - title: リポジトリとは何ですか
+        url: "/windows/concept_what_repositories_are.html"
+      - title: プロファイルとは
+        url: "/windows/concept_what_profiles_are.html"
+      - title: SnapManager の動作状態
+        url: "/windows/concept_what_snapmanager_operation_states_are.html"
+      - title: SnapManager によるセキュリティの維持方法
+        url: "/windows/concept_snapmanager_security.html"
+      - title: オンラインヘルプへのアクセスと印刷
+        url: "/windows/task_accessing_and_printing_online_help.html"
+    - title: SnapManager for Oracle の導入に関する考慮事項
+      url: "/windows/concept_snapmanager_for_oracle_deployment_considerations.html"
+      entries:
+      - title: SnapManager を実行するための要件
+        url: "/windows/concept_requirements_for_running_snapmanager.html"
+        entries:
+        - title: サポートされているホストハードウェア
+          url: "/windows/concept_supported_host_hardware.html"
+        - title: サポートされている一般的な構成
+          url: "/windows/concept_supported_general_configurations.html"
+        - title: クラスタ構成
+          url: "/windows/concept_clustered_configurations.html"
+      - title: データベースバージョンのサポートと設定の概要
+        url: "/windows/concept_database_version_support_and_configuration_overview.html"
+        entries:
+        - title: 一般的なレイアウトと構成
+          url: "/windows/concept_general_layout_and_configuration.html"
+        - title: データベースボリュームのレイアウト例
+          url: "/windows/reference_sample_database_volume_layouts.html"
+      - title: SnapManager で作業する際の制限事項
+        url: "/windows/concept_limitations.html"
+      - title: Windows では、 SnapManager の機能と Oracle テクノロジはサポートされていません
+        url: "/windows/concept_snapmanager_features_and_oracle_technologies_not_supported_on_windows.html"
+      - title: clustered Data ONTAP での SnapManager の制限事項
+        url: "/windows/concept_snapmanger_limitations_for_clustered_data_ontap.html"
+      - title: Oracle データベースに関する制限事項
+        url: "/windows/concept_limitations_related_to_oracle_database.html"
+      - title: Oracle データベースの廃止されたバージョン
+        url: "/windows/concept_deprecated_versions_of_oracle_database.html"
+    - title: SnapManager for Oracle をインストールしています
+      url: "/windows/concept_installing_snapmanager_for_oracle.html"
+      entries:
+      - title: SnapManager for Oracle のインストールの準備をしています
+        url: "/windows/concept_preparing_to_install_snapmanager_for_oracle.html"
+        entries:
+        - title: インストール前のタスク
+          url: "/windows/concept_preinstallation_tasks.html"
+        - title: SnapManager for Oracle インストール・パッケージのダウンロード
+          url: "/windows/task_downloading_snapmanager_for_oracle_installation_package.html"
+      - title: SnapManager for Oracle をインストールしています
+        url: "/windows/task_installing_snapmanager_for_oracle.html"
+    - title: SnapManager のアップグレード
+      url: "/windows/concept_upgrading_snapmanager_for_oracle.html"
+      entries:
+      - title: SnapManager のアップグレード準備をしています
+        url: "/windows/concept_preparing_to_upgrade_snapmanager_for_oracle.html"
+      - title: SnapManager ホストをアップグレードする
+        url: "/windows/task_upgrading_snapmanager_for_oracle_hosts.html"
+      - title: アップグレード後の手順
+        url: "/windows/concept_post_upgrade_tasks.html"
+        entries:
+        - title: 既存のリポジトリを更新しています
+          url: "/windows/task_updating_the_existing_repository.html"
+        - title: バックアップ保持クラスを変更しています
+          url: "/windows/task_modifying_the_backup_retention_class.html"
+      - title: ローリングアップグレードを使用した SnapManager ホストのアップグレード
+        url: "/windows/concept_upgrading_snapmanager_hosts_by_using_rolling_upgrade.html"
+        entries:
+        - title: ローリングアップグレードを実行するための前提条件
+          url: "/windows/concept_prerequisites_for_performing_rolling_upgrade.html"
+        - title: 単一のホストまたは複数のホストでローリングアップグレードを実行する
+          url: "/windows/task_performing_rolling_upgrade_on_a_single_host_or_multiple_hosts.html"
+        - title: ロールバックとは
+          url: "/windows/concept_what_a_rollback_is.html"
+          entries:
+          - title: ロールバックの実行に関する制限事項
+            url: "/windows/concept_limitations_for_performing_a_rollback.html"
+          - title: ロールバックを実行するための前提条件
+            url: "/windows/concept_prerequisites_for_performing_a_rollback.html"
+          - title: 単一のホストまたは複数のホストでロールバックを実行する
+            url: "/windows/task_performing_a_rollback_on_a_single_host_or_multiple_hosts.html"
+          - title: ロールバック後のタスク
+            url: "/windows/task_post_rollback_tasks.html"
+    - title: SnapManager を設定しています
+      url: "/windows/concept_configuring_snapmanager_for_oraclesap.html"
+      entries:
+      - title: SnapManager の設定パラメータ
+        url: "/windows/reference_snapmanager_configuration_parameters.html"
+        entries:
+        - title: 設定パラメータを編集する
+          url: "/windows/task_editing_the_configuration_parameters.html"
+    - title: SnapManagerfor Oracle を起動しています
+      url: "/windows/task_starting_snapmanager_for_oraclefor_sap.html"
+      entries:
+      - title: バックアップする既存データベースを特定しています
+        url: "/windows/task_identifying_an_existing_database_to_backup.html"
+      - title: Oracle リスナーのステータスを確認する
+        url: "/windows/task_verifying_the_oracle_listener_status.html"
+      - title: リポジトリデータベース用の Oracle ユーザの作成
+        url: "/windows/task_creating_oracle_users_for_the_repository_database.html"
+      - title: ターゲットデータベースの Oracle ユーザを作成しています
+        url: "/windows/task_creating_an_oracle_user_for_the_target_database.html"
+      - title: SnapManager へのアクセス
+        url: "/windows/concept_accessing_snapmanager.html"
+        entries:
+        - title: SnapManager ホスト・サーバを起動しています
+          url: "/windows/task_starting_the_snapmanager_windows_host_server.html"
+          entries:
+          - title: SnapManager ホストサーバのステータスの確認
+            url: "/windows/task_verifying_the_snapmanager_windows_host_server_status.html"
+        - title: SnapManager コマンドを使用する
+          url: "/windows/task_using_snapmanager_commands.html"
+        - title: SnapManager GUI を起動しています
+          url: "/windows/task_starting_the_snapmanager_graphical_user_interface.html"
+        - title: Java Web Start を使用したグラフィカルユーザインターフェイスのダウンロードと起動
+          url: "/windows/task_downloading_and_starting_the_graphical_user_interface_using_java_web_start_windows.html"
+      - title: 環境の検証
+        url: "/windows/task_verifying_the_environment.html"
+        entries:
+        - title: SnapDrive for Windows を確認しています
+          url: "/windows/task_verifying_snapdrive_for_windows.html"
+      - title: リポジトリの作成
+        url: "/windows/task_creating_repositories.html"
+        entries:
+        - title: リポジトリを整理する方法
+          url: "/windows/concept_how_to_organize_repositories.html"
+      - title: 処理の実行順序
+        url: "/windows/task_order_of_performing_operations.html"
+    - title: セキュリティと資格情報の管理
+      url: "/windows/concept_managing_security_and_credentials.html"
+      entries:
+      - title: ユーザ認証とは
+        url: "/windows/concept_what_user_authentication_is.html"
+      - title: カスタムスクリプト用に暗号化されたパスワードを保存する
+        url: "/windows/task_storing_encrypted_passwords_for_custom_scripts.html"
+      - title: リポジトリへのアクセスを許可する
+        url: "/windows/task_authorizing_user_access_to_the_repository.html"
+      - title: プロファイルへのアクセスの許可
+        url: "/windows/task_authorizing_user_access_to_profiles.html"
+      - title: ユーザクレデンシャルの表示
+        url: "/windows/task_viewing_user_credentials.html"
+      - title: すべてのホスト、リポジトリ、およびプロファイルのユーザ・クレデンシャルの消去
+        url: "/windows/task_clearing_user_credentials_for_all_hosts_repositories_and_profiles.html"
+        entries:
+        - title: クレデンシャルキャッシュをクリアしたあとにクレデンシャルを設定
+          url: "/windows/task_setting_credentials_after_clearing_credential_cache.html"
+      - title: 個々のリソースのクレデンシャルを削除する
+        url: "/windows/task_deleting_credentials_for_individual_resources.html"
+        entries:
+        - title: リポジトリのユーザクレデンシャルを削除します
+          url: "/windows/task_deleting_user_credentials_for_repositories.html"
+        - title: ホストのユーザクレデンシャルを削除する
+          url: "/windows/task_deleting_user_credentials_for_hosts.html"
+        - title: プロファイルのユーザクレデンシャルを削除する
+          url: "/windows/task_deleting_user_credentials_for_profiles.html"
+    - title: 効率的なバックアップを行うためのプロファイルの管理
+      url: "/windows/concept_managing_profiles_for_efficient_backups.html"
+      entries:
+      - title: プロファイルの作成
+        url: "/windows/task_creating_profiles.html"
+      - title: Snapshot コピーの命名規則
+        url: "/windows/concept_snapshot_copy_naming.html"
+      - title: プロファイル名の変更
+        url: "/windows/task_renaming_profiles.html"
+      - title: プロファイルのパスワードを変更する
+        url: "/windows/task_changing_profile_passwords.html"
+      - title: プロファイルパスワードをリセットしています
+        url: "/windows/task_resetting_profile_password.html"
+      - title: プロファイルへのアクセスの許可
+        url: "/windows/task_authorizing_user_access_to_profiles.html"
+      - title: プロファイルの検証
+        url: "/windows/task_verifying_profiles.html"
+      - title: プロファイルの更新
+        url: "/windows/task_updating_profiles.html"
+      - title: プロファイルの削除
+        url: "/windows/task_deleting_profiles.html"
+    - title: データベースをバックアップしています
+      url: "/windows/concept_database_backup_management.html"
+      entries:
+      - title: SnapManager データベースバックアップとは
+        url: "/windows/concept_what_snapmanager_database_backups_are.html"
+      - title: フル・バックアップおよびパーシャル・バックアップとは
+        url: "/windows/concept_what_full_and_partial_backups_are.html"
+        entries:
+        - title: バックアップのタイプおよび Snapshot コピーの数
+          url: "/windows/concept_backup_types_and_the_number_of_snapshot_copies.html"
+        - title: フルオンラインバックアップ
+          url: "/windows/concept_full_online_backups.html"
+        - title: パーシャル・オンライン・バックアップ
+          url: "/windows/concept_partial_online_backups.html"
+        - title: バックアップ、リストア、リカバリ処理の例
+          url: "/windows/reference_examples_of_backup_restore_and_recover_operations.html"
+      - title: 制御ファイルおよびアーカイブログファイルの処理について
+        url: "/windows/concept_about_control_file_and_archive_log_file_handling.html"
+      - title: データベースバックアップのスケジュールとは
+        url: "/windows/concept_what_database_backup_scheduling_is.html"
+      - title: データベースバックアップを作成しています
+        url: "/windows/task_creating_database_backups.html"
+        entries:
+        - title: アーカイブ・ログ・ファイルの削除
+          url: "/windows/task_pruning_archive_log_files.html"
+        - title: アーカイブログバックアップの統合
+          url: "/windows/task_consolidating_archive_log_backups.html"
+        - title: アーカイブ・ログ・ファイルの削除のスケジュール設定
+          url: "/windows/task_scheduling_archive_log_file_pruning.html"
+      - title: AutoSupport とは
+        url: "/windows/concept_what_autosupport_is.html"
+        entries:
+        - title: clustered Data ONTAP で動作しているストレージシステムを SnapManager サーバホストに追加する
+          url: "/windows/task_adding_storage_systems_to_the_snapmanager_server_host.html"
+        - title: SnapManager での AutoSupport の有効化
+          url: "/windows/task_enabling_autosupport_in_snapmanager.html"
+        - title: SnapManager で AutoSupport を無効にします
+          url: "/windows/task_disabling_autosupport_in_snapmanager.html"
+      - title: データベースのバックアップの検証
+        url: "/windows/task_verifying_database_backups.html"
+      - title: バックアップ保持ポリシーを変更する
+        url: "/windows/task_changing_the_backup_retention_policy.html"
+        entries:
+        - title: バックアップを無期限に保持
+          url: "/windows/task_retaining_backups_forever.html"
+        - title: 特定の保持クラスを持つバックアップを割り当てています
+          url: "/windows/task_assigning_backups_with_a_specific_retention_class.html"
+        - title: 保持ポリシーのデフォルト動作を変更する
+          url: "/windows/task_changing_the_retention_policy_default_behavior.html"
+        - title: 保持ポリシー適用除外バックアップの解放または削除
+          url: "/windows/task_freeing_or_deleting_retention_policy_exempt_backups.html"
+      - title: バックアップのリストを表示します
+        url: "/windows/task_viewing_a_list_of_backups.html"
+      - title: バックアップの詳細を表示しています
+        url: "/windows/task_viewing_backup_details.html"
+      - title: バックアップのマウント
+        url: "/windows/task_mounting_backups.html"
+      - title: バックアップのアンマウント
+        url: "/windows/task_unmounting_backups.html"
+      - title: バックアップの解放
+        url: "/windows/task_freeing_backups.html"
+      - title: バックアップを削除する
+        url: "/windows/task_deleting_backups.html"
+    - title: データベースのバックアップをスケジュール設定する
+      url: "/windows/concept_scheduling_database_backups.html"
+      entries:
+      - title: バックアップスケジュールを作成しています
+        url: "/windows/task_creating_backup_schedules.html"
+      - title: バックアップスケジュールを更新しています
+        url: "/windows/task_updating_a_backup_schedule.html"
+      - title: スケジュールされた処理のリストを表示します
+        url: "/windows/task_viewing_a_list_of_scheduled_operations.html"
+      - title: バックアップスケジュールを一時停止する
+        url: "/windows/task_suspending_backup_schedules.html"
+      - title: バックアップスケジュールを再開しています
+        url: "/windows/task_resuming_backup_schedules.html"
+      - title: バックアップスケジュールを削除しています
+        url: "/windows/task_deleting_backup_schedules.html"
+    - title: データベースバックアップのリストア
+      url: "/windows/concept_restoring_database_backup.html"
+      entries:
+      - title: データベースリストアとは
+        url: "/windows/concept_what_database_restore_is.html"
+        entries:
+        - title: バックアップリカバリ
+          url: "/windows/concept_backup_recovery.html"
+        - title: リストアプロセスに必要なデータベースの状態
+          url: "/windows/concept_database_state_needed_for_restore_process.html"
+        - title: リストアプレビュープランとは
+          url: "/windows/concept_restore_preview_plans.html"
+      - title: バックアップリストア情報をプレビューしています
+        url: "/windows/task_previewing_backup_restore_information.html"
+      - title: プライマリストレージでのバックアップのリストア
+        url: "/windows/task_restoring_backups_on_primary_storage.html"
+      - title: Oracle Recovery Manager （ RMAN ）を使用したブロックレベル・リカバリの実行
+        url: "/windows/task_performing_block_level_recovery_with_rman.html"
+      - title: 別の場所からファイルをリストアする
+        url: "/windows/concept_restore_files_from_an_alternate_location.html"
+        entries:
+        - title: 代替保存場所からのバックアップのリストアの概要
+          url: "/windows/concept_restore_backups_from_an_alternate_location_overview.html"
+          entries:
+          - title: ファイルからのデータのリストア
+            url: "/windows/concept_restoration_of_the_data_from_files.html"
+          - title: ファイルシステムからのデータのリストア
+            url: "/windows/concept_restoration_of_the_data_from_file_systems.html"
+        - title: リストア仕様を作成しています
+          url: "/windows/task_creating_restore_specifications.html"
+        - title: 別の場所からのバックアップのリストア
+          url: "/windows/task_restoring_backups_from_an_alternate_location.html"
+    - title: データベースバックアップをクローニングしています
+      url: "/windows/concept_cloning_database_backup.html"
+      entries:
+      - title: クローニングとは
+        url: "/windows/concept_what_cloning_is.html"
+      - title: クローニングの方法
+        url: "/windows/concept_cloning_methods.html"
+      - title: クローン仕様を作成しています
+        url: "/windows/task_creating_clone_specifications.html"
+        entries:
+        - title: データベースのクローニングおよびカスタムプラグインスクリプトの使用
+          url: "/windows/task_cloning_databases_and_using_custom_plugin_scripts.html"
+      - title: バックアップからデータベースをクローニングする
+        url: "/windows/task_cloning_databases_from_backups.html"
+      - title: 現在の状態のデータベースをクローニングしています
+        url: "/windows/task_cloning_databases_in_the_current_state.html"
+      - title: resetlogs を実行しないでデータベースバックアップをクローニングする
+        url: "/windows/task_cloning_database_backups_without_resetlogs.html"
+      - title: 代替ホストにデータベースをクローニングする場合の考慮事項
+        url: "/windows/concept_considerations_for_cloning_a_database_to_an_alternate_host.html"
+        entries:
+        - title: 代替ホストへのデータベースのクローニング
+          url: "/windows/task_cloning_a_database_to_an_alternate_host.html"
+      - title: クローンのリストを表示しています
+        url: "/windows/task_viewing_a_list_of_clones.html"
+      - title: クローンの詳細情報を表示します
+        url: "/windows/task_viewing_detailed_clone_information.html"
+      - title: クローンを削除します
+        url: "/windows/task_deleting_clones.html"
+    - title: SnapManager でのデータ保護の概要
+      url: "/windows/concept_introduction_to_data_protection_in_snapmanager.html"
+      entries:
+      - title: SnapManager がローカルストレージ上にバックアップを保持する方法
+        url: "/windows/concept_how_snapmanager_retains_backups_on_the_local_storage.html"
+      - title: データ保護を実行する場合の考慮事項
+        url: "/windows/concept_prerequisites_for_data_protection.html"
+        entries:
+        - title: SnapManager でのデータ保護に必要なライセンス
+          url: "/windows/concept_licenses_required_for_data_protection.html"
+      - title: ポストスクリプトを使用したデータベースバックアップの保護
+        url: "/windows/concept_protecting_database_backups_by_using_post_scripts.html"
+        entries:
+        - title: ポストスクリプトの例
+          url: "/windows/reference_sample_post_scripts.html"
+        - title: ポストスクリプトの作成または更新
+          url: "/windows/task_creating_or_updating_post_scripts.html"
+          entries:
+          - title: 後処理のタスク仕様ファイルを作成しています
+            url: "/windows/task_creating_post_processing_task_specification_file.html"
+            entries:
+            - title: ポストプロセスタスク仕様を使用してボリュームをミラーリング
+              url: "/windows/task_using_post-processing_task_specification_to_mirror_volumes.html"
+            - title: ポストプロセスタスク仕様を使用して qtree をバックアップする
+              url: "/windows/task_using_post_processing_task_specification_to_vault_qtrees.html"
+    - title: 管理処理を実行しています
+      url: "/windows/concept_performing_management_operations.html"
+      entries:
+      - title: 処理のリストを表示する
+        url: "/windows/task_viewing_a_list_of_operations.html"
+      - title: 処理の詳細を表示しています
+        url: "/windows/task_viewing_operation_details.html"
+      - title: 代替ホストからのコマンドの実行
+        url: "/windows/task_issuing_commands_from_an_alternate_host.html"
+      - title: SnapManager ソフトウェアのバージョンを確認しています
+        url: "/windows/task_checking_the_snapmanager_software_version.html"
+      - title: SnapManager ホストサーバを停止します
+        url: "/windows/task_stopping_the_snapmanager_host_server.html"
+      - title: SnapManager ホストサーバを再起動しています
+        url: "/windows/task_restarting_the_snapmanager_windows_host_server.html"
+      - title: SnapManager をアンインストールします
+        url: "/windows/task_uninstalling_the_software_from_a_windows_host.html"
+    - title: E メール通知の設定
+      url: "/windows/concept_configuring_e_mail_notification.html"
+      entries:
+      - title: リポジトリのメールサーバを設定する
+        url: "/windows/task_configuring_mail_server_for_a_repository.html"
+      - title: 新しいプロファイルの E メール通知を設定しています
+        url: "/windows/task_configuring_e_mail_notification_for_a_new_profile.html"
+        entries:
+        - title: 新しいプロファイルの電子メールの件名をカスタマイズする
+          url: "/windows/task_customizing_e_mail_subject_for_a_new_profile.html"
+      - title: 既存のプロファイルの E メール通知を設定する
+        url: "/windows/task_configuring_e_mail_notification_for_an_existing_profile.html"
+        entries:
+        - title: 既存のプロファイルの電子メールの件名をカスタマイズする
+          url: "/windows/task_customizing_the_email_subject_for_an_existing_profile.html"
+      - title: 複数のプロファイルに関するサマリー E メール通知の設定
+        url: "/windows/task_configuring_summary_e_mail_notification_for_multiple_profiles.html"
+      - title: 概要 E メール通知に新しいプロファイルを追加します
+        url: "/windows/task_adding_new_profile_to_summary_notification.html"
+      - title: サマリー E メール通知に既存のプロファイルを追加する
+        url: "/windows/task_adding_existing_profile_to_summary_notification.html"
+      - title: 複数のプロファイルの E メール通知を無効にする
+        url: "/windows/task_disabling_email_notification_for_multiple_profiles.html"
+    - title: SnapManager 処理用のタスク仕様ファイルおよびスクリプトの作成
+      url: "/windows/concept_creating_task_specification_file_and_scripts_for_snapmanager_operations.html"
+      entries:
+      - title: プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成
+        url: "/windows/task_creating_pretask_post_task_and_policy_scripts.html"
+        entries:
+        - title: タスクスクリプト内の操作
+          url: "/windows/concept_operations_in_task_scripts.html"
+        - title: バックアップ処理のタスクスクリプトで使用できる変数
+          url: "/windows/concept_variables_available_in_the_task_scripts_for_backup_operation.html"
+        - title: リストア処理のタスクスクリプトで使用できる変数
+          url: "/windows/concept_variables_available_in_custom_script_for_restore_operation.html"
+        - title: クローニング処理のタスクスクリプトで使用できる変数
+          url: "/windows/concept_variables_available_in_the_task_scripts_for_clone_operation.html"
+        - title: カスタムスクリプトでのエラー処理
+          url: "/windows/concept_error_handling_in_custom_scripts.html"
+      - title: サンプルのプラグインスクリプトの表示
+        url: "/windows/task_viewing_sample_plugin_scripts.html"
+      - title: タスクスクリプトの作成
+        url: "/windows/task_creating_task_scripts.html"
+      - title: タスクスクリプトの保存
+        url: "/windows/task_storing_the_task_scripts.html"
+      - title: プラグインスクリプトのインストールの確認
+        url: "/windows/task_verifying_installation_of_plugin_scripts.html"
+      - title: タスク仕様ファイルを作成しています
+        url: "/windows/task_creating_a_task_specification_file.html"
+      - title: プリスクリプトとポストスクリプトを使用してバックアップ、リストア、クローニングの処理を実行する
+        url: "/windows/task_performing_backup_restore_and_clone_operations_using_prescript_and_post_scripts.html"
+    - title: プロファイルに関連付けられたストレージ・システム名およびターゲット・データベース・ホスト名を更新しています
+      url: "/windows/concept_updating_storage_controller_name_and_database_hostname_associated_with_a_profile.html"
+      entries:
+      - title: プロファイルに関連付けられたストレージ・システムの名前を更新する
+        url: "/windows/task_updating_storage_system_name_associated_with_a_profile.html"
+      - title: プロファイルに関連付けられているストレージ・システムのリストの表示
+        url: "/windows/task_viewing_a_list_of_storage_controllers_associated_with_a_profile.html"
+      - title: プロファイルに関連付けられたターゲット・データベースのホスト名を更新しています
+        url: "/windows/task_updating_target_database_hostname_associated_with_a_profile.html"
+    - title: SnapManager 操作の履歴を保持する
+      url: "/windows/concept_maintaining_history_of_snapmanager_operations.html"
+      entries:
+      - title: SnapManager 操作の履歴を設定しています
+        url: "/windows/task_configuring_history_for_backup_operation.html"
+      - title: SnapManager 処理の履歴のリストを表示する
+        url: "/windows/task_viewing_a_list_of_snapmanager_history_operation_as_a_report.html"
+      - title: プロファイルに関連付けられている特定の処理の詳細履歴を表示する
+        url: "/windows/task_viewing_the_detailed_history_of_a_specific_operation_associated_with_a_profile.html"
+      - title: SnapManager 処理の履歴を削除しています
+        url: "/windows/task_purging_history_of_snapmanager_operation.html"
+      - title: 単一のプロファイルまたは複数のプロファイルに関連付けられている履歴設定を削除する
+        url: "/windows/task_removing_history_configuration_associated_with_a_single_profile_or_multiple_profiles.html"
+      - title: SnapManager の履歴の設定の詳細を表示する
+        url: "/windows/task_viewing_snapmanger_history_operation_details.html"
+    - title: SnapManager for Oracle のコマンドリファレンスを参照してください
+      url: "/windows/concept_snapmanager_for_oraclefor_sap_command_reference.html"
+      entries:
+      - title: smo _server restart コマンド
+        url: "/windows/reference_the_smosmsap_server_restart_command.html"
+      - title: smo _server start コマンド
+        url: "/windows/reference_the_smosmsap_server_start_command.html"
+      - title: smo _server status コマンド
+        url: "/windows/reference_the_smosmsap_server_status_command.html"
+      - title: smo _server stop コマンド
+        url: "/windows/reference_the_smosmsap_server_stop_command.html"
+      - title: smo backup create コマンド
+        url: "/windows/reference_the_smosmsapbackup_create_command.html"
+      - title: smo backup delete コマンド
+        url: "/windows/reference_the_smosmsapbackup_delete_command.html"
+      - title: smo backup free コマンド
+        url: "/windows/reference_the_smosmsapbackup_free_command.html"
+      - title: smo backup list コマンド
+        url: "/windows/reference_the_smosmsapbackup_list_command.html"
+      - title: smo backup mount コマンド
+        url: "/windows/reference_the_smosmsapbackup_mount_command.html"
+      - title: smo backup restore コマンド
+        url: "/windows/reference_the_smosmsapbackup_restore_command.html"
+      - title: smo backup show コマンド
+        url: "/windows/reference_the_smosmsapbackup_show_command.html"
+      - title: smo backup unmount コマンドを使用します
+        url: "/windows/reference_the_smosmsapbackup_unmount_command.html"
+      - title: smo backup update コマンド
+        url: "/windows/reference_the_smosmsapbackup_update_command.html"
+      - title: smo backup verify コマンド
+        url: "/windows/reference_the_smosmsapbackup_verify_command.html"
+      - title: smo clone create コマンド
+        url: "/windows/reference_the_smosmsapclone_create_command.html"
+      - title: smo clone delete コマンド
+        url: "/windows/reference_the_smosmsapclone_delete_command.html"
+      - title: smo clone list コマンド
+        url: "/windows/reference_the_smosmsapclone_list_command.html"
+      - title: smo clone show コマンド
+        url: "/windows/reference_the_smosmsapclone_show_command.html"
+      - title: smo clone template コマンド
+        url: "/windows/reference_the_smosmsapclone_template_command.html"
+      - title: smo clone update コマンド
+        url: "/windows/reference_the_smosmsap_clone_update_command.html"
+      - title: smo clone detach コマンド
+        url: "/windows/reference_the_smosmsap_clone_detach_command.html"
+      - title: smo cmdfile コマンド
+        url: "/windows/reference_the_smosmsapcmdfile_command.html"
+      - title: smo credential clear コマンド
+        url: "/windows/reference_the_smosmsapcredential_clear_command.html"
+      - title: smo credential delete コマンド
+        url: "/windows/reference_the_smosmsapcredential_delete_command.html"
+      - title: smo credential list コマンド
+        url: "/windows/reference_the_smosmsapcredential_list_command.html"
+      - title: smo credential set コマンドです
+        url: "/windows/reference_the_smosmsapcredential_set_command.html"
+      - title: smo history list コマンド
+        url: "/windows/reference_the_smosmsap_history_list_command.html"
+      - title: smo history operation-show コマンド
+        url: "/windows/reference_the_smosmsap_history_operation_show_command.html"
+      - title: smo history purge コマンド
+        url: "/windows/reference_the_smosmsap_history_purge_command.html"
+      - title: smo history remove コマンド
+        url: "/windows/reference_the_smosmsap_history_remove_command.html"
+      - title: smo history set コマンド
+        url: "/windows/reference_the_smosmsap_history_set_command.html"
+      - title: smo history show コマンド
+        url: "/windows/reference_the_smo_smsap_history_show_command.html"
+      - title: smo help コマンド
+        url: "/windows/reference_the_smosmsaphelp_command.html"
+      - title: smo notification remove-summary-notification コマンド
+        url: "/windows/reference_the_smo_notification_removesummarynotification_command.html"
+      - title: smo notification update-summary-notification コマンド
+        url: "/windows/reference_the_smosmsap_notification_updatesummarynotification_command.html"
+      - title: smo notification set コマンド
+        url: "/windows/reference_the_smosmsap_notification_set_command.html"
+      - title: smo operation dump コマンド
+        url: "/windows/reference_the_smosmsapoperation_dump_command.html"
+      - title: smo operation list コマンド
+        url: "/windows/reference_the_smosmsapoperation_list_command.html"
+      - title: smo operation show コマンド
+        url: "/windows/reference_the_smosmsap_operation_show_command.html"
+      - title: smo password reset コマンド
+        url: "/windows/reference_the_smosmsap_password_reset_command.html"
+      - title: smo profile create コマンド
+        url: "/windows/reference_the_smosmsapprofile_create_command.html"
+      - title: smo profile delete コマンド
+        url: "/windows/reference_the_smosmsapprofile_delete_command.html"
+      - title: smo profile dump コマンド
+        url: "/windows/reference_the_smosmsapprofile_dump_command.html"
+      - title: smo profile list コマンド
+        url: "/windows/reference_the_smosmsapprofile_list_command.html"
+      - title: smo profile show コマンド
+        url: "/windows/reference_the_smosmsapprofile_show_command.html"
+      - title: smo profile sync コマンド
+        url: "/windows/reference_the_smosmsapprofile_sync_command.html"
+      - title: smo profile update コマンド
+        url: "/windows/reference_the_smosmsapprofile_update_command.html"
+      - title: smo profile verify コマンド
+        url: "/windows/reference_the_smosmsapprofile_verify_command.html"
+      - title: smo repository create コマンド
+        url: "/windows/reference_the_smosmsaprepository_create_command.html"
+      - title: smo repository delete コマンド
+        url: "/windows/reference_the_smosmsaprepository_delete_command.html"
+      - title: smo repository rollback コマンド
+        url: "/windows/reference_the_smosmsap_repository_rollingback_command.html"
+      - title: smo repository rollingupgrade コマンドは、次のようになります
+        url: "/windows/reference_the_smosmsap_repository_rollingupgrade.html"
+      - title: smo repository show コマンド
+        url: "/windows/reference_the_smosmsaprepository_show_command.html"
+      - title: smo repository update コマンド
+        url: "/windows/reference_the_smosmsaprepository_update_command.html"
+      - title: smo schedule create コマンド
+        url: "/windows/reference_the_smosmsap_schedule_create_command.html"
+      - title: smo schedule delete コマンド
+        url: "/windows/reference_the_smosmsap_schedule_delete_command.html"
+      - title: smo schedule list コマンド
+        url: "/windows/reference_the_smosmsap_schedule_list_command.html"
+      - title: smo schedule resume コマンド
+        url: "/windows/reference_the_smosmsap_schedule_resume_command.html"
+      - title: smo schedule suspend コマンド
+        url: "/windows/reference_the_smosmsap_schedule_suspend_command.html"
+      - title: smo schedule update コマンド
+        url: "/windows/reference_the_smosmsap_schedule_update_command.html"
+      - title: smo storage list コマンド
+        url: "/windows/reference_the_smosmsap_storage_list_command.html"
+      - title: smo storage rename コマンド
+        url: "/windows/reference_the_smosmsap_storage_rename_command.html"
+      - title: smo system dump コマンド
+        url: "/windows/reference_the_smosmsapsystem_dump_command.html"
+      - title: smo system verify コマンド
+        url: "/windows/reference_the_smosmsapsystem_verify_command.html"
+      - title: smo version コマンド
+        url: "/windows/reference_the_smosmsapversion_command.html"
+    - title: SnapManager のトラブルシューティング
+      url: "/windows/reference_troubleshooting_snapmanager.html"
+      entries:
+      - title: ダンプ・ファイル
+        url: "/windows/concept_dump_files.html"
+        entries:
+        - title: 処理レベルのダンプ・ファイルの作成
+          url: "/windows/task_creating_operation_level_dump_files.html"
+        - title: プロファイルレベルのダンプ・ファイルの作成
+          url: "/windows/task_creating_profile_level_dump_files.html"
+        - title: システムレベルのダンプファイルを作成しています
+          url: "/windows/task_creating_system_level_dump_files.html"
+        - title: ダンプ・ファイルの検索方法
+          url: "/windows/reference_how_to_locate_dump_files.html"
+        - title: ダンプ・ファイルの収集方法
+          url: "/windows/concept_how_to_collect_dump_files.html"
+        - title: デバッグを容易にするために追加のログ情報を収集する
+          url: "/windows/concept_collecting_additional_log_information_for_easier_debugging.html"
+      - title: クローニングの問題のトラブルシューティング
+        url: "/windows/reference_troubleshooting_clone_issues.html"
+      - title: グラフィカルユーザインターフェイスの問題のトラブルシューティング
+        url: "/windows/reference_troubleshooting_graphical_user_interface_issues.html"
+      - title: 既知の問題のトラブルシューティング
+        url: "/windows/reference_troubleshooting_known_issues.html"
+      - title: SnapManager で複数の並列処理を実行すると失敗します
+        url: "/windows/reference_running_multiple_parallel_operations_fail_in_snapmanager.html"
+      - title: プロファイルが作成されていない RAC ノードの 1 つから RAC データベースをリストアできません
+        url: "/windows/reference_unable_to_restore_rac_database_from_rac_node_where_the_profile_was_not_created.html"
+      - title: 詳細については、こちらを参照してください
+        url: "/windows/reference_where_to_go_for_more_information.html"
+    - title: エラーメッセージの分類
+      url: "/windows/reference_error_message_classifications.html"
+    - title: エラーメッセージ
+      url: "/windows/reference_error_messages.html"
+  - title: 法的通知
+    url: "/reference_legal_notices.html"

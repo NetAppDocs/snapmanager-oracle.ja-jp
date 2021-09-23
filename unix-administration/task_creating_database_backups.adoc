@@ -155,9 +155,7 @@ auto オプションを指定します。このオプションを使用する場
  a| 
 * 特定のファイルのパーシャル・バックアップを実行するかどうかを指定します *
  a| 
-....
-Specify the -data-files option and then list the files, separated by commas. For example, list the file names f1, f2, and f3 after the option.
-....
+ Specify the -data-files option and then list the files, separated by commas. For example, list the file names f1, f2, and f3 after the option.
 + UNIX 上に部分的なデータファイルバックアップを作成する例
 
 [+]
@@ -173,9 +171,7 @@ smo backup create -profile nosep -data -files /user/user.dbf -online
  a| 
 * 特定の表領域のパーシャル・バックアップを実行するかどうかを指定します。 *
  a| 
-....
-Specify the -data-tablespaces option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
-....
+ Specify the -data-tablespaces option and then list the tablespaces, separated by commas. For example, use ts1, ts2, and ts3 after the option.
 + SnapManager では、読み取り専用表領域のバックアップがサポートされます。バックアップの作成時に、 SnapManager は読み取り専用テーブルスペースを読み取り / 書き込みに変更します。バックアップの作成後、表領域は読み取り専用に変更されます。
 
 + 例：パーシャル・テーブルスペース・バックアップを作成します
@@ -192,9 +188,7 @@ Specify the -data-tablespaces option and then list the tablespaces, separated by
  a| 
 * 各バックアップに一意のラベルを作成するかどうかを full_hot_mybackup_label * という形式で指定します
  a| 
-....
-For Linux, you might enter this example:
-....
+ For Linux, you might enter this example:
 [+]
 
 [listing]
@@ -208,9 +202,7 @@ For Linux, you might enter this example:
  a| 
 * アーカイブ・ログ・ファイルのバックアップを ' データ・ファイルとは別に作成するかどうかを指定します *
  a| 
-....
-Specify the following options and variables:
-....
+ Specify the following options and variables:
 ** -archivelog アーカイブ・ログ・ファイルのバックアップを作成します
 ** -backup-dest では、バックアップするアーカイブ・ログ・ファイルのデスティネーションを指定します。
 ** -exclude-dest には、除外するアーカイブログのデスティネーションを指定します。
@@ -235,9 +227,7 @@ smo backup create -profile nosep -archivelogs -backup-dest /mnt/archive_dest_2/ 
  a| 
 * データ・ファイルとアーカイブ・ログ・ファイルのバックアップを一緒に作成するかどうかを指定します *
  a| 
-....
-Specify the following options and variables:
-....
+ Specify the following options and variables:
 ** データ・ファイルを指定する DATA オプション
 ** -archivelog オプションを使用してアーカイブ・ログ・ファイルを指定しますUNIX でのデータ・ファイルとアーカイブ・ログ・ファイルのバックアップ例
 +
@@ -254,9 +244,7 @@ smo backup create -profile nosep -data -online -archivelogs -backup-dest  mnt/ar
  a| 
 * バックアップ作成時にアーカイブ・ログ・ファイルのプルーニングを実行するかどうかを指定します *
  a| 
-....
-Specify the following options and variables:
-....
+ Specify the following options and variables:
 ** -prunelogs ：アーカイブログのデスティネーションからアーカイブログファイルを削除するように指定します
 +
 *** -all は、アーカイブログデスティネーションからすべてのアーカイブログファイルを削除するように指定します。

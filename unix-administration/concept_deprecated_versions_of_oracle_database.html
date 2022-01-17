@@ -157,7 +157,12 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
+  <script src='/ja-jp/snapmanager-oracle/js/version-dropdown.js'></script>
   <script src='/ja-jp/snapmanager-oracle/js/product-family.js'></script>
+  <script src='/ja-jp/snapmanager-oracle/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/snapmanager-oracle/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/snapmanager-oracle/js/jszip.min.js'></script>
+  <script src='/ja-jp/snapmanager-oracle/js/pdf-ux.js'></script>
 </head>
 
 
@@ -273,9 +278,6 @@
       </div>
       <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
         <div class="n-language-selector-menu">
-          <div class="n-language-selector-menu__header">
-            <span class="n-language-selector-menu__title">言語を選択</span>
-          </div>
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
@@ -287,10 +289,6 @@
                 </li></ul>
             </li>
           </ul>
-          <div class="menu__footer">
-            <p>選択中の言語: 日本語
-            </p>
-          </div>
         </div>
       </div>
     </div><!-- End Language Selector -->
@@ -327,31 +325,6 @@
   <!-- End property bar -->
 </header>
 
-        <div class="ie-utility">
-  <div class="ie-menu">
-    <div class="n-breadcrumb">
-      <ul class="n-breadcrumb__list">
-        <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">ホーム</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">ドキュメント</a>
-        </li>
-        
-
-        <li class="n-breadcrumb__list-item">
-          <a href="/ja-jp/snapmanager-oracle/">SnapManager&nbsp;Oracle</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          Oracle データベースの廃止されたバージョン
-        </li>
-      </ul>
-    </div>
-
-    <div style="clear: both"></div><!-- Main needs to have height -->
-  </div>
-</div>
-
 
         <main id="n-main-content" class="n-main-content">
           <!-- Start Documentation Content -->
@@ -360,68 +333,51 @@
   
   <div class="col-md-3" >
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDF<span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">サイト</span>
-    </div>
-    <li>
-      <a target="_blank" href="/ja-jp/snapmanager-oracle/pdfs/fullsite-sidebar/Oracle_用_SnapManager_3_4_2.pdf" >
-        <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
-        Oracle 用 SnapManager 3.4.2
-      </a>
-    </li>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ja-jp/snapmanager-oracle/pdfs/fullsite-sidebar/Oracle_用_SnapManager_3_4_2.pdf" >
+          <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
 
 
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/UNIX_for_clustered_Data_ONTAP_のインストールとセットアップ.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             UNIX for clustered Data ONTAP のインストールとセットアップ
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/製品の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             製品の概要
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -431,33 +387,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/導入の準備.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             導入の準備
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -465,35 +417,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースを設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースを設定しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -503,31 +451,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_をセットアップしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager をセットアップしています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -535,31 +479,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapMirror_レプリケーションと_SnapVault_レプリケーションのためのストレージシステムの準備.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムの準備
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -567,37 +507,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースのバックアップと検証.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースのバックアップと検証
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -606,10 +542,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -617,49 +552,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/7_Mode_での_UNIX_for_Data_ONTAP_のインストールとセットアップ.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             7-Mode での UNIX for Data ONTAP のインストールとセットアップ
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/製品の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             製品の概要
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -669,33 +591,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/導入の準備.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             導入の準備
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -703,35 +621,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースを設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースを設定しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -741,31 +655,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_をセットアップしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager をセットアップしています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -773,37 +683,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースのバックアップと検証.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースのバックアップと検証
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -812,10 +718,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -823,41 +728,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/UNIX_の管理.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             UNIX の管理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/製品の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             製品の概要
           </a>
-        </li>
-        <span>
           
 
 
@@ -885,19 +778,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/一般的なデータベースレイアウトとストレージ構成を推奨します.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             一般的なデータベースレイアウトとストレージ構成を推奨します
           </a>
-        </li>
-        <span>
           
 
 
@@ -911,19 +801,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ASMLib_のない_ASM_データベースのサポート.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ASMLib のない ASM データベースのサポート
           </a>
-        </li>
-        <span>
           
 
 
@@ -931,29 +818,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/スクリプトの導入と実行.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             スクリプトの導入と実行
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -962,10 +845,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -976,10 +858,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -987,80 +868,67 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_で作業する際の制限事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager で作業する際の制限事項
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/Oracle_データベースに関する制限事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             Oracle データベースに関する制限事項
           </a>
-        </li>
-        <span>
           
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">このページ</span>
-</div>
-
-<li class="active">
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/ja-jp/snapmanager-oracle/pdfs/pages/unix-administration/concept_deprecated_versions_of_oracle_database.pdf" >
-    <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
-    Oracle データベースの廃止されたバージョン
+    <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
-
+</ul>
   
-
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
-
 
 
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
-
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1092,19 +960,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/一般的なデータベースレイアウトとストレージ構成を推奨します.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             一般的なデータベースレイアウトとストレージ構成を推奨します
           </a>
-        </li>
-        <span>
           
 
 
@@ -1118,19 +983,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ASMLib_のない_ASM_データベースのサポート.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ASMLib のない ASM データベースのサポート
           </a>
-        </li>
-        <span>
           
 
 
@@ -1138,29 +1000,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/スクリプトの導入と実行.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             スクリプトの導入と実行
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1169,10 +1027,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1183,10 +1040,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1194,70 +1050,58 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_で作業する際の制限事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager で作業する際の制限事項
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/Oracle_データベースに関する制限事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             Oracle データベースに関する制限事項
           </a>
-        </li>
-        <span>
           
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">このページ</span>
-</div>
-
-<li class="active">
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/ja-jp/snapmanager-oracle/pdfs/pages/unix-administration/concept_deprecated_versions_of_oracle_database.pdf" >
-    <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
-    Oracle データベースの廃止されたバージョン
+    <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
-
+</ul>
   
-
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
-
 
 
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1265,19 +1109,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_のアップグレード.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager のアップグレード
           </a>
-        </li>
-        <span>
           
 
 
@@ -1285,31 +1126,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/アップグレード後の手順.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             アップグレード後の手順
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1317,19 +1154,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ローリングアップグレードを使用した_SnapManager_ホストのアップグレード.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ローリングアップグレードを使用した SnapManager ホストのアップグレード
           </a>
-        </li>
-        <span>
           
 
 
@@ -1337,53 +1171,47 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ロールバックとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ロールバックとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1391,43 +1219,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager を設定しています
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_の設定パラメータ.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager の設定パラメータ
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1440,10 +1261,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1451,47 +1271,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/セキュリティと資格情報の管理.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             セキュリティと資格情報の管理
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ロールベースアクセス制御について.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ロールベースアクセス制御について
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1507,27 +1320,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/すべてのホスト_リポジトリ_およびプロファイルのユーザ_クレデンシャルの消去.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             すべてのホスト、リポジトリ、およびプロファイルのユーザ・クレデンシャルの消去
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1535,41 +1344,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/個々のリソースのクレデンシャルを削除する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             個々のリソースのクレデンシャルを削除する
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1577,43 +1381,39 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/効率的なバックアップを行うためのプロファイルの管理.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             効率的なバックアップを行うためのプロファイルの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1621,51 +1421,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースをバックアップしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースをバックアップしています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/フル_バックアップおよびパーシャル_バックアップとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             フル・バックアップおよびパーシャル・バックアップとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1677,33 +1470,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバックアップを作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバックアップを作成しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1711,31 +1500,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/AutoSupport_とは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             AutoSupport とは
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1745,33 +1530,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/バックアップ保持ポリシーを変更する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             バックアップ保持ポリシーを変更する
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1790,10 +1571,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1801,37 +1581,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースのバックアップをスケジュール設定する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースのバックアップをスケジュール設定する
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1839,59 +1615,66 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバックアップのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバックアップのリストア
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースリストアとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースリストアとは
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/高速リストアを使用できる状況については_次のガイドラインを参照してください.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             高速リストアを使用できる状況については、次のガイドラインを参照してください
           </a>
+          
+
+
+
+          
         </li>
-        <span>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
           
-
-
-
-
-          
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1907,67 +1690,42 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/別の場所からファイルをリストアする.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             別の場所からファイルをリストアする
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/代替保存場所からのバックアップのリストアの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             代替保存場所からのバックアップのリストアの概要
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1978,20 +1736,18 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1999,19 +1755,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバックアップをクローニングしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバックアップをクローニングしています
           </a>
-        </li>
-        <span>
           
 
 
@@ -2019,27 +1772,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/クローン仕様を作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             クローン仕様を作成しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2053,27 +1802,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/代替ホストにデータベースをクローニングする場合の考慮事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             代替ホストにデータベースをクローニングする場合の考慮事項
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2087,51 +1832,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/クローンのスプリット.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             クローンのスプリット
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2139,19 +1879,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_でのデータ保護の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager でのデータ保護の概要
           </a>
-        </li>
-        <span>
           
 
 
@@ -2163,31 +1900,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ポリシーベースのデータ保護の設定と有効化.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ポリシーベースのデータ保護の設定と有効化
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2197,27 +1930,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データ保護を実行する場合の考慮事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データ保護を実行する場合の考慮事項
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2227,29 +1956,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/セカンダリストレージから保護されたバックアップをリストアする.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             セカンダリストレージから保護されたバックアップをリストアする
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2258,10 +1983,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2269,19 +1993,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_では__Protection_Manager_を使用してデータベースバックアップを保護します.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle では、 Protection Manager を使用してデータベースバックアップを保護します
           </a>
-        </li>
-        <span>
           
 
 
@@ -2293,41 +2014,37 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/保護されたバックアップ構成と実行.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             保護されたバックアップ構成と実行
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2335,39 +2052,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/バックアップからのデータベースリストア.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             バックアップからのデータベースリストア
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2375,39 +2087,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/管理処理を実行しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             管理処理を実行しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2415,45 +2123,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/E_メール通知の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             E メール通知の設定
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/新しいプロファイルの_E_メール通知を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             新しいプロファイルの E メール通知を設定しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2461,27 +2162,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/既存のプロファイルの_E_メール通知を設定する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             既存のプロファイルの E メール通知を設定する
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2496,10 +2193,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2507,51 +2203,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_処理用のタスク仕様ファイルおよびスクリプトの作成.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager 処理用のタスク仕様ファイルおよびスクリプトの作成
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/プリタスクスクリプト_ポストタスクスクリプト_ポリシースクリプトの作成.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2570,10 +2259,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2581,31 +2269,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/プロファイルに関連付けられたストレージ_システム名およびターゲット_データベース_ホスト名を更新しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             プロファイルに関連付けられたストレージ・システム名およびターゲット・データベース・ホスト名を更新しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2613,37 +2297,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_操作の履歴を保持する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager 操作の履歴を保持する
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2651,173 +2331,169 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_のコマンドリファレンスを参照してください.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle のコマンドリファレンスを参照してください
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2825,53 +2501,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_のトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager のトラブルシューティング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ダンプ_ファイル.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ダンプ・ファイル
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2896,10 +2565,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2910,10 +2578,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2921,41 +2588,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/Windows_のインストールとセットアップ.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             Windows のインストールとセットアップ
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManagerfor_Oracle_とは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManagerfor Oracle とは
           </a>
-        </li>
-        <span>
           
 
 
@@ -2963,39 +2618,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_を使用する利点.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager を使用する利点
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3003,33 +2654,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_のアーキテクチャとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle のアーキテクチャとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3046,10 +2693,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3057,47 +2703,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_の導入に関する考慮事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle の導入に関する考慮事項
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_を実行するための要件.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager を実行するための要件
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3105,29 +2744,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバージョンのサポートと設定の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバージョンのサポートと設定の概要
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3144,10 +2779,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3155,45 +2789,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_をインストールしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle をインストールしています
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_のインストールの準備をしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle のインストールの準備をしています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3202,10 +2829,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3213,19 +2839,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_のアップグレード.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager のアップグレード
           </a>
-        </li>
-        <span>
           
 
 
@@ -3233,29 +2856,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/アップグレード後の手順.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             アップグレード後の手順
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3263,19 +2882,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ローリングアップグレードを使用した_SnapManager_ホストのアップグレード.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ローリングアップグレードを使用した SnapManager ホストのアップグレード
           </a>
-        </li>
-        <span>
           
 
 
@@ -3283,53 +2899,47 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ロールバックとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ロールバックとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3337,53 +2947,45 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager を設定しています
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_の設定パラメータ.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager の設定パラメータ
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3391,19 +2993,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManagerfor_Oracle_を起動しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManagerfor Oracle を起動しています
           </a>
-        </li>
-        <span>
           
 
 
@@ -3415,43 +3014,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_へのアクセス.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager へのアクセス
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_ホスト_サーバを起動しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager ホスト・サーバを起動しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3464,10 +3056,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3475,27 +3066,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/環境の検証.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             環境の検証
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3503,27 +3090,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/リポジトリの作成.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             リポジトリの作成
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3532,10 +3115,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3543,19 +3125,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/セキュリティと資格情報の管理.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             セキュリティと資格情報の管理
           </a>
-        </li>
-        <span>
           
 
 
@@ -3569,27 +3148,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/すべてのホスト_リポジトリ_およびプロファイルのユーザ_クレデンシャルの消去.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             すべてのホスト、リポジトリ、およびプロファイルのユーザ・クレデンシャルの消去
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3597,41 +3172,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/個々のリソースのクレデンシャルを削除する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             個々のリソースのクレデンシャルを削除する
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3639,43 +3209,39 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/効率的なバックアップを行うためのプロファイルの管理.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             効率的なバックアップを行うためのプロファイルの管理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3683,51 +3249,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースをバックアップしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースをバックアップしています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/フル_バックアップおよびパーシャル_バックアップとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             フル・バックアップおよびパーシャル・バックアップとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3739,31 +3298,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバックアップを作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバックアップを作成しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3771,31 +3326,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/AutoSupport_とは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             AutoSupport とは
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3805,33 +3356,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/バックアップ保持ポリシーを変更する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             バックアップ保持ポリシーを変更する
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3850,10 +3397,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3861,37 +3407,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースのバックアップをスケジュール設定する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースのバックアップをスケジュール設定する
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3899,47 +3441,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバックアップのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバックアップのリストア
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースリストアとは.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースリストアとは
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3953,45 +3488,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/別の場所からファイルをリストアする.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             別の場所からファイルをリストアする
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/代替保存場所からのバックアップのリストアの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             代替保存場所からのバックアップのリストアの概要
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4002,20 +3530,18 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4023,19 +3549,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データベースバックアップをクローニングしています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データベースバックアップをクローニングしています
           </a>
-        </li>
-        <span>
           
 
 
@@ -4043,27 +3566,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/クローン仕様を作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             クローン仕様を作成しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4077,27 +3596,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/代替ホストにデータベースをクローニングする場合の考慮事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             代替ホストにデータベースをクローニングする場合の考慮事項
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4110,10 +3625,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4121,45 +3635,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_でのデータ保護の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager でのデータ保護の概要
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/データ保護を実行する場合の考慮事項.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             データ保護を実行する場合の考慮事項
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4167,93 +3674,80 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ポストスクリプトを使用したデータベースバックアップの保護.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ポストスクリプトを使用したデータベースバックアップの保護
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ポストスクリプトの作成または更新.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ポストスクリプトの作成または更新
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/後処理のタスク仕様ファイルを作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             後処理のタスク仕様ファイルを作成しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4261,39 +3755,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/管理処理を実行しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             管理処理を実行しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4301,45 +3791,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/E_メール通知の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             E メール通知の設定
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/新しいプロファイルの_E_メール通知を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             新しいプロファイルの E メール通知を設定しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4347,27 +3830,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/既存のプロファイルの_E_メール通知を設定する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             既存のプロファイルの E メール通知を設定する
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4382,10 +3861,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4393,51 +3871,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_処理用のタスク仕様ファイルおよびスクリプトの作成.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager 処理用のタスク仕様ファイルおよびスクリプトの作成
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/プリタスクスクリプト_ポストタスクスクリプト_ポリシースクリプトの作成.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4456,10 +3927,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4467,31 +3937,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/プロファイルに関連付けられたストレージ_システム名およびターゲット_データベース_ホスト名を更新しています.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             プロファイルに関連付けられたストレージ・システム名およびターゲット・データベース・ホスト名を更新しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4499,37 +3965,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_操作の履歴を保持する.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager 操作の履歴を保持する
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4537,155 +3999,151 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_for_Oracle_のコマンドリファレンスを参照してください.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager for Oracle のコマンドリファレンスを参照してください
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4693,53 +4151,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/SnapManager_のトラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             SnapManager のトラブルシューティング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapmanager-oracle/pdfs/sidebar/ダンプ_ファイル.pdf" 
             
           >
-            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="16" height="16"/>
             ダンプ・ファイル
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4758,10 +4209,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4772,10 +4222,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4783,15 +4232,44 @@
 
 
 
-</ul>
-
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/snapmanager-oracle/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
 <script>
-  $("#toggleContainerPdf li.active").parents('li').toggle('display');
-  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapmanager-oracle/index.html">
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapmanager-oracle/index.html">
         ホーム
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapmanager-oracle/releasenotes.html">
         リリースノート
@@ -6346,7 +5824,7 @@
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapmanager-oracle/reference_legal_notices.html">
         法的通知
       </a></li></ul>
-
+</div>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -6356,6 +5834,30 @@
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
     <!-- Begin of page container -->
     <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/snapmanager-oracle/">SnapManager&nbsp;Oracle</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          Oracle データベースの廃止されたバージョン
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
       <div class="ie-nmt-disclaimer">
   <span>
     <div class="ie-nmt-disclaimer-container">
@@ -6378,18 +5880,12 @@
 <p class="page-details">
   
     
-    <time datetime="2021-08-06 02:26:58 +0000">08/06/2021</time>
+    <time datetime="2022-01-17 14:12:46 +0000">01/17/2022</time>
     
   
 
 <span>寄稿者
 </span>
-
-
-  <span>
-    <a target="_blank" href="/ja-jp/snapmanager-oracle/pdfs/pages/unix-administration/concept_deprecated_versions_of_oracle_database.pdf" role="button">
-      <img src="/ja-jp/snapmanager-oracle/images/pdf.png" width="20" height="20"/>このページの PDF をダウンロード</a>
-  </span>
 
 
 </p>
@@ -6440,11 +5936,11 @@ Oracle データベース 12_c__ は、 SnapManager 3.3.1 からのみサポー�
   
   <!-- Start Page Toolbar -->
   <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <div class="page-nav-contribute-title">寄稿する</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapmanager-oracle/blob/main/unix-administration/concept_deprecated_versions_of_oracle_database.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/snapmanager-oracle/images/github.png" class="github-icon" />このページを編集する</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapmanager-oracle/issues/new?body=Page%3A%20[Oracle データベースの廃止されたバージョン](https://docs.netapp.com/ja-jp/snapmanager-oracle/unix-administration/concept_deprecated_versions_of_oracle_database.html)" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/snapmanager-oracle/images/github.png" class="github-icon" />ドキュメントの変更をリクエストする</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >貢献する方法を学ぶ</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapmanager-oracle/issues/new?body=Page%3A%20[Oracle データベースの廃止されたバージョン](https://docs.netapp.com/ja-jp/snapmanager-oracle/unix-administration/concept_deprecated_versions_of_oracle_database.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapmanager-oracle/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapmanager-oracle/blob/main/unix-administration/concept_deprecated_versions_of_oracle_database.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapmanager-oracle/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/snapmanager-oracle/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
@@ -6469,7 +5965,7 @@ Oracle データベース 12_c__ は、 SnapManager 3.3.1 からのみサポー�
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
 
 </ul>

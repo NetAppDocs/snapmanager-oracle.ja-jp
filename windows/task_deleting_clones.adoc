@@ -2,7 +2,7 @@
 permalink: windows/task_deleting_clones.html 
 sidebar: sidebar 
 keywords: delete, clone, snapshot, copy, backup, guarantee, current, data, deleting 
-summary: Snapshot コピーのサイズがバックアップの 10~20% の間に達した時点でクローンを削除できます。これにより、クローンに最新のデータが保持されます。 
+summary: 'Snapshot コピーのサイズがバックアップの 10~20% の間に達した時点でクローンを削除できます。これにより、クローンに最新のデータが保持されます。' 
 ---
 = クローンを削除します
 :icons: font

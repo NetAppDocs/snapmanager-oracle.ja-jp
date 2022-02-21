@@ -2,7 +2,7 @@
 permalink: windows/task_checking_the_snapmanager_software_version.html 
 sidebar: sidebar 
 keywords: determine, version, product, running, local, host, comand, snapmanager 
-summary: version コマンドを実行すると ' ローカル・ホストで稼働している製品のバージョンを確認できます 
+summary: 'version コマンドを実行すると " ローカル・ホストで稼働している製品のバージョンを確認できます' 
 ---
 = SnapManager ソフトウェアのバージョンを確認しています
 :icons: font

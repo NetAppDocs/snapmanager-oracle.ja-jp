@@ -2,7 +2,7 @@
 permalink: unix-installation-cmode/task_creating_an_oracle_user_for_the_repository_database_instance.html 
 sidebar: sidebar 
 keywords: oracle, user, require, repository, database, instance, create, user, connect, resource, privilege 
-summary: Oracle ユーザは、にログインしてリポジトリデータベースインスタンスにアクセスする必要があります。このユーザーは ' 接続およびリソースの権限を持つユーザーを作成する必要があります 
+summary: 'Oracle ユーザは、にログインしてリポジトリデータベースインスタンスにアクセスする必要があります。このユーザーは " 接続およびリソースの権限を持つユーザーを作成する必要があります' 
 ---
 = リポジトリデータベースインスタンスの Oracle ユーザを作成します
 :icons: font

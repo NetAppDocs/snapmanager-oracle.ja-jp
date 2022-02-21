@@ -2,7 +2,7 @@
 permalink: windows/reference_the_smosmsapsystem_dump_command.html 
 sidebar: sidebar 
 keywords: run, system, dump, command, create, jar, file, contain, diagnostic, information, smo 
-summary: システムダンプコマンドを実行して ' サーバ環境に関する診断情報を含む JAR ファイルを作成できます 
+summary: 'システムダンプコマンドを実行して " サーバ環境に関する診断情報を含む JAR ファイルを作成できます' 
 ---
 = smo system dump コマンド
 :icons: font

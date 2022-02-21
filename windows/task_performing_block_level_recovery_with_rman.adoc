@@ -2,7 +2,7 @@
 permalink: windows/task_performing_block_level_recovery_with_rman.html 
 sidebar: sidebar 
 keywords: configure, snapmanager, catalog, backup, recovery, manager, rman, oracle, tool, perform, block-level 
-summary: RMAN を使用してブロックレベルのリカバリを実行できるようにするために、 Oracle ツールである Recovery Manager （ RMAN ）でバックアップのカタログを作成するように SnapManager を設定できます。RMAN は ' データベースの制御ファイルまたは個別のリカバリ・カタログ・データベースのいずれかをリポジトリとして使用できます 
+summary: 'RMAN を使用してブロックレベルのリカバリを実行できるようにするために、 Oracle ツールである Recovery Manager （ RMAN ）でバックアップのカタログを作成するように SnapManager を設定できます。RMAN は " データベースの制御ファイルまたは個別のリカバリ・カタログ・データベースのいずれかをリポジトリとして使用できます' 
 ---
 = Oracle Recovery Manager （ RMAN ）を使用したブロックレベル・リカバリの実行
 :icons: font

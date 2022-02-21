@@ -2,7 +2,7 @@
 permalink: windows/task_creating_or_updating_post_scripts.html 
 sidebar: sidebar 
 keywords: create, new, post, script, default, install, directory, plugin, backup, create, creating, updating 
-summary: 新しいポストスクリプトを作成するか 'default_install_directory\plugins\backup\create\post で使用できるスクリプトを使用できます 
+summary: '新しいポストスクリプトを作成するか "default_install_directory\plugins\backup\create\post で使用できるスクリプトを使用できます' 
 ---
 = ポストスクリプトの作成または更新
 :icons: font

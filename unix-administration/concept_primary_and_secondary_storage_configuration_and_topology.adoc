@@ -2,7 +2,7 @@
 permalink: unix-administration/concept_primary_and_secondary_storage_configuration_and_topology.html 
 sidebar: sidebar 
 keywords: techco, payroll, database, snapmanager, primary, secondary, storage, configuration, topology, oracle 
-summary: この例では 'TechCo 社が給与データベースを Oracle ホスト用の SnapManager であるデータベース・サーバ上で実行し ' 本社のプライマリ・ストレージ・システムに給与データベースのデータと構成ファイルを保存しています企業の要件は、ローカル・ストレージへの日単位および週単位のバックアップ、およびセカンダリ・ストレージ・サイトにあるストレージ・システムへのバックアップにより、データベースを保護することです。 
+summary: 'この例では "TechCo 社が給与データベースを Oracle ホスト用の SnapManager であるデータベース・サーバ上で実行し " 本社のプライマリ・ストレージ・システムに給与データベースのデータと構成ファイルを保存しています企業の要件は、ローカル・ストレージへの日単位および週単位のバックアップ、およびセカンダリ・ストレージ・サイトにあるストレージ・システムへのバックアップにより、データベースを保護することです。' 
 ---
 = プライマリストレージとセカンダリストレージの構成とトポロジ
 :icons: font

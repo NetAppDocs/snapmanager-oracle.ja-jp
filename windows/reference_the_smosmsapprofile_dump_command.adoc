@@ -5,6 +5,7 @@ keywords: run, profile, dump, command, jar, diagnostic, information, smo
 summary: profile dump コマンドを実行すると、プロファイルに関する診断情報が格納された .jar ファイルを作成できます。 
 ---
 = smo profile dump コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

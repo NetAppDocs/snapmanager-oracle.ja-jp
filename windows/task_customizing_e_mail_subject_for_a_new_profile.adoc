@@ -5,6 +5,7 @@ keywords: customize, email, subject, new, profile, create, customizing
 summary: 新しいプロファイルを作成するときに、そのプロファイルの電子メールの件名をカスタマイズできます。 
 ---
 = 新しいプロファイルの電子メールの件名をカスタマイズする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

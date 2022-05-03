@@ -5,6 +5,7 @@ keywords: windows, server, netapp, product
 summary: SnapManager ホストとは Windows サーバであり、ほかのネットアップ製品も稼働します。 
 ---
 = SnapManager ホスト
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

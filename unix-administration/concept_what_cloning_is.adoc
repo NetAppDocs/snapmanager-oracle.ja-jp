@@ -5,6 +5,7 @@ keywords: clone, database, replica, original, database, clone, full, backup, cur
 summary: データベースをクローニングして、元のデータベースの正確なレプリカを作成できます。クローンは、フルバックアップから作成するか、またはデータベースの現在の状態から作成できます。 
 ---
 = クローニングとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

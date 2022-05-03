@@ -5,6 +5,7 @@ keywords: doccomment, quality, documentation, high-quality, improve, quality, se
 summary: 弊社では、マニュアルの品質を向上していくため、皆様からのフィードバックをお待ちしています。本番レベルのドキュメント（ GA/FCS ）が最初にリリースされたときや、既存の本番レベルのドキュメントに重要な変更が加えられたときに、自動通知を受け取ることができます。 
 ---
 = マニュアルの更新について
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

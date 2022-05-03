@@ -5,6 +5,7 @@ keywords: create, creating, pretask, post-task, policy, task, backup, restore, c
 summary: バックアップ、リストア、クローニングの各処理の実行前タスク、タスク後のスクリプト、およびポリシータスクスクリプトを作成し、定義済みの環境変数をパラメータに含めることができます。新しいスクリプトを作成するか、 SnapManager サンプルスクリプトのいずれかを変更できます。 
 ---
 = タスクスクリプトの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

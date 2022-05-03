@@ -5,6 +5,7 @@ keywords: command, stop, running, clone, split, process, split-stop, smo
 summary: このコマンドは、実行中のクローンスプリットプロセスを停止します。 
 ---
 = smo clone split -stop コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

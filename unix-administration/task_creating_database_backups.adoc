@@ -5,6 +5,7 @@ keywords: create, backup, entire, database, portion, tablespace, data, file, con
 summary: 表領域、データ・ファイル、制御ファイルなど、データベース全体またはデータベースの一部のバックアップを作成できます。 
 ---
 = データベースバックアップを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

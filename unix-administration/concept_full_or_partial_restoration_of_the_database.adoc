@@ -5,6 +5,7 @@ keywords: snapmanager, flexibility, restore, full, database, tablespace, file, d
 summary: SnapManager では、フルデータベース、特定の表領域、ファイル、制御ファイル、またはこれらのエンティティの組み合わせを柔軟にリストアできます。SnapManager では、ファイルベースのリストアプロセスや高速なボリュームベースのリストアプロセスを使用して、データをリストアできます。データベース管理者は、使用するプロセスを選択することも、 SnapManager が適切なプロセスを判断することもできます。 
 ---
 = データベースの完全リストアまたは部分リストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

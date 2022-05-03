@@ -5,6 +5,7 @@ keywords: check, backup, create, profile, state, smo, list, command
 summary: smo backup list コマンドを使用すると、プロファイルに作成されたバックアップおよびバックアップの状態を確認できます。各プロファイルについて、最新のバックアップの情報が表示され、すべてのバックアップの情報が表示されるまで処理が続行されます。 
 ---
 = バックアップのリストを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

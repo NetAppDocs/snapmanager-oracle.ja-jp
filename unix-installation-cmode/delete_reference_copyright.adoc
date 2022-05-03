@@ -5,6 +5,7 @@ keywords: copyright, information
 summary: 著作権情報 
 ---
 = 著作権情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

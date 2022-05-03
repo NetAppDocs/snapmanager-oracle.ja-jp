@@ -5,6 +5,7 @@ keywords: dba, backup, loss, data, disaster, regulatory, schedule, retention, st
 summary: データベース管理者は、データ損失や災害発生時のバックアップ、規制上の理由から、バックアップを確実に利用できるようにしたいと考えています。そのためには、さまざまなデータベースの保持ポリシーを慎重に検討する必要があります。 
 ---
 = バックアップのスケジュールと保持に関する戦略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

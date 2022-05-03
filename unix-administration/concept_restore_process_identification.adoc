@@ -5,6 +5,7 @@ keywords: restore, process, support, snapmanager, oracle, file-based, backup
 summary: SnapManager for Oracle のすべてのバージョンで、すべてのリストアプロセスがサポートされるわけではありません。SnapManager をアップグレードしたら、バックアップのリストアに使用できるリストアプロセスを理解しておく必要があります。 
 ---
 = リストアプロセスのタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

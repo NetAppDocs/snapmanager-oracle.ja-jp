@@ -5,6 +5,7 @@ keywords: resource, pool, collection, unused, physical, storage, protected, prof
 summary: リソースプールは、未使用の物理ストレージ（ストレージシステムやアグリゲートなど）の集合体です。新しいボリュームや LUN をプロビジョニングしてデータを格納することができます。ストレージシステムをリソースプールに割り当てると、そのストレージシステム上のすべてのアグリゲートをプロビジョニングできるようになります。 
 ---
 = リソースプールとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

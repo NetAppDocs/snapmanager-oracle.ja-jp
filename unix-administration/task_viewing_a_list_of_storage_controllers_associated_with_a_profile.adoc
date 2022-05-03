@@ -5,6 +5,7 @@ keywords: view, list, storage, system, associate, particular, profile, smo
 summary: 特定のプロファイルに関連付けられているストレージシステムのリストを表示できます。 
 ---
 = プロファイルに関連付けられているストレージ・システムのリストの表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

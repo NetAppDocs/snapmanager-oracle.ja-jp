@@ -5,6 +5,7 @@ keywords: smo, repository, data, profile, block, size, smo
 summary: このコマンドは、データベースプロファイルおよび関連付けられたクレデンシャルを格納するリポジトリを作成します。また、このコマンドはブロックサイズが適切かどうかもチェックします。 
 ---
 = smo repository create コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

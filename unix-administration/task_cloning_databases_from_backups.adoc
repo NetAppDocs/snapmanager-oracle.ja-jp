@@ -5,6 +5,7 @@ keywords: clone, database, backup, using, clone, create, command, sid, snapmanag
 summary: バックアップからデータベースをクローニングするには、 clone create コマンドを使用します。 
 ---
 = バックアップからデータベースをクローニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

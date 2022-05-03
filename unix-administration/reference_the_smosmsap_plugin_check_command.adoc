@@ -5,6 +5,7 @@ keywords: snapmanager, enable, install, custom, script, various, operation, rest
 summary: SnapManager では、さまざまな処理にカスタムスクリプトをインストールして使用できます。SnapManager には、バックアップ、リストア、クローニングの各プラグインが用意されており、バックアップ、リストア、クローニングの処理の前後にカスタムスクリプトを自動化できます。プラグインのバックアップ、リストア、およびクローニングを使用する前に、 plugin check コマンドを実行してプラグインスクリプトのインストールを確認できます。カスタムスクリプトは、 3 つのディレクトリに格納されます。ポリシー（バックアップ、リストア、クローニングの処理が実行される前に常に実行する必要があるスクリプトの場合）、 PRE （前処理スクリプトの場合）、 POST （後処理スクリプトの場合）の 3 つです。 
 ---
 = smo plugin check コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

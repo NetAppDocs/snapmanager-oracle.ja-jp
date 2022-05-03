@@ -5,6 +5,7 @@ keywords: create, backup, snapmanager, install, snapdrive, unix, oracle, deploym
 summary: SnapManager でバックアップを作成する前に、まず SnapDrive for UNIX をインストールし、次に SnapManager for Oracle をインストールする必要があります。 
 ---
 = 導入のワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

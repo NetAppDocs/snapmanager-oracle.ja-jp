@@ -5,6 +5,7 @@ keywords: snapmanager, configure, summary, email, notification, multiple, profil
 summary: SnapManager では、リポジトリデータベースの複数のプロファイルについて、サマリー E メール通知を設定できます。 
 ---
 = 複数のプロファイルに関するサマリー E メール通知の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

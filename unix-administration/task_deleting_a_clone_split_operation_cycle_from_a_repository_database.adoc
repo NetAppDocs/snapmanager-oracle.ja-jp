@@ -5,6 +5,7 @@ keywords: delete, clone, split, operation, cycle, entry, repository, database
 summary: リポジトリデータベースから、クローンスプリット処理サイクルエントリを削除できます。 
 ---
 = リポジトリデータベースからクローンスプリット処理サイクルを削除します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

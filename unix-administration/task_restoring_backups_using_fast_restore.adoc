@@ -5,6 +5,7 @@ keywords: force, snapmanager, oracle, volume-based, snaprestore, restore, proces
 summary: SnapRestore for Oracle では、必須の高速リストアの条件がすべて満たされていれば、他のリストアプロセスではなくボリュームベースの SnapManager プロセスを強制的に使用できます。 
 ---
 = 高速リストアを使用したバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

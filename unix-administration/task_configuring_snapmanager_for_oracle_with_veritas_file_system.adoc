@@ -5,6 +5,7 @@ keywords: snapmanager, install, solaris, configure, veritas, storage, foundation
 summary: SnapManager が Solaris にインストールされている場合、 Veritas Storage Foundation for Oracle RAC\ （ SFRAC\ ）環境をサポートするように SnapManager を設定できます。 
 ---
 = Veritas SFRAC 環境をサポートするように SnapManager を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

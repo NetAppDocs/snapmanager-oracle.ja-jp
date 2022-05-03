@@ -5,6 +5,7 @@ keywords: run, backup, update, command, retention, policy, smo
 summary: バックアップ保持ポリシーは、 backup update コマンドを実行して更新できます。 
 ---
 = smo backup update コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

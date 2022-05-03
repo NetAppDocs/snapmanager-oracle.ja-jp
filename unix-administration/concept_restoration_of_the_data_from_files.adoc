@@ -5,6 +5,7 @@ keywords: restore, alternate, location, necessary, file, storage, media, file, s
 summary: 別の場所からリストアする場合は、ストレージ・メディアから必要なファイルをリストアし、 SnapVault や SnapMirror などのアプリケーションからローカル・ホストにマウントされたファイルシステムにファイルをリストアする必要があります。 
 ---
 = ファイルからのデータのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

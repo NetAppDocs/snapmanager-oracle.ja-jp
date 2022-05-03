@@ -5,6 +5,7 @@ keywords: provide, list, configuration, parameter, edit, requirement
 summary: SnapManager には、要件に応じて編集可能な設定パラメータのリストが用意されています。構成パラメータは、 smo .config ファイルに保存されます。ただし、 smo .config ファイルに、サポートされる設定パラメータがすべて含まれているわけではありません。要件に応じて構成パラメータを追加できます。 
 ---
 = SnapManager の設定パラメータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

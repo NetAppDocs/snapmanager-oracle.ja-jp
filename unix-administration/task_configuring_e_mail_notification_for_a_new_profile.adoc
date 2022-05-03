@@ -5,6 +5,7 @@ keywords: creating, new, profile, configure, receive, email, notification, compl
 summary: 新しいプロファイルを作成する場合、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。 
 ---
 = 新しいプロファイルの E メール通知を設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

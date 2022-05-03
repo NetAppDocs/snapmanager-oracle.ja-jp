@@ -5,6 +5,7 @@ keywords: snapmanager, install, host, graphical, user, interface, gui, program, 
 summary: SnapManager がホストにインストールされている場合は、プログラムのリストからプログラムを選択して、 SnapManager のグラフィカルユーザインターフェイス（ GUI ）を起動します。 
 ---
 = SnapManager GUI を起動しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

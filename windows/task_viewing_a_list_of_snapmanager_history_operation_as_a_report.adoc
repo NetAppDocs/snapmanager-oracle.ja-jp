@@ -5,6 +5,7 @@ keywords: view, history, specific, snapmanager, operation, report, base, retenti
 summary: 保持設定に基づいて、特定またはすべての SnapManager 処理の履歴をレポートとして表示できます。 
 ---
 = SnapManager 処理の履歴のリストを表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

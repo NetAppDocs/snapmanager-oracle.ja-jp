@@ -5,6 +5,7 @@ keywords: command, enable, delete, history, snapmanager, operation, smo, purge
 summary: このコマンドを使用すると、 SnapManager 処理の履歴を削除できます。 
 ---
 = smo history purge コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

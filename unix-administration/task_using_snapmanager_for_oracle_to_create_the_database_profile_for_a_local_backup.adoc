@@ -5,6 +5,7 @@ keywords: database, administrator, snapmanager, create, profile, backup, local, 
 summary: データベース管理者は、 SnapManager を使用してデータベースプロファイルを作成し、プライマリストレージシステム上のローカルストレージへのバックアップを開始します。プロファイルの作成プロセスとバックアップ作成プロセスはすべて SnapManager で実行され、 Protection Manager も含まれません。 
 ---
 = SnapManager for Oracle を使用して、ローカル・バックアップのデータベース・プロファイルを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

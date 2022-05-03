@@ -5,6 +5,7 @@ keywords: command, delete, backup, schedule, smo, necessary
 summary: このコマンドは、不要になったバックアップスケジュールを削除します。 
 ---
 = smo schedule delete コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

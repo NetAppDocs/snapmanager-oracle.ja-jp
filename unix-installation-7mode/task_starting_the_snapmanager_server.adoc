@@ -5,6 +5,7 @@ keywords: snapmanager, target, database, host
 summary: ターゲットデータベースホストから SnapManager サーバを起動する必要があります。 
 ---
 = SnapManager サーバを起動しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

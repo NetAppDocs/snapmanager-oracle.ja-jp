@@ -5,6 +5,7 @@ keywords: command, delete, split, clone, database, profile, generate, snapmanage
 summary: このコマンドは、クローンスプリット処理中に SnapManager によって生成されたプロファイルに加え、スプリットクローン \ （データベース \ ）を削除します。 
 ---
 = smo profile destroy コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

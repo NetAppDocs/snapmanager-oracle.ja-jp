@@ -5,6 +5,7 @@ keywords: upgrade, upgrading, version, repository, backup, post-upgrade, task
 summary: 新しいバージョンの SnapManager にアップグレードした場合は、既存のリポジトリを更新する必要があります。また、既存のバックアップに割り当てられているバックアップ保持クラスの変更が必要になる場合もあります。 
 ---
 = アップグレード後の手順
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

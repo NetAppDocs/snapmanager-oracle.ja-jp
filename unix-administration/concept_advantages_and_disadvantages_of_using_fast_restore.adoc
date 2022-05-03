@@ -5,6 +5,7 @@ keywords: dba, advantage, disadvantage, volume-based, fast, restore, backup
 summary: DBA は、ボリューム・ベースの高速リストアを使用することには利点と欠点があることに留意する必要があります。 
 ---
 = 高速リストアを使用する利点と欠点
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

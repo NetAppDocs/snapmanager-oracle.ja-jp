@@ -5,6 +5,7 @@ keywords: target, database, oracle, configure, standalone, real, application, cl
 summary: ターゲットデータベースは、スタンドアロン、 Real Application Clusters （ RAC ）、 Automatic Storage Management （ ASM ）、またはサポートされるその他の任意の組み合わせとして設定できる Oracle データベースです。 
 ---
 = ターゲットデータベースを設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

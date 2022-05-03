@@ -5,6 +5,7 @@ keywords: license, require, data, protection, install, enable, primary, secondar
 summary: データ保護に必要なライセンスがプライマリストレージシステムとセカンダリストレージシステムにインストールされ、有効になっていることを確認する必要があります。 
 ---
 = SnapManager でのデータ保護に必要なライセンス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

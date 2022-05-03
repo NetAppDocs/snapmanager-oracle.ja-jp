@@ -5,6 +5,7 @@ keywords: snapmanager, wide, range, storage, type, physical, virtual, machine, v
 summary: SnapManager は、物理マシンと仮想マシンの両方でさまざまなストレージタイプをサポートしています。SnapManager をインストールまたはアップグレードする前に、ストレージタイプがサポートされているかどうかを確認する必要があります。 
 ---
 = サポートされているストレージタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

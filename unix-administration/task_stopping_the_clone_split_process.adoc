@@ -5,6 +5,7 @@ keywords: stop, run, clone, split, process, smo
 summary: 実行中のクローンスプリットプロセスを停止できます。 
 ---
 = クローンスプリット処理を停止しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

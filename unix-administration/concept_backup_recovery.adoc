@@ -5,6 +5,7 @@ keywords: snapmanager, perform, restore, recover, operation, rman, database, ora
 summary: SnapManager では、リストア処理とリカバリ処理を同時に実行する必要があります。リストア処理のあとに SnapManager のリカバリ処理を実行することはできません。 
 ---
 = バックアップリカバリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

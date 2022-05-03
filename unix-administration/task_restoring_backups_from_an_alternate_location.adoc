@@ -5,6 +5,7 @@ keywords: restore, backup, alternate, location, data, file, intermediate, system
 summary: 別の場所からバックアップをリストアして、中間ファイルシステムからアクティブファイルシステムにデータファイルをリストアしたり、中間 raw デバイスからアクティブ raw デバイスにデータブロックをリストアしたりできます。 
 ---
 = 別の場所からのバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

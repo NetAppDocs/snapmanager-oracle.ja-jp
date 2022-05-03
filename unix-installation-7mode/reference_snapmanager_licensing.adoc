@@ -5,6 +5,7 @@ keywords: snapmanager, license, storage, system, license, require, operation
 summary: SnapManager の処理を実行するには、 SnapManager ライセンスといくつかのストレージシステムライセンスが必要です。SnapManager ライセンスには 2 つのライセンスモデルがあります。サーバ単位のライセンスの場合は SnapManager ライセンスを各データベースホストに設定し、ストレージシステム単位のライセンスの場合は SnapManager ライセンスをストレージシステムに設定します。 
 ---
 = SnapManager ライセンス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

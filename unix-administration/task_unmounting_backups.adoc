@@ -5,6 +5,7 @@ keywords: snapmanager, automatic, unmount, backup, unavailable, host, server, as
 summary: SnapManager は、バックアップを自動的にアンマウントして、ホストサーバで使用できないようにします。SnapManager では、 Oracle Recovery Manager\ （ RMAN \ ）などの外部ツールを使用してバックアップ内のファイルにアクセスしたり、バックアップの状態を変更してアクセスを切断したりすることもできます。 
 ---
 = バックアップのアンマウント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

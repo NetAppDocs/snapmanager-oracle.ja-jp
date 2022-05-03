@@ -5,6 +5,7 @@ keywords: dba, snapmanager, storage, administrator, netapp, management, console,
 summary: この例では、 DBA （ SnapManager を使用）とストレージ管理者（ネットアップ管理コンソールのデータ保護機能を使用）が、対象データベースのローカルバックアップとセカンダリバックアップ（保護されたバックアップ）の設定作業をコーディネートしています。 
 ---
 = ローカルおよびセカンダリデータベースバックアップのワークフローの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

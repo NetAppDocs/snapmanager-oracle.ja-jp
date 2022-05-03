@@ -5,6 +5,7 @@ keywords: restore, data, alternate, location, necessary, file, system, local, re
 summary: 代替保存場所からデータをリストアする前に、必要なファイルシステムをリストアして、ローカル・ホストにマウントする必要があります。 
 ---
 = ファイルシステムからのデータのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

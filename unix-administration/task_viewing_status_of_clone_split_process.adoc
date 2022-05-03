@@ -5,6 +5,7 @@ keywords: view, progress, split, process, start, smo
 summary: 開始したスプリットプロセスの進行状況を表示できます。 
 ---
 = クローンスプリットプロセスのステータスを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: updating, profile, configure, receive, email, notification, completion
 summary: プロファイルを更新する場合は、データベース処理が完了したときに E メール通知を受け取るようにを設定できます。 
 ---
 = 既存のプロファイルの E メール通知を設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

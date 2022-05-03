@@ -5,6 +5,7 @@ keywords: administration, guide, unix, 3.4.2
 summary: 『 SnapManager for Oracle 3.4.2 Administration Guide for UNIX ® 』を参照してください 
 ---
 = 『 Administration Guide for UNIX ® 』を参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

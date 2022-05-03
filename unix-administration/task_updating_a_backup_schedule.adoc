@@ -5,6 +5,7 @@ keywords: list, schedule, operation, update, scheduling, frequency, cronstring, 
 summary: スケジュールされた処理のリストを表示し、必要に応じて更新できます。スケジューリング頻度、スケジュールの開始時刻、 cronstring 式、バックアップをスケジュールしたユーザを更新できます。 
 ---
 = バックアップスケジュールを更新しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

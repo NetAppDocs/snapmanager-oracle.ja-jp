@@ -5,6 +5,7 @@ keywords: run, backup, free, command, snapshot, copies, copy, removing, remove, 
 summary: バックアップメタデータをリポジトリから削除せずにバックアップの Snapshot コピーを解放するには、 backup free コマンドを実行します。 
 ---
 = smo backup free コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: command, confirm, component, environment, require, snapmanager, correc
 summary: このコマンドを使用すると、 SnapManager の実行に必要な環境のすべてのコンポーネントが正しく設定されているかどうかを確認できます。 
 ---
 = smo system verify コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

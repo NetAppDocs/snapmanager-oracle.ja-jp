@@ -5,6 +5,7 @@ keywords: command, enable, history, specific, operation, associate, profile, smo
 summary: このコマンドを使用すると、プロファイルに関連付けられた特定の SnapManager 処理の履歴を表示できます。 
 ---
 = smo history operation-show コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

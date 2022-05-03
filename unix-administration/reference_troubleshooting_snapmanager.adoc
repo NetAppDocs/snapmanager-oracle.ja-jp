@@ -5,6 +5,7 @@ keywords: information, common, issue, resolve, troubleshoot, snapmanager
 summary: ここでは、発生する可能性のある最も一般的な問題とその解決方法について説明します。 
 ---
 = SnapManager のトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

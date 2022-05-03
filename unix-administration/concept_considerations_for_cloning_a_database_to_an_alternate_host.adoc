@@ -5,6 +5,7 @@ keywords: clone, host, database, reside, requirement, consideration, alternate, 
 summary: データベースが配置されているホスト以外のホストにクローニングを行うには、いくつかの要件を満たす必要があります。 
 ---
 = 代替ホストにデータベースをクローニングする場合の考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

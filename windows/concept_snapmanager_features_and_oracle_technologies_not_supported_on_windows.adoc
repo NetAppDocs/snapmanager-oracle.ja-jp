@@ -5,6 +5,7 @@ keywords: feature, platform, oracle, technologies, technology, windows
 summary: SnapManager では、 Windows 上で SnapManager の一部の機能、プラットフォーム、および Oracle テクノロジがサポートされません。 
 ---
 = Windows では、 SnapManager の機能と Oracle テクノロジはサポートされていません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

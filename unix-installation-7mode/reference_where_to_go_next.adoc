@@ -5,6 +5,7 @@ keywords: install, snapmanager, successful, creating, backup, restore, recovery,
 summary: SnapManager をインストールしてバックアップを正常に作成したら、 SnapManager を使用してリストア、リカバリ、およびクローニングの処理を実行できます。また、スケジュール設定、 SnapManager 処理の管理、処理履歴の保持など、 SnapManager のその他の機能に関する情報も必要になる場合があります。 
 ---
 = 次の手順
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: run, backup, delete, command, remove, remove, create, clone, retention
 summary: backup delete コマンドを実行すると、クローン作成に使用したバックアップや失敗したバックアップなど、自動的に削除されないバックアップを削除できます。保持するバックアップは、保持クラスを変更することなく、無制限に削除できます。 
 ---
 = smo backup delete コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

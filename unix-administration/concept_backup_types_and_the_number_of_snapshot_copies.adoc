@@ -5,6 +5,7 @@ keywords: backup, snapshot, snapmanager, backup, copy, ontap, data
 summary: バックアップのタイプ（フルまたはパーシャル）によって、 SnapManager で作成される Snapshot コピーの数が異なります。フル・バックアップで SnapManager は、 SnapManager は各ボリュームの Snapshot コピーを作成し、パーシャル・バックアップでは各表領域ファイルの Snapshot コピーを作成します。 
 ---
 = バックアップのタイプおよび Snapshot コピーの数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: run, backup, list, command, display, information, profile, retention, 
 summary: backup list コマンドを実行すると、保持クラスや保護ステータスに関する情報など、プロファイル内のバックアップに関する情報を表示できます。 
 ---
 = smo backup list コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

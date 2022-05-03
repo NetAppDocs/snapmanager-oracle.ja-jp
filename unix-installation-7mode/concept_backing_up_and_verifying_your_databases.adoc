@@ -5,6 +5,7 @@ keywords: install, snapmanager, create, basic, backup, database, verify, corrupt
 summary: SnapManager のインストール後、データベースの基本的なバックアップを作成し、バックアップに破損ファイルが含まれていないことを確認できます。 
 ---
 = データベースのバックアップと検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

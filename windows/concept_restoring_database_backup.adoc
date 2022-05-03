@@ -5,6 +5,7 @@ keywords: oracle, enable, restore, database, snapshot, restoring, backup, mean-t
 summary: SnapManager for Oracle を使用すると、データベースを Snapshot コピーが作成されたときの状態にリストアできます。バックアップはより頻繁に作成されるため、適用する必要があるログの数が少なくなり、データベースの平均リカバリ時間（ MTTR ）が短縮されます。 
 ---
 = データベースバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: general, layout, configuration, information, storage, disk, group
 summary: ディスクグループ、ファイルタイプ、表領域に関する問題を回避するために、推奨される一般的なデータベースレイアウトおよびストレージ構成に関する情報を参照できます。 
 ---
 = 一般的なレイアウトと構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

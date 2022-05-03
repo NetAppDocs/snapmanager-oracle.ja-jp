@@ -5,6 +5,7 @@ keywords: verify, backup, database, backed-up, file, not, corrupt, snapmanager
 summary: データベースのバックアップを検証して、バックアップファイルが破損していないことを確認できます。 
 ---
 = データベースのバックアップの検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

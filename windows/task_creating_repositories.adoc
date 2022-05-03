@@ -5,6 +5,7 @@ keywords: snapmanager, require, repository, host, hold, data, operation, perform
 summary: SnapManager では、実行した処理に関するデータを保持するために、ホスト上にリポジトリが必要です。 
 ---
 = リポジトリの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

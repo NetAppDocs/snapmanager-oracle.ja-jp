@@ -5,6 +5,7 @@ keywords: snapmanager, enable, perform, volume-based, file-based, restore, opert
 summary: SnapManager では、ボリュームベースまたはファイルベースのバックアップとリストアの処理を実行できます。 
 ---
 = データベースリストアとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

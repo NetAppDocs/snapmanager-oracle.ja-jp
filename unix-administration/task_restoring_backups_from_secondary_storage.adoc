@@ -5,6 +5,7 @@ keywords: restore, protect, backup, secondary, storage, copy, data, primary, sto
 summary: 保護されたバックアップをセカンダリストレージからリストアして、データをプライマリストレージにコピーする方法を選択できます。 
 ---
 = セカンダリストレージからのバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

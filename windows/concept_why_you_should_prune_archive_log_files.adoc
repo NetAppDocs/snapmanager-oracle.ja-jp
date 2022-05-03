@@ -5,6 +5,7 @@ keywords: oracle, enable, delete, archive, log, file, back, up, prune
 summary: SnapManager for Oracle を使用すると、すでにバックアップされているアクティブ・ファイルシステムからアーカイブ・ログ・ファイルを削除できます。 
 ---
 = アーカイブログファイルの削除が必要な理由
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

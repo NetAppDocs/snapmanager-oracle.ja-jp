@@ -5,6 +5,7 @@ keywords: tools, require, perform, policy-driven, data, management, schedule, cr
 summary: SnapManager には、ポリシーベースのデータ管理、定期的なデータベースバックアップのスケジュール設定と作成、データ損失や災害が発生した場合のこれらのバックアップからのデータのリストア、データベースクローンの作成に必要なツールが用意されています。ポストプロセススクリプトを使用して、プライマリストレージにバックアップを作成し、保護されたバックアップをセカンダリストレージに作成できます。 
 ---
 = SnapManagerfor Oracle とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

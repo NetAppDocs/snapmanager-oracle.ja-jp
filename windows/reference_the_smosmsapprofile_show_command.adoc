@@ -5,6 +5,7 @@ keywords: run, profile, show, command, display, smo
 summary: profile show コマンドを実行すると、プロファイルに関する情報を表示できます。 
 ---
 = smo profile show コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

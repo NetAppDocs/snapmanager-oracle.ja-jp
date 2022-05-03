@@ -5,6 +5,7 @@ keywords: restore, local, backup, exist, primary, storage, entire, process, perf
 summary: プライマリストレージにあるローカルバックアップをリストアすることができます。プロセス全体は、 SnapManager for Oracle を使用して実行されます。 
 ---
 = SnapManager for Oracle を使用してプライマリストレージ上のローカルバックアップをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

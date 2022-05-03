@@ -5,6 +5,7 @@ keywords: refer, sample, database, volume, layout, configuring, configure
 summary: データベースの設定方法については、サンプルのデータベースボリュームレイアウトを参照してください。 
 ---
 = データベースボリュームのレイアウト例
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

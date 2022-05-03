@@ -5,6 +5,7 @@ keywords: free, backup, delete, snapshot, copies, deleting, metadata, function
 summary: バックアップを解放して、バックアップのメタデータを削除することなく Snapshot コピーを削除できます。この機能により、バックアップが占有するスペースが解放されます。smo backup free コマンドを使用すると、バックアップを解放できます。 
 ---
 = バックアップの解放
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

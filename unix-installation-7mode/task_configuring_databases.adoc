@@ -5,6 +5,7 @@ keywords: configure, oracle, database, snapmanager, online
 summary: SnapManager を使用してバックアップするターゲットデータベースと、ターゲットデータベースメタデータを格納するリポジトリデータベースを、少なくとも 2 つずつ設定する必要があります。SnapManager 処理を実行する前に、ターゲットデータベースと SnapManager リポジトリデータベースを設定してオンラインにする必要があります。 
 ---
 = データベースを設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: addition, role-based, access, control, rbac, snapmanager, enable, pass
 summary: SnapManager では、ロールベースアクセス制御に加えて、プロファイルのパスワードを設定して不正アクセスを防止することができます。 
 ---
 = プロファイルへのアクセスの許可
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

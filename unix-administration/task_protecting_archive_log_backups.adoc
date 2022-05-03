@@ -5,6 +5,7 @@ keywords: creating, profile, enable, protection, archive, log, backup, base, pol
 summary: プロファイルの作成中に、アーカイブログの保護ポリシーに基づいてアーカイブログのバックアップの保護を有効にできます。 
 ---
 = アーカイブログのバックアップを保護しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

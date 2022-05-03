@@ -5,6 +5,7 @@ keywords: snapmanager, storage, system, host, name, address, target, database
 summary: SnapManager 3.3 以降では、ストレージ・システムのホスト名またはストレージ・システムのアドレス、および SnapManager プロファイルに関連付けられたターゲット・データベースのホスト名を更新できます。 
 ---
 = プロファイルに関連付けられたストレージ・システム名およびターゲット・データベース・ホスト名を更新しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

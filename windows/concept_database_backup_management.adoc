@@ -5,6 +5,7 @@ keywords: backing, up, database, resource, post-process, script
 summary: SnapManager では、ポストプロセススクリプトを使用してローカルストレージリソースのデータをバックアップできます。 
 ---
 = データベースをバックアップしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

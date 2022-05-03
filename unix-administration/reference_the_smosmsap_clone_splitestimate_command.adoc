@@ -5,6 +5,7 @@ keywords: command, enable, clone, split, amount, storage, consume, estimate
 summary: このコマンドを使用すると、クローンスプリットの概算ストレージ消費量を表示できます。 
 ---
 = smo clone split -estimate コマンドを使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, provide, method, custom, script, operation, occur, plug-i
 summary: SnapManager では、クローニング処理の前後にカスタムスクリプトを使用することができます。たとえば、クローンデータベースの SID を検証し、命名ポリシーで SID を許可するカスタムスクリプトを作成したとします。SnapManager のクローンプラグインを使用すると、カスタムスクリプトを含めることができ、 SnapManager のクローン処理の前後に自動的に実行されます。 
 ---
 = データベースのクローニングおよびカスタムプラグインスクリプトの使用
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

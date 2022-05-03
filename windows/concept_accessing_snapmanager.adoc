@@ -5,6 +5,7 @@ keywords: command-line, interface, cli, graphical, user, gui, accessing
 summary: SnapManager には、コマンドラインインターフェイス（ CLI ）またはグラフィカルユーザインターフェイス（ GUI ）を使用してアクセスできます。 
 ---
 = SnapManager へのアクセス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

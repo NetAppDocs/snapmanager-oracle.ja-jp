@@ -5,6 +5,7 @@ keywords: configuring, backup, schedule, storage, administrator, configure, prot
 summary: バックアップスケジュールを設定したら、保護されたバックアップストレージポリシーをそのスケジュールに含めるようにストレージ管理者が設定します。 
 ---
 = Protection Manager を使用して、セカンダリバックアップ保護ポリシーを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

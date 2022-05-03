@@ -5,6 +5,7 @@ keywords: smo, server, status, command, host
 summary: smo _server status コマンドを実行すると、 SnapManager ホスト・サーバのステータスを表示できます。 
 ---
 = smo _server status コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: restore, backup, data, secondary, primary, storage, overview, protect,
 summary: セカンダリストレージからプライマリストレージにバックアップデータをリストアする際に使用するリストア方式を選択できます。 
 ---
 = 保護されたバックアップのリストアの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

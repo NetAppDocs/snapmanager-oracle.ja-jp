@@ -5,6 +5,7 @@ keywords: snapmanager, restore, plan, operation, preview, plan, storage-side
 summary: SnapManager では、リストア処理の実行前と実行後にリストア計画を提示します。リストア計画を使用して、さまざまなリストア方式についてプレビュー、確認、分析を行います。 
 ---
 = リストアプレビュープランとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

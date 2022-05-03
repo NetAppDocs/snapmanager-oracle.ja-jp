@@ -5,6 +5,7 @@ keywords: register, root, user, administrator, datafabric, manager, server, root
 summary: データ保護を有効にするには、 DataFabric Manager サーバの root ユーザまたはストレージシステムの root ユーザを SnapDrive に登録する必要があります。 
 ---
 = RBAC が有効になっていない場合の SnapDrive の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

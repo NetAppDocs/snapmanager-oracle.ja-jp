@@ -5,6 +5,7 @@ keywords: profile, store, information, necessary, operation, database
 summary: SnapManager はプロファイルを使用して、特定のデータベースに対して処理を実行するために必要な情報を格納します。プロファイルには、クレデンシャル、バックアップ、クローンなど、データベースに関する情報が格納されます。プロファイルを作成すると、そのデータベースに対して処理を実行するたびにデータベースの詳細を指定する必要がなくなります。 
 ---
 = プロファイルとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

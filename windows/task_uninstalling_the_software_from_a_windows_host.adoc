@@ -5,6 +5,7 @@ keywords: uninstall, snapmanager, host, server
 summary: SnapManager はホストサーバからアンインストールできます。 
 ---
 = SnapManager をアンインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

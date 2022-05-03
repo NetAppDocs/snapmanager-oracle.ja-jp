@@ -5,6 +5,7 @@ keywords: snapmanager, appropriate, credentials, security, rbac, snapdrive
 summary: SnapManager 処理は、適切なクレデンシャルがある場合にのみ実行できます。SnapManager のセキュリティは、ユーザ認証とロールベースアクセス制御（ RBAC ）によって管理されます。データベース管理者は、 RBAC を使用して、データベース内のデータファイルを保持するボリュームや LUN に対して SnapManager で実行できる処理を制限できます。 
 ---
 = SnapManager によるセキュリティの維持方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

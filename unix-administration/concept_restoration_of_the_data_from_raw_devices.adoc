@@ -5,6 +5,7 @@ keywords: restore, alternate, location, connect, necessary, raw, device, local, 
 summary: 代替保存場所からリストアする前に、ローカル・ホスト上に存在する必要な raw デバイスに接続する必要があります。 
 ---
 = raw デバイスからのデータのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

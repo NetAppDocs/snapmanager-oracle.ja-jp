@@ -5,6 +5,7 @@ keywords: roll, upgrade, approach, enable, host, stagger, host-by-host, manner, 
 summary: SnapManager 3.1 からは、段階的なホスト単位のアップグレード方式を使用してホストをアップグレードできるローリングアップグレード方式がサポートされます。 
 ---
 = ローリングアップグレードを使用した SnapManager ホストのアップグレード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

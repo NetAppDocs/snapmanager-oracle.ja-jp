@@ -5,6 +5,7 @@ keywords: create, profile, snapmanager, oracle, enable, protect, client, payroll
 summary: SnapManager for Oracle でプロファイルを作成し、プロファイルで保護を有効にし、保護ポリシーを割り当てて、保護されたバックアップを作成する必要があります。 
 ---
 = SnapManager for Oracle を使用して、データベースプロファイルを作成し、保護ポリシーを割り当てます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

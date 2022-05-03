@@ -5,6 +5,7 @@ keywords: oracle, database, 9i, 10gr2, deprecated, version
 summary: Oracle データベース 9i は、 SnapManager 3.2 以降ではサポートされません。また、 SnapManager 3.3.1 以降では、 Oracle データベース 10gR2 （ 10.2.0.4 より前）はサポートされません。 
 ---
 = Oracle データベースの廃止されたバージョン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

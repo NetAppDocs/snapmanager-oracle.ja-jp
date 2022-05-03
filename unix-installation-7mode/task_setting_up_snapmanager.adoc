@@ -5,6 +5,7 @@ keywords: start, snapmanager, access, user, interface, ui, command-line, interfa
 summary: SnapManager を起動し、ユーザインターフェイス（ UI ）またはコマンドラインインターフェイス（ CLI ）を使用してアクセスできます。SnapManager にアクセスしたあと、 SnapManager の処理を実行する前に、 SnapManager リポジトリを作成する必要があります。 
 ---
 = SnapManager をセットアップしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

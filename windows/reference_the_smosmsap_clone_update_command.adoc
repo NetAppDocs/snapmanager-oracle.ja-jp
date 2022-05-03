@@ -5,6 +5,7 @@ keywords: command, update, information, clone, comment, smo
 summary: このコマンドは、クローンに関する情報を更新します。コメントを更新できます。 
 ---
 = smo clone update コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

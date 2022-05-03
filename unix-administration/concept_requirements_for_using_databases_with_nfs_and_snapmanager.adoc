@@ -5,6 +5,7 @@ keywords: requirement, network, file, system, nfs, snapmanager, recommendation, 
 summary: ネットワークファイルシステム（ NFS ）および SnapManager でデータベースを使用するための要件を確認しておく必要があります。推奨事項には、 root 、属性のキャッシュ、およびシンボリックリンクとしての実行が含まれます。 
 ---
 = NFS および SnapManager でデータベースを使用するための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

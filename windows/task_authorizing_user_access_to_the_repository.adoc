@@ -5,6 +5,7 @@ keywords: snapmanager, enable, credential, database, access, repository, restric
 summary: SnapManager を使用すると、データベースユーザがリポジトリにアクセスするためのクレデンシャルを設定できます。クレデンシャルを使用すると、 SnapManager ホスト、リポジトリ、プロファイル、およびデータベースへのアクセスを制限したり、禁止したりできます。 
 ---
 = リポジトリへのアクセスを許可する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

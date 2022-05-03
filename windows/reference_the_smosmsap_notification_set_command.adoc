@@ -5,6 +5,7 @@ keywords: notification, set, command, configure, mail, server, smo
 summary: 通知セットコマンドを使用してメールサーバを設定できます。 
 ---
 = smo notification set コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

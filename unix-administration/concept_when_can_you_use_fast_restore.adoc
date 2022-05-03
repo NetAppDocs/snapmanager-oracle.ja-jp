@@ -5,6 +5,7 @@ keywords: specific, rule, fast, restore, optimal, restore, performance, fast, re
 summary: 高速リストアを使用して最適なリストアパフォーマンスを実現するには、特定のルールが適用されます。場合によっては、高速リストアを使用できないこともあります。 
 ---
 = 高速リストアを使用できる状況については、次のガイドラインを参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

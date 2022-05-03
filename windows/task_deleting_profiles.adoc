@@ -5,6 +5,7 @@ keywords: delete, profile, anytime, successful, incomplete, backup, delete
 summary: 成功したバックアップまたは未完了のバックアップが含まれていないかぎり、プロファイルはいつでも削除できます。解放または削除されたバックアップを含むプロファイルを削除できます。 
 ---
 = プロファイルの削除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: protection, policies, rule, database, backup, portect, schedule
 summary: 保護ポリシーは、データベースバックアップの保護方法を制御するルールです。プロファイルの作成時に保護ポリシーを選択できます。 
 ---
 = 保護ポリシーとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

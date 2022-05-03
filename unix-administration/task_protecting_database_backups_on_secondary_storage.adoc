@@ -5,6 +5,7 @@ keywords: snapmanager, protect, backup, copies, secondary, tertiary, storage, sy
 summary: SnapManager を使用して、セカンダリストレージシステムまたはターシャリストレージシステム上のバックアップコピーを保護できます。 
 ---
 = セカンダリストレージまたはターシャリストレージ上のデータベースバックアップを保護する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

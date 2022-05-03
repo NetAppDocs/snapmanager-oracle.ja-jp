@@ -5,6 +5,7 @@ keywords: listener, process, listen, client, connection, request, receive, incom
 summary: リスナーは、クライアントの接続要求をリスンするプロセスです。受信したクライアント接続要求を受信し、これらの要求のトラフィックをデータベースに管理します。ターゲットデータベースまたはリポジトリデータベースのインスタンスに接続する前に、 status コマンドを使用してリスナーの設定を確認できます。 
 ---
 = Oracle リスナーの設定の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

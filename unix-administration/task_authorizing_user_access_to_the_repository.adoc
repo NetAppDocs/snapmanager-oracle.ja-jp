@@ -5,6 +5,7 @@ keywords: addition, role-based, access, control, rbac, snapmanager, enable, cred
 summary: SnapManager では、ロールベースアクセス制御に加えて、データベースユーザがリポジトリにアクセスするためのクレデンシャルを設定できます。クレデンシャルを使用すると、 SnapManager ホスト、リポジトリ、プロファイル、およびデータベースへのアクセスを制限したり、禁止したりできます。 
 ---
 = リポジトリへのアクセスを許可する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: delete, clone, size, snapshot, copy, backup, guarantee, deleting
 summary: 'Snapshot コピーのサイズがバックアップの 10~20% の間に達した時点でクローンを削除できます。これにより、クローンに最新のデータが保持されます。' 
 ---
 = クローンを削除します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

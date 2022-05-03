@@ -5,6 +5,7 @@ keywords: run, backup, verify, command, valid, oracle, smo
 summary: backup verify コマンドを実行して、バックアップが Oracle で有効な形式になっているかどうかを確認できます。 
 ---
 = smo backup verify コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

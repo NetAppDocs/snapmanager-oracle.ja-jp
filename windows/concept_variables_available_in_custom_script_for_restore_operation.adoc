@@ -5,6 +5,7 @@ keywords: provide, context, information, form, environment, variable, restore, o
 summary: SnapManager には、実行中のリストア処理に関連する環境変数の形式でコンテキスト情報が表示されます。たとえば、元のホストの名前とリストアされるバックアップのラベルを取得できます。 
 ---
 = リストア処理のタスクスクリプトで使用できる変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

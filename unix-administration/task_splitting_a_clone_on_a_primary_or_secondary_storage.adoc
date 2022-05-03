@@ -5,6 +5,7 @@ keywords: clone, split, command, complete, metadata, repository, primary, second
 summary: clone split コマンドを使用すると、クローンをスプリットできます。クローンスプリットが完了すると、クローンメタデータはリポジトリデータベースから削除され、クローンに関連付けられているバックアップは削除または解放できます。 
 ---
 = プライマリストレージまたはセカンダリストレージ上のクローンをスプリットする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

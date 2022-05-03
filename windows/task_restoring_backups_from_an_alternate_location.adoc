@@ -5,6 +5,7 @@ keywords: restore, alternate, location, data, file, intermediate, system, active
 summary: 別の場所からリストアして、中間ファイルシステムからアクティブファイルシステムにデータファイルをリストアできます。 
 ---
 = 別の場所からのバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

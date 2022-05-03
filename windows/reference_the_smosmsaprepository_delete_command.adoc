@@ -5,6 +5,7 @@ keywords: command, delete, repository, store, database, associate, credential, d
 summary: このコマンドは、データベースプロファイルおよび関連付けられているクレデンシャルを格納するリポジトリを削除します。リポジトリを削除できるのは、リポジトリにプロファイルがない場合だけです。 
 ---
 = smo repository delete コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: archive, log, consolidation, backup
 summary: SnapManager （ 3.2 以降） for Oracle は、アーカイブ・ログ・ファイルのバックアップを最小限の数だけ保持するように、アーカイブ・ログ・バックアップを統合します。SnapManager for Oracle は、他のバックアップのサブセットであるアーカイブ・ログ・ファイルを含むバックアップを識別して解放します。 
 ---
 = アーカイブログの統合
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, organize, information, profile, associate, repositories, 
 summary: SnapManager では、情報がプロファイルに整理され、プロファイルがリポジトリに関連付けられます。プロファイルには管理対象のデータベースに関する情報が格納され、リポジトリにはプロファイルに対して実行された処理に関するデータが格納されます。 
 ---
 = リポジトリとは何ですか
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

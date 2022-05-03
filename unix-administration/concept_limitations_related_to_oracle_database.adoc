@@ -5,6 +5,7 @@ keywords: snapmanager, limitations, oracle, database, 10gr2, 11gr1, 11gr2, 12_c_
 summary: SnapManager を使用する前に、 Oracle データベースに関する制限事項を確認しておく必要があります。 
 ---
 = Oracle データベースに関する制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, reduce, level, detail, database, administrator, track, de
 summary: SnapManager では、単一のインターフェイスから処理を監視する方法を提供することで、さまざまな処理のステータスを追跡するために必要な詳細レベルをデータベース管理者が軽減できます。 
 ---
 = 詳細を追跡し、レポートを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

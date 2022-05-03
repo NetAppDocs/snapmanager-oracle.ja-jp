@@ -5,6 +5,7 @@ keywords: environment, software, hardware, browser, database, operating, system,
 summary: SnapManager をアップグレードする環境は、ソフトウェア、ハードウェア、ブラウザ、データベース、およびオペレーティングシステムの特定の要件を満たしている必要があります。要件の最新情報については、 Interoperability Matrix を参照してください。 
 ---
 = SnapManager のアップグレード準備をしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: operation, backup, restore, clone, different, state
 summary: SnapManager 処理（バックアップ、リストア、クローン）はさまざまな状態になり、各状態が処理の進捗状況を示します。 
 ---
 = SnapManager の動作状態
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

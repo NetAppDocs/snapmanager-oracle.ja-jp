@@ -5,6 +5,7 @@ keywords: determine, cause, error, message, classification
 summary: メッセージの分類がわかっている場合は、エラーの原因を判断できます。 
 ---
 = エラーメッセージの分類
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

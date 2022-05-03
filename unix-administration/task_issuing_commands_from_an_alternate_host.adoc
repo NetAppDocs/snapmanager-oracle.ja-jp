@@ -5,6 +5,7 @@ keywords: issue, cli, command, host, database, snapmanager, route, appropriate, 
 summary: データベース・ホスト以外のホストから問題 CLI コマンドを実行すると、入力したコマンドが SnapManager によって適切なホストにルーティングされます。 
 ---
 = 代替ホストからのコマンドの実行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

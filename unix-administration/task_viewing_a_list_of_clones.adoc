@@ -5,6 +5,7 @@ keywords: view, list, clone, associate, particular, profile
 summary: 特定のプロファイルに関連付けられているクローンのリストを表示できます。 
 ---
 = クローンのリストを表示しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

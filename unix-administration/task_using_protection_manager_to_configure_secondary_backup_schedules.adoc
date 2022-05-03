@@ -5,6 +5,7 @@ keywords: support, backup, database, secondary, storage, administrator, protecti
 summary: ストレージ管理者は、セカンダリストレージへのデータベースのバックアップをサポートするために、 Protection Manager を使用してバックアップスケジュールを設定します。 
 ---
 = Protection Manager を使用して、セカンダリバックアップスケジュールを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: smo, operation, dump, command, name, id, fail, particular, host, envir
 summary: smo operation dump コマンドでは、失敗した処理の名前または ID を指定して、特定の処理に関するログ情報を取得できます。さまざまなログレベルを指定して、特定の処理、プロファイル、ホスト、または環境に関する情報を収集できます。 
 ---
 = 処理レベルのダンプ・ファイルの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

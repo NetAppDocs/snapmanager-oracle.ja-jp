@@ -5,6 +5,7 @@ keywords: install, snapmanager, host, database, backup, run, snapdrive, unix, re
 summary: バックアップするデータベースが実行されている各ホストに SnapManager をインストールする必要があります。 
 ---
 = SnapManager をインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

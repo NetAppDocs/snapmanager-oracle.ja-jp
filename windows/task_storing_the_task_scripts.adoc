@@ -5,6 +5,7 @@ keywords: pretask, post-task, policy, task, script, directory, target, server, b
 summary: バックアップまたはクローンを作成するターゲットサーバ上の指定したディレクトリに、タスク実行前スクリプト、タスク実行後スクリプト、ポリシータスクスクリプトを保存する必要があります。リストア処理の場合、バックアップをリストアするターゲットサーバ上の指定したディレクトリにスクリプトが配置されている必要があります。 
 ---
 = タスクスクリプトの保存
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

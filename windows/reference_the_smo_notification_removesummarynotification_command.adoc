@@ -5,6 +5,7 @@ keywords: command, disable, summary, notification, multiple, profile, repository
 summary: このコマンドは、リポジトリデータベースの複数のプロファイルに関する概要通知を無効にします。 
 ---
 = smo notification remove-summary-notification コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

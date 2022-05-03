@@ -5,6 +5,7 @@ keywords: command, delete, clone, split, operation, cycle, entry, repository, da
 summary: このコマンドを使用すると、リポジトリデータベースからクローンスプリット処理サイクルエントリを削除できます。 
 ---
 = smo clone split -delete コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

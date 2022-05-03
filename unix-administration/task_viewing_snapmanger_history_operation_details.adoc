@@ -5,6 +5,7 @@ keywords: view, history, settings, single, profile, smo
 summary: 1 つのプロファイルの履歴設定を表示できます。 
 ---
 = SnapManager の履歴の設定の詳細を表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

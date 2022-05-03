@@ -5,6 +5,7 @@ keywords: snapmanager, enable, perform, operation, backup, cloning, clone, opera
 summary: SnapManager では、プロファイルの作成、バックアップの実行、バックアップのクローニングなど、さまざまな処理を実行できます。これらの処理は、特定の順序で実行する必要があります。 
 ---
 = 処理の実行順序
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

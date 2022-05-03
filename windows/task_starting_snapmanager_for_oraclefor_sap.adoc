@@ -5,6 +5,7 @@ keywords: snapmanager, startup, section, list, task, oracle, learn
 summary: SnapManager の起動セクションには、 SnapManager の起動時に実行するタスクがリストされています。このセクションは、 SnapManager について学習している場合にも使用します。 
 ---
 = SnapManagerfor Oracle を起動しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

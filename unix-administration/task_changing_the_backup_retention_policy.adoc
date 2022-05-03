@@ -5,6 +5,7 @@ keywords: change, properties, backup, eligible, ineligible, delete, according, r
 summary: 保持ポリシーに従ってバックアップを削除できるようにするか、または削除しないように、バックアップのプロパティを変更できます。 
 ---
 = バックアップ保持ポリシーを変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

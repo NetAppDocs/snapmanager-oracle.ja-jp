@@ -5,6 +5,7 @@ keywords: install, snapmanager, oracle, environment, preinstallation, task
 summary: SnapManager for Oracle をインストールする前に、いくつかの追加タスクを実行して環境をセットアップする必要があります。実行する必要があるタスクは、使用するオペレーティングシステム、 Oracle コンポーネント、およびデータベースバージョンによって異なります。 
 ---
 = インストール前のタスク
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

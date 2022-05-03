@@ -5,6 +5,7 @@ keywords: view, detail, history, specific, snapmanager, operation, associate, pr
 summary: プロファイルに関連付けられた特定の SnapManager 処理の詳細な履歴を表示できます。 
 ---
 = プロファイルに関連付けられている特定の処理の詳細履歴を表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

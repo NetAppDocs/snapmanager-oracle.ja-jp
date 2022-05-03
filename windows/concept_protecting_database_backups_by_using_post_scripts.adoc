@@ -5,6 +5,7 @@ keywords: enable, protect, database, backup, postscript, snapmirror, snapvault, 
 summary: SnapManager では、プライマリストレージシステムとセカンダリストレージシステムの間に SnapMirror 関係または SnapVault 関係が確立されたときに、ポストスクリプトを使用してデータベースバックアップを保護できます。SnapManager の CLI と GUI の両方から、バックアップ処理後のアクティビティのデフォルトのポストスクリプトを使用できます。 
 ---
 = ポストスクリプトを使用したデータベースバックアップの保護
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

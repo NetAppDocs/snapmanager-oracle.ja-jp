@@ -5,6 +5,7 @@ keywords: snapmanager, software, uninstall, host, server, unix, smo
 summary: SnapManager ソフトウェアが不要になった場合は、ホストサーバからアンインストールできます。 
 ---
 = UNIX ホストからソフトウェアをアンインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

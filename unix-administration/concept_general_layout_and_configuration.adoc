@@ -5,6 +5,7 @@ keywords: recommend, general, database, layout, storage, configuration, avoid, i
 summary: 推奨される一般的なデータベースレイアウトとストレージ構成を把握しておくと、ディスクグループ、ファイルタイプ、表領域に関する問題の回避に役立ちます。 
 ---
 = 一般的なデータベースレイアウトとストレージ構成を推奨します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

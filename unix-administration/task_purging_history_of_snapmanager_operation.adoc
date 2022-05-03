@@ -5,6 +5,7 @@ keywords: delete, history, snapmanager, operation, longer, require, detail, smo
 summary: 履歴の詳細が不要になった場合は、 SnapManager 処理の履歴を削除できます。 
 ---
 = SnapManager 処理の履歴を削除しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

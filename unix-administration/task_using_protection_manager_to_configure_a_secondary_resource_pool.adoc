@@ -5,6 +5,7 @@ keywords: support, backup, database, secondary, storage, administrator, protecti
 summary: ストレージ管理者は、セカンダリストレージへのデータベースのバックアップをサポートするために、 Protection Manager を使用して、 SnapVault セカンダリライセンスで有効になっているセカンダリストレージシステムをバックアップ用のリソースプールに編成します。 
 ---
 = Protection Manager を使用してセカンダリリソースプールを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

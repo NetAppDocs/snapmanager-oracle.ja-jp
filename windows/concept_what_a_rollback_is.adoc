@@ -5,6 +5,7 @@ keywords: rollback, operation, enable, revert, upgrade
 summary: ロールバック処理を使用すると、ローリングアップグレードの実行後に SnapManager を以前のバージョンにリバートできます。 
 ---
 = ロールバックとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

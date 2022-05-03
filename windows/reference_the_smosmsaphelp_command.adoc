@@ -5,6 +5,7 @@ keywords: run, help, command, display, information, snapmanager, smo, valid
 summary: help コマンドを実行すると、 SnapManager コマンドとそのオプションに関する情報を表示できます。コマンド名を指定しない場合は、有効なコマンドのリストが表示されます。コマンド名を指定すると、そのコマンドの構文が表示されます。 
 ---
 = smo help コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

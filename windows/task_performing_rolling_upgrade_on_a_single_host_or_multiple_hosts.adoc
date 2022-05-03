@@ -5,6 +5,7 @@ keywords: perform, rolling, upgrade, single, multiple, snapmanager, host, comman
 summary: コマンドラインインターフェイス（ CLI ）を使用して、 1 つまたは複数の SnapManager サーバホストでローリングアップグレードを実行できます。アップグレードした SnapManager サーバホストは、新しいバージョンの SnapManager でのみ管理されます。 
 ---
 = 単一のホストまたは複数のホストでローリングアップグレードを実行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

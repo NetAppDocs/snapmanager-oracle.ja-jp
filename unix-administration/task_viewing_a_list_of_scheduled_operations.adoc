@@ -5,6 +5,7 @@ keywords: view, list, schedule, operation, profile, smo
 summary: プロファイルに対してスケジュールされている処理のリストを表示できます。 
 ---
 = スケジュールされた処理のリストを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

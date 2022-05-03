@@ -5,6 +5,7 @@ keywords: snapmanager, support, data, protection, backup, secondary, tertiary, s
 summary: SnapManager は、データ保護をサポートして、セカンダリストレージシステムまたはターシャリストレージシステム上のバックアップを保護します。ソースボリュームとデスティネーションボリュームの間に SnapMirror 関係と SnapVault 関係を設定する必要があります。 
 ---
 = SnapManager でのデータ保護の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: backup, show, command, display, information, protection, status
 summary: backup show コマンドを使用すると、バックアップの保護ステータス、バックアップ保持クラス、プライマリストレージとセカンダリストレージ上のバックアップなど、バックアップに関する詳細情報を表示できます。 
 ---
 = smo backup show コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

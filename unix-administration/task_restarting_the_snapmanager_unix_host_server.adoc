@@ -5,6 +5,7 @@ keywords: restart, server, unix, host, cli, smo
 summary: CLI を使用して UNIX ホストでサーバを再起動できます。 
 ---
 = SnapManager UNIX ホスト・サーバを再起動します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

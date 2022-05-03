@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, backup, associate, profile, determine, protection
 summary: SnapManager for Oracle を使用すると、プロファイルに関連付けられたバックアップのリストを表示し、バックアップが保護に対して有効になっているかどうかを確認し、保持クラスを確認できます（この例では毎日または毎週）。 
 ---
 = SnapManager for Oracle を使用したバックアップ保護の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

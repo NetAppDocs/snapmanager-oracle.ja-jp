@@ -5,6 +5,7 @@ keywords: oracle, rac, environment, node, cluster, database, fail
 summary: 両方のノードが同じクラスタに属する Oracle RAC 環境で、バックアップが作成されたノードとは異なるノードからリストア処理を実行しようとすると、リストア処理に失敗します。 
 ---
 = プロファイルが作成されていない RAC ノードの 1 つから RAC データベースをリストアできません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

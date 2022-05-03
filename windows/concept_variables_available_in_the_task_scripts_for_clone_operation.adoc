@@ -5,6 +5,7 @@ keywords: provide, context, information, environment, variable, relate, clone, o
 summary: SnapManager は、実行するクローン処理に関連する環境変数の形式でコンテキスト情報を提供します。たとえば、元のホストの名前、クローンデータベースの名前、バックアップのラベルを取得できます。 
 ---
 = クローニング処理のタスクスクリプトで使用できる変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

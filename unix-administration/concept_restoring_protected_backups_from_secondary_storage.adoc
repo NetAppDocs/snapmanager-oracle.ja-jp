@@ -5,6 +5,7 @@ keywords: restore, protect, backup, secondary, storage
 summary: 保護されているバックアップはセカンダリストレージからリストアできます。ただし、プライマリストレージにバックアップが存在する場合、セカンダリストレージからバックアップをリストアすることはできません。 
 ---
 = セカンダリストレージから保護されたバックアップをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: pretask, post-task, script, create, oracle, task, operation
 summary: 作成するプリタスクスクリプトまたはポストタスクスクリプトは、 SnapManager for Oracle プラグインの標準構造に従う必要があります。 
 ---
 = タスクスクリプト内の操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

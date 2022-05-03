@@ -5,6 +5,7 @@ keywords: task, specification, graphical, user, interface, gui, command-line, in
 summary: タスク仕様ファイルは、グラフィカルユーザインターフェイス \ （ GUI\ ）、コマンドラインインターフェイス \ （ CLI\ ）、またはテキストエディタを使用して作成できます。これらのファイルは、バックアップ、リストア、クローニングの各処理の前処理または後処理を実行する際に使用されます。 
 ---
 = タスク仕様ファイルを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

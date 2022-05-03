@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, restore, database, snapshot, file-based, backup, 
 summary: SnapManager for Oracle を使用すると、データベースを Snapshot コピーが作成されたときの状態にリストアできます。SnapManager では、ファイルベースのリストアプロセスに加えて、ボリュームベースの高速リストアテクノロジがサポートされているため、他のリカバリ方法に比べてリストア時間が大幅に短縮されます。バックアップはより頻繁に作成されるため、適用する必要があるログの数が少なくなり、データベースの平均リカバリ時間（ MTTR ）が短縮されます。 
 ---
 = データベースバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

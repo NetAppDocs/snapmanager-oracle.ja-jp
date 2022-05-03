@@ -5,6 +5,7 @@ keywords: snapmanager, integrated, technology, mirror, snapshot, copies, data-pr
 summary: SnapManager の統合された SnapMirror テクノロジを使用して Snapshot コピーをミラーリングするには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。初期化の際に、 SnapMirror はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。また、ソースボリューム上の最新ではない Snapshot コピーもすべてデスティネーションボリュームに転送します。 
 ---
 = SnapMirror レプリケーションのためのストレージシステムの準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

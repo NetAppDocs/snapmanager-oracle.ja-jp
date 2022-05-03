@@ -5,6 +5,7 @@ keywords: snapmanager, flexclone, volume, nfs, environment, clone, backup, flexv
 summary: SnapManager 環境でボリュームの FlexClone を作成すると、 /etc/exports ファイルにエントリが追加されます。SnapManager ホストへのクローンまたはバックアップのマウントが失敗して、エラーメッセージが表示されます。 
 ---
 = NFS 環境で FlexClone ボリュームのマウントが失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

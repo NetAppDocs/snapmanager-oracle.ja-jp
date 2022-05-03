@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, maintain, history, single, multiple, profile, bac
 summary: SnapManager for Oracle では、 1 つまたは複数のプロファイルに関連付けられた SnapManager 操作の履歴を保持できます。履歴は、 SnapManager のコマンドラインインターフェイス（ CLI ）またはグラフィカルユーザインターフェイス（ GUI ）で管理できます。処理の履歴をレポートとして表示し、このレポートを監査コンプライアンスの目的で使用できます。 
 ---
 = SnapManager 操作の履歴を保持する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

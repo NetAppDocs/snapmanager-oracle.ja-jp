@@ -5,6 +5,7 @@ keywords: verify, exist, profile, set, up, correct, snapmanager, environment, sm
 summary: 既存のプロファイルが正しく設定されていることを確認できます。プロファイルを検証すると、 SnapManager は指定されたプロファイルの環境をチェックし、プロファイルが設定されていて、このプロファイルのデータベースにアクセスできることを検証します。 
 ---
 = プロファイルの検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

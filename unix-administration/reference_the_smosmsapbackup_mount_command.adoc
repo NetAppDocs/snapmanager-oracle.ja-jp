@@ -5,6 +5,7 @@ keywords: run, backup, mount, command, perform, recover, operation, external, to
 summary: 外部ツールを使用してリカバリ処理を実行するには、 backup mount コマンドを実行してバックアップをマウントします。 
 ---
 = smo backup mount コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

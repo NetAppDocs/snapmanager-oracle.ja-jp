@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, cli, gui, history, configuring, history, operatio
 summary: SnapManager for Oracle を使用すると、 SnapManager の CLI または GUI から SnapManager 処理の履歴を保持できます。SnapManager 処理の履歴はレポートとして表示できます。 
 ---
 = SnapManager 操作の履歴を設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

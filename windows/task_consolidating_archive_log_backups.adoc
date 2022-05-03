@@ -5,6 +5,7 @@ keywords: snapmanager, consolidate, archivelog-only, backup, freeing, duplicate,
 summary: SnapManager は、重複するアーカイブログのみのバックアップを解放することにより、バックアップを作成するたびにアーカイブログのみのバックアップを統合します。デフォルトでは、統合は有効になっています。 
 ---
 = アーカイブログバックアップの統合
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

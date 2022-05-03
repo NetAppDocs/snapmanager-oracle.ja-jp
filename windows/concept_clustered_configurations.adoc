@@ -5,6 +5,7 @@ keywords: cluster, configuration
 summary: SnapManager はクラスタ構成で動作します。 
 ---
 = クラスタ構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

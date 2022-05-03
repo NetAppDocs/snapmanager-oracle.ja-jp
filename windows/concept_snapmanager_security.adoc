@@ -5,6 +5,7 @@ keywords: perform, operation, appropriate, credential, security, authentication
 summary: SnapManager 処理は、適切なクレデンシャルがある場合にのみ実行できます。SnapManager のセキュリティは、ユーザ認証によって管理されます。 
 ---
 = SnapManager によるセキュリティの維持方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

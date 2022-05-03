@@ -5,6 +5,7 @@ keywords: find, log, information, particular, profile, smo, dump, command, name,
 summary: smo profile dump コマンドでプロファイル名を指定すると、特定のプロファイルに関するログ情報を検索できます。 
 ---
 = プロファイルレベルのダンプ・ファイルの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

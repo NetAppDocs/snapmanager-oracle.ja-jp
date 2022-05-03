@@ -5,6 +5,7 @@ keywords: snapmanager, enable, create, script, preprocessing, activity, post-pro
 summary: SnapManager では、前処理アクティビティ、後処理アクティビティ、およびバックアップ、リストア、クローン操作のポリシータスク用のスクリプトを作成できます。SnapManager 処理の前処理アクティビティ、後処理アクティビティ、およびポリシータスクを実行するには、スクリプトを正しいインストールディレクトリに配置する必要があります。 
 ---
 = プリタスクスクリプト、ポストタスクスクリプト、ポリシースクリプトの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: run, operation, show, command, list, summary, information, perform, sp
 summary: operation show コマンドを実行して、指定したプロファイルに対して実行されたすべての処理の概要情報をリストできます。この出力には、クライアントユーザ（クライアント PC のユーザ）と有効なユーザ（選択したホストで有効な SnapManager のユーザ）が表示されます。 
 ---
 = smo operation show コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

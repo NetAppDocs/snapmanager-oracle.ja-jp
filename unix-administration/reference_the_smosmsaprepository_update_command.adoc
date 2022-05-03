@@ -5,6 +5,7 @@ keywords: command, repository, store, database, profile, associate, credentials,
 summary: このコマンドは、 SnapManager のアップグレード時に、データベースプロファイルおよび関連するクレデンシャルを格納するリポジトリを更新します。SnapManager の新しいバージョンをインストールする場合は、そのバージョンを使用する前に、 repository update コマンドを実行する必要があります。このコマンドは、リポジトリに不完全なコマンドがない場合にのみ使用できます。 
 ---
 = smo repository update コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

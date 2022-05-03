@@ -5,6 +5,7 @@ keywords: administrator, restore, protect, backup, secondary, storage, copy, dat
 summary: 保護されたバックアップをセカンダリストレージからリストアしたり、データをプライマリストレージにコピーする方法を選択したりできます。 
 ---
 = SnapManager for Oracle を使用してセカンダリストレージからバックアップをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: history, run, set, command, configure, operation, history, smo
 summary: history set コマンドを実行すると、履歴を表示する操作を設定できます。 
 ---
 = smo history set コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

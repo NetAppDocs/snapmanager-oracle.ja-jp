@@ -5,6 +5,7 @@ keywords: command, enable, view, detail, history, information, specific, profile
 summary: このコマンドを使用すると、特定のプロファイルの詳細な履歴情報を表示できます。 
 ---
 = smo history show コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

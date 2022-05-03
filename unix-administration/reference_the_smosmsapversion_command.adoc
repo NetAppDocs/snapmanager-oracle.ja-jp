@@ -5,6 +5,7 @@ keywords: run, version, command, determine, snapmanager, local, host, smo
 summary: version コマンドを実行すると、ローカル・ホストで稼働している SnapManager のバージョンを確認できます。 
 ---
 = smo version コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: run, backup, restore, command, backup, smo
 summary: backup restore コマンドを実行してデータベースまたはデータベースの一部のバックアップをリストアし、必要に応じてデータベース情報をリカバリすることができます。 
 ---
 = smo backup restore コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: backup, full, partial, backup, tablespace, database, snapshot, online
 summary: フル・バックアップの代わりに、データベースの表領域のパーシャル・バックアップを実行するように選択できます。SnapManager はフル・バックアップ用にボリュームの Snapshot コピーを作成しますが、 SnapManager は、指定された表領域ごとに、パーシャル・バックアップ用の Snapshot コピーを作成します。 
 ---
 = パーシャル・オンライン・バックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

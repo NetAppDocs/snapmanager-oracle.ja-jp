@@ -5,6 +5,7 @@ keywords: create, profile, snapmanager, operation, efficient, backup
 summary: SnapManager で、処理を実行するデータベースのプロファイルを作成する必要があります。プロファイルを選択し、実行する処理を選択する必要があります。 
 ---
 = 効率的なバックアップを行うためのプロファイルの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

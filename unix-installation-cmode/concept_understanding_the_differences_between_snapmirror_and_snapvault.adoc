@@ -5,6 +5,7 @@ keywords: snapmirror, disaster, recovery, technology, design, failover, primary,
 summary: SnapMirror は、地理的に離れたサイトのプライマリストレージからセカンダリストレージへのフェイルオーバー用に設計されたディザスタリカバリテクノロジです。SnapVault は、基準への準拠およびその他のガバナンス関連の目的で、ディスクツーディスクの Snapshot コピーレプリケーション用に設計されたアーカイブテクノロジです。 
 ---
 = SnapMirror と SnapVault の違いを理解する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

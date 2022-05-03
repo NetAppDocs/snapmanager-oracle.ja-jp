@@ -5,6 +5,7 @@ keywords: full, online, backup, database, snapshot, copies, copy
 summary: フルオンラインバックアップでは、 SnapManager がデータベース全体をバックアップし、（表領域レベルではなく）ボリュームレベルで Snapshot コピーを作成します。 
 ---
 = フルオンラインバックアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

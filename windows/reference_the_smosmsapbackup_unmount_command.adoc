@@ -5,6 +5,7 @@ keywords: run, backup, unmount, command, smo
 summary: backup unmount コマンドを実行して、バックアップをアンマウントできます。 
 ---
 = smo backup unmount コマンドを使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

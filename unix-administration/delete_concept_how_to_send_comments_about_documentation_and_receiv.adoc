@@ -5,6 +5,7 @@ keywords: doccomments, quality, documentation, high-quality, documentation, feed
 summary: 弊社では、マニュアルの品質を向上していくため、皆様からのフィードバックをお待ちしています。GA/FCS 版の製品マニュアルの初回リリース時や既存マニュアルへの重要な変更があった場合にご案内いたします。 
 ---
 = マニュアルの更新について
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

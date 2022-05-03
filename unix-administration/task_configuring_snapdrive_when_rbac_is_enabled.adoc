@@ -5,6 +5,7 @@ keywords: role-based, access, control, rbac, enable, configure, datafabric, mana
 summary: ロールベースアクセス制御（ RBAC ）を有効にする場合は、 DataFabric Manager サーバに RBAC 機能を含めるように設定する必要があります。また、 DataFabric Manager サーバで作成した SnapDrive ユーザおよびストレージシステムの root ユーザも SnapDrive に登録する必要があります。 
 ---
 = RBAC が有効な場合の DataFabric Manager サーバおよび SnapDrive の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

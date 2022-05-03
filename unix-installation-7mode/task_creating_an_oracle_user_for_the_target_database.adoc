@@ -5,6 +5,7 @@ keywords: oracle, database, user, require, log, in, snapmanager, operation, sysd
 summary: Oracle データベースユーザは、データベースにログインして SnapManager 処理を実行するために必要です。sysdba 権限を持つユーザがターゲットデータベースに存在しない場合は、 sysdba 権限を持つユーザを作成する必要があります。 
 ---
 = ターゲットデータベースの Oracle データベースユーザを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

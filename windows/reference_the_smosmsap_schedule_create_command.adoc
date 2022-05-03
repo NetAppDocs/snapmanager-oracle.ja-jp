@@ -5,6 +5,7 @@ keywords: smo, schedule, create, command, backup, specific, time
 summary: schedule create コマンドを使用して、特定の時間にバックアップを作成するようにスケジュールを設定できます。 
 ---
 = smo schedule create コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

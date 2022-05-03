@@ -5,6 +5,7 @@ keywords: command, load, profile-to-repository, mapping, repository, file, home,
 summary: このコマンドは、リポジトリのプロファイル / リポジトリのマッピングを、ローカルホストのホームディレクトリ内のファイルにロードします。 
 ---
 = smo profile sync コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

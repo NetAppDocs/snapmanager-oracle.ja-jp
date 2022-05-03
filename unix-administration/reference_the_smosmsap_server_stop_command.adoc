@@ -5,6 +5,7 @@ keywords: command, stop, snapmanager, host, server, enter, root, smo_server
 summary: このコマンドは、 SnapManager ホスト・サーバを停止し、ルートに入力します。 
 ---
 = smo _server stop コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

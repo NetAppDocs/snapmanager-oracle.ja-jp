@@ -5,6 +5,7 @@ keywords: snapmanager, back, data, local, storage, post-process, backup, seconda
 summary: SnapManager では、ポストプロセススクリプトを使用するか、セカンダリまたはターシャリストレージリソース上のバックアップを保護することによって、ローカルストレージリソース上のデータをバックアップできます。セカンダリストレージにバックアップするように選択すると、災害発生時にデータを保持するためのレイヤが追加で提供されます。 
 ---
 = データベースをバックアップしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

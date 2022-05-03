@@ -5,6 +5,7 @@ keywords: update, profile, modify, password, backup, retain, access, database, o
 summary: プロファイルを更新して、プロファイルのパスワード、保持するバックアップの数、データベースへのアクセス、データベース認証に対するオペレーティングシステム（ OS ）認証、およびホストに関する情報を変更できます。Oracle データベースのパスワード情報が変更された場合は、プロファイル内のパスワード情報も変更する必要があります。 
 ---
 = プロファイルの更新
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

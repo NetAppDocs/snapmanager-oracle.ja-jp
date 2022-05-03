@@ -5,6 +5,7 @@ keywords: snapmanager, enable, destroy, profile, associate, split, clone, databa
 summary: SnapManager を使用すると、スプリットクローン \ （データベース \ ）に関連付けられたプロファイルを、基盤となるストレージとともに削除できます。プロファイルを削除する前に、関連付けられたバックアップとクローンを削除する必要があります。 
 ---
 = プロファイルの削除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

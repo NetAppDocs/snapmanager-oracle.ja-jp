@@ -5,6 +5,7 @@ keywords: snapmanager, restore, data, file, control, location, snapshot, origina
 summary: SnapManager を使用すると、元のボリューム内の Snapshot コピー以外の場所からデータファイルと制御ファイルをリストアできます。 
 ---
 = 別の場所からファイルをリストアする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

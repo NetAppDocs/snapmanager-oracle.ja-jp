@@ -5,6 +5,7 @@ keywords: snapmanager, data, ontap, snapmirror, technology, mirror, copies, crea
 summary: SnapManager と Data ONTAP の SnapMirror テクノロジを使用すると、バックアップセットのミラーコピーを別のボリュームに作成できます。また、 Data ONTAP SnapVault テクノロジと組み合わせれば、バックアップをディスクに効率的にアーカイブできます。SnapManager でこれらのタスクを実行するには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して、その関係を初期化する必要があります。 
 ---
 = SnapMirror レプリケーションと SnapVault レプリケーションのためのストレージシステムの準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, enable, exist, profile, summary, email, notification, upd
 summary: SnapManager を使用すると、既存のプロファイルを概要 E メール通知に追加し、そのプロファイルを更新できます。 
 ---
 = サマリー E メール通知に既存のプロファイルを追加する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: command, update, name, ip, address, storage, system, smo, rename
 summary: このコマンドは、ストレージシステムの名前または IP アドレスを更新します。 
 ---
 = smo storage rename コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: smo, repository, creat, command
 summary: このコマンドは、データベースプロファイルおよび関連付けられたクレデンシャルを格納するリポジトリを作成します。 
 ---
 = smo repository create コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

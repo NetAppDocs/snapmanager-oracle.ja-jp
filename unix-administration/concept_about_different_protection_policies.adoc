@@ -5,6 +5,7 @@ keywords: policies, backup, secondary, tertiary, storage, system, protection
 summary: 別のポリシーを選択して、セカンダリストレージシステムまたはターシャリストレージシステム上のバックアップを保護できます。 
 ---
 = 各種の保護ポリシーについて
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

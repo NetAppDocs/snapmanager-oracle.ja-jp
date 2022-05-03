@@ -5,6 +5,7 @@ keywords: smo_paydb, dataset, create, storage, administrator, protection, manage
 summary: smo _paydb データセットの作成後、ストレージ管理者は Protection Manager を使用してストレージ・システム・リソースを割り当て、データセットのバックアップ・ノードをプロビジョニングします。 
 ---
 = Protection Manager を使用して新しいデータセットをプロビジョニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: -dump, dump, file, succesful, fail, operation
 summary: SnapManager コマンドに -dump を含めると、 SnapManager 処理の成功または失敗後にダンプファイルを収集できます。 
 ---
 = ダンプ・ファイルの収集方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

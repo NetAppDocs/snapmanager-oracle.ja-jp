@@ -5,6 +5,7 @@ keywords: schedule, update, monitor, backup, tab, graphical, user, interface
 summary: グラフィカルユーザインターフェイスの Schedule タブでは、データベースのバックアップのスケジュール設定、更新、監視を行うことができます。 
 ---
 = データベースバックアップのスケジュールとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

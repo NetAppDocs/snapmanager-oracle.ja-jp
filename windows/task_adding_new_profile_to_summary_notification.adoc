@@ -5,6 +5,7 @@ keywords: configure, summary, email, notification, database, profile
 summary: リポジトリデータベースのサマリー E メール通知を設定したら、 summary notification コマンドを使用して、新しいプロファイルをサマリー通知に追加できます。 
 ---
 = 概要 E メール通知に新しいプロファイルを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

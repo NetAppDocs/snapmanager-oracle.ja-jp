@@ -5,6 +5,7 @@ keywords: run, profile, delete, command, database, smo
 summary: profile delete コマンドを実行して、データベースのプロファイルを削除できます。 
 ---
 = smo profile delete コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

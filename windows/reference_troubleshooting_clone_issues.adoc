@@ -5,6 +5,7 @@ keywords: information, occur, during, operation, resolve, troubleshooting, clone
 summary: ここでは、クローニング処理中に発生する可能性がある情報と、その解決方法について説明します。 
 ---
 = クローニングの問題のトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

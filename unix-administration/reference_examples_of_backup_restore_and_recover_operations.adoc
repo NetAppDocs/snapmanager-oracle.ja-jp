@@ -5,6 +5,7 @@ keywords: information, backup, restore, recover, scenario, accomplish, data, pro
 summary: ここでは、データ保護の目標を達成するために使用できるバックアップ、リストア、およびリカバリのシナリオに関する情報を記載します。 
 ---
 = バックアップ、リストア、リカバリ処理の例
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

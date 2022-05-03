@@ -5,6 +5,7 @@ keywords: snapmanager, volume, management, restriction, environment, asm, disk, 
 summary: SnapManager には、環境に影響する可能性があるボリューム管理の制限があります。 
 ---
 = ボリューム管理の制限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

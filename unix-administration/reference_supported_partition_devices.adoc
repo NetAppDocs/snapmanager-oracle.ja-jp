@@ -5,6 +5,7 @@ keywords: partition, snapmanager, support, device, red, hat, enterprise, linux, 
 summary: SnapManager でサポートされているさまざまなパーティションデバイスを把握しておく必要があります。 
 ---
 = サポートされているパーティションデバイス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

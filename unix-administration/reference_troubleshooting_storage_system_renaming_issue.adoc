@@ -5,6 +5,7 @@ keywords: face, issue, renaming, storage, system, succesful, rename, storage, sy
 summary: ストレージシステムの名前変更時や、ストレージシステムの名前変更後に問題が発生することがあります。 
 ---
 = ストレージ・システムで問題名が変更された場合の
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

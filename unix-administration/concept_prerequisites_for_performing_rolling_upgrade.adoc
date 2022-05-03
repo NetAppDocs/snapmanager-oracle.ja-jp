@@ -5,6 +5,7 @@ keywords: perform, roll, upgrade, environment, requirement, snapmanager, unix
 summary: ローリングアップグレードを実行する前に、環境が一定の要件を満たしていることを確認する必要があります。 
 ---
 = ローリングアップグレードを実行するための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

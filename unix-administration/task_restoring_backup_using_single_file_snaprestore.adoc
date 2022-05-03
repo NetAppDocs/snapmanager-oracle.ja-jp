@@ -5,6 +5,7 @@ keywords: restore, backup, single, file, snaprestore, sfsr, method, restoring, g
 summary: バックアップは、 Single File SnapRestore \ （ SFSR ）方式を使用してリストアできます。 
 ---
 = Single File SnapRestore を使用したバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

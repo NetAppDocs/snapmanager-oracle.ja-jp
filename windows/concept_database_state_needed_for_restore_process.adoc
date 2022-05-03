@@ -5,6 +5,7 @@ keywords: state, database, restore
 summary: リストアされるデータベースの状態は、実行するリストアプロセスのタイプ、およびリストアに含めるファイルのタイプによって異なります。 
 ---
 = リストアプロセスに必要なデータベースの状態
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, enable, install, custom, script, perform, various, operat
 summary: SnapManager では、カスタムスクリプトをインストールして使用することで、さまざまな処理を実行できます。SnapManager には、バックアップ、リストア、クローニングの各処理のプラグインが用意されています。このプラグインを使用すると、バックアップ、リストア、クローニングの各処理の前後にカスタムスクリプトを自動化できます。 
 ---
 = プラグインスクリプトのインストールの確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

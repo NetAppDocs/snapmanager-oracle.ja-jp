@@ -5,6 +5,7 @@ keywords: smo, clone, split-result, command
 summary: smo clone split -result コマンドを使用します。 
 ---
 = smo clone split -result コマンドを使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

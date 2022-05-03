@@ -5,6 +5,7 @@ keywords: clone, cloning, method, database
 summary: データベースのクローニングは、次の 2 つの方法のいずれかを使用して実行できます。選択する方法はクローン作成処理に影響します。 
 ---
 = クローニングの方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

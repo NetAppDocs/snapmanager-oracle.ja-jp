@@ -5,6 +5,7 @@ keywords: run, system, dump, command, create, jar, file, contain, diagnostic, in
 summary: 'システムダンプコマンドを実行して " サーバ環境に関する診断情報を含む JAR ファイルを作成できます' 
 ---
 = smo system dump コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

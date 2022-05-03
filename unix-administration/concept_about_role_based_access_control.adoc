@@ -5,6 +5,7 @@ keywords: role-based, access, control, rbac, snapmanager, operation
 summary: Role-Based Access Control （ RBAC ；ロールベースアクセス制御）を使用すると、 SnapManager 処理へのアクセス権を持つユーザを制御できます。RBAC では、管理者がロールを定義してそれらのロールにユーザを割り当てることで、ユーザのグループを管理できます。RBAC がすでに設定されている環境では、 SnapManager RBAC を使用できます。 
 ---
 = ロールベースアクセス制御について
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: backup, retention, class, unlimited, delete, freed, directly, assign, 
 summary: 保持クラスが「 unlimited 」のバックアップは、直接削除または解放することはできません。これらのバックアップを削除したり解放したりするには、まず毎時、毎日、毎週、または毎月などの別の保持クラスを割り当てる必要があります。保持ポリシーの適用対象外になっているバックアップを削除または解放するには、削除または解放を可能にするために、最初にバックアップを更新する必要があります。 
 ---
 = 保持ポリシー適用除外バックアップの解放または削除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

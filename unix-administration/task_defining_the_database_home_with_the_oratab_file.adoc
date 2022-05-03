@@ -5,6 +5,7 @@ keywords: snapmanager, oratab, file, operation, determine, oracle, database, hom
 summary: SnapManager は、処理中に oratab ファイルを使用して、 Oracle データベースのホームディレクトリを判別します。SnapManager が正常に動作するには、 Oracle データベースのエントリが oratab ファイル内に存在する必要があります。oratab ファイルは、 Oracle ソフトウェアのインストール中に作成されます。 
 ---
 = oratab ファイルを使用してデータベースホームを定義します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

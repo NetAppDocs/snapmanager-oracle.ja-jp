@@ -5,6 +5,7 @@ keywords: run, protection-policy, command, list, protection, policies, applied, 
 summary: protection-policy コマンドを実行すると、プロファイルに適用可能な保護ポリシーをリスト表示できます。保護ポリシーは、新しいプロファイルが作成されたとき、または既存のプロファイルが更新されたときに適用できます。プロファイルの保護ポリシーは、 Protection Manager コンソールを使用して設定することもできます。 
 ---
 = smo protection-policy コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

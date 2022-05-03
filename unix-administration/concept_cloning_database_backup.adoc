@@ -5,6 +5,7 @@ keywords: clone, database, perform, task, test, upgrade, protected, rac
 summary: データベースをクローニングすると、本番環境のデータベースに影響を与えずにデータベースへのアップグレードをテストしたり、マスタインストールを複数のトレーニングシステムに複製したり、マスタインストールを同じような要件を持つ他のサーバにベースインストールとして複製したりすることができます。 
 ---
 = データベースバックアップをクローニングしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

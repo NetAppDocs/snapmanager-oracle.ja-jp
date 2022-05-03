@@ -5,6 +5,7 @@ keywords: restore, specification, file, xml, original, alternate, location, rest
 summary: リストア仕様ファイルは、ファイルのリストア元となる元の場所および別の場所を含む XML ファイルです。SnapManager はこの仕様ファイルを使用して、指定した場所からファイルをリストアします。 
 ---
 = リストア仕様を作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, control, files, archive, log, backup
 summary: SnapManager には制御ファイルが格納されており、必要に応じて各バックアップと一緒にアーカイブログファイルも格納されます。アーカイブログファイルはリカバリ処理に使用されます。 
 ---
 = 制御ファイルおよびアーカイブログファイルの処理について
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

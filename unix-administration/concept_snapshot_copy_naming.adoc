@@ -5,6 +5,7 @@ keywords: specify, convention, pattern, snapshot, profile, copy, naming
 summary: 命名規則またはパターンを指定して、作成または更新するプロファイルに関連する Snapshot コピーを指定できます。すべての Snapshot コピー名にカスタムテキストを含めることもできます。 
 ---
 = Snapshot コピーの命名規則
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

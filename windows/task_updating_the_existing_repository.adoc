@@ -5,6 +5,7 @@ keywords: update, exist, repository, upgrading, snapmanager, updating, upgrade
 summary: SnapManager 3.3.x から SnapManager 3.4 以降にアップグレードする場合、既存のリポジトリを更新する必要はありませんが、他のすべてのアップグレードパスでは、アップグレード後にアクセスできるように既存のリポジトリを更新する必要があります。 
 ---
 = 既存のリポジトリを更新しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

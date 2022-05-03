@@ -5,6 +5,7 @@ keywords: perform, fast, restore, backup, snapmanager, elegibility, ascs, voting
 summary: バックアップの高速リストアを実行するように選択した場合は、まず SnapManager で適格性チェックが実行され、高速リストア・プロセスを使用できるかどうかが確認されます。 
 ---
 = リストアへの対応状況のチェックが高速
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

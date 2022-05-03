@@ -5,6 +5,7 @@ keywords: schedule, backup, operation, initiate, automatic, regular, interval, s
 summary: バックアップ処理は、定期的に自動で開始されるようにスケジュールを設定できます。SnapManager では、毎時、毎日、毎週、毎月、または 1 回ごとにバックアップをスケジュールできます。 
 ---
 = 定期的なバックアップのスケジュール設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

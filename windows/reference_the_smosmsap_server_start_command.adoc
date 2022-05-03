@@ -5,6 +5,7 @@ keywords: command, host, server, run, oracle, software, smo
 summary: このコマンドは、 SnapManager for Oracle ソフトウェアが稼働しているホスト・サーバを起動します。 
 ---
 = smo _server start コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

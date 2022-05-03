@@ -5,6 +5,7 @@ keywords: autosupport, storage, system, backup, operation
 summary: AutoSupport 機能を使用すると、バックアップ処理の完了後に、 SnapManager サーバからストレージシステムに AutoSupport メッセージを送信できます。 
 ---
 = AutoSupport とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

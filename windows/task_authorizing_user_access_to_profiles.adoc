@@ -5,6 +5,7 @@ keywords: snapmanager, enable, password, profile, prevent, unauthorize, access
 summary: SnapManager では、プロファイルのパスワードを設定して、不正なアクセスを防止できます。 
 ---
 = プロファイルへのアクセスの許可
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

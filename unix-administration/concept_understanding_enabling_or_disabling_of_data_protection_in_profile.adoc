@@ -5,6 +5,7 @@ keywords: enable, disable, data, protection, creating, updating, database, profi
 summary: データベースプロファイルの作成時または更新時にデータ保護を有効または無効にできます。 
 ---
 = プロファイルでのデータ保護の有効化または無効化の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

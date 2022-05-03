@@ -5,6 +5,7 @@ keywords: organize, repository, repositories
 summary: SnapManager リポジトリは、ビジネスニーズに合わせて整理することができます。アプリケーションの種類や使用方法など、複数の方法で整理できます。 
 ---
 = リポジトリを整理する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

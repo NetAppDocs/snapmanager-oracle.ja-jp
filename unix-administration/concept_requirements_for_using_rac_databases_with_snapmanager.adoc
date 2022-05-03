@@ -5,6 +5,7 @@ keywords: recommendation, real, application, cluster, rac, database, snapmanager
 summary: SnapManager で Real Application Clusters （ RAC ）データベースを使用する際の推奨事項を確認しておく必要があります。推奨事項には、ポート番号、パスワード、認証モードなどがあります。 
 ---
 = SnapManager で RAC データベースを使用するための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

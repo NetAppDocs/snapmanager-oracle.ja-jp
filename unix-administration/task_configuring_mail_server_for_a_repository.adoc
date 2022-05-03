@@ -5,6 +5,7 @@ keywords: snapmanager, enable, specify, mail, server, detail, alert, repository,
 summary: SnapManager を使用すると、 E メールアラートの送信元のメールサーバの詳細を指定できます。 
 ---
 = リポジトリのメールサーバを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

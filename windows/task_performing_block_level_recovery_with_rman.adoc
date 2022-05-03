@@ -5,6 +5,7 @@ keywords: configure, snapmanager, catalog, backup, recovery, manager, rman, orac
 summary: 'RMAN を使用してブロックレベルのリカバリを実行できるようにするために、 Oracle ツールである Recovery Manager （ RMAN ）でバックアップのカタログを作成するように SnapManager を設定できます。RMAN は " データベースの制御ファイルまたは個別のリカバリ・カタログ・データベースのいずれかをリポジトリとして使用できます' 
 ---
 = Oracle Recovery Manager （ RMAN ）を使用したブロックレベル・リカバリの実行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: download, oracle, install, operation, database, backup, restore, cloni
 summary: SnapManager for Oracle をダウンロードして環境にインストールし、データベースのバックアップ、リストア、リカバリ、クローニングなどの処理を実行できます。 
 ---
 = SnapManager for Oracle をインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

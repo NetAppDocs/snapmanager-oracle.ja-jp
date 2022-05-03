@@ -5,6 +5,7 @@ keywords: restore, database, backup, alternate, location, overview
 summary: 代替保存場所からデータベース・バックアップをリストアするには、次の主要な手順を実行します。これらの手順については、この項でさらに詳しく説明します。 
 ---
 = 代替保存場所からのバックアップのリストアの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

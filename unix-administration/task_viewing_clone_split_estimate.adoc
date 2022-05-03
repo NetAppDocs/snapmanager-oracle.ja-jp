@@ -5,6 +5,7 @@ keywords: clone, split, estimate, help, total, free, space, available, aggregate
 summary: クローンスプリットの見積もりから、アグリゲートの使用可能な合計空きスペース、クローンと元のデータベースで共有しているスペース、およびクローン専用のスペースを確認できます。また、クローンが作成された日時と、クローンの作成日時も表示できます。この概算値に基づいて、クローンをスプリットするかどうかを決定します。 
 ---
 = クローンスプリットの見積もりを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

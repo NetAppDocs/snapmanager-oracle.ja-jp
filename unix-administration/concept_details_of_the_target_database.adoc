@@ -5,6 +5,7 @@ keywords: integrated, database, protection, payroll, techco, dba, 3000-person, a
 summary: この統合データベース保護の例では、給与データベースの保護について説明します。この例では次のデータを使用しています。 
 ---
 = ターゲットデータベースの詳細
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

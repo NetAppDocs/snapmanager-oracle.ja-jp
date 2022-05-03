@@ -5,6 +5,7 @@ keywords: oracle, 10g, asmcmd, sql, query, disk, list, support
 summary: 'Oracle 10g を使用している場合は "asmcmd コマンドを使用してディスクを一覧表示することはできませんSQL クエリを使用してディスクリストを取得できます。' 
 ---
 = ASMLib のない Oracle 10g ASM データベースのサポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

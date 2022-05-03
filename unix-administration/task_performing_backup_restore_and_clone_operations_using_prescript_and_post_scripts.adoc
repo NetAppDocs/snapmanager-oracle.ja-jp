@@ -5,6 +5,7 @@ keywords: script, initiating, backup, restore, clone, operation, snapmanager, di
 summary: 独自のスクリプトを使用して、バックアップ、リストア、またはクローニングの処理を開始できます。SnapManager では、バックアップ作成ウィザード、リストアウィザード、リカバリウィザード、またはクローン作成ウィザードのタスク有効化ページが表示されます。このページで、スクリプトを選択し、スクリプトに必要なパラメータの値を指定できます。 
 ---
 = プリスクリプトとポストスクリプトを使用してバックアップ、リストア、クローニングの処理を実行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

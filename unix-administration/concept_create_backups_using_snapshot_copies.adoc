@@ -5,6 +5,7 @@ keywords: snapmanager, create, backup, primary, storage, secondary, protection, 
 summary: SnapManager では、保護ポリシーまたはポストプロセススクリプトを使用して、プライマリ（ローカル）ストレージおよびセカンダリ（リモート）ストレージにバックアップを作成できます。 
 ---
 = Snapshot コピーを使用してバックアップを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

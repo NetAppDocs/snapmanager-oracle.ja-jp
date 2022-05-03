@@ -5,6 +5,7 @@ keywords: scenario, limitation, environment
 summary: 環境に影響する可能性があるシナリオと制限事項を把握しておく必要があります。 
 ---
 = SnapManager で作業する際の制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

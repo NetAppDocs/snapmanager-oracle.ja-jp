@@ -5,6 +5,7 @@ keywords: limitations, functionalities, snapmanager, operations, ontap, cluster,
 summary: clustered Data ONTAP を使用する場合は、一部の機能と SnapManager 処理の制限事項を理解しておく必要があります。 
 ---
 = clustered Data ONTAP での SnapManager の制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

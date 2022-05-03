@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, clone, specification, xml, file, mappings, option
 summary: SnapManager for Oracle では、クローン仕様 XML ファイルを使用します。このファイルには、クローン処理で使用するマッピング、オプション、およびパラメータが含まれています。SnapManager は、この情報を使用して、クローニングするファイルの配置場所、および診断情報、制御ファイル、パラメータなどの処理方法を決定します。 
 ---
 = クローン仕様を作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

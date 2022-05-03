@@ -5,6 +5,7 @@ keywords: creating, profile, assign, particular, oracle, database, user, account
 summary: プロファイルの作成時に、特定の Oracle データベースのユーザ・アカウントをプロファイルに割り当てることができます。プロファイルの保持ポリシーを設定し、このプロファイルを使用してすべてのバックアップに対してセカンダリストレージでのバックアップ保護を有効にし、各保持クラスの保持数と保持期間を設定できます。 
 ---
 = プロファイルの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

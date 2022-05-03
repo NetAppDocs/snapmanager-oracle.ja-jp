@@ -5,6 +5,7 @@ keywords: upgrade, exist, snapmanager, host, latest, version, simultaneously, up
 summary: 既存のすべての SnapManager ホストをアップグレードして、最新バージョンの SnapManager を使用できます。すべてのホストが同時にアップグレードされます。ただし、その際にすべての SnapManager ホストおよびスケジュールされた処理が停止する可能性があります。 
 ---
 = SnapManager ホストをアップグレードする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

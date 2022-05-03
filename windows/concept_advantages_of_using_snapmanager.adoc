@@ -5,6 +5,7 @@ keywords: oracle, task, database, manage, data, advantage
 summary: SnapManager for Oracle を使用すると、データベースに対してさまざまなタスクを実行し、データを効率的に管理できます。 
 ---
 = SnapManager を使用する利点
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

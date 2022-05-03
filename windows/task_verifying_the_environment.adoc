@@ -5,6 +5,7 @@ keywords: verify, environment, snapdrive, snapmanager, set, up, correctly
 summary: 環境を検証して、 SnapDrive と SnapManager が正しく設定されていることを確認できます。 
 ---
 = 環境の検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

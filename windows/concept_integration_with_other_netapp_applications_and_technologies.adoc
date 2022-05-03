@@ -5,6 +5,7 @@ keywords: oracle, stand-alone, product, netapp, application, technology, technol
 summary: SnapManager for Oracle は、他のネットアップ製品の機能を統合したスタンドアロン製品で、ごく少量のスペースを必要とする高速なバックアップを実現します。 
 ---
 = 他のネットアップのアプリケーションやテクノロジとの統合
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

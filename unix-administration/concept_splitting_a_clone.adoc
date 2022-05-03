@@ -5,6 +5,7 @@ keywords: snapmanager, split, manage, existing, clone, flexclone, technology, cl
 summary: SnapManager では、 FlexClone テクノロジを使用して作成された既存のクローンをスプリットして管理できます。FlexClone テクノロジでは、クローンと元のデータベースは同じ物理データブロックを共有します。 
 ---
 = クローンのスプリット
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

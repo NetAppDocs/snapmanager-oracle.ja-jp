@@ -5,6 +5,7 @@ keywords: clone, rac, database, non-rac, srvctl
 summary: RAC データベースを非 RAC データベースにクローニングしたり、非 RAC データベースにクローニングしてから RAC データベースに変更したりできます。 
 ---
 = RAC データベースのクローニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

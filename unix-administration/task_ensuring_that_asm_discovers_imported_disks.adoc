@@ -5,6 +5,7 @@ keywords: automatic, storage, management, asm, nfs, environment, install, snapma
 summary: NFS 環境で Automatic Storage Management\ （ ASM\ ）を使用している場合は、 SnapManager のインストール後に、 ASM が SnapManager によってインポートされたディスクを検出できることを確認する必要があります。これを行うには、 ASM ディレクトリのパスを ASM_DISKSTRING パラメータに追加します。 
 ---
 = ASM がインポートされたディスクを検出することを確認し
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

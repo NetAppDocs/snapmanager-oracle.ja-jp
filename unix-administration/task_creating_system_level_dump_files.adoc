@@ -5,6 +5,7 @@ keywords: smo, system, dump, command, log, information, snapmanager, host, envir
 summary: smo system dump コマンドを使用すると、 SnapManager ホストおよび環境に関するログ情報を取得できます。さまざまなログレベルを指定して、特定の処理、プロファイル、またはホストと環境に関する情報を収集できます。 
 ---
 = システムレベルのダンプファイルを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

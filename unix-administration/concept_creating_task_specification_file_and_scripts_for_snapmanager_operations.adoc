@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, specification, extensible, markup, language, xml
 summary: SnapManager for Oracle では、タスク仕様の Extensible Markup Language （ XML ）ファイルを使用して、バックアップ、リストア、クローニングの各処理のプリタスクとポストタスクを指定します。バックアップ、リストア、クローニングの処理の前後に実行するタスクについては、 XML ファイルにプリタスクスクリプトとポストタスクスクリプトの名前を追加できます。 
 ---
 = SnapManager 処理用のタスク仕様ファイルおよびスクリプトの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: certain, limitation, script, asm, database, asmlib, root, grid, oracle
 summary: ASMLib のない ASM データベースをサポートするためにスクリプトを使用する場合は、一定の制限事項に注意する必要があります。 
 ---
 = ASMLib のない ASM データベースをサポートするスクリプトの使用に関する制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: repository, store, information, relate, operation, backup, tablespace,
 summary: リポジトリには、バックアップ時刻、表領域とデータ・ファイルのバックアップ時刻、使用されているストレージ・システム、作成されたクローン、作成された Snapshot コピーなど、さまざまな SnapManager 処理に関連する情報が格納されます。 
 ---
 = SnapManager リポジトリ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

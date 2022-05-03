@@ -5,6 +5,7 @@ keywords: view, summary, list, operation, perform, profile, smo
 summary: プロファイルに対して実行されたすべての処理について、概要情報を表示できます。 
 ---
 = 処理のリストを表示する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

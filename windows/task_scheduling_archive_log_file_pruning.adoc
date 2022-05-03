@@ -5,6 +5,7 @@ keywords: create, backup, schedule, pruning, prune, archive, log, file, scheduli
 summary: バックアップを作成する場合、指定した時間にアーカイブ・ログ・ファイルが削除されるようにスケジュールを設定できます。 
 ---
 = アーカイブ・ログ・ファイルの削除のスケジュール設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

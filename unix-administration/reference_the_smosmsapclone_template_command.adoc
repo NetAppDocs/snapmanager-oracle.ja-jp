@@ -5,6 +5,7 @@ keywords: command, create, clone, specification, template, smo
 summary: このコマンドを使用すると、クローン仕様テンプレートを作成できます。 
 ---
 = smo clone template コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

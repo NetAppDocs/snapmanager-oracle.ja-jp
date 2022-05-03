@@ -5,6 +5,7 @@ keywords: clone, split, command, independent, original, snapmanager
 summary: clone split コマンドを実行してクローンをスプリットできます。スプリットクローンは、元のクローンから独立して作成されます。SnapManager では、クローンスプリット処理のあとに新しいプロファイルが生成され、このプロファイルを使用してスプリット・クローンを管理できます。 
 ---
 = smo clone split コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

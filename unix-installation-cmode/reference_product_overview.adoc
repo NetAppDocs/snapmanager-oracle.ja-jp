@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, automate, simplifies, complex, manual, time-consu
 summary: SnapManager for Oracle を使用すると、 Oracle データベースのバックアップ、リカバリ、クローニングに関連する、複雑で時間のかかる手動プロセスを自動化して簡易化できます。SnapManager と Data ONTAP の SnapMirror テクノロジを使用すると、別のボリュームにバックアップのコピーを作成できます。また、 Data ONTAP SnapVault テクノロジを使用すると、効率的にバックアップをディスクにアーカイブできます。 
 ---
 = 製品の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

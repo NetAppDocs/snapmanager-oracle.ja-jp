@@ -5,6 +5,7 @@ keywords: run, profile, update, command, information, existing, smo
 summary: profile update コマンドを実行して、既存のプロファイルの情報を更新できます。 
 ---
 = smo profile update コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, clone, copy, backup, protect, cloning, san, nas, ontap, 7
 summary: SnapManager を使用して、保護されているバックアップのコピーをクローニングすることができます。 
 ---
 = 保護されたバックアップをクローニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

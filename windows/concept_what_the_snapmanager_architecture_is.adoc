@@ -5,6 +5,7 @@ keywords: oracle, architecture, component, host, client, repository, netapp, arc
 summary: SnapManager for Oracle のアーキテクチャには、 SnapManager for Oracle のホスト、クライアント、リポジトリなど、多数のコンポーネントが含まれています。その他のコンポーネントには、プライマリおよびセカンダリストレージシステムやその他のネットアップ製品があります。 
 ---
 = SnapManager for Oracle のアーキテクチャとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

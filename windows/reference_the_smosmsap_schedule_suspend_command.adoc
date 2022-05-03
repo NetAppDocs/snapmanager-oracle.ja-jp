@@ -5,6 +5,7 @@ keywords: command, suspend, backup, schedule, smo
 summary: このコマンドは、バックアップスケジュールが再開されるまでバックアップスケジュールを一時停止します。 
 ---
 = smo schedule suspend コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

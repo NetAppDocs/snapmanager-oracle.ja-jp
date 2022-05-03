@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, schedule, database, backup, regular, basis, off-p
 summary: SnapManager （ 3.2 以降） for Oracle を使用すると、高いパフォーマンスを維持するために、オフピークの時間帯にデータベースのバックアップを定期的に実行するようにスケジュール設定できます。バックアップのスケジュールを設定するには、データベース情報と保持ポリシーを含むプロファイルを作成し、バックアップのスケジュールを設定します。 
 ---
 = データベースのバックアップをスケジュール設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

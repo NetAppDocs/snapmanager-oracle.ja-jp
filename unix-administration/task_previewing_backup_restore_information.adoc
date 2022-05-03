@@ -5,6 +5,7 @@ keywords: preview, information, backup, restore, process, occurs, eligibility, s
 summary: バックアップのリストアプロセスが実行される前に、そのプロセスに関する情報をプレビューして、 SnapManager for Oracle がバックアップで検出したリストア対応状況を確認できます。SnapManager はバックアップ上のデータを分析して、リストアプロセスを正常に完了できるかどうかを判断します。 
 ---
 = バックアップリストア情報をプレビューしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

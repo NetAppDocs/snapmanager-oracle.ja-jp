@@ -5,6 +5,7 @@ keywords: defining, backup, strategy, creating, successful, database, snapmanage
 summary: バックアップを作成する前にバックアップ戦略を定義しておくと、データベースを正常にリストアするためのバックアップを確実に作成できます。SnapManager は、サービスレベルアグリーメント（ SLA ）に合わせて、柔軟にきめ細かなバックアップのスケジュールを設定できます。 
 ---
 = バックアップ戦略の定義
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

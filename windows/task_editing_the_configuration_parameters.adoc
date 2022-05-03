@@ -5,6 +5,7 @@ keywords: environment, default, change, value, configuration, parameter, editing
 summary: 環境に応じて、構成パラメータに割り当てられているデフォルト値を変更することができます。 
 ---
 = 設定パラメータを編集する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

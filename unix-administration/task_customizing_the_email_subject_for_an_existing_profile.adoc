@@ -5,6 +5,7 @@ keywords: snapmanager, enable, customize, email, subject, pattern, exist, profil
 summary: SnapManager では、既存のプロファイルを更新することで、そのプロファイルの E メールの件名のパターンをカスタマイズできます。このカスタマイズされた件名パターンは、更新されたプロファイルにのみ適用されます。 
 ---
 = 既存のプロファイルの電子メールの件名をカスタマイズする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

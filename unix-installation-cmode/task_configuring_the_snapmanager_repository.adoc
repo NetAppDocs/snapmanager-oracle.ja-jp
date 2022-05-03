@@ -5,6 +5,7 @@ keywords: configure, snapmanager, repository, database, instance, store, metadat
 summary: リポジトリデータベースインスタンスに SnapManager リポジトリを設定する必要があります。リポジトリデータベースには、 SnapManager で管理されているデータベースのメタデータが格納されます。 
 ---
 = SnapManager リポジトリの設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: command, progress, run, split, process
 summary: このコマンドを使用すると、スプリットプロセスの実行の進捗状況を確認できます。 
 ---
 = smo clone split -status コマンドを使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

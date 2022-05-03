@@ -5,6 +5,7 @@ keywords: dump, file, log, snapmanager, environment
 summary: ダンプファイルは、 SnapManager とその環境に関する情報が格納された圧縮ログファイルです。作成されるログファイルには、処理、プロファイル、およびシステムダンプファイルの種類があります。 
 ---
 = ダンプ・ファイル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

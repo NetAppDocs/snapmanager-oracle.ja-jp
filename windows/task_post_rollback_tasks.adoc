@@ -5,6 +5,7 @@ keywords: perform, additional, step, rollback, repository, database, snapmanager
 summary: リポジトリ・データベースをロールバックし、 SnapManager ホストを SnapManager 3.2 から SnapManager 3.0 にダウングレードしたあと、以前のバージョンのリポジトリ・データベースで作成されたスケジュールを表示するには、いくつかの追加手順を実行する必要があります。 
 ---
 = ロールバック後のタスク
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

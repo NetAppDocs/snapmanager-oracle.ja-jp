@@ -5,6 +5,7 @@ keywords: run, backup, create, command, database, storage, system, smo
 summary: backup create コマンドを実行すると、 1 つ以上のストレージシステム上にデータベースバックアップを作成できます。 
 ---
 = smo backup create コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

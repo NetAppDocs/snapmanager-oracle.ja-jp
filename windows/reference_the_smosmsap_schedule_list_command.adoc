@@ -5,6 +5,7 @@ keywords: command, list, schedule, operation, associate, profile, smo
 summary: このコマンドは、プロファイルに関連付けられているスケジュール済み処理をリスト表示します。 
 ---
 = smo schedule list コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

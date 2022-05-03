@@ -5,6 +5,7 @@ keywords: memory, disk, space, cpu, requirement, host, hardware
 summary: メモリ、ディスクスペース、 CPU の要件を考慮してください。 
 ---
 = サポートされているホストハードウェア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

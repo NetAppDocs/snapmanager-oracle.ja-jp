@@ -5,6 +5,7 @@ keywords: consideration, perform, data, protection
 summary: データ保護を実行する際の考慮事項は次のとおりです。 
 ---
 = データ保護を実行する場合の考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

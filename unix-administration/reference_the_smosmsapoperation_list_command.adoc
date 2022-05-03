@@ -5,6 +5,7 @@ keywords: command, list, summary, information, operation, record, specified, pro
 summary: このコマンドは、指定したプロファイルに対して記録されたすべての処理の概要情報を表示します。 
 ---
 = smo operation list コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

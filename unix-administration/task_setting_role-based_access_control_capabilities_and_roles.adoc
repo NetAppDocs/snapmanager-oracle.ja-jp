@@ -5,6 +5,7 @@ keywords: enable, role-based, access, control, rbac, snapmanager, snapdrive, cap
 summary: SnapDrive を使用してロールベースアクセス制御（ RBAC ） for SnapManager を有効にしたあと、 RBAC の機能とユーザをロールに追加して SnapManager の処理を実行できます。 
 ---
 = ロールベースアクセス制御の機能とロールを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

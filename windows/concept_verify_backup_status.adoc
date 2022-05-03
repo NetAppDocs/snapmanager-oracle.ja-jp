@@ -5,6 +5,7 @@ keywords: verify, backup, status, integrity, backup, verification, operation
 summary: SnapManager では、 Oracle の標準バックアップ検証処理を使用して、バックアップの整合性を確認できます。 
 ---
 = バックアップのステータスを確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

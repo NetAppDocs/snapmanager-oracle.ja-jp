@@ -5,6 +5,7 @@ keywords: error, message, information, operation
 summary: ここでは、さまざまな SnapManager 処理に関連するエラーメッセージについて説明します。 
 ---
 = エラーメッセージ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

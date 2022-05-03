@@ -5,6 +5,7 @@ keywords: backup, restore, command, database, primary
 summary: プライマリストレージにデータベースバックアップをリストアするには、 backup restore コマンドを使用します。 
 ---
 = プライマリストレージでのバックアップのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

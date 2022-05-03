@@ -5,6 +5,7 @@ keywords: command, list, clone, database, given, profile, smo
 summary: このコマンドでは、指定したプロファイルに対応するデータベースのクローンを表示します。 
 ---
 = smo clone list コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

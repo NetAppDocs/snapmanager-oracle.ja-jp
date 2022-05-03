@@ -5,6 +5,7 @@ keywords: snapmanager, enable, rename, profile, update, capabilities, capability
 summary: SnapManager を使用すると、プロファイルの更新時にプロファイルの名前を変更できます。プロファイルに設定されている SnapManager 機能と、名前を変更する前に実行できる操作は、名前を変更したプロファイルに保持されます。 
 ---
 = プロファイル名の変更
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, process, return, code
 summary: SnapManager は、特定の戻りコードに基づいてカスタムスクリプトを処理します。たとえば、カスタムスクリプトから値 0 、 1 、 2 、または 3 が返された場合、 SnapManager はクローンプロセスを続行します。また、リターンコードは、 SnapManager によるスクリプト実行の処理方法と標準出力の返し方にも影響を与えます。 
 ---
 = カスタムスクリプトでのエラー処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

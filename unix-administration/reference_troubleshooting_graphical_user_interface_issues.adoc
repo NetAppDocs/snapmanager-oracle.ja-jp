@@ -5,6 +5,7 @@ keywords: information, common, known, graphical, user, interface, gui, resolve, 
 summary: ここでは、一般的なグラフィカルユーザインターフェイス（ GUI ）のいくつかの問題について、解決に役立つ情報を記載します。 
 ---
 = グラフィカルユーザインターフェイスの問題のトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

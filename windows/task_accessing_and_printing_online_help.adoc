@@ -5,6 +5,7 @@ keywords: online, help, provide, instruction, snapmanager, graphical, user, inte
 summary: オンラインヘルプには、 SnapManager のグラフィカルユーザインターフェイスを使用して実行できるタスクの手順が記載されています。また、オンラインヘルプでは、 Windows およびウィザードのフィールドについても説明しています。 
 ---
 = オンラインヘルプへのアクセスと印刷
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

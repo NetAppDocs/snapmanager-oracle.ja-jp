@@ -5,6 +5,7 @@ keywords: prune, pruning, archive, log, file, backup
 summary: バックアップを作成する際に、アーカイブログの場所からアーカイブログファイルの削除を実行できます。 
 ---
 = アーカイブ・ログ・ファイルの削除
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

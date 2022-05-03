@@ -5,6 +5,7 @@ keywords: authenticate, user, operating, system, os, login, host, server, smo, c
 summary: SnapManager は、 SnapManager サーバが実行されているホストでオペレーティングシステム（ OS ）ログインを使用してユーザを認証します。ユーザ認証を有効にするには、処理時にパスワードのプロンプトを使用するか、 smo credential set コマンドを使用して、ユーザ認証を有効にします。ユーザ認証には、パスワードのプロンプトを使用するか、 smo credential set コマンドを使用します。 
 ---
 = ユーザ認証とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

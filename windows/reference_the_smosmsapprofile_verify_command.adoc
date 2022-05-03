@@ -5,6 +5,7 @@ keywords: run, profile, verify, command, database, smo
 summary: profile verify コマンドを実行して、プロファイルの設定を確認できます。このコマンドを実行する前に、データベースをマウントする必要があります。 
 ---
 = smo profile verify コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

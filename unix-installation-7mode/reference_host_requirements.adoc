@@ -5,6 +5,7 @@ keywords: install, snapmanager, oracle, host, database, minimum, requirement, co
 summary: バックアップ対象の Oracle データベースをホストしているすべてのホストに、 SnapManager for Oracle をインストールする必要があります。SnapManager 構成の最小要件をホストが満たしていることを確認する必要があります。 
 ---
 = UNIX ホストの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

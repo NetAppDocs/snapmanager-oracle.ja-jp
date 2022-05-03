@@ -5,6 +5,7 @@ keywords: add, storage, system, operating, clustered, data, ontap, snapmanager, 
 summary: AutoSupport を有効にするには、 clustered Data ONTAP で動作するストレージシステムを SnapManager サーバホストに追加する必要があります。SnapManager 3.3 以前では、 AutoSupport は 7-Mode のストレージシステムでのみサポートされていました。 
 ---
 = clustered Data ONTAP で動作しているストレージシステムを SnapManager サーバホストに追加する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

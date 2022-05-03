@@ -5,6 +5,7 @@ keywords: determine, version, product, run, local, host, command, snapmanager, s
 summary: 'version コマンドを実行すると " ローカル・ホストで稼働している製品のバージョンを確認できます' 
 ---
 = SnapManager ソフトウェアのバージョンを確認しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

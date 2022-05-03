@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, ability, update, host, name, target, database, pr
 summary: SnapManager （ 3.2 以降） for Oracle を使用すると、 SnapManager プロファイル内のターゲット・データベースのホスト名を更新できます。 
 ---
 = プロファイルに関連付けられたターゲット・データベースのホスト名を更新しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

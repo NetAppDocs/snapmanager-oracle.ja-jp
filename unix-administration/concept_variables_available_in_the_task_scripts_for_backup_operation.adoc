@@ -5,6 +5,7 @@ keywords: snapmanager, context, information, environment, variable, backup, oper
 summary: SnapManager は、実行されるバックアップ処理に関連する環境変数の形式でコンテキスト情報を提供します。たとえば、元のホストの名前、保持ポリシーの名前、バックアップのラベルを取得できます。 
 ---
 = バックアップ処理のタスクスクリプトで使用できる変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

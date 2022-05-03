@@ -5,6 +5,7 @@ keywords: run, profile, create, command, database, repository, smo
 summary: profile create コマンドを実行して、リポジトリ内にデータベースのプロファイルを作成できます。このコマンドを実行する前に、データベースをマウントする必要があります。 
 ---
 = smo profile create コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

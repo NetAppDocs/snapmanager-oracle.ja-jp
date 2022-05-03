@@ -5,6 +5,7 @@ keywords: database, configuration, overview
 summary: SnapManager でサポートされるデータベースのバージョンと設定を確認しておく必要があります。基本的なデータベースレイアウトと設定のセットアップを実行して、処理を正常に実行する必要があります。 
 ---
 = データベースバージョンのサポートと設定の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

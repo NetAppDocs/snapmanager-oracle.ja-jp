@@ -5,6 +5,7 @@ keywords: backup, expire, based, retention, policy, snapmanager, determine, dele
 summary: 保持ポリシーに基づいてバックアップが期限切れになると、 SnapManager は保持設定に基づいてバックアップを削除するかどうかを決定します。デフォルトでは、バックアップの削除が実行されます。このデフォルトの動作を変更して、保護されていないバックアップを解放するように選択できます。 
 ---
 = 保持ポリシーのデフォルト動作を変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

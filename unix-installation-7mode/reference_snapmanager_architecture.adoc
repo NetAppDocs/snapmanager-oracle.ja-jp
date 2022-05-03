@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, component, work, together, comprehensive, powerfu
 summary: SnapManager for Oracle には解決策、 Oracle データベース向けの包括的で強力なバックアップ、リストア、リカバリ、クローニングを実行するためのコンポーネントが含まれています。 
 ---
 = SnapManager アーキテクチャ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

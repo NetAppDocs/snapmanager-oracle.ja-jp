@@ -5,6 +5,7 @@ keywords: before, deploy, snapmanager, storage, system, unix, host, minimum, res
 summary: SnapManager を導入する前に、ストレージシステムと UNIX ホストがリソースの最小要件を満たしていることを確認する必要があります。 
 ---
 = 導入の準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

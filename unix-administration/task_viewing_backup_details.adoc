@@ -5,6 +5,7 @@ keywords: view, detail, information, particular, backup, profile, smo, show, com
 summary: smo backup show コマンドを使用すると、プロファイル内の特定のバックアップの詳細情報を表示できます。 
 ---
 = バックアップの詳細を表示しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: run, notification, update-summary-notification, command, summary, enab
 summary: notification update-summary-notification コマンドを実行すると、リポジトリデータベースのサマリー通知をイネーブルにできます。 
 ---
 = smo notification update-summary-notification コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

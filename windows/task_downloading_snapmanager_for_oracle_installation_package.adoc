@@ -5,6 +5,7 @@ keywords: download, snapmanager, oracle, installation, package, netapp, support,
 summary: SnapManager for Oracle のインストールパッケージは、ネットアップサポートサイトからダウンロードできます。 
 ---
 = SnapManager for Oracle インストール・パッケージのダウンロード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: view, detail, information, specific, clone, show, command
 summary: 特定のクローンに関する詳細情報を表示するには、 clone show コマンドを使用します。 
 ---
 = クローンの詳細情報を表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

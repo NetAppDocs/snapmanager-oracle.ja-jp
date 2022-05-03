@@ -5,6 +5,7 @@ keywords: creating, profile, database, schedule, initial, backup, verification, 
 summary: プロファイルの作成後、データベースをバックアップする必要があります。初期バックアップおよび検証のあとに、定期的なバックアップのスケジュールを設定できます。 
 ---
 = データベースをバックアップしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

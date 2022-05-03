@@ -5,6 +5,7 @@ keywords: snapmanager, backup, task, retention, class, retain, database, seconda
 summary: SnapManager では、さまざまなバックアップタスクを実行できます。保持クラスを割り当てて、バックアップを保持できる期間を指定できます。期限に達すると、バックアップは削除されます。 
 ---
 = SnapManager データベースバックアップとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

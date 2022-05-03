@@ -5,6 +5,7 @@ keywords: command, enable, remove, history, snapmanager, associate, single, mult
 summary: このコマンドを使用すると、単一のプロファイル、複数のプロファイル、またはリポジトリ内のすべてのプロファイルに関連付けられている SnapManager 処理の履歴を削除できます。 
 ---
 = smo history remove コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

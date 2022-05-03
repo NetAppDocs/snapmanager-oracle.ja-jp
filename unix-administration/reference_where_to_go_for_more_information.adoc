@@ -5,6 +5,7 @@ keywords: information, basic, task, involve, install, snapmanager
 summary: ここでは、 SnapManager のインストールと使用に関連する基本タスクについて説明します。 
 ---
 = 詳細については、こちらを参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, integrated, snapvault, technology, archive, snapshot, cop
 summary: SnapManager の統合 SnapVault テクノロジを使用して Snapshot コピーをディスクにアーカイブするには、ソースボリュームとデスティネーションボリューム間のデータ保護関係を設定して初期化する必要があります。初期化の際に、 SnapVault はソースボリュームの Snapshot コピーを作成して、そのコピーおよびコピーが参照するすべてのデータブロックをデスティネーションボリュームに転送します。 
 ---
 = SnapVault レプリケーションのためのストレージシステムの準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

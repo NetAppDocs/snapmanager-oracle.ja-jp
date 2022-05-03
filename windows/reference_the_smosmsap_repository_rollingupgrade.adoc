@@ -5,6 +5,7 @@ keywords: command, perform, roll, upgrade, single, multiple, host, associate, ta
 summary: このコマンドは、単一のホストまたは複数のホスト、および関連するターゲットデータベースを下位バージョンの SnapManager から上位バージョンへローリングアップグレードします。アップグレードされたホストは、上位バージョンの SnapManager でのみ管理されます。 
 ---
 = smo repository rollingupgrade コマンドは、次のようになります
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

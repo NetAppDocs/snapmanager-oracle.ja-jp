@@ -5,6 +5,7 @@ keywords: snapmanager, oracle, enable, script, mirror, volume, backup, operation
 summary: SnapManager for Oracle では、スクリプトを使用して、 Windows 環境でバックアップ処理が実行されたあとにボリュームをミラーリングできます。 
 ---
 = ポストプロセスタスク仕様を使用してボリュームをミラーリング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

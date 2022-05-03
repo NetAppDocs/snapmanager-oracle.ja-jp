@@ -5,6 +5,7 @@ keywords: snapmanager, backup, retention, policies, local, storage, primary, sec
 summary: SnapManager を使用すると、保持ポリシーを満たすバックアップを作成できます。このバックアップは、ローカルストレージに保持する成功したバックアップの数を指定します。特定のデータベースのプロファイルに保持する、成功したバックアップの数を指定できます。 
 ---
 = SnapManager がローカルストレージ上にバックアップを保持する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanger, enable, flexible, cloning, recover, database, desired, poi
 summary: SnapManager では柔軟なクローニングを実行できるため、 resetlogs を使用してデータベースを開かなくても、クローンデータベースを希望の時点に手動でリカバリできます。クローニングされたデータベースを Data Guard Standby データベースとして手動で設定することもできます。 
 ---
 = resetlogs を実行しないでデータベースバックアップをクローニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, automatic, handle, mount, backup, available, host, scenar
 summary: SnapManager は、バックアップのマウントを自動的に処理して、ホストで使用できるようにします。また、 Oracle Recovery Manager\ （ RMAN \ ）などの外部ツールを使用してバックアップ内のファイルにアクセスする場合にも、バックアップをマウントできます。 
 ---
 = バックアップのマウント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: dba, assign, specific, retention, class, hourly, daily, weekly, monthl
 summary: DBA は、毎時、毎日、毎週、または毎月という特定の保持クラスをバックアップに割り当てることができます。特定の保持クラスを割り当てると、この変更に基づいて実行されたバックアップが削除対象になります。 
 ---
 = 特定の保持クラスを持つバックアップを割り当てています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

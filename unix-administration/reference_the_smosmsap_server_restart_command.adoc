@@ -5,6 +5,7 @@ keywords: command, restart, snapmanager, host, server, root, smo_server
 summary: このコマンドは、 SnapManager ホストサーバを再起動し、 root として入力します。 
 ---
 = smo _server restart コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, include, script, example, basis, custom, view, plug-in, s
 summary: SnapManager には、独自のスクリプトを作成する方法、またはカスタムスクリプトのベースとして使用できるスクリプトが用意されています。 
 ---
 = サンプルのプラグインスクリプトの表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

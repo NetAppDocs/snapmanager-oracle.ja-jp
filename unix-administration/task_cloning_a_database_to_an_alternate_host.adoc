@@ -5,6 +5,7 @@ keywords: clone, create, command, database, backup, alternate, host, cloning, ex
 summary: clone create コマンドを使用すると、代替ホスト上でデータベース・バックアップをクローニングできます。 
 ---
 = 代替ホストへのデータベースのクローニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

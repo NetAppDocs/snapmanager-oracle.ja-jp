@@ -5,6 +5,7 @@ keywords: snapmanager, netapp, snapshot, technology, create, backup, database, d
 summary: SnapManager では、ネットアップの Snapshot テクノロジを使用してデータベースのバックアップを作成します。DBVERIFY ユーティリティを使用することも、 SnapManager を使用してバックアップの整合性を検証することもできます。 
 ---
 = SnapManager バックアップの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

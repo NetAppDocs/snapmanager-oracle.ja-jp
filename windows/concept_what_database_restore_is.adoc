@@ -5,6 +5,7 @@ keywords: enable, perform, file-based, backup, restore, operation
 summary: SnapManager を使用すると、ファイルベースのバックアップとリストアの処理を実行できます。 
 ---
 = データベースリストアとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

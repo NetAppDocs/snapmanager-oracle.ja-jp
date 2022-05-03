@@ -5,6 +5,7 @@ keywords: enable, summary, email, notification, multiple, profile, disable, rece
 summary: 複数のプロファイルについての概要 E メール通知を有効にしたあとに、それらのプロファイルを無効にして E メールアラートを受信しないようにすることができます。 
 ---
 = 複数のプロファイルの E メール通知を無効にする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

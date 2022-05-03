@@ -5,6 +5,7 @@ keywords: dump, file, locate, client, system, easy, access, file, helpful, troub
 summary: ダンプ・ファイルは、容易にアクセスできるようにクライアント・システムに配置されています。これらのファイルは、プロファイル、システム、または処理に関する問題のトラブルシューティングを行う場合に役立ちます。 
 ---
 = ダンプ・ファイルの検索方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

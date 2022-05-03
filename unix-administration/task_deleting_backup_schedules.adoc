@@ -5,6 +5,7 @@ keywords: delete, backup, schedule, necessary, deleting, smo
 summary: 不要になったバックアップスケジュールを削除できます。 
 ---
 = バックアップスケジュールを削除しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

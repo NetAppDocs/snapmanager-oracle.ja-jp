@@ -5,6 +5,7 @@ keywords: addition, role-based, access, control, rbac, snapmanager, authenticate
 summary: SnapManager では、 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）に加えて、 SnapManager サーバが実行されているホストでオペレーティングシステム（ OS ）ログインを使用してユーザを認証します。ユーザ認証は、処理時にパスワードプロンプトを使用して有効にするか、 smo credential set コマンドを使用して有効にできます。 
 ---
 = ユーザ認証とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

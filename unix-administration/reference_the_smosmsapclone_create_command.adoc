@@ -5,6 +5,7 @@ keywords: run, clone, create, command, backed-up, database, primary, secondary, 
 summary: clone create コマンドを実行して、バックアップされたデータベースのクローンを作成できます。バックアップはプライマリストレージまたはセカンダリストレージからクローニングできます。 
 ---
 = smo clone create コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: access, snapmanager, user, interface, ui, remote, web, browser, system
 summary: SnapManager ユーザインターフェイス（ UI ）には、 SnapManager がサポートするオペレーティングシステムで実行されている任意のシステムから Web ブラウザを使用して、リモートからアクセスできます。ターゲット・データベース・ホストから smogui コマンドを実行して SnapManager UI にアクセスすることもできます 
 ---
 = SnapManager のユーザインターフェイスにアクセスします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

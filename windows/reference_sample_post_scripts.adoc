@@ -5,6 +5,7 @@ keywords: refer, sample, script, create, customized, environment, mirror, vault,
 summary: サンプルスクリプトを参照し、環境に応じてカスタマイズしたスクリプトを作成して、ミラーリングとバックアップを実行することができます。サンプルスクリプトは、 default_install_directory\plugins\backup\create\post から入手できます。 
 ---
 = ポストスクリプトの例
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

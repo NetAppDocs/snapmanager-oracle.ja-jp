@@ -5,6 +5,7 @@ keywords: create, oracle, sysdba, role, connect, database, perform, operation, t
 summary: データベースに接続してデータベース処理を実行する sysdba ロールを持つ Oracle ユーザを作成する必要があります。 
 ---
 = ターゲットデータベースの Oracle ユーザを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: aware, known, issue, snapmanager, troubleshoot, identify, cluster-mode
 summary: SnapManager の使用時に発生する可能性がある既知の問題とその回避方法について理解しておく必要があります。 
 ---
 = 既知の問題のトラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

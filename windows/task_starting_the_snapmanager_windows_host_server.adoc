@@ -5,6 +5,7 @@ keywords: start, snapmanager, server, windows, service, host
 summary: SnapManager サーバは、 Windows サービスを使用して起動できます。 
 ---
 = SnapManager ホスト・サーバを起動しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

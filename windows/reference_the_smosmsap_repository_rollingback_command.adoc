@@ -5,6 +5,7 @@ keywords: command, enable, roll, back, revert, higher, version, original, versio
 summary: このコマンドを使用すると、 SnapManager の上位バージョンからアップグレード元のバージョンにロールバックまたはリバートできます。 
 ---
 = smo repository rollback コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: run, clone, show, command, display, information, database, clone, spec
 summary: 指定したプロファイルのデータベース・クローンに関する情報を表示するには、 clone show コマンドを実行します。 
 ---
 = smo clone show コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

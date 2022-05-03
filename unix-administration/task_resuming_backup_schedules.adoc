@@ -5,6 +5,7 @@ keywords: administrator, option, resume, suspend, backup, schedule, smo
 summary: 管理者は、中断したバックアップ・スケジュールを再開できます。 
 ---
 = バックアップスケジュールを再開しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

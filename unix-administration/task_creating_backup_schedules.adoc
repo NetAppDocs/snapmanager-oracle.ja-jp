@@ -5,6 +5,7 @@ keywords: schedule, backup, occur, time, frequency, suit, data, environment, cre
 summary: バックアップは、データと環境に適した時間と頻度で実行するようにスケジュールを設定できます。 
 ---
 = バックアップスケジュールを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

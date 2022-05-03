@@ -5,6 +5,7 @@ keywords: specify, backup, ineligible, deletion, retention, policy, indefinitely
 summary: バックアップを無期限に保持するには、保持ポリシーの削除対象外にするように指定します。 
 ---
 = バックアップを無期限に保持
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

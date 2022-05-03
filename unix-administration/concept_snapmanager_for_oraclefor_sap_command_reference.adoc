@@ -5,6 +5,7 @@ keywords: snapmanager, syntax, options, parameters, argument, oracle, command, r
 summary: SnapManager コマンドリファレンスには、コマンドとともに指定する有効な使用構文、オプション、パラメータ、および引数と例が記載されています。 
 ---
 = SnapManager for Oracle のコマンドリファレンスを参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

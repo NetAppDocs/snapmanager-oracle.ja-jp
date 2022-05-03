@@ -5,6 +5,7 @@ keywords: splitting, clone, volume, parent, data, ontap, detach, snapmanager, cl
 summary: Data ONTAP の親ボリュームからクローンボリュームをスプリットしたら、 SnapManager から clone detach コマンドを実行して、そのボリュームがクローンでなくなったことを SnapManager に通知できます。 
 ---
 = smo clone detach コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: limitation, perform, rollback, scenario, rollback
 summary: ロールバックを実行できない状況に注意してください。ただし、一部のシナリオでは、ロールバックを実行する前にいくつかの追加タスクを実行できます。 
 ---
 = ロールバックの実行に関する制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

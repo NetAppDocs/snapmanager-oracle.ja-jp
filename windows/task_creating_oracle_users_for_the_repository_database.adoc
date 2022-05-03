@@ -5,6 +5,7 @@ keywords: create, oracle, user, repository, database, specific, privilege, perfo
 summary: リポジトリデータベース用の Oracle ユーザを作成し、リポジトリデータベースに対して複数の処理を実行するための特定の権限を割り当てることができます。 
 ---
 = リポジトリデータベース用の Oracle ユーザの作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

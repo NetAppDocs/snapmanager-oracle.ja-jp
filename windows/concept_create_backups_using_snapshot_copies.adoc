@@ -5,6 +5,7 @@ keywords: backup, snapshot, copies, copy, storage
 summary: SnapManager では、プライマリ（ローカル）ストレージ、およびポストプロセススクリプトを使用してセカンダリ（リモート）ストレージにバックアップを作成できます。 
 ---
 = Snapshot コピーを使用してバックアップを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

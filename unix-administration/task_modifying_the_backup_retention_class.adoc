@@ -5,6 +5,7 @@ keywords: upgrading, snapmanager, default, backup, retention, class, exist, modi
 summary: アップグレード後、 SnapManager はデフォルトのバックアップ保持クラスを既存のバックアップに割り当てます。デフォルトの保持クラスの値は、バックアップの要件に合わせて変更することができます。 
 ---
 = バックアップ保持クラスを変更しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapmanager, enable, suspend, backup, schedule, resume
 summary: SnapManager を使用すると、バックアップスケジュールを再開するまで一時停止できます。 
 ---
 = バックアップスケジュールを一時停止する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

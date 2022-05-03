@@ -5,6 +5,7 @@ keywords: perform, rollback, environment, requirement, prerequisite
 summary: ロールバックを実行する前に、環境が一定の要件を満たしていることを確認する必要があります。 
 ---
 = ロールバックを実行するための前提条件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

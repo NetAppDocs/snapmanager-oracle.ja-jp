@@ -5,6 +5,7 @@ keywords: collect, additional, log, information, debug, fail, external, environm
 summary: 失敗した SnapManager 処理をデバッグするために追加のログが必要な場合は、外部環境変数 server.log.level を設定する必要があります。この変数は、デフォルトのログレベルを上書きし、ログファイル内のすべてのログメッセージをダンプします。たとえば、ログレベルを DEBUG に変更できます。これにより、追加のメッセージが記録され、問題のデバッグに役立ちます。 
 ---
 = デバッグを容易にするために追加のログ情報を収集する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

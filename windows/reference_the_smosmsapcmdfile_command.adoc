@@ -5,6 +5,7 @@ keywords: cmdfile, command, run, host, limit, smo
 summary: ホスト上のシェルでコマンド・ラインに表示できる文字数が制限されている場合は、 cmdfile コマンドを使用して、任意のコマンドを実行できます。 
 ---
 = smo cmdfile コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

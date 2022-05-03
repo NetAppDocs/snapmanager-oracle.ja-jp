@@ -5,6 +5,7 @@ keywords: perform, rollback, single, multiple, snapmanager, server, host, comman
 summary: コマンドラインインターフェイス（ CLI ）を使用して、 1 つまたは複数の SnapManager サーバホストでロールバックを実行できます。 
 ---
 = 単一のホストまたは複数のホストでロールバックを実行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

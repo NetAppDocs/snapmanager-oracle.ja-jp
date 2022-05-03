@@ -5,6 +5,7 @@ keywords: create, backup, clone, database, current, state, single, command, smo
 summary: 単一のコマンドを使用して、データベースの現在の状態からデータベースのバックアップとクローンを作成できます。 
 ---
 = 現在の状態のデータベースをクローニングしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

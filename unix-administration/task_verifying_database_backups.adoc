@@ -5,6 +5,7 @@ keywords: backup, verify, command, block, database, corrupt, operation, invoke, 
 summary: backup verify コマンドを使用して、データベースバックアップ内のブロックが破損していないかどうかを確認できます。検証処理では、バックアップ内の各データファイルに対して Oracle Database Verify ユーティリティが呼び出されます。 
 ---
 = データベースのバックアップの検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

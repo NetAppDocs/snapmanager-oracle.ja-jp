@@ -5,6 +5,7 @@ keywords: creating, backup, example, dba, option, secondary, protect, oracle, re
 summary: たとえば、データベース管理者は、バックアップを作成する際に、フルバックアップを作成し、バックアップオプションを設定して、セカンダリストレージに対する保護を選択します。バックアップは最初はローカルストレージ上に作成されますが、このバックアップは保護が有効なプロファイルに基づいているため、 Protection Manager で定義されている保護ポリシーのスケジュールに従ってセカンダリストレージに転送されます。 
 ---
 = SnapManager for Oracle を使用して、保護されたバックアップを作成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

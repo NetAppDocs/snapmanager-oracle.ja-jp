@@ -5,6 +5,7 @@ keywords: multiple, parallel, operation, seperate, database, storage, system, lu
 summary: 同じストレージシステム上の異なるデータベースに対して複数の並列処理を実行すると、一方の処理が原因で、両方のデータベースに関連付けられている LUN の igroup が削除されることがあります。そのあとに他の処理が削除された igroup を使用しようとすると、 SnapManager にエラーメッセージが表示されます。 
 ---
 = SnapManager で複数の並列処理を実行すると失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

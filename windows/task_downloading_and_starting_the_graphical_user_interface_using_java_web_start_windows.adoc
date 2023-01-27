@@ -2,7 +2,7 @@
 permalink: windows/task_downloading_and_starting_the_graphical_user_interface_using_java_web_start_windows.html 
 sidebar: sidebar 
 keywords: java, web, start, snapmanager, install, host, download, component, graphical, user, interface, gui, jre 
-summary: SnapManager がホストにインストールされていない場合は、 Java Web Start を使用できます。Java Web Start は、 SnapManager コンポーネントをダウンロードし、 GUI （グラフィカルユーザインターフェイス）を起動します。サポートされている JRE のバージョンは、 1.5 、 1.6 、および 1.7 です。 
+summary: SnapManager がホストにインストールされていない場合は、 Java Web Start を使用できます。Java Web Start は、 SnapManager コンポーネントをダウンロードし、 GUI （グラフィカルユーザインターフェイス）を起動します。サポートされているJREのバージョンは、1.5、1.6、1.7、および1.8です 
 ---
 = Java Web Start を使用したグラフィカルユーザインターフェイスのダウンロードと起動
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapManager がホストにインストールされていない場合�
 
 
 [role="lead"]
-SnapManager がホストにインストールされていない場合は、 Java Web Start を使用できます。Java Web Start は、 SnapManager コンポーネントをダウンロードし、 GUI （グラフィカルユーザインターフェイス）を起動します。サポートされている JRE のバージョンは、 1.5 、 1.6 、および 1.7 です。
+SnapManager がホストにインストールされていない場合は、 Java Web Start を使用できます。Java Web Start は、 SnapManager コンポーネントをダウンロードし、 GUI （グラフィカルユーザインターフェイス）を起動します。サポートされているJREのバージョンは、1.5、1.6、1.7、および1.8です。
 
 次の条件が満たされていることを確認する必要があります。
 
